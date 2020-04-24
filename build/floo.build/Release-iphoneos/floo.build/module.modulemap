@@ -1,0 +1,6 @@
+framework module floo {
+  umbrella header "floo.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,3 @@
+[submodule "floo"]
+	path = floo
+	url = git@github.com:blockmessage/floo.git

@@ -1,0 +1,1627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4834D49521B535260009EEF3 /* BMXDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D44421B535250009EEF3 /* BMXDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4834D49A21B535260009EEF3 /* BMXNetworkManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4834D44921B535250009EEF3 /* BMXNetworkManagerListener.mm */; };
+		4834D49D21B535260009EEF3 /* BMXClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D44C21B535250009EEF3 /* BMXClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		485CBAFB21B7802C00B7DD8D /* BMXChatService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485CBAE821B7802C00B7DD8D /* BMXChatService.mm */; };
+		485CBB0C21B7802C00B7DD8D /* ChatServiceListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485CBAF921B7802C00B7DD8D /* ChatServiceListener.mm */; };
+		48AFC4E321B3A2A500F4CDEB /* floo-ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AFC4D921B3A2A500F4CDEB /* floo-ios.framework */; };
+		B51337E7240A6BF200E1F3D9 /* BMXDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D3454C2285B6E900316630 /* BMXDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337E8240A6BF200E1F3D9 /* BMXMessageSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D3454E2285B6E900316630 /* BMXMessageSetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337E9240A6C0B00E1F3D9 /* BMXChatManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF421B7802C00B7DD8D /* BMXChatManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337EA240A6C0B00E1F3D9 /* BMXChatServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF321B7802C00B7DD8D /* BMXChatServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337EB240A6C0B00E1F3D9 /* BMXConversation.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF221B7802C00B7DD8D /* BMXConversation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337EC240A6C0B00E1F3D9 /* BMXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF121B7802C00B7DD8D /* BMXError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337ED240A6C0B00E1F3D9 /* BMXErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAEF21B7802C00B7DD8D /* BMXErrorCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337EE240A6C0B00E1F3D9 /* BMXMessageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAEB21B7802C00B7DD8D /* BMXMessageObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337EF240A6C0B00E1F3D9 /* BMXMessagePageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF721B7802C00B7DD8D /* BMXMessagePageObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F0240A6C1700E1F3D9 /* BMXHostConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EF3A6221FB303700B28908 /* BMXHostConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F1240A6C1700E1F3D9 /* BMXSDKConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D44021B535250009EEF3 /* BMXSDKConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F2240A6C2400E1F3D9 /* BMXApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D345592285B7A700316630 /* BMXApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F3240A6C2400E1F3D9 /* BMXRoster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D45421B535250009EEF3 /* BMXRoster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F5240A6C2400E1F3D9 /* BMXRosterServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D45521B535250009EEF3 /* BMXRosterServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F6240A6C3B00E1F3D9 /* BMXGroupManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454BE2407B304007BB0EA /* BMXGroupManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F7240A6C3B00E1F3D9 /* BMXGroupService.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454BB2407B303007BB0EA /* BMXGroupService.h */; };
+		B51337F8240A6C3B00E1F3D9 /* BMXGroupServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B514549F2407B303007BB0EA /* BMXGroupServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337F9240A6C5900E1F3D9 /* BMXAuthQuestion.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D3452B2285B59000316630 /* BMXAuthQuestion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FA240A6C5900E1F3D9 /* BMXGroupAnnounment.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D345252285B59000316630 /* BMXGroupAnnounment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FB240A6C5900E1F3D9 /* BMXGroupApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D3452F2285B59000316630 /* BMXGroupApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FC240A6C5900E1F3D9 /* BMXGroupBannedMember.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D345242285B59000316630 /* BMXGroupBannedMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FD240A6C5900E1F3D9 /* BMXGroupInvitation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D345272285B59000316630 /* BMXGroupInvitation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FE240A6C5900E1F3D9 /* BMXGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D45E21B535250009EEF3 /* BMXGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51337FF240A6C5900E1F3D9 /* BMXCreatGroupOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D180AC21BA54270080AF8C /* BMXCreatGroupOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133800240A6C5900E1F3D9 /* BMXGroupMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D1809521B9553D0080AF8C /* BMXGroupMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133801240A6C5900E1F3D9 /* BMXGroupSharedFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D1809121B955350080AF8C /* BMXGroupSharedFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133802240A6C6200E1F3D9 /* BMXFileAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46D21B535260009EEF3 /* BMXFileAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133803240A6C6200E1F3D9 /* BMXImageAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46621B535260009EEF3 /* BMXImageAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133804240A6C6300E1F3D9 /* BMXLocationAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46521B535260009EEF3 /* BMXLocationAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133805240A6C6300E1F3D9 /* BMXMessageAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46221B535250009EEF3 /* BMXMessageAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133806240A6C6300E1F3D9 /* BMXVideoAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46921B535260009EEF3 /* BMXVideoAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133807240A6C6300E1F3D9 /* BMXVoiceAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D46B21B535260009EEF3 /* BMXVoiceAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133808240A6C6B00E1F3D9 /* BMXUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D47221B535260009EEF3 /* BMXUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133809240A6C6B00E1F3D9 /* BMXUserProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBADE21B6F97300B7DD8D /* BMXUserProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B513380A240A6C6B00E1F3D9 /* BMXUserService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D47321B535260009EEF3 /* BMXUserService.h */; };
+		B513380B240A6C6B00E1F3D9 /* BMXUserServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D47421B535260009EEF3 /* BMXUserServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B513380C240A6C6B00E1F3D9 /* UserServiceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D47021B535260009EEF3 /* UserServiceListener.h */; };
+		B513380D240A6CBD00E1F3D9 /* BMXNetworkManagerListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 4834D44D21B535250009EEF3 /* BMXNetworkManagerListener.h */; };
+		B513380E240A6CBD00E1F3D9 /* BMXMessageConfig+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B514551A2407B338007BB0EA /* BMXMessageConfig+Private.h */; };
+		B513380F240A6CBD00E1F3D9 /* BMXMessageConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B51455162407B32A007BB0EA /* BMXMessageConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5133810240A6CBD00E1F3D9 /* BMXChatService+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EF3A6C21FB305000B28908 /* BMXChatService+Private.h */; };
+		B5133811240A6CBD00E1F3D9 /* BMXChatService.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAE921B7802C00B7DD8D /* BMXChatService.h */; };
+		B5133812240A6CBD00E1F3D9 /* ChatServiceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAEC21B7802C00B7DD8D /* ChatServiceListener.h */; };
+		B5133813240A6CBD00E1F3D9 /* BMXMessageObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAED21B7802C00B7DD8D /* BMXMessageObject+Private.h */; };
+		B5133814240A6CBD00E1F3D9 /* BMXConversation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 485CBAF521B7802C00B7DD8D /* BMXConversation+Private.h */; };
+		B5133815240A6CBD00E1F3D9 /* BMXHostConfig+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454F62407B31B007BB0EA /* BMXHostConfig+Private.h */; };
+		B5133816240A6CBD00E1F3D9 /* BMXError+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454F72407B31B007BB0EA /* BMXError+Private.h */; };
+		B5133817240A6CBD00E1F3D9 /* BMXStringUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454FE2407B31B007BB0EA /* BMXStringUtil.h */; };
+		B5133818240A6CBD00E1F3D9 /* BMXDelegatesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454FF2407B31B007BB0EA /* BMXDelegatesContainer.h */; };
+		B5133819240A6CBD00E1F3D9 /* BMXSDKConfig+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51455002407B31B007BB0EA /* BMXSDKConfig+Private.h */; };
+		B513381A240A6CBD00E1F3D9 /* BMXService.h in Headers */ = {isa = PBXBuildFile; fileRef = B51455012407B31B007BB0EA /* BMXService.h */; };
+		B513381B240A6CBD00E1F3D9 /* BMXDefinesTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = B51455042407B31B007BB0EA /* BMXDefinesTransform.h */; };
+		B513381C240A6CBD00E1F3D9 /* BMXRosterService.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454DF2407B312007BB0EA /* BMXRosterService.h */; };
+		B513381D240A6CBD00E1F3D9 /* RosterServiceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454E02407B312007BB0EA /* RosterServiceListener.h */; };
+		B513381E240A6CBD00E1F3D9 /* BMXApplication+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454E22407B312007BB0EA /* BMXApplication+Private.h */; };
+		B513381F240A6CBD00E1F3D9 /* BMXRoster+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454E62407B312007BB0EA /* BMXRoster+Private.h */; };
+		B5133820240A6CBD00E1F3D9 /* GroupServiceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454A02407B303007BB0EA /* GroupServiceListener.h */; };
+		B5133821240A6CBD00E1F3D9 /* BMXGroup+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454A62407B303007BB0EA /* BMXGroup+Private.h */; };
+		B5133822240A6CBD00E1F3D9 /* BMXGroupAnnounment+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454A92407B303007BB0EA /* BMXGroupAnnounment+Private.h */; };
+		B5133823240A6CBD00E1F3D9 /* BMXGroupInvitation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454AD2407B303007BB0EA /* BMXGroupInvitation+Private.h */; };
+		B5133824240A6CBD00E1F3D9 /* BMXGroupApplication+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454AE2407B303007BB0EA /* BMXGroupApplication+Private.h */; };
+		B5133825240A6CBD00E1F3D9 /* BMXGroupSharedFile+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454AF2407B303007BB0EA /* BMXGroupSharedFile+Private.h */; };
+		B5133826240A6CBD00E1F3D9 /* BMXCreatGroupOption+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454B02407B303007BB0EA /* BMXCreatGroupOption+Private.h */; };
+		B5133827240A6CBD00E1F3D9 /* BMXGroupBannedMember+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454B12407B303007BB0EA /* BMXGroupBannedMember+Private.h */; };
+		B5133828240A6CBD00E1F3D9 /* BMXGroupMember+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B51454B72407B303007BB0EA /* BMXGroupMember+Private.h */; };
+		B5133829240A6CBD00E1F3D9 /* BMXMessageAttachment+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B514547B2407B2D2007BB0EA /* BMXMessageAttachment+Private.h */; };
+		B513382A240A6CBD00E1F3D9 /* BMXDevice+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B514548A2407B2E7007BB0EA /* BMXDevice+Private.h */; };
+		B513382B240A6CBD00E1F3D9 /* BMXMessageSetting+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B514548C2407B2E7007BB0EA /* BMXMessageSetting+Private.h */; };
+		B513382C240A6CBD00E1F3D9 /* BMXUserProfile+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B514548E2407B2E7007BB0EA /* BMXUserProfile+Private.h */; };
+		B51454802407B2D2007BB0EA /* BMXLocationAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454782407B2D2007BB0EA /* BMXLocationAttachment.mm */; };
+		B51454812407B2D2007BB0EA /* BMXVoiceAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454792407B2D2007BB0EA /* BMXVoiceAttachment.mm */; };
+		B51454822407B2D2007BB0EA /* BMXFileAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514547A2407B2D2007BB0EA /* BMXFileAttachment.mm */; };
+		B51454842407B2D2007BB0EA /* BMXVideoAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514547C2407B2D2007BB0EA /* BMXVideoAttachment.mm */; };
+		B51454852407B2D2007BB0EA /* BMXMessageAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514547D2407B2D2007BB0EA /* BMXMessageAttachment.mm */; };
+		B51454862407B2D2007BB0EA /* BMXImageAttachment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514547E2407B2D2007BB0EA /* BMXImageAttachment.mm */; };
+		B51454872407B2D2007BB0EA /* BMXMessageAttachment+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514547F2407B2D2007BB0EA /* BMXMessageAttachment+Private.mm */; };
+		B51454942407B2E7007BB0EA /* BMXDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454892407B2E7007BB0EA /* BMXDevice.mm */; };
+		B51454962407B2E7007BB0EA /* BMXDevice+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514548B2407B2E7007BB0EA /* BMXDevice+Private.mm */; };
+		B51454982407B2E7007BB0EA /* BMXMessageSetting.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514548D2407B2E7007BB0EA /* BMXMessageSetting.mm */; };
+		B514549A2407B2E7007BB0EA /* BMXUserService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514548F2407B2E7007BB0EA /* BMXUserService.mm */; };
+		B514549B2407B2E7007BB0EA /* BMXMessageSetting+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454902407B2E7007BB0EA /* BMXMessageSetting+Private.mm */; };
+		B514549C2407B2E7007BB0EA /* UserServiceListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454912407B2E7007BB0EA /* UserServiceListener.mm */; };
+		B514549D2407B2E7007BB0EA /* BMXUserProfile+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454922407B2E7007BB0EA /* BMXUserProfile+Private.mm */; };
+		B514549E2407B2E7007BB0EA /* BMXUserProfile.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454932407B2E7007BB0EA /* BMXUserProfile.mm */; };
+		B51454C12407B304007BB0EA /* BMXCreatGroupOption.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A22407B303007BB0EA /* BMXCreatGroupOption.mm */; };
+		B51454C22407B304007BB0EA /* BMXGroupAnnounment+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A32407B303007BB0EA /* BMXGroupAnnounment+Private.mm */; };
+		B51454C32407B304007BB0EA /* BMXGroupBannedMember+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A42407B303007BB0EA /* BMXGroupBannedMember+Private.mm */; };
+		B51454C42407B304007BB0EA /* BMXGroup+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A52407B303007BB0EA /* BMXGroup+Private.mm */; };
+		B51454C62407B304007BB0EA /* BMXGroupApplication+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A72407B303007BB0EA /* BMXGroupApplication+Private.mm */; };
+		B51454C72407B304007BB0EA /* BMXGroupMember+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454A82407B303007BB0EA /* BMXGroupMember+Private.mm */; };
+		B51454C92407B304007BB0EA /* BMXGroupInvitation+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454AA2407B303007BB0EA /* BMXGroupInvitation+Private.mm */; };
+		B51454CA2407B304007BB0EA /* BMXGroupBannedMember.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454AB2407B303007BB0EA /* BMXGroupBannedMember.mm */; };
+		B51454CB2407B304007BB0EA /* BMXGroupSharedFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454AC2407B303007BB0EA /* BMXGroupSharedFile.mm */; };
+		B51454D12407B304007BB0EA /* BMXGroupMember.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B22407B303007BB0EA /* BMXGroupMember.mm */; };
+		B51454D22407B304007BB0EA /* BMXGroupInvitation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B32407B303007BB0EA /* BMXGroupInvitation.mm */; };
+		B51454D32407B304007BB0EA /* BMXGroupApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B42407B303007BB0EA /* BMXGroupApplication.mm */; };
+		B51454D42407B304007BB0EA /* BMXCreatGroupOption+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B52407B303007BB0EA /* BMXCreatGroupOption+Private.mm */; };
+		B51454D52407B304007BB0EA /* BMXGroupSharedFile+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B62407B303007BB0EA /* BMXGroupSharedFile+Private.mm */; };
+		B51454D72407B304007BB0EA /* BMXGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B82407B303007BB0EA /* BMXGroup.mm */; };
+		B51454D82407B304007BB0EA /* BMXAuthQuestion.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454B92407B303007BB0EA /* BMXAuthQuestion.mm */; };
+		B51454D92407B304007BB0EA /* BMXGroupAnnounment.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454BA2407B303007BB0EA /* BMXGroupAnnounment.mm */; };
+		B51454DB2407B304007BB0EA /* GroupServiceListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454BC2407B304007BB0EA /* GroupServiceListener.mm */; };
+		B51454DC2407B304007BB0EA /* BMXGroupService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454BD2407B304007BB0EA /* BMXGroupService.mm */; };
+		B51454EB2407B312007BB0EA /* BMXRoster+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E12407B312007BB0EA /* BMXRoster+Private.mm */; };
+		B51454ED2407B312007BB0EA /* BMXApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E32407B312007BB0EA /* BMXApplication.mm */; };
+		B51454EE2407B312007BB0EA /* BMXApplication+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E42407B312007BB0EA /* BMXApplication+Private.mm */; };
+		B51454EF2407B312007BB0EA /* BMXRoster.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E52407B312007BB0EA /* BMXRoster.mm */; };
+		B51454F12407B312007BB0EA /* RosterServiceListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E72407B312007BB0EA /* RosterServiceListener.mm */; };
+		B51454F22407B312007BB0EA /* BMXRosterService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454E82407B312007BB0EA /* BMXRosterService.mm */; };
+		B51455052407B31B007BB0EA /* BMXClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454F42407B31B007BB0EA /* BMXClient.mm */; };
+		B51455062407B31B007BB0EA /* BMXDelegatesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B51454F52407B31B007BB0EA /* BMXDelegatesContainer.m */; };
+		B51455092407B31B007BB0EA /* BMXSDKConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454F82407B31B007BB0EA /* BMXSDKConfig.mm */; };
+		B514550A2407B31B007BB0EA /* BMXDefinesTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454F92407B31B007BB0EA /* BMXDefinesTransform.mm */; };
+		B514550B2407B31B007BB0EA /* BMXHostConfig+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454FA2407B31B007BB0EA /* BMXHostConfig+Private.mm */; };
+		B514550C2407B31B007BB0EA /* BMXHostConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454FB2407B31B007BB0EA /* BMXHostConfig.mm */; };
+		B514550D2407B31B007BB0EA /* BMXSDKConfig+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454FC2407B31B007BB0EA /* BMXSDKConfig+Private.mm */; };
+		B514550E2407B31B007BB0EA /* BMXStringUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51454FD2407B31B007BB0EA /* BMXStringUtil.mm */; };
+		B51455132407B31B007BB0EA /* BMXError+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51455022407B31B007BB0EA /* BMXError+Private.mm */; };
+		B51455142407B31B007BB0EA /* BMXService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51455032407B31B007BB0EA /* BMXService.mm */; };
+		B514551F2407B338007BB0EA /* BMXConversation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51455182407B337007BB0EA /* BMXConversation.mm */; };
+		B51455202407B338007BB0EA /* BMXMessageConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51455192407B337007BB0EA /* BMXMessageConfig.mm */; };
+		B51455222407B338007BB0EA /* BMXMessagePageObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514551B2407B338007BB0EA /* BMXMessagePageObject.mm */; };
+		B51455232407B338007BB0EA /* BMXMessageConfig+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514551C2407B338007BB0EA /* BMXMessageConfig+Private.mm */; };
+		B51455242407B338007BB0EA /* BMXError.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514551D2407B338007BB0EA /* BMXError.mm */; };
+		B51455252407B338007BB0EA /* BMXMessageObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514551E2407B338007BB0EA /* BMXMessageObject.mm */; };
+		B51D282924504DC800441D9E /* bmx_roster_service_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D280B24504DC700441D9E /* bmx_roster_service_listener.h */; };
+		B51D282A24504DC800441D9E /* bmx_image_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D280C24504DC700441D9E /* bmx_image_attachment.h */; };
+		B51D282B24504DC800441D9E /* bmx_user_service_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D280D24504DC700441D9E /* bmx_user_service_listener.h */; };
+		B51D282C24504DC800441D9E /* bmx_error.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D280E24504DC700441D9E /* bmx_error.h */; };
+		B51D282D24504DC800441D9E /* bmx_message_config.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D280F24504DC700441D9E /* bmx_message_config.h */; };
+		B51D282E24504DC800441D9E /* bmx_chat_service.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281024504DC700441D9E /* bmx_chat_service.h */; };
+		B51D282F24504DC800441D9E /* bmx_result_page.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281124504DC700441D9E /* bmx_result_page.h */; };
+		B51D283024504DC800441D9E /* bmx_roster_item.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281224504DC700441D9E /* bmx_roster_item.h */; };
+		B51D283124504DC800441D9E /* bmx_roster_service.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281324504DC700441D9E /* bmx_roster_service.h */; };
+		B51D283224504DC800441D9E /* bmx_location_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281424504DC700441D9E /* bmx_location_attachment.h */; };
+		B51D283324504DC800441D9E /* bmx_video_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281524504DC700441D9E /* bmx_video_attachment.h */; };
+		B51D283424504DC800441D9E /* bmx_message_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281624504DC700441D9E /* bmx_message_attachment.h */; };
+		B51D283524504DC800441D9E /* bmx_forward_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281724504DC700441D9E /* bmx_forward_attachment.h */; };
+		B51D283624504DC800441D9E /* bmx_base_object.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281824504DC700441D9E /* bmx_base_object.h */; };
+		B51D283724504DC800441D9E /* bmx_sdk_config.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281924504DC700441D9E /* bmx_sdk_config.h */; };
+		B51D283824504DC800441D9E /* bmx_client.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281A24504DC700441D9E /* bmx_client.h */; };
+		B51D283924504DC800441D9E /* bmx_group_service_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281B24504DC700441D9E /* bmx_group_service_listener.h */; };
+		B51D283A24504DC800441D9E /* bmx_file_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281C24504DC700441D9E /* bmx_file_attachment.h */; };
+		B51D283B24504DC800441D9E /* bmx_user_service.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281D24504DC700441D9E /* bmx_user_service.h */; };
+		B51D283C24504DC800441D9E /* bmx_chat_service_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281E24504DC700441D9E /* bmx_chat_service_listener.h */; };
+		B51D283D24504DC800441D9E /* bmx_device.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D281F24504DC700441D9E /* bmx_device.h */; };
+		B51D283E24504DC800441D9E /* bmx_group.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282024504DC700441D9E /* bmx_group.h */; };
+		B51D283F24504DC800441D9E /* bmx_user_profile.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282124504DC700441D9E /* bmx_user_profile.h */; };
+		B51D284024504DC800441D9E /* bmx_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282224504DC700441D9E /* bmx_defines.h */; };
+		B51D284124504DC800441D9E /* bmx_voice_attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282324504DC700441D9E /* bmx_voice_attachment.h */; };
+		B51D284224504DC800441D9E /* bmx_message.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282424504DC700441D9E /* bmx_message.h */; };
+		B51D284324504DC800441D9E /* bmx_group_service.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282524504DC700441D9E /* bmx_group_service.h */; };
+		B51D284424504DC800441D9E /* bmx_network_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282624504DC700441D9E /* bmx_network_listener.h */; };
+		B51D284524504DC800441D9E /* bmx_conversation.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D282724504DC700441D9E /* bmx_conversation.h */; };
+		B51D284624504DC800441D9E /* libfloo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B51D282824504DC800441D9E /* libfloo.a */; };
+		B53B22DE2433779D00DB6EB7 /* BMXRosterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B22DD2433779D00DB6EB7 /* BMXRosterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5EF3A2D21FAE0F500B28908 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A2C21FAE0F500B28908 /* AppDelegate.m */; };
+		B5EF3A3021FAE0F500B28908 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A2F21FAE0F500B28908 /* ViewController.m */; };
+		B5EF3A3321FAE0F500B28908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EF3A3121FAE0F500B28908 /* Main.storyboard */; };
+		B5EF3A3521FAE0F600B28908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5EF3A3421FAE0F600B28908 /* Assets.xcassets */; };
+		B5EF3A3821FAE0F600B28908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EF3A3621FAE0F600B28908 /* LaunchScreen.storyboard */; };
+		B5EF3A3B21FAE0F600B28908 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A3A21FAE0F600B28908 /* main.m */; };
+		B5EF3A4521FAE0F600B28908 /* floo_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A4421FAE0F600B28908 /* floo_iosTests.m */; };
+		B5EF3A5021FAE0F600B28908 /* floo_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A4F21FAE0F600B28908 /* floo_iosUITests.m */; };
+		B5EF3A6D21FB305000B28908 /* BMXChatService+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5EF3A6B21FB305000B28908 /* BMXChatService+Private.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48AFC4E421B3A2A500F4CDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48AFC4D021B3A2A500F4CDEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48AFC4D821B3A2A500F4CDEB;
+			remoteInfo = floo;
+		};
+		B5EF3A4121FAE0F600B28908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48AFC4D021B3A2A500F4CDEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5EF3A2821FAE0F400B28908;
+			remoteInfo = "floo-ios";
+		};
+		B5EF3A4C21FAE0F600B28908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48AFC4D021B3A2A500F4CDEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5EF3A2821FAE0F400B28908;
+			remoteInfo = "floo-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4814956F21BEA9750094C367 /* MaxIM.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = MaxIM.xcworkspace; path = ../P_MaxIM/maxim_ios/MaxIM/MaxIM.xcworkspace; sourceTree = "<group>"; };
+		4834D44021B535250009EEF3 /* BMXSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXSDKConfig.h; sourceTree = "<group>"; };
+		4834D44421B535250009EEF3 /* BMXDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXDefines.h; sourceTree = "<group>"; };
+		4834D44921B535250009EEF3 /* BMXNetworkManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXNetworkManagerListener.mm; sourceTree = "<group>"; };
+		4834D44C21B535250009EEF3 /* BMXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXClient.h; sourceTree = "<group>"; };
+		4834D44D21B535250009EEF3 /* BMXNetworkManagerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXNetworkManagerListener.h; sourceTree = "<group>"; };
+		4834D45421B535250009EEF3 /* BMXRoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXRoster.h; sourceTree = "<group>"; };
+		4834D45521B535250009EEF3 /* BMXRosterServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXRosterServiceProtocol.h; sourceTree = "<group>"; };
+		4834D45E21B535250009EEF3 /* BMXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroup.h; sourceTree = "<group>"; };
+		4834D46221B535250009EEF3 /* BMXMessageAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXMessageAttachment.h; sourceTree = "<group>"; };
+		4834D46521B535260009EEF3 /* BMXLocationAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXLocationAttachment.h; sourceTree = "<group>"; };
+		4834D46621B535260009EEF3 /* BMXImageAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXImageAttachment.h; sourceTree = "<group>"; };
+		4834D46921B535260009EEF3 /* BMXVideoAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXVideoAttachment.h; sourceTree = "<group>"; };
+		4834D46B21B535260009EEF3 /* BMXVoiceAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXVoiceAttachment.h; sourceTree = "<group>"; };
+		4834D46D21B535260009EEF3 /* BMXFileAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXFileAttachment.h; sourceTree = "<group>"; };
+		4834D47021B535260009EEF3 /* UserServiceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserServiceListener.h; sourceTree = "<group>"; };
+		4834D47221B535260009EEF3 /* BMXUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXUserManager.h; sourceTree = "<group>"; };
+		4834D47321B535260009EEF3 /* BMXUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXUserService.h; sourceTree = "<group>"; };
+		4834D47421B535260009EEF3 /* BMXUserServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXUserServiceProtocol.h; sourceTree = "<group>"; };
+		485CBADE21B6F97300B7DD8D /* BMXUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXUserProfile.h; sourceTree = "<group>"; };
+		485CBAE821B7802C00B7DD8D /* BMXChatService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXChatService.mm; sourceTree = "<group>"; };
+		485CBAE921B7802C00B7DD8D /* BMXChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXChatService.h; sourceTree = "<group>"; };
+		485CBAEB21B7802C00B7DD8D /* BMXMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXMessageObject.h; sourceTree = "<group>"; };
+		485CBAEC21B7802C00B7DD8D /* ChatServiceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatServiceListener.h; sourceTree = "<group>"; };
+		485CBAED21B7802C00B7DD8D /* BMXMessageObject+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXMessageObject+Private.h"; sourceTree = "<group>"; };
+		485CBAEF21B7802C00B7DD8D /* BMXErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXErrorCode.h; sourceTree = "<group>"; };
+		485CBAF121B7802C00B7DD8D /* BMXError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXError.h; sourceTree = "<group>"; };
+		485CBAF221B7802C00B7DD8D /* BMXConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXConversation.h; sourceTree = "<group>"; };
+		485CBAF321B7802C00B7DD8D /* BMXChatServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXChatServiceProtocol.h; sourceTree = "<group>"; };
+		485CBAF421B7802C00B7DD8D /* BMXChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXChatManager.h; sourceTree = "<group>"; };
+		485CBAF521B7802C00B7DD8D /* BMXConversation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXConversation+Private.h"; sourceTree = "<group>"; };
+		485CBAF721B7802C00B7DD8D /* BMXMessagePageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXMessagePageObject.h; sourceTree = "<group>"; };
+		485CBAF921B7802C00B7DD8D /* ChatServiceListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ChatServiceListener.mm; sourceTree = "<group>"; };
+		48AFC4D921B3A2A500F4CDEB /* floo-ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "floo-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48AFC4E221B3A2A500F4CDEB /* flooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48AFC59221B3A95200F4CDEB /* floo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = floo.h; sourceTree = "<group>"; };
+		48AFC59321B3A95200F4CDEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D1809121B955350080AF8C /* BMXGroupSharedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupSharedFile.h; sourceTree = "<group>"; };
+		48D1809521B9553D0080AF8C /* BMXGroupMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupMember.h; sourceTree = "<group>"; };
+		48D180AC21BA54270080AF8C /* BMXCreatGroupOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMXCreatGroupOption.h; sourceTree = "<group>"; };
+		B51454782407B2D2007BB0EA /* BMXLocationAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXLocationAttachment.mm; sourceTree = "<group>"; };
+		B51454792407B2D2007BB0EA /* BMXVoiceAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXVoiceAttachment.mm; sourceTree = "<group>"; };
+		B514547A2407B2D2007BB0EA /* BMXFileAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXFileAttachment.mm; sourceTree = "<group>"; };
+		B514547B2407B2D2007BB0EA /* BMXMessageAttachment+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXMessageAttachment+Private.h"; sourceTree = "<group>"; };
+		B514547C2407B2D2007BB0EA /* BMXVideoAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXVideoAttachment.mm; sourceTree = "<group>"; };
+		B514547D2407B2D2007BB0EA /* BMXMessageAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXMessageAttachment.mm; sourceTree = "<group>"; };
+		B514547E2407B2D2007BB0EA /* BMXImageAttachment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXImageAttachment.mm; sourceTree = "<group>"; };
+		B514547F2407B2D2007BB0EA /* BMXMessageAttachment+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXMessageAttachment+Private.mm"; sourceTree = "<group>"; };
+		B51454892407B2E7007BB0EA /* BMXDevice.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXDevice.mm; sourceTree = "<group>"; };
+		B514548A2407B2E7007BB0EA /* BMXDevice+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXDevice+Private.h"; sourceTree = "<group>"; };
+		B514548B2407B2E7007BB0EA /* BMXDevice+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXDevice+Private.mm"; sourceTree = "<group>"; };
+		B514548C2407B2E7007BB0EA /* BMXMessageSetting+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXMessageSetting+Private.h"; sourceTree = "<group>"; };
+		B514548D2407B2E7007BB0EA /* BMXMessageSetting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXMessageSetting.mm; sourceTree = "<group>"; };
+		B514548E2407B2E7007BB0EA /* BMXUserProfile+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXUserProfile+Private.h"; sourceTree = "<group>"; };
+		B514548F2407B2E7007BB0EA /* BMXUserService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXUserService.mm; sourceTree = "<group>"; };
+		B51454902407B2E7007BB0EA /* BMXMessageSetting+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXMessageSetting+Private.mm"; sourceTree = "<group>"; };
+		B51454912407B2E7007BB0EA /* UserServiceListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UserServiceListener.mm; sourceTree = "<group>"; };
+		B51454922407B2E7007BB0EA /* BMXUserProfile+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXUserProfile+Private.mm"; sourceTree = "<group>"; };
+		B51454932407B2E7007BB0EA /* BMXUserProfile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXUserProfile.mm; sourceTree = "<group>"; };
+		B514549F2407B303007BB0EA /* BMXGroupServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupServiceProtocol.h; sourceTree = "<group>"; };
+		B51454A02407B303007BB0EA /* GroupServiceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupServiceListener.h; sourceTree = "<group>"; };
+		B51454A22407B303007BB0EA /* BMXCreatGroupOption.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXCreatGroupOption.mm; sourceTree = "<group>"; };
+		B51454A32407B303007BB0EA /* BMXGroupAnnounment+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupAnnounment+Private.mm"; sourceTree = "<group>"; };
+		B51454A42407B303007BB0EA /* BMXGroupBannedMember+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupBannedMember+Private.mm"; sourceTree = "<group>"; };
+		B51454A52407B303007BB0EA /* BMXGroup+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroup+Private.mm"; sourceTree = "<group>"; };
+		B51454A62407B303007BB0EA /* BMXGroup+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroup+Private.h"; sourceTree = "<group>"; };
+		B51454A72407B303007BB0EA /* BMXGroupApplication+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupApplication+Private.mm"; sourceTree = "<group>"; };
+		B51454A82407B303007BB0EA /* BMXGroupMember+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupMember+Private.mm"; sourceTree = "<group>"; };
+		B51454A92407B303007BB0EA /* BMXGroupAnnounment+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupAnnounment+Private.h"; sourceTree = "<group>"; };
+		B51454AA2407B303007BB0EA /* BMXGroupInvitation+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupInvitation+Private.mm"; sourceTree = "<group>"; };
+		B51454AB2407B303007BB0EA /* BMXGroupBannedMember.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupBannedMember.mm; sourceTree = "<group>"; };
+		B51454AC2407B303007BB0EA /* BMXGroupSharedFile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupSharedFile.mm; sourceTree = "<group>"; };
+		B51454AD2407B303007BB0EA /* BMXGroupInvitation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupInvitation+Private.h"; sourceTree = "<group>"; };
+		B51454AE2407B303007BB0EA /* BMXGroupApplication+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupApplication+Private.h"; sourceTree = "<group>"; };
+		B51454AF2407B303007BB0EA /* BMXGroupSharedFile+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupSharedFile+Private.h"; sourceTree = "<group>"; };
+		B51454B02407B303007BB0EA /* BMXCreatGroupOption+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXCreatGroupOption+Private.h"; sourceTree = "<group>"; };
+		B51454B12407B303007BB0EA /* BMXGroupBannedMember+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupBannedMember+Private.h"; sourceTree = "<group>"; };
+		B51454B22407B303007BB0EA /* BMXGroupMember.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupMember.mm; sourceTree = "<group>"; };
+		B51454B32407B303007BB0EA /* BMXGroupInvitation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupInvitation.mm; sourceTree = "<group>"; };
+		B51454B42407B303007BB0EA /* BMXGroupApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupApplication.mm; sourceTree = "<group>"; };
+		B51454B52407B303007BB0EA /* BMXCreatGroupOption+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXCreatGroupOption+Private.mm"; sourceTree = "<group>"; };
+		B51454B62407B303007BB0EA /* BMXGroupSharedFile+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXGroupSharedFile+Private.mm"; sourceTree = "<group>"; };
+		B51454B72407B303007BB0EA /* BMXGroupMember+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXGroupMember+Private.h"; sourceTree = "<group>"; };
+		B51454B82407B303007BB0EA /* BMXGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroup.mm; sourceTree = "<group>"; };
+		B51454B92407B303007BB0EA /* BMXAuthQuestion.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXAuthQuestion.mm; sourceTree = "<group>"; };
+		B51454BA2407B303007BB0EA /* BMXGroupAnnounment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupAnnounment.mm; sourceTree = "<group>"; };
+		B51454BB2407B303007BB0EA /* BMXGroupService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupService.h; sourceTree = "<group>"; };
+		B51454BC2407B304007BB0EA /* GroupServiceListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GroupServiceListener.mm; sourceTree = "<group>"; };
+		B51454BD2407B304007BB0EA /* BMXGroupService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXGroupService.mm; sourceTree = "<group>"; };
+		B51454BE2407B304007BB0EA /* BMXGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupManager.h; sourceTree = "<group>"; };
+		B51454DF2407B312007BB0EA /* BMXRosterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXRosterService.h; sourceTree = "<group>"; };
+		B51454E02407B312007BB0EA /* RosterServiceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosterServiceListener.h; sourceTree = "<group>"; };
+		B51454E12407B312007BB0EA /* BMXRoster+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXRoster+Private.mm"; sourceTree = "<group>"; };
+		B51454E22407B312007BB0EA /* BMXApplication+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXApplication+Private.h"; sourceTree = "<group>"; };
+		B51454E32407B312007BB0EA /* BMXApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXApplication.mm; sourceTree = "<group>"; };
+		B51454E42407B312007BB0EA /* BMXApplication+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXApplication+Private.mm"; sourceTree = "<group>"; };
+		B51454E52407B312007BB0EA /* BMXRoster.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXRoster.mm; sourceTree = "<group>"; };
+		B51454E62407B312007BB0EA /* BMXRoster+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXRoster+Private.h"; sourceTree = "<group>"; };
+		B51454E72407B312007BB0EA /* RosterServiceListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RosterServiceListener.mm; sourceTree = "<group>"; };
+		B51454E82407B312007BB0EA /* BMXRosterService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXRosterService.mm; sourceTree = "<group>"; };
+		B51454F42407B31B007BB0EA /* BMXClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXClient.mm; sourceTree = "<group>"; };
+		B51454F52407B31B007BB0EA /* BMXDelegatesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMXDelegatesContainer.m; sourceTree = "<group>"; };
+		B51454F62407B31B007BB0EA /* BMXHostConfig+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXHostConfig+Private.h"; sourceTree = "<group>"; };
+		B51454F72407B31B007BB0EA /* BMXError+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXError+Private.h"; sourceTree = "<group>"; };
+		B51454F82407B31B007BB0EA /* BMXSDKConfig.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXSDKConfig.mm; sourceTree = "<group>"; };
+		B51454F92407B31B007BB0EA /* BMXDefinesTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXDefinesTransform.mm; sourceTree = "<group>"; };
+		B51454FA2407B31B007BB0EA /* BMXHostConfig+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXHostConfig+Private.mm"; sourceTree = "<group>"; };
+		B51454FB2407B31B007BB0EA /* BMXHostConfig.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXHostConfig.mm; sourceTree = "<group>"; };
+		B51454FC2407B31B007BB0EA /* BMXSDKConfig+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXSDKConfig+Private.mm"; sourceTree = "<group>"; };
+		B51454FD2407B31B007BB0EA /* BMXStringUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXStringUtil.mm; sourceTree = "<group>"; };
+		B51454FE2407B31B007BB0EA /* BMXStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXStringUtil.h; sourceTree = "<group>"; };
+		B51454FF2407B31B007BB0EA /* BMXDelegatesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXDelegatesContainer.h; sourceTree = "<group>"; };
+		B51455002407B31B007BB0EA /* BMXSDKConfig+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXSDKConfig+Private.h"; sourceTree = "<group>"; };
+		B51455012407B31B007BB0EA /* BMXService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXService.h; sourceTree = "<group>"; };
+		B51455022407B31B007BB0EA /* BMXError+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXError+Private.mm"; sourceTree = "<group>"; };
+		B51455032407B31B007BB0EA /* BMXService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXService.mm; sourceTree = "<group>"; };
+		B51455042407B31B007BB0EA /* BMXDefinesTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXDefinesTransform.h; sourceTree = "<group>"; };
+		B51455162407B32A007BB0EA /* BMXMessageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMXMessageConfig.h; path = src/Chat/BMXMessageConfig.h; sourceTree = SOURCE_ROOT; };
+		B51455182407B337007BB0EA /* BMXConversation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXConversation.mm; sourceTree = "<group>"; };
+		B51455192407B337007BB0EA /* BMXMessageConfig.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXMessageConfig.mm; sourceTree = "<group>"; };
+		B514551A2407B338007BB0EA /* BMXMessageConfig+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXMessageConfig+Private.h"; sourceTree = "<group>"; };
+		B514551B2407B338007BB0EA /* BMXMessagePageObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXMessagePageObject.mm; sourceTree = "<group>"; };
+		B514551C2407B338007BB0EA /* BMXMessageConfig+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXMessageConfig+Private.mm"; sourceTree = "<group>"; };
+		B514551D2407B338007BB0EA /* BMXError.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXError.mm; sourceTree = "<group>"; };
+		B514551E2407B338007BB0EA /* BMXMessageObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMXMessageObject.mm; sourceTree = "<group>"; };
+		B51D280B24504DC700441D9E /* bmx_roster_service_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_roster_service_listener.h; sourceTree = "<group>"; };
+		B51D280C24504DC700441D9E /* bmx_image_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_image_attachment.h; sourceTree = "<group>"; };
+		B51D280D24504DC700441D9E /* bmx_user_service_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_user_service_listener.h; sourceTree = "<group>"; };
+		B51D280E24504DC700441D9E /* bmx_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_error.h; sourceTree = "<group>"; };
+		B51D280F24504DC700441D9E /* bmx_message_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_message_config.h; sourceTree = "<group>"; };
+		B51D281024504DC700441D9E /* bmx_chat_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_chat_service.h; sourceTree = "<group>"; };
+		B51D281124504DC700441D9E /* bmx_result_page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_result_page.h; sourceTree = "<group>"; };
+		B51D281224504DC700441D9E /* bmx_roster_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_roster_item.h; sourceTree = "<group>"; };
+		B51D281324504DC700441D9E /* bmx_roster_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_roster_service.h; sourceTree = "<group>"; };
+		B51D281424504DC700441D9E /* bmx_location_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_location_attachment.h; sourceTree = "<group>"; };
+		B51D281524504DC700441D9E /* bmx_video_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_video_attachment.h; sourceTree = "<group>"; };
+		B51D281624504DC700441D9E /* bmx_message_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_message_attachment.h; sourceTree = "<group>"; };
+		B51D281724504DC700441D9E /* bmx_forward_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_forward_attachment.h; sourceTree = "<group>"; };
+		B51D281824504DC700441D9E /* bmx_base_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_base_object.h; sourceTree = "<group>"; };
+		B51D281924504DC700441D9E /* bmx_sdk_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_sdk_config.h; sourceTree = "<group>"; };
+		B51D281A24504DC700441D9E /* bmx_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_client.h; sourceTree = "<group>"; };
+		B51D281B24504DC700441D9E /* bmx_group_service_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_group_service_listener.h; sourceTree = "<group>"; };
+		B51D281C24504DC700441D9E /* bmx_file_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_file_attachment.h; sourceTree = "<group>"; };
+		B51D281D24504DC700441D9E /* bmx_user_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_user_service.h; sourceTree = "<group>"; };
+		B51D281E24504DC700441D9E /* bmx_chat_service_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_chat_service_listener.h; sourceTree = "<group>"; };
+		B51D281F24504DC700441D9E /* bmx_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_device.h; sourceTree = "<group>"; };
+		B51D282024504DC700441D9E /* bmx_group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_group.h; sourceTree = "<group>"; };
+		B51D282124504DC700441D9E /* bmx_user_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_user_profile.h; sourceTree = "<group>"; };
+		B51D282224504DC700441D9E /* bmx_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_defines.h; sourceTree = "<group>"; };
+		B51D282324504DC700441D9E /* bmx_voice_attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_voice_attachment.h; sourceTree = "<group>"; };
+		B51D282424504DC700441D9E /* bmx_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_message.h; sourceTree = "<group>"; };
+		B51D282524504DC700441D9E /* bmx_group_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_group_service.h; sourceTree = "<group>"; };
+		B51D282624504DC700441D9E /* bmx_network_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_network_listener.h; sourceTree = "<group>"; };
+		B51D282724504DC700441D9E /* bmx_conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmx_conversation.h; sourceTree = "<group>"; };
+		B51D282824504DC800441D9E /* libfloo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfloo.a; sourceTree = "<group>"; };
+		B53B22DD2433779D00DB6EB7 /* BMXRosterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXRosterManager.h; sourceTree = "<group>"; };
+		B5D345242285B59000316630 /* BMXGroupBannedMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupBannedMember.h; sourceTree = "<group>"; };
+		B5D345252285B59000316630 /* BMXGroupAnnounment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupAnnounment.h; sourceTree = "<group>"; };
+		B5D345272285B59000316630 /* BMXGroupInvitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupInvitation.h; sourceTree = "<group>"; };
+		B5D3452B2285B59000316630 /* BMXAuthQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXAuthQuestion.h; sourceTree = "<group>"; };
+		B5D3452F2285B59000316630 /* BMXGroupApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXGroupApplication.h; sourceTree = "<group>"; };
+		B5D3454C2285B6E900316630 /* BMXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMXDevice.h; path = User/BMXDevice.h; sourceTree = "<group>"; };
+		B5D3454E2285B6E900316630 /* BMXMessageSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMXMessageSetting.h; path = User/BMXMessageSetting.h; sourceTree = "<group>"; };
+		B5D345592285B7A700316630 /* BMXApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXApplication.h; sourceTree = "<group>"; };
+		B5EF3A2921FAE0F400B28908 /* floo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "floo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EF3A2B21FAE0F400B28908 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5EF3A2C21FAE0F500B28908 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5EF3A2E21FAE0F500B28908 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B5EF3A2F21FAE0F500B28908 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B5EF3A3221FAE0F500B28908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5EF3A3421FAE0F600B28908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5EF3A3721FAE0F600B28908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5EF3A3921FAE0F600B28908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EF3A3A21FAE0F600B28908 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5EF3A4021FAE0F600B28908 /* floo-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "floo-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EF3A4421FAE0F600B28908 /* floo_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = floo_iosTests.m; sourceTree = "<group>"; };
+		B5EF3A4621FAE0F600B28908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EF3A4B21FAE0F600B28908 /* floo-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "floo-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EF3A4F21FAE0F600B28908 /* floo_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = floo_iosUITests.m; sourceTree = "<group>"; };
+		B5EF3A5121FAE0F600B28908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EF3A6221FB303700B28908 /* BMXHostConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMXHostConfig.h; sourceTree = "<group>"; };
+		B5EF3A6B21FB305000B28908 /* BMXChatService+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BMXChatService+Private.mm"; sourceTree = "<group>"; };
+		B5EF3A6C21FB305000B28908 /* BMXChatService+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMXChatService+Private.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48AFC4D621B3A2A500F4CDEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51D284624504DC800441D9E /* libfloo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AFC4DF21B3A2A500F4CDEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48AFC4E321B3A2A500F4CDEB /* floo-ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A2621FAE0F400B28908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A3D21FAE0F600B28908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A4821FAE0F600B28908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4814956E21BEA9740094C367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4814956F21BEA9750094C367 /* MaxIM.xcworkspace */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4834D42B21B535250009EEF3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B5D3454C2285B6E900316630 /* BMXDevice.h */,
+				B5D3454E2285B6E900316630 /* BMXMessageSetting.h */,
+				485CBB2821B7DDC400B7DD8D /* NetWork */,
+				485CBAE621B7802C00B7DD8D /* Chat */,
+				4834D43D21B535250009EEF3 /* Util */,
+				4834D45121B535250009EEF3 /* Roster */,
+				4834D45A21B535250009EEF3 /* Group */,
+				4834D45F21B535250009EEF3 /* Attachment */,
+				4834D46F21B535260009EEF3 /* User */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4834D43D21B535250009EEF3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B51454F32407B31B007BB0EA /* Private */,
+				B5EF3A6221FB303700B28908 /* BMXHostConfig.h */,
+				4834D44C21B535250009EEF3 /* BMXClient.h */,
+				4834D44421B535250009EEF3 /* BMXDefines.h */,
+				4834D44021B535250009EEF3 /* BMXSDKConfig.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		4834D45121B535250009EEF3 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				B53B22DD2433779D00DB6EB7 /* BMXRosterManager.h */,
+				B51454DE2407B312007BB0EA /* Private */,
+				B5D345592285B7A700316630 /* BMXApplication.h */,
+				4834D45421B535250009EEF3 /* BMXRoster.h */,
+				4834D45521B535250009EEF3 /* BMXRosterServiceProtocol.h */,
+			);
+			path = Roster;
+			sourceTree = "<group>";
+		};
+		4834D45A21B535250009EEF3 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				B51454BE2407B304007BB0EA /* BMXGroupManager.h */,
+				B51454BB2407B303007BB0EA /* BMXGroupService.h */,
+				B51454BD2407B304007BB0EA /* BMXGroupService.mm */,
+				B514549F2407B303007BB0EA /* BMXGroupServiceProtocol.h */,
+				B51454A02407B303007BB0EA /* GroupServiceListener.h */,
+				B51454BC2407B304007BB0EA /* GroupServiceListener.mm */,
+				B51454A12407B303007BB0EA /* Private */,
+				B5D3452B2285B59000316630 /* BMXAuthQuestion.h */,
+				B5D345252285B59000316630 /* BMXGroupAnnounment.h */,
+				B5D3452F2285B59000316630 /* BMXGroupApplication.h */,
+				B5D345242285B59000316630 /* BMXGroupBannedMember.h */,
+				B5D345272285B59000316630 /* BMXGroupInvitation.h */,
+				4834D45E21B535250009EEF3 /* BMXGroup.h */,
+				48D180AC21BA54270080AF8C /* BMXCreatGroupOption.h */,
+				48D1809521B9553D0080AF8C /* BMXGroupMember.h */,
+				48D1809121B955350080AF8C /* BMXGroupSharedFile.h */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		4834D45F21B535250009EEF3 /* Attachment */ = {
+			isa = PBXGroup;
+			children = (
+				B51454772407B2D2007BB0EA /* Private */,
+				4834D46D21B535260009EEF3 /* BMXFileAttachment.h */,
+				4834D46621B535260009EEF3 /* BMXImageAttachment.h */,
+				4834D46521B535260009EEF3 /* BMXLocationAttachment.h */,
+				4834D46221B535250009EEF3 /* BMXMessageAttachment.h */,
+				4834D46921B535260009EEF3 /* BMXVideoAttachment.h */,
+				4834D46B21B535260009EEF3 /* BMXVoiceAttachment.h */,
+			);
+			path = Attachment;
+			sourceTree = "<group>";
+		};
+		4834D46F21B535260009EEF3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B51454882407B2E7007BB0EA /* Private */,
+				4834D47221B535260009EEF3 /* BMXUserManager.h */,
+				485CBADE21B6F97300B7DD8D /* BMXUserProfile.h */,
+				4834D47321B535260009EEF3 /* BMXUserService.h */,
+				4834D47421B535260009EEF3 /* BMXUserServiceProtocol.h */,
+				4834D47021B535260009EEF3 /* UserServiceListener.h */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		485CBAE621B7802C00B7DD8D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				485CBAF421B7802C00B7DD8D /* BMXChatManager.h */,
+				485CBAF321B7802C00B7DD8D /* BMXChatServiceProtocol.h */,
+				485CBAF221B7802C00B7DD8D /* BMXConversation.h */,
+				485CBAF121B7802C00B7DD8D /* BMXError.h */,
+				485CBAEF21B7802C00B7DD8D /* BMXErrorCode.h */,
+				485CBAEB21B7802C00B7DD8D /* BMXMessageObject.h */,
+				485CBAF721B7802C00B7DD8D /* BMXMessagePageObject.h */,
+				485CBB0D21B7834D00B7DD8D /* Private */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		485CBB0D21B7834D00B7DD8D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51455182407B337007BB0EA /* BMXConversation.mm */,
+				B514551D2407B338007BB0EA /* BMXError.mm */,
+				B51455192407B337007BB0EA /* BMXMessageConfig.mm */,
+				B514551A2407B338007BB0EA /* BMXMessageConfig+Private.h */,
+				B514551C2407B338007BB0EA /* BMXMessageConfig+Private.mm */,
+				B514551E2407B338007BB0EA /* BMXMessageObject.mm */,
+				B514551B2407B338007BB0EA /* BMXMessagePageObject.mm */,
+				B51455162407B32A007BB0EA /* BMXMessageConfig.h */,
+				B5EF3A6C21FB305000B28908 /* BMXChatService+Private.h */,
+				B5EF3A6B21FB305000B28908 /* BMXChatService+Private.mm */,
+				485CBAE821B7802C00B7DD8D /* BMXChatService.mm */,
+				485CBAE921B7802C00B7DD8D /* BMXChatService.h */,
+				485CBAEC21B7802C00B7DD8D /* ChatServiceListener.h */,
+				485CBAF921B7802C00B7DD8D /* ChatServiceListener.mm */,
+				485CBAED21B7802C00B7DD8D /* BMXMessageObject+Private.h */,
+				485CBAF521B7802C00B7DD8D /* BMXConversation+Private.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		485CBB2821B7DDC400B7DD8D /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				4834D44D21B535250009EEF3 /* BMXNetworkManagerListener.h */,
+				4834D44921B535250009EEF3 /* BMXNetworkManagerListener.mm */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		48AFC4CF21B3A2A500F4CDEB = {
+			isa = PBXGroup;
+			children = (
+				B51D280A24504DC700441D9E /* include */,
+				B51D282824504DC800441D9E /* libfloo.a */,
+				4834D42B21B535250009EEF3 /* src */,
+				48AFC59121B3A95200F4CDEB /* config */,
+				B5EF3A2A21FAE0F400B28908 /* floo-ios */,
+				B5EF3A4321FAE0F600B28908 /* floo-iosTests */,
+				B5EF3A4E21FAE0F600B28908 /* floo-iosUITests */,
+				48AFC4DA21B3A2A500F4CDEB /* Products */,
+				4814956E21BEA9740094C367 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48AFC4DA21B3A2A500F4CDEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48AFC4D921B3A2A500F4CDEB /* floo-ios.framework */,
+				48AFC4E221B3A2A500F4CDEB /* flooTests.xctest */,
+				B5EF3A2921FAE0F400B28908 /* floo-ios.app */,
+				B5EF3A4021FAE0F600B28908 /* floo-iosTests.xctest */,
+				B5EF3A4B21FAE0F600B28908 /* floo-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48AFC59121B3A95200F4CDEB /* config */ = {
+			isa = PBXGroup;
+			children = (
+				48AFC59221B3A95200F4CDEB /* floo.h */,
+				48AFC59321B3A95200F4CDEB /* Info.plist */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		B51454772407B2D2007BB0EA /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51454782407B2D2007BB0EA /* BMXLocationAttachment.mm */,
+				B51454792407B2D2007BB0EA /* BMXVoiceAttachment.mm */,
+				B514547A2407B2D2007BB0EA /* BMXFileAttachment.mm */,
+				B514547B2407B2D2007BB0EA /* BMXMessageAttachment+Private.h */,
+				B514547C2407B2D2007BB0EA /* BMXVideoAttachment.mm */,
+				B514547D2407B2D2007BB0EA /* BMXMessageAttachment.mm */,
+				B514547E2407B2D2007BB0EA /* BMXImageAttachment.mm */,
+				B514547F2407B2D2007BB0EA /* BMXMessageAttachment+Private.mm */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B51454882407B2E7007BB0EA /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51454892407B2E7007BB0EA /* BMXDevice.mm */,
+				B514548A2407B2E7007BB0EA /* BMXDevice+Private.h */,
+				B514548B2407B2E7007BB0EA /* BMXDevice+Private.mm */,
+				B514548C2407B2E7007BB0EA /* BMXMessageSetting+Private.h */,
+				B514548D2407B2E7007BB0EA /* BMXMessageSetting.mm */,
+				B514548E2407B2E7007BB0EA /* BMXUserProfile+Private.h */,
+				B514548F2407B2E7007BB0EA /* BMXUserService.mm */,
+				B51454902407B2E7007BB0EA /* BMXMessageSetting+Private.mm */,
+				B51454912407B2E7007BB0EA /* UserServiceListener.mm */,
+				B51454922407B2E7007BB0EA /* BMXUserProfile+Private.mm */,
+				B51454932407B2E7007BB0EA /* BMXUserProfile.mm */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B51454A12407B303007BB0EA /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51454A22407B303007BB0EA /* BMXCreatGroupOption.mm */,
+				B51454A32407B303007BB0EA /* BMXGroupAnnounment+Private.mm */,
+				B51454A42407B303007BB0EA /* BMXGroupBannedMember+Private.mm */,
+				B51454A52407B303007BB0EA /* BMXGroup+Private.mm */,
+				B51454A62407B303007BB0EA /* BMXGroup+Private.h */,
+				B51454A72407B303007BB0EA /* BMXGroupApplication+Private.mm */,
+				B51454A82407B303007BB0EA /* BMXGroupMember+Private.mm */,
+				B51454A92407B303007BB0EA /* BMXGroupAnnounment+Private.h */,
+				B51454AA2407B303007BB0EA /* BMXGroupInvitation+Private.mm */,
+				B51454AB2407B303007BB0EA /* BMXGroupBannedMember.mm */,
+				B51454AC2407B303007BB0EA /* BMXGroupSharedFile.mm */,
+				B51454AD2407B303007BB0EA /* BMXGroupInvitation+Private.h */,
+				B51454AE2407B303007BB0EA /* BMXGroupApplication+Private.h */,
+				B51454AF2407B303007BB0EA /* BMXGroupSharedFile+Private.h */,
+				B51454B02407B303007BB0EA /* BMXCreatGroupOption+Private.h */,
+				B51454B12407B303007BB0EA /* BMXGroupBannedMember+Private.h */,
+				B51454B22407B303007BB0EA /* BMXGroupMember.mm */,
+				B51454B32407B303007BB0EA /* BMXGroupInvitation.mm */,
+				B51454B42407B303007BB0EA /* BMXGroupApplication.mm */,
+				B51454B52407B303007BB0EA /* BMXCreatGroupOption+Private.mm */,
+				B51454B62407B303007BB0EA /* BMXGroupSharedFile+Private.mm */,
+				B51454B72407B303007BB0EA /* BMXGroupMember+Private.h */,
+				B51454B82407B303007BB0EA /* BMXGroup.mm */,
+				B51454B92407B303007BB0EA /* BMXAuthQuestion.mm */,
+				B51454BA2407B303007BB0EA /* BMXGroupAnnounment.mm */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B51454DE2407B312007BB0EA /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51454DF2407B312007BB0EA /* BMXRosterService.h */,
+				B51454E02407B312007BB0EA /* RosterServiceListener.h */,
+				B51454E12407B312007BB0EA /* BMXRoster+Private.mm */,
+				B51454E22407B312007BB0EA /* BMXApplication+Private.h */,
+				B51454E32407B312007BB0EA /* BMXApplication.mm */,
+				B51454E42407B312007BB0EA /* BMXApplication+Private.mm */,
+				B51454E52407B312007BB0EA /* BMXRoster.mm */,
+				B51454E62407B312007BB0EA /* BMXRoster+Private.h */,
+				B51454E72407B312007BB0EA /* RosterServiceListener.mm */,
+				B51454E82407B312007BB0EA /* BMXRosterService.mm */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B51454F32407B31B007BB0EA /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B51454F42407B31B007BB0EA /* BMXClient.mm */,
+				B51454F52407B31B007BB0EA /* BMXDelegatesContainer.m */,
+				B51454F62407B31B007BB0EA /* BMXHostConfig+Private.h */,
+				B51454F72407B31B007BB0EA /* BMXError+Private.h */,
+				B51454F82407B31B007BB0EA /* BMXSDKConfig.mm */,
+				B51454F92407B31B007BB0EA /* BMXDefinesTransform.mm */,
+				B51454FA2407B31B007BB0EA /* BMXHostConfig+Private.mm */,
+				B51454FB2407B31B007BB0EA /* BMXHostConfig.mm */,
+				B51454FC2407B31B007BB0EA /* BMXSDKConfig+Private.mm */,
+				B51454FD2407B31B007BB0EA /* BMXStringUtil.mm */,
+				B51454FE2407B31B007BB0EA /* BMXStringUtil.h */,
+				B51454FF2407B31B007BB0EA /* BMXDelegatesContainer.h */,
+				B51455002407B31B007BB0EA /* BMXSDKConfig+Private.h */,
+				B51455012407B31B007BB0EA /* BMXService.h */,
+				B51455022407B31B007BB0EA /* BMXError+Private.mm */,
+				B51455032407B31B007BB0EA /* BMXService.mm */,
+				B51455042407B31B007BB0EA /* BMXDefinesTransform.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B51D280A24504DC700441D9E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B51D280B24504DC700441D9E /* bmx_roster_service_listener.h */,
+				B51D280C24504DC700441D9E /* bmx_image_attachment.h */,
+				B51D280D24504DC700441D9E /* bmx_user_service_listener.h */,
+				B51D280E24504DC700441D9E /* bmx_error.h */,
+				B51D280F24504DC700441D9E /* bmx_message_config.h */,
+				B51D281024504DC700441D9E /* bmx_chat_service.h */,
+				B51D281124504DC700441D9E /* bmx_result_page.h */,
+				B51D281224504DC700441D9E /* bmx_roster_item.h */,
+				B51D281324504DC700441D9E /* bmx_roster_service.h */,
+				B51D281424504DC700441D9E /* bmx_location_attachment.h */,
+				B51D281524504DC700441D9E /* bmx_video_attachment.h */,
+				B51D281624504DC700441D9E /* bmx_message_attachment.h */,
+				B51D281724504DC700441D9E /* bmx_forward_attachment.h */,
+				B51D281824504DC700441D9E /* bmx_base_object.h */,
+				B51D281924504DC700441D9E /* bmx_sdk_config.h */,
+				B51D281A24504DC700441D9E /* bmx_client.h */,
+				B51D281B24504DC700441D9E /* bmx_group_service_listener.h */,
+				B51D281C24504DC700441D9E /* bmx_file_attachment.h */,
+				B51D281D24504DC700441D9E /* bmx_user_service.h */,
+				B51D281E24504DC700441D9E /* bmx_chat_service_listener.h */,
+				B51D281F24504DC700441D9E /* bmx_device.h */,
+				B51D282024504DC700441D9E /* bmx_group.h */,
+				B51D282124504DC700441D9E /* bmx_user_profile.h */,
+				B51D282224504DC700441D9E /* bmx_defines.h */,
+				B51D282324504DC700441D9E /* bmx_voice_attachment.h */,
+				B51D282424504DC700441D9E /* bmx_message.h */,
+				B51D282524504DC700441D9E /* bmx_group_service.h */,
+				B51D282624504DC700441D9E /* bmx_network_listener.h */,
+				B51D282724504DC700441D9E /* bmx_conversation.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B5EF3A2A21FAE0F400B28908 /* floo-ios */ = {
+			isa = PBXGroup;
+			children = (
+				B5EF3A2B21FAE0F400B28908 /* AppDelegate.h */,
+				B5EF3A2C21FAE0F500B28908 /* AppDelegate.m */,
+				B5EF3A2E21FAE0F500B28908 /* ViewController.h */,
+				B5EF3A2F21FAE0F500B28908 /* ViewController.m */,
+				B5EF3A3121FAE0F500B28908 /* Main.storyboard */,
+				B5EF3A3421FAE0F600B28908 /* Assets.xcassets */,
+				B5EF3A3621FAE0F600B28908 /* LaunchScreen.storyboard */,
+				B5EF3A3921FAE0F600B28908 /* Info.plist */,
+				B5EF3A3A21FAE0F600B28908 /* main.m */,
+			);
+			path = "floo-ios";
+			sourceTree = "<group>";
+		};
+		B5EF3A4321FAE0F600B28908 /* floo-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5EF3A4421FAE0F600B28908 /* floo_iosTests.m */,
+				B5EF3A4621FAE0F600B28908 /* Info.plist */,
+			);
+			path = "floo-iosTests";
+			sourceTree = "<group>";
+		};
+		B5EF3A4E21FAE0F600B28908 /* floo-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5EF3A4F21FAE0F600B28908 /* floo_iosUITests.m */,
+				B5EF3A5121FAE0F600B28908 /* Info.plist */,
+			);
+			path = "floo-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48AFC4D421B3A2A500F4CDEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51337E7240A6BF200E1F3D9 /* BMXDevice.h in Headers */,
+				B53B22DE2433779D00DB6EB7 /* BMXRosterManager.h in Headers */,
+				B513380F240A6CBD00E1F3D9 /* BMXMessageConfig.h in Headers */,
+				B51337E8240A6BF200E1F3D9 /* BMXMessageSetting.h in Headers */,
+				B51337E9240A6C0B00E1F3D9 /* BMXChatManager.h in Headers */,
+				B51D284324504DC800441D9E /* bmx_group_service.h in Headers */,
+				B51337EA240A6C0B00E1F3D9 /* BMXChatServiceProtocol.h in Headers */,
+				B51337EB240A6C0B00E1F3D9 /* BMXConversation.h in Headers */,
+				B51D284024504DC800441D9E /* bmx_defines.h in Headers */,
+				B51337EC240A6C0B00E1F3D9 /* BMXError.h in Headers */,
+				B51337ED240A6C0B00E1F3D9 /* BMXErrorCode.h in Headers */,
+				B51337EE240A6C0B00E1F3D9 /* BMXMessageObject.h in Headers */,
+				B51D283224504DC800441D9E /* bmx_location_attachment.h in Headers */,
+				B51337EF240A6C0B00E1F3D9 /* BMXMessagePageObject.h in Headers */,
+				B51337F0240A6C1700E1F3D9 /* BMXHostConfig.h in Headers */,
+				4834D49D21B535260009EEF3 /* BMXClient.h in Headers */,
+				B51D282D24504DC800441D9E /* bmx_message_config.h in Headers */,
+				B51D283A24504DC800441D9E /* bmx_file_attachment.h in Headers */,
+				B51D283C24504DC800441D9E /* bmx_chat_service_listener.h in Headers */,
+				4834D49521B535260009EEF3 /* BMXDefines.h in Headers */,
+				B51337F1240A6C1700E1F3D9 /* BMXSDKConfig.h in Headers */,
+				B51D283B24504DC800441D9E /* bmx_user_service.h in Headers */,
+				B51337F2240A6C2400E1F3D9 /* BMXApplication.h in Headers */,
+				B51337F3240A6C2400E1F3D9 /* BMXRoster.h in Headers */,
+				B51337F5240A6C2400E1F3D9 /* BMXRosterServiceProtocol.h in Headers */,
+				B51337F6240A6C3B00E1F3D9 /* BMXGroupManager.h in Headers */,
+				B51337F8240A6C3B00E1F3D9 /* BMXGroupServiceProtocol.h in Headers */,
+				B51337F9240A6C5900E1F3D9 /* BMXAuthQuestion.h in Headers */,
+				B51337FA240A6C5900E1F3D9 /* BMXGroupAnnounment.h in Headers */,
+				B51337FB240A6C5900E1F3D9 /* BMXGroupApplication.h in Headers */,
+				B51D282E24504DC800441D9E /* bmx_chat_service.h in Headers */,
+				B51337FC240A6C5900E1F3D9 /* BMXGroupBannedMember.h in Headers */,
+				B51337FD240A6C5900E1F3D9 /* BMXGroupInvitation.h in Headers */,
+				B51337FE240A6C5900E1F3D9 /* BMXGroup.h in Headers */,
+				B51D283324504DC800441D9E /* bmx_video_attachment.h in Headers */,
+				B51337FF240A6C5900E1F3D9 /* BMXCreatGroupOption.h in Headers */,
+				B51D284524504DC800441D9E /* bmx_conversation.h in Headers */,
+				B51D283524504DC800441D9E /* bmx_forward_attachment.h in Headers */,
+				B5133800240A6C5900E1F3D9 /* BMXGroupMember.h in Headers */,
+				B5133801240A6C5900E1F3D9 /* BMXGroupSharedFile.h in Headers */,
+				B51337F7240A6C3B00E1F3D9 /* BMXGroupService.h in Headers */,
+				B5133802240A6C6200E1F3D9 /* BMXFileAttachment.h in Headers */,
+				B5133803240A6C6200E1F3D9 /* BMXImageAttachment.h in Headers */,
+				B5133804240A6C6300E1F3D9 /* BMXLocationAttachment.h in Headers */,
+				B51D282A24504DC800441D9E /* bmx_image_attachment.h in Headers */,
+				B51D282F24504DC800441D9E /* bmx_result_page.h in Headers */,
+				B513380A240A6C6B00E1F3D9 /* BMXUserService.h in Headers */,
+				B5133805240A6C6300E1F3D9 /* BMXMessageAttachment.h in Headers */,
+				B5133806240A6C6300E1F3D9 /* BMXVideoAttachment.h in Headers */,
+				B5133807240A6C6300E1F3D9 /* BMXVoiceAttachment.h in Headers */,
+				B5133808240A6C6B00E1F3D9 /* BMXUserManager.h in Headers */,
+				B5133809240A6C6B00E1F3D9 /* BMXUserProfile.h in Headers */,
+				B513380C240A6C6B00E1F3D9 /* UserServiceListener.h in Headers */,
+				B51D282924504DC800441D9E /* bmx_roster_service_listener.h in Headers */,
+				B513380B240A6C6B00E1F3D9 /* BMXUserServiceProtocol.h in Headers */,
+				B51D282B24504DC800441D9E /* bmx_user_service_listener.h in Headers */,
+				B51D283D24504DC800441D9E /* bmx_device.h in Headers */,
+				B513380D240A6CBD00E1F3D9 /* BMXNetworkManagerListener.h in Headers */,
+				B513380E240A6CBD00E1F3D9 /* BMXMessageConfig+Private.h in Headers */,
+				B5133810240A6CBD00E1F3D9 /* BMXChatService+Private.h in Headers */,
+				B5133811240A6CBD00E1F3D9 /* BMXChatService.h in Headers */,
+				B5133812240A6CBD00E1F3D9 /* ChatServiceListener.h in Headers */,
+				B5133813240A6CBD00E1F3D9 /* BMXMessageObject+Private.h in Headers */,
+				B51D283E24504DC800441D9E /* bmx_group.h in Headers */,
+				B5133814240A6CBD00E1F3D9 /* BMXConversation+Private.h in Headers */,
+				B5133815240A6CBD00E1F3D9 /* BMXHostConfig+Private.h in Headers */,
+				B5133816240A6CBD00E1F3D9 /* BMXError+Private.h in Headers */,
+				B5133817240A6CBD00E1F3D9 /* BMXStringUtil.h in Headers */,
+				B5133818240A6CBD00E1F3D9 /* BMXDelegatesContainer.h in Headers */,
+				B5133819240A6CBD00E1F3D9 /* BMXSDKConfig+Private.h in Headers */,
+				B51D284424504DC800441D9E /* bmx_network_listener.h in Headers */,
+				B51D283424504DC800441D9E /* bmx_message_attachment.h in Headers */,
+				B513381A240A6CBD00E1F3D9 /* BMXService.h in Headers */,
+				B513381B240A6CBD00E1F3D9 /* BMXDefinesTransform.h in Headers */,
+				B513381C240A6CBD00E1F3D9 /* BMXRosterService.h in Headers */,
+				B51D283F24504DC800441D9E /* bmx_user_profile.h in Headers */,
+				B513381D240A6CBD00E1F3D9 /* RosterServiceListener.h in Headers */,
+				B513381E240A6CBD00E1F3D9 /* BMXApplication+Private.h in Headers */,
+				B51D282C24504DC800441D9E /* bmx_error.h in Headers */,
+				B513381F240A6CBD00E1F3D9 /* BMXRoster+Private.h in Headers */,
+				B51D284124504DC800441D9E /* bmx_voice_attachment.h in Headers */,
+				B5133820240A6CBD00E1F3D9 /* GroupServiceListener.h in Headers */,
+				B51D283124504DC800441D9E /* bmx_roster_service.h in Headers */,
+				B5133821240A6CBD00E1F3D9 /* BMXGroup+Private.h in Headers */,
+				B5133822240A6CBD00E1F3D9 /* BMXGroupAnnounment+Private.h in Headers */,
+				B5133823240A6CBD00E1F3D9 /* BMXGroupInvitation+Private.h in Headers */,
+				B5133824240A6CBD00E1F3D9 /* BMXGroupApplication+Private.h in Headers */,
+				B5133825240A6CBD00E1F3D9 /* BMXGroupSharedFile+Private.h in Headers */,
+				B5133826240A6CBD00E1F3D9 /* BMXCreatGroupOption+Private.h in Headers */,
+				B5133827240A6CBD00E1F3D9 /* BMXGroupBannedMember+Private.h in Headers */,
+				B51D283024504DC800441D9E /* bmx_roster_item.h in Headers */,
+				B51D284224504DC800441D9E /* bmx_message.h in Headers */,
+				B5133828240A6CBD00E1F3D9 /* BMXGroupMember+Private.h in Headers */,
+				B5133829240A6CBD00E1F3D9 /* BMXMessageAttachment+Private.h in Headers */,
+				B513382A240A6CBD00E1F3D9 /* BMXDevice+Private.h in Headers */,
+				B51D283724504DC800441D9E /* bmx_sdk_config.h in Headers */,
+				B513382B240A6CBD00E1F3D9 /* BMXMessageSetting+Private.h in Headers */,
+				B51D283924504DC800441D9E /* bmx_group_service_listener.h in Headers */,
+				B51D283624504DC800441D9E /* bmx_base_object.h in Headers */,
+				B513382C240A6CBD00E1F3D9 /* BMXUserProfile+Private.h in Headers */,
+				B51D283824504DC800441D9E /* bmx_client.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		48AFC4D821B3A2A500F4CDEB /* floo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48AFC4ED21B3A2A500F4CDEB /* Build configuration list for PBXNativeTarget "floo" */;
+			buildPhases = (
+				48AFC4D421B3A2A500F4CDEB /* Headers */,
+				48AFC4D521B3A2A500F4CDEB /* Sources */,
+				48AFC4D621B3A2A500F4CDEB /* Frameworks */,
+				48AFC4D721B3A2A500F4CDEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = floo;
+			productName = floo;
+			productReference = 48AFC4D921B3A2A500F4CDEB /* floo-ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		48AFC4E121B3A2A500F4CDEB /* flooTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48AFC4F021B3A2A500F4CDEB /* Build configuration list for PBXNativeTarget "flooTests" */;
+			buildPhases = (
+				48AFC4DE21B3A2A500F4CDEB /* Sources */,
+				48AFC4DF21B3A2A500F4CDEB /* Frameworks */,
+				48AFC4E021B3A2A500F4CDEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48AFC4E521B3A2A500F4CDEB /* PBXTargetDependency */,
+			);
+			name = flooTests;
+			productName = flooTests;
+			productReference = 48AFC4E221B3A2A500F4CDEB /* flooTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5EF3A2821FAE0F400B28908 /* floo-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5EF3A5221FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-ios" */;
+			buildPhases = (
+				B5EF3A2521FAE0F400B28908 /* Sources */,
+				B5EF3A2621FAE0F400B28908 /* Frameworks */,
+				B5EF3A2721FAE0F400B28908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "floo-ios";
+			productName = "floo-ios";
+			productReference = B5EF3A2921FAE0F400B28908 /* floo-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5EF3A3F21FAE0F600B28908 /* floo-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5EF3A5521FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-iosTests" */;
+			buildPhases = (
+				B5EF3A3C21FAE0F600B28908 /* Sources */,
+				B5EF3A3D21FAE0F600B28908 /* Frameworks */,
+				B5EF3A3E21FAE0F600B28908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5EF3A4221FAE0F600B28908 /* PBXTargetDependency */,
+			);
+			name = "floo-iosTests";
+			productName = "floo-iosTests";
+			productReference = B5EF3A4021FAE0F600B28908 /* floo-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5EF3A4A21FAE0F600B28908 /* floo-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5EF3A5821FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-iosUITests" */;
+			buildPhases = (
+				B5EF3A4721FAE0F600B28908 /* Sources */,
+				B5EF3A4821FAE0F600B28908 /* Frameworks */,
+				B5EF3A4921FAE0F600B28908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5EF3A4D21FAE0F600B28908 /* PBXTargetDependency */,
+			);
+			name = "floo-iosUITests";
+			productName = "floo-iosUITests";
+			productReference = B5EF3A4B21FAE0F600B28908 /* floo-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48AFC4D021B3A2A500F4CDEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = hyt;
+				TargetAttributes = {
+					48AFC4D821B3A2A500F4CDEB = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					48AFC4E121B3A2A500F4CDEB = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					B5EF3A2821FAE0F400B28908 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B5EF3A3F21FAE0F600B28908 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B5EF3A2821FAE0F400B28908;
+					};
+					B5EF3A4A21FAE0F600B28908 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B5EF3A2821FAE0F400B28908;
+					};
+				};
+			};
+			buildConfigurationList = 48AFC4D321B3A2A500F4CDEB /* Build configuration list for PBXProject "floo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48AFC4CF21B3A2A500F4CDEB;
+			productRefGroup = 48AFC4DA21B3A2A500F4CDEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48AFC4D821B3A2A500F4CDEB /* floo */,
+				48AFC4E121B3A2A500F4CDEB /* flooTests */,
+				B5EF3A2821FAE0F400B28908 /* floo-ios */,
+				B5EF3A3F21FAE0F600B28908 /* floo-iosTests */,
+				B5EF3A4A21FAE0F600B28908 /* floo-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48AFC4D721B3A2A500F4CDEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AFC4E021B3A2A500F4CDEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A2721FAE0F400B28908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EF3A3821FAE0F600B28908 /* LaunchScreen.storyboard in Resources */,
+				B5EF3A3521FAE0F600B28908 /* Assets.xcassets in Resources */,
+				B5EF3A3321FAE0F500B28908 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A3E21FAE0F600B28908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A4921FAE0F600B28908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48AFC4D521B3A2A500F4CDEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51454CB2407B304007BB0EA /* BMXGroupSharedFile.mm in Sources */,
+				B514550B2407B31B007BB0EA /* BMXHostConfig+Private.mm in Sources */,
+				B51454D12407B304007BB0EA /* BMXGroupMember.mm in Sources */,
+				B514549D2407B2E7007BB0EA /* BMXUserProfile+Private.mm in Sources */,
+				B51454802407B2D2007BB0EA /* BMXLocationAttachment.mm in Sources */,
+				B51454EF2407B312007BB0EA /* BMXRoster.mm in Sources */,
+				B51454C92407B304007BB0EA /* BMXGroupInvitation+Private.mm in Sources */,
+				B514549A2407B2E7007BB0EA /* BMXUserService.mm in Sources */,
+				B51455052407B31B007BB0EA /* BMXClient.mm in Sources */,
+				B51454CA2407B304007BB0EA /* BMXGroupBannedMember.mm in Sources */,
+				485CBAFB21B7802C00B7DD8D /* BMXChatService.mm in Sources */,
+				B51454D42407B304007BB0EA /* BMXCreatGroupOption+Private.mm in Sources */,
+				B51454C62407B304007BB0EA /* BMXGroupApplication+Private.mm in Sources */,
+				B51454F12407B312007BB0EA /* RosterServiceListener.mm in Sources */,
+				B51454872407B2D2007BB0EA /* BMXMessageAttachment+Private.mm in Sources */,
+				B51454DB2407B304007BB0EA /* GroupServiceListener.mm in Sources */,
+				B514549C2407B2E7007BB0EA /* UserServiceListener.mm in Sources */,
+				B51455242407B338007BB0EA /* BMXError.mm in Sources */,
+				B514549B2407B2E7007BB0EA /* BMXMessageSetting+Private.mm in Sources */,
+				485CBB0C21B7802C00B7DD8D /* ChatServiceListener.mm in Sources */,
+				B514551F2407B338007BB0EA /* BMXConversation.mm in Sources */,
+				B51454812407B2D2007BB0EA /* BMXVoiceAttachment.mm in Sources */,
+				B51454842407B2D2007BB0EA /* BMXVideoAttachment.mm in Sources */,
+				B5EF3A6D21FB305000B28908 /* BMXChatService+Private.mm in Sources */,
+				B51454D72407B304007BB0EA /* BMXGroup.mm in Sources */,
+				B51454D82407B304007BB0EA /* BMXAuthQuestion.mm in Sources */,
+				B51454D22407B304007BB0EA /* BMXGroupInvitation.mm in Sources */,
+				B51454D92407B304007BB0EA /* BMXGroupAnnounment.mm in Sources */,
+				B51454962407B2E7007BB0EA /* BMXDevice+Private.mm in Sources */,
+				B51454822407B2D2007BB0EA /* BMXFileAttachment.mm in Sources */,
+				B514549E2407B2E7007BB0EA /* BMXUserProfile.mm in Sources */,
+				B51455092407B31B007BB0EA /* BMXSDKConfig.mm in Sources */,
+				B514550D2407B31B007BB0EA /* BMXSDKConfig+Private.mm in Sources */,
+				B51454852407B2D2007BB0EA /* BMXMessageAttachment.mm in Sources */,
+				B51454D52407B304007BB0EA /* BMXGroupSharedFile+Private.mm in Sources */,
+				B51455062407B31B007BB0EA /* BMXDelegatesContainer.m in Sources */,
+				B51454DC2407B304007BB0EA /* BMXGroupService.mm in Sources */,
+				B51454F22407B312007BB0EA /* BMXRosterService.mm in Sources */,
+				B514550E2407B31B007BB0EA /* BMXStringUtil.mm in Sources */,
+				B51454ED2407B312007BB0EA /* BMXApplication.mm in Sources */,
+				B51455232407B338007BB0EA /* BMXMessageConfig+Private.mm in Sources */,
+				B51454C32407B304007BB0EA /* BMXGroupBannedMember+Private.mm in Sources */,
+				B51454862407B2D2007BB0EA /* BMXImageAttachment.mm in Sources */,
+				B51454C72407B304007BB0EA /* BMXGroupMember+Private.mm in Sources */,
+				B51454C22407B304007BB0EA /* BMXGroupAnnounment+Private.mm in Sources */,
+				4834D49A21B535260009EEF3 /* BMXNetworkManagerListener.mm in Sources */,
+				B51454982407B2E7007BB0EA /* BMXMessageSetting.mm in Sources */,
+				B51455202407B338007BB0EA /* BMXMessageConfig.mm in Sources */,
+				B51454D32407B304007BB0EA /* BMXGroupApplication.mm in Sources */,
+				B51454C12407B304007BB0EA /* BMXCreatGroupOption.mm in Sources */,
+				B51454EB2407B312007BB0EA /* BMXRoster+Private.mm in Sources */,
+				B51454EE2407B312007BB0EA /* BMXApplication+Private.mm in Sources */,
+				B51454942407B2E7007BB0EA /* BMXDevice.mm in Sources */,
+				B514550C2407B31B007BB0EA /* BMXHostConfig.mm in Sources */,
+				B51455252407B338007BB0EA /* BMXMessageObject.mm in Sources */,
+				B51454C42407B304007BB0EA /* BMXGroup+Private.mm in Sources */,
+				B51455132407B31B007BB0EA /* BMXError+Private.mm in Sources */,
+				B51455222407B338007BB0EA /* BMXMessagePageObject.mm in Sources */,
+				B514550A2407B31B007BB0EA /* BMXDefinesTransform.mm in Sources */,
+				B51455142407B31B007BB0EA /* BMXService.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AFC4DE21B3A2A500F4CDEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A2521FAE0F400B28908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EF3A3021FAE0F500B28908 /* ViewController.m in Sources */,
+				B5EF3A3B21FAE0F600B28908 /* main.m in Sources */,
+				B5EF3A2D21FAE0F500B28908 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A3C21FAE0F600B28908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EF3A4521FAE0F600B28908 /* floo_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EF3A4721FAE0F600B28908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EF3A5021FAE0F600B28908 /* floo_iosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48AFC4E521B3A2A500F4CDEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48AFC4D821B3A2A500F4CDEB /* floo */;
+			targetProxy = 48AFC4E421B3A2A500F4CDEB /* PBXContainerItemProxy */;
+		};
+		B5EF3A4221FAE0F600B28908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5EF3A2821FAE0F400B28908 /* floo-ios */;
+			targetProxy = B5EF3A4121FAE0F600B28908 /* PBXContainerItemProxy */;
+		};
+		B5EF3A4D21FAE0F600B28908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5EF3A2821FAE0F400B28908 /* floo-ios */;
+			targetProxy = B5EF3A4C21FAE0F600B28908 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5EF3A3121FAE0F500B28908 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5EF3A3221FAE0F500B28908 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5EF3A3621FAE0F600B28908 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5EF3A3721FAE0F600B28908 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48AFC4EB21B3A2A500F4CDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		48AFC4EC21B3A2A500F4CDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48AFC4EE21B3A2A500F4CDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/config/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 2.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.maxim.floo;
+				PRODUCT_NAME = "floo-ios";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48AFC4EF21B3A2A500F4CDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/config/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 2.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.maxim.floo;
+				PRODUCT_NAME = "floo-ios";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48AFC4F121B3A2A500F4CDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = flooTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top..flooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48AFC4F221B3A2A500F4CDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = flooTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top..flooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5EF3A5321FAE0F600B28908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5EF3A5421FAE0F600B28908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5EF3A5621FAE0F600B28908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/floo-ios.app/floo-ios";
+			};
+			name = Debug;
+		};
+		B5EF3A5721FAE0F600B28908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/floo-ios.app/floo-ios";
+			};
+			name = Release;
+		};
+		B5EF3A5921FAE0F600B28908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-iosUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "floo-ios";
+			};
+			name = Debug;
+		};
+		B5EF3A5A21FAE0F600B28908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W99996QAJ5;
+				INFOPLIST_FILE = "floo-iosUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.maxim.floo-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "floo-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48AFC4D321B3A2A500F4CDEB /* Build configuration list for PBXProject "floo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AFC4EB21B3A2A500F4CDEB /* Debug */,
+				48AFC4EC21B3A2A500F4CDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48AFC4ED21B3A2A500F4CDEB /* Build configuration list for PBXNativeTarget "floo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AFC4EE21B3A2A500F4CDEB /* Debug */,
+				48AFC4EF21B3A2A500F4CDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48AFC4F021B3A2A500F4CDEB /* Build configuration list for PBXNativeTarget "flooTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AFC4F121B3A2A500F4CDEB /* Debug */,
+				48AFC4F221B3A2A500F4CDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5EF3A5221FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5EF3A5321FAE0F600B28908 /* Debug */,
+				B5EF3A5421FAE0F600B28908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5EF3A5521FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5EF3A5621FAE0F600B28908 /* Debug */,
+				B5EF3A5721FAE0F600B28908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5EF3A5821FAE0F600B28908 /* Build configuration list for PBXNativeTarget "floo-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5EF3A5921FAE0F600B28908 /* Debug */,
+				B5EF3A5A21FAE0F600B28908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48AFC4D021B3A2A500F4CDEB /* Project object */;
+}
