@@ -33,6 +33,7 @@ class BMXRosterService;
 class BMXGroupService;
 class BMXChatService;
 class BMXUserService;
+class BMXPushService;
 
 /**
  * @brief 客户端
@@ -80,6 +81,12 @@ public:
    * @return BMXRosterService
    **/
   virtual BMXRosterService& getRosterService() = 0;
+
+  /**
+   * @brief 获取推送Service
+   * @return BMXPushService
+   **/
+  virtual BMXPushService& getPushService() = 0;
 
   /**
    * @brief 注册新用户，username和password是必填参数
@@ -164,7 +171,7 @@ public:
    * @param appId 新变更的appId
    * @return BMXErrorCode
    **/
-  virtual BMXErrorCode changeAppId(const std::string& appId) = 0;
+  virtual BMXErrorCode changeAppId(const std::string& appId, const std::string& appSecret = "") = 0;
 
   /**
    * @brief 获取app的服务器网络配置，在初始化SDK之后登陆之前调用，可以提前获取服务器配置加快登陆速度。

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithBMXMessageSettingPtr:(floo::BMXUserProfile::MessageSetting)ptr;
 
-- (floo::BMXUserProfilePtr)getBMXMessageSettingPtr;
+- (floo::BMXUserProfile::MessageSetting)getBMXMessageSettingPtr;
 
 @end
 

@@ -23,7 +23,7 @@
 
 @interface BMXHostConfig ()
 
-@property (nonatomic,assign) floo::BMXSDKConfig::HostConfig *hostConfig;
+@property (nonatomic,assign) floo::BMXSDKConfig::HostConfig hostConfig;
 
 @end
 
@@ -32,34 +32,48 @@
 
 - (instancetype)initWithRestHostConfig:(NSString *)restHost imPort:(int)imPort imHost:(NSString *)imHost {
     if (self = [super init]) {
-      self.hostConfig = new floo::BMXSDKConfig::HostConfig([BMXStringUtil toStdString:restHost], imPort, [BMXStringUtil toStdString:imHost]);
+        self.hostConfig = floo::BMXSDKConfig::HostConfig([BMXStringUtil toStdString:imHost], imPort, [BMXStringUtil toStdString:restHost]);
     }
     return self;
 }
 
 - (void)setMPort:(int)mPort {
-    _mPort = _hostConfig->imPort;
+    _hostConfig.imPort = mPort;
 }
 
 - (void)setImHost:(NSString *)imHost {
-    _imHost = [BMXStringUtil stdToNSString:_hostConfig->imHost];
+    _hostConfig.imHost = [BMXStringUtil toStdString:imHost];
 }
 
 - (void)setRestHost:(NSString *)restHost {
-    _restHost = [BMXStringUtil stdToNSString:_hostConfig->restHost];
+    _hostConfig.restHost = [BMXStringUtil toStdString:restHost];
 }
 
+- (NSString *)restHost {
+    return [BMXStringUtil stdToNSString:_hostConfig.restHost];
+    
+}
+
+- (NSString *)imHost {
+    return [BMXStringUtil stdToNSString:_hostConfig.imHost];
+
+}
+
+- (int)mPort {
+    return _hostConfig.imPort;
+
+}
 @end
 
 @implementation BMXHostConfig (Private)
 
 - (floo::BMXSDKConfig::HostConfig)getHostConfig {
-    return *_hostConfig;
+    return _hostConfig;
 }
 
 - (instancetype)initWithBMXHostConfigPtr:(floo::BMXSDKConfig::HostConfig)hostConfig {
     if (self = [super init]) {
-        *_hostConfig = hostConfig;
+        _hostConfig = hostConfig;
     }
     return self;
 

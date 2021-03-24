@@ -52,6 +52,22 @@
     return [BMXStringUtil stdToNSString:_settingS.mPushNickname];
 }
 
+- (int)silenceStartTime {
+    return _settingS.mSilenceStartTime;
+}
+
+- (int)silenceEndTime {
+    return _settingS.mSilenceEndTime;
+}
+
+- (int)pushStartTime {
+    return _settingS.mPushStartTime;
+}
+
+- (int)mPushEndTime {
+    return _settingS.mPushEndTime;
+}
+
 @end
 
 @implementation BMXMessageSetting (Private)

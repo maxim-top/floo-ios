@@ -106,12 +106,26 @@ public:
   virtual void onReceiveDeleteMessages(const BMXMessageList& list) {}
 
   /**
+   * @brief 收到音频/视频消息已播放回执
+   * @param list 接收到的音频/视频消息已播放回执消息列表
+   **/
+  virtual void onReceivePlayAcks(const BMXMessageList& list)  {}
+
+  /**
    * @brief 附件下载状态发生变化
    * @param msg 发生下载状态变化的消息
    * @param error 状态错误码
    * @param percent 附件下载的进度
    **/
   virtual void onAttachmentStatusChanged(BMXMessagePtr msg, BMXErrorCode error, int percent)  {}
+
+  /**
+   * @brief 附件下载状态发生变化
+   * @param msgId 发生下载状态变化的消息Id
+   * @param error 状态错误码
+   * @param percent 附件下载的进度
+   **/
+  virtual void onAttachmentDownloadByUrlStatusChanged(int64_t msgId, BMXErrorCode error, int percent)  {}
 
   /**
    * @brief 拉取历史消息

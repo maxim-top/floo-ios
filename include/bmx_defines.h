@@ -104,6 +104,36 @@ enum class BMXLogLevel {
   Debug
 };
 
+/**
+ * @brief 推送的提供商类型 1-APNS，2-华为，3-小米，4-魅族，5-VIVO， 6-OPPO
+ **/
+enum class BMXPushProviderType {
+  /// 未知客户端类型
+  Unknown = 0,
+  // 苹果 APNS
+  APNS,
+  // 华为
+  HuaWei,
+  // 小米
+  XiaoMi,
+  // 魅族
+  MeiZu,
+  // VIVO
+  VIVO,
+  // OPPO
+  OPPS
+};
+
+/**
+ * @brief 推送的运行环境类型 0,开发环境 1,生产环境
+ **/
+enum class BMXPushEnvironmentType {
+  // 开发环境
+  Development = 0,
+  // 生产环境
+  Production
+};
+
 }
 
 #endif /* __bmx_defines_h__ */

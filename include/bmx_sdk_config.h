@@ -61,6 +61,30 @@ public:
                bool deliveryAck = false);
 
   /**
+   * @brief 构造函数
+   * @param type 客户端类型
+   * @param vsn 客户端OS版本
+   * @param dataDir 聊天数据存储路径
+   * @param cacheDir 缓存数据存储路径
+   * @param SDKVersion SDK版本
+   * @param pushCertName Push证书名字
+   * @param userAgent 用户代理信息
+   * @param appId 用户的appId
+   * @param appSecret 用户的appSecret（对于使用推送的用户，必须同时设置appId和appSecret）
+   * @param deliveryAck 是否发送消息送达回执
+   **/
+  BMXSDKConfig(BMXClientType type,
+               const std::string& vsn,
+               const std::string &dataDir,
+               const std::string &cacheDir,
+               const std::string &SDKVersion,
+               const std::string &pushCertName,
+               const std::string &userAgent,
+               const std::string &appId,
+               const std::string &appSecret,
+               bool deliveryAck = false);
+
+  /**
    * @brief 析构函数
    **/
   virtual ~BMXSDKConfig();
@@ -100,6 +124,12 @@ public:
    * @return std::string
    **/
   const std::string& getPushCertName();
+
+  /**
+   * @brief 设置Push证书名字
+   * @return std::string
+   **/
+  void setPushCertName(const std::string&);
 
   /**
    * @brief 获取用户代理信息
@@ -228,6 +258,42 @@ public:
   void setAppID(const std::string &appID);
 
   /**
+   * @brief 获取用户的appSecret。
+   * @return std::string
+   **/
+  std::string getAppSecret();
+
+  /**
+   * @brief 设置用户的appSecret。
+   * @param appID 用户的appSecret
+   **/
+  void setAppSecret(const std::string &appSecret);
+
+  /**
+   * @brief 获取用户的推送提供商类型。
+   * @return BMXPushProviderType
+   **/
+  BMXPushProviderType getPushProviderType();
+
+  /**
+   * @brief 设置用户的推送提供商类型。
+   * @param type 用户的推送提供商类型
+   **/
+  void setPushProviderType(BMXPushProviderType type);
+
+  /**
+   * @brief 获取用户的推送环境类型。
+   * @return BMXPushEnvironmentType
+   **/
+  BMXPushEnvironmentType getPushEnvironmentType();
+
+  /**
+   * @brief 设置用户的推送环境类型。
+   * @param type 用户的推送环境类型
+   **/
+  void setEnvironmentType(BMXPushEnvironmentType type);
+
+  /**
    * @brief 获取调试log接收着账号(仅用于SDK调试，接收客户端log日志使用)
    * @return int64_t
    **/
@@ -258,6 +324,9 @@ private:
   bool mEnableDNS;
   std::string mDNSAddress;
   std::string mAppID;
+  std::string mAppSecret;
+  BMXPushProviderType mPushProviderType;
+  BMXPushEnvironmentType mPushEnvironmentType;
   int64_t mLogReceiverId;
 };
 

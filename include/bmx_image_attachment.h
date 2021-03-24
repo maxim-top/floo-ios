@@ -38,12 +38,12 @@ public:
 
   /**
    * @brief 构造函数，构建接收图片消息附件
-   * @param url 图片服务器地址
+   * @param url  图片ratel服务器地址
    * @param size 图片的大小，宽度和高度
    * @param displayName 展示名
    * @param fileLength 文件大小
    **/
-  BMXImageAttachment(const std::string& url, const Size& size, const std::string& displayName, int64_t fileLength);
+  BMXImageAttachment(const std::string& ratelUrl, const Size& size, const std::string& displayName, int64_t fileLength);
 
   /**
    * @brief 析构函数
@@ -67,6 +67,12 @@ public:
    * @return Size
    **/
   const Size& size() const;
+
+  /**
+   * @brief 远程使用缩略图URL
+   * @return std::string
+   **/
+  const std::string& thumbnailUrl() const;
 
   /**
    * @brief 设置发送图片消息缩略图
@@ -93,6 +99,7 @@ private:
   Size mSize;
 
   //Thumbnail
+  std::string mThumbnailUrl;
   std::string mThumbnailPath;
   DownloadStatus mThumbnailDownloadStatus;
   friend class Encoder<BMXImageAttachment>;

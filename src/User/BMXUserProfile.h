@@ -112,5 +112,6 @@ typedef enum {
  */
 @property (nonatomic,assign) BOOL isAutoAcceptGroupInvite;
 
+
 @end
 

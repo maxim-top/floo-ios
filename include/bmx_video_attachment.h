@@ -49,24 +49,24 @@ public:
 
   /**
    * @brief 构造函数，构建接收视频消息附件
-   * @param url 文件服务器地址
+   * @param ratelUrl ratel文件服务器地址
    * @param duration 视频片段时长
    * @param size 视频大小，宽度和高度
    * @param displayName 文件展示名
    * @param fileLength 文件大小
    **/
-  BMXVideoAttachment(const std::string &url, int duration, const Size& size, const std::string& displayName, int64_t fileLength);
+  BMXVideoAttachment(const std::string &ratelUrl, int duration, const Size& size, const std::string& displayName, int64_t fileLength);
 
   /**
    * @brief 构造函数，构建接收视频消息附件
-   * @param url 文件服务器地址
-   * @param thumbnailUrl 缩略图文件服务器地址
+   * @param ratelUrl ratel文件服务器地址
+   * @param thumbnailRatelUrl 缩略图ratel文件服务器地址
    * @param duration 视频片段时长
    * @param size 视频大小，宽度和高度
    * @param displayName 文件展示名
    * @param fileLength 文件大小
    **/
-  BMXVideoAttachment(const std::string &url, const std::string &thumbnailUrl, int duration, const Size& size, const std::string& displayName, int64_t fileLength);
+  BMXVideoAttachment(const std::string &ratelUrl, const std::string &thumbnailRatelUrl, int duration, const Size& size, const std::string& displayName, int64_t fileLength);
 
   /**
    * @brief 析构函数
@@ -110,16 +110,22 @@ public:
   const std::string& thumbnailPath() const;
 
   /**
-   * @brief 设置发送视频片段消息缩略图服务器路径
-   * @param thumbnailUrl 视频片段消息缩略图服务器路径
-   **/
-  void setThumbnailUrl(const std::string& thumbnailUrl);
-
-  /**
-   * @brief 缩略图服务器路径
+   * @brief 远程缩略图使用URL
    * @return std::string
    **/
   const std::string& thumbnailUrl() const;
+
+  /**
+   * @brief 设置发送视频片段消息缩略图ratel服务器路径
+   * @param thumbnailRatelUrl 视频片段消息缩略图服务器路径
+   **/
+  void setThumbnailRatelUrl(const std::string& thumbnailRatelUrl);
+
+  /**
+   * @brief 缩略图ratel服务器路径
+   * @return std::string
+   **/
+  const std::string& thumbnailRatelUrl() const;
 
   /**
    * @brief 缩略图下载状态
@@ -137,6 +143,7 @@ private:
 
   //Snapshot
   std::string mThumbnailPath;
+  std::string mThumbnailRatelUrl;
   std::string mThumbnailUrl;
   DownloadStatus mThumbnailDownloadStatus;
   friend class Encoder<BMXVideoAttachment>;

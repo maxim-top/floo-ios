@@ -30,7 +30,11 @@
                    imageSize:(CGSize)imageSize
               conversationId:(NSString *)conversationId;
 
-
+- (instancetype)initWithLocalPath:(NSString *)aLocalPath
+                    thumbnailPath:(NSString *)aThumbnailPath
+                             size:(CGSize)size
+                      displayName:(NSString *)aDisplayName
+                   conversationId:(NSString *)conversationId;
 /**
  * 设置接收图片消息缩略图
  **/

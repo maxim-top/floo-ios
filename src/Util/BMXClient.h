@@ -22,6 +22,7 @@
 #import "BMXGroupManager.h"
 #import "BMXUserManager.h"
 #import "BMXSDKConfig.h"
+#import "BMXPushManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) id<BMXChatManager> chatService;
 
 @property (nonatomic, strong, readonly) id<BMXGroupManager> groupService;
+
+@property (nonatomic, strong, readonly) id<BMXPushManager> pushService;
 
 @property (nonatomic, strong) BMXSDKConfig *sdkConfig;
 
@@ -110,6 +113,10 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 - (void)signOutID:(NSInteger)userID
 ignoreUnbindDevice:(BOOL)ignoreUnbindDevice
+   completion:(void(^)(BMXError *error))aCompletionBlock;
+
+
+- (void)signOutignoreUnbindDevice:(BOOL)ignoreUnbindDevice
    completion:(void(^)(BMXError *error))aCompletionBlock;
 
 

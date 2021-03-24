@@ -133,6 +133,13 @@ public:
   virtual BMXErrorCode setPushNickname(const std::string& nickname) = 0;
 
   /**
+   * @brief 
+   * @param nickname 推送昵称
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode setPushAlias(const std::string& alias, const std::string& bmxPushToken) = 0;
+
+  /**
    * @brief 设置收到新消息是否声音提醒
    * @param enable 收到新消息是否声音提醒，true提醒，false不提醒
    * @return BMXErrorCode

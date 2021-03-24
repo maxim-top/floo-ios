@@ -30,6 +30,11 @@ static const std::string kPushMessage = "pushMessage";                  // strin
 static const std::string kSenderNickname = "senderNickname";            // string
 static const std::string kGroupAck = "groupAck";                        // bool
 static const std::string kGroupMemberList = "groupMemberList";          // vector<int64_t>
+static const std::string kIOSConfig = "ios";                            // string
+static const std::string kAndroidConfig = "android";                    // string
+static const std::string kPushShowBeginTime = "show_begin_time";        // int
+static const std::string kPushShowEndTime = "show_end_time";            // int
+static const std::string kPushTitle = "title";                          // string
 
 class BMXMessageConfig;
 typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
@@ -129,7 +134,65 @@ public:
    **/
   void clearGroupMemberList();
 
+    /**
+   * @brief 设置IOS系统配置信息
+   * @param iosConfig
+   **/
+  void setIOSConfig(const std::string& iosConfig);
 
+  /**
+   * @brief 获取IOS系统配置信息
+   * @return std::string
+   **/
+  std::string getIOSConfig();
+
+  /**
+   * @brief 设置Android系统配置信息
+   * @param androidConfig
+   **/
+  void setAndroidConfig(const std::string& androidConfig);
+
+  /**
+   * @brief 获取Android系统配置信息
+   * @return std::string
+   **/
+  std::string getAndroidConfig();
+
+  /**
+   * @brief 设置推送显示开始时间
+   * @param beginTime
+   **/
+  void setPushShowBeginTime(int beginTime);
+
+  /**
+   * @brief 获取推送显示开始时间
+   * @return int
+   **/
+  int getPushShowBeginTime();
+
+  /**
+   * @brief 设置推送显示结束时间
+   * @param endTime
+   **/
+  void setPushShowEndTime(int endTime);
+
+  /**
+   * @brief 获取推送显示结束时间
+   * @return int
+   **/
+  int getPushShowEndTime();
+
+  /**
+   * @brief 设置推送标题
+   * @param pushTitle
+   **/
+  void setPushTitle(const std::string& pushTitle);
+
+  /**
+   * @brief 获取推送标题
+   * @return std::string
+   **/
+  std::string getPushTitle();
 
   /**
    * @brief 序列化操作
@@ -153,6 +216,11 @@ private:
   std::string mPushMessage;
   std::string mSenderNickname;
   std::vector<int64_t> mGroupMemberList;
+  std::string mIOSConfig;
+  std::string mAndroidConfig;
+  int mPushShowBeginTime;
+  int mPushShowEndTime;
+  std::string mPushTitle;
 };
 
 std::string encodeBMXMessageConfig(BMXMessageConfigPtr);

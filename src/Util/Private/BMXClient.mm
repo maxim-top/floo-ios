@@ -20,7 +20,7 @@
 #import "BMXRosterService.h"
 #import "BMXGroupService.h"
 #import "BMXStringUtil.h"
-
+#import "BMXPushService.h"
 
 #include "bmx_client.h"
 #import "BMXSDKConfig.h"
@@ -49,6 +49,7 @@ static BMXClient *sharedClient = nil;
 @synthesize chatService = _chatService;
 @synthesize rosterService = _rosterService;
 @synthesize groupService = _groupService;
+@synthesize pushService = _pushService;
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -88,6 +89,7 @@ static BMXClient *sharedClient = nil;
 }
 
 - (void)initManager {
+    [self pushService];
     [self chatService];
     [self rosterService];
     [self groupService];
@@ -166,6 +168,16 @@ static BMXClient *sharedClient = nil;
     return _groupService;
 }
 
+- (id<BMXPushManager>)pushService {
+    if (!self.isInitialized) {
+        return nil;
+    }
+    if (_pushService == nil) {
+        _pushService = [[BMXPushService alloc] initWithClientPtr:clientPtr];
+    }
+    return _pushService;
+}
+
 
 - (void)signUpNewUser:(NSString *)userName
              password:(NSString *)password
@@ -213,8 +225,16 @@ static BMXClient *sharedClient = nil;
 ignoreUnbindDevice:(BOOL)ignoreUnbindDevice
        completion:(void(^)(BMXError *error))aCompletionBlock {
     [self handle:^floo::BMXErrorCode{
-        return self->clientPtr->signOut((int64_t)userID ,(bool)ignoreUnbindDevice);
+        return self->clientPtr->signOut((bool)ignoreUnbindDevice);
     } completion:aCompletionBlock];
+}
+
+- (void)signOutignoreUnbindDevice:(BOOL)ignoreUnbindDevice
+                       completion:(void(^)(BMXError *error))aCompletionBlock {
+    [self handle:^floo::BMXErrorCode{
+        return self->clientPtr->signOut((bool)ignoreUnbindDevice);
+    } completion:aCompletionBlock];
+    
 }
 
 - (void)initializeServerConfig:(BOOL)isLocal {

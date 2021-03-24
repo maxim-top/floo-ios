@@ -181,6 +181,18 @@ public:
   void setIsPlayed(bool);
 
   /**
+   * @brief 对于发送方表示是否收到了已播放回执，对于接收方表示是否发送了已播放回执
+   * @return bool
+   */
+  bool isPlayAcked();
+
+
+  /**
+   * @brief 设置已播放回执
+   */
+  void setIsPlayAcked(bool);
+
+  /**
    * @brief 是否接收的消息
    * @return bool
    */
@@ -325,6 +337,36 @@ public:
   bool groupAckReadAll();
 
   /**
+   * @brief 群消息已播放AckCount数目（仅用于音频/视频附件消息）
+   * @return int
+   */
+  int groupPlayAckCount();
+
+  /**
+   * @brief 设置消息已播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）
+   * @param count 设置群消息已读数目
+   */
+  void setGroupPlayAckCount(int count);
+
+  /**
+   * @brief 群消息未播放AckCount数目（仅用于音频/视频附件消息）
+   * @return int
+   */
+  int groupPlayAckUnreadCount();
+
+  /**
+   * @brief 设置消息未播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）
+   * @param count 设置群消息未播放数目
+   */
+  void setGroupPlayAckUnreadCount(int count);
+
+  /**
+   * @brief 群消息是否全部已播放
+   * @return bool
+   */
+  bool groupPlayAckReadAll();
+
+  /**
    * @brief 设置消息的扩散优先级，默认为0。0表示扩散，数字越小扩散的越多。
    * @brief 取值范围0-10。普通人在聊天室发送的消息级别默认为5，可以丢弃。管理员默认为0不会丢弃。其它值可以根据业务自行设置。
    * @param priority 设置群消息未读数目
@@ -336,6 +378,17 @@ public:
    * @return int
    */
   int priority();
+
+  /**
+   * @brief 设置消息是否为推送消息。
+   */
+  void setPushMessageMode(bool);
+
+  /**
+   * @brief 消息是否是推送消息
+   * @return bool
+   */
+  bool isPushMessage();
 
 public:
   /**
@@ -431,6 +484,7 @@ private:
   int64_t mClientTimestamp;
   int64_t mServerTimestamp;
   bool mIsPlayed;
+  bool mIsPlayedAcked;
   bool mIsReceiveMsg;
   bool mIsRead;
   bool mIsReadAcked;
@@ -445,7 +499,10 @@ private:
   bool mIsGroupAck;
   int mGroupAckCount;
   int mGroupAckUnreadCount;
+  int mGroupPlayAckCount;
+  int mGroupPlayAckUnreadCount;
   int mPriority;
+  bool mIsPushMessage;
   std::recursive_mutex mMutex;
 };
 

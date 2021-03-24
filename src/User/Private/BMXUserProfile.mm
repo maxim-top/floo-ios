@@ -74,13 +74,6 @@
     return nil;
 }
 
-//- (NSString *)email {
-//    if (_ptr.get() != nullptr) {
-//        return [NSString stringWithUTF8String:_ptr->email().c_str()];
-//    }
-//    return nil;
-//}
-
 - (NSString *)publicInfoJson {
     if (_ptr.get() != nullptr) {
         return [NSString stringWithUTF8String:_ptr->publicInfo().c_str()];

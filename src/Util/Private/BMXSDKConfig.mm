@@ -88,7 +88,7 @@
     return [BMXStringUtil stdToNSString:self.ptr->getSDKVersion()];
 }
 
-- (NSString *)getPushCertName {
+- (NSString *)pushCertName {
     return [BMXStringUtil stdToNSString:self.ptr->getPushCertName()];
 }
 
@@ -105,6 +105,11 @@
 }
 
 - (BMXHostConfig *)hostConfig {
+    
+//    NSString *rest = [BMXStringUtil stdToNSString:self.ptr->getHostConfig().restHost];
+//    NSString *import = [NSString stringWithFormat:@"%d", self.ptr->getHostConfig().imPort];
+//    NSString *imHost = [BMXStringUtil stdToNSString:self.ptr->getHostConfig().imHost];
+    
     return [[BMXHostConfig alloc] initWithBMXHostConfigPtr:self.ptr->getHostConfig()];
 }
 
@@ -123,6 +128,10 @@
 
 - (NSString *)appID {
     return [BMXStringUtil stdToNSString:self.ptr->getAppID()];
+}
+
+- (NSString *)appSecret {
+    return [BMXStringUtil stdToNSString:self.ptr->getAppSecret()];
 }
 
 - (NSString *)debugLogRecevierID {
@@ -172,6 +181,15 @@
 - (void)setDebugLogRecevierID:(NSString *)debugLogRecevierID {
     self.ptr->setDebugLogReceiverId((int64_t)[debugLogRecevierID integerValue]);
 }
+
+- (void)setPushCertName:(NSString *)pushCertName {
+    self.ptr->setPushCertName([BMXStringUtil toStdString:pushCertName]);
+}
+
+- (void)setAppSecret:(NSString *)appSecret {
+    self.ptr->setAppSecret([BMXStringUtil toStdString:appSecret]);
+}
+
 @end
 
 @implementation BMXSDKConfig (Private)

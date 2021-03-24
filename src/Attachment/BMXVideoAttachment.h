@@ -66,6 +66,20 @@ NS_ASSUME_NONNULL_BEGIN
                thumbnailData:(NSData *)thumbnailData
               conversationId:(NSString *)conversationId;
 
+- (instancetype)initWithLocalPath:(NSString *)aLocalPath
+                         duration:(int)duration
+                             size:(CGSize)size
+                      displayName:(NSString *)aDisplayName
+                   conversationId:(NSString *)conversationId;
+
+- (instancetype)initWithLocalPath:(NSString *)aLocalPath
+                         duration:(int)duration
+                             size:(CGSize)size
+                    thumbnailPath:(NSString *)thumbnailPath
+                      displayName:(NSString *)aDisplayName
+                   conversationId:(NSString *)conversationId;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

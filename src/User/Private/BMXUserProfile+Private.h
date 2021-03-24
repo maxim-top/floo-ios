@@ -17,10 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (floo::BMXUserProfilePtr)getBMXUserProfilePtr;
 
-//- (instancetype)initWithBMXUserAuthQuestion:(floo::BMXUserProfile::AuthQuestion)authQuestion;
-//
-//- (floo::BMXUserProfile::AuthQuestion)getBMXUserAuthQuestion;
-
 @end
 
 

@@ -68,7 +68,8 @@ public:
     int mSize;
     int64_t mCreateTime;
     int64_t mUpdateTime;
-    std::string mUrl;
+    std::string mRatelUrl;  //群共享文件Ratel服务器Url
+    std::string mUrl;       //群共享文件服务器Url
     std::string mPath;
     std::string mDisplayName;
     std::string mType;
@@ -308,7 +309,13 @@ public:
   virtual const std::string& description() = 0;
 
   /**
-   * @brief 群头像
+   * @brief 群头像Ratel服务器Url
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
+   * @brief 群头像服务器Url
    * @return std::string
    **/
   virtual std::string avatarUrl() = 0;
@@ -318,6 +325,12 @@ public:
    * @return std::string
    **/
   virtual std::string avatarPath() = 0;
+
+  /**
+   * @brief 群头像缩略图服务器Url
+   * @return std::string
+   **/
+  virtual std::string avatarThumbnailUrl() = 0;
 
   /**
    * @brief 群头像缩略图下载后的本地路径

@@ -45,11 +45,14 @@
         [aData writeToFile:localPath atomically:YES];
     }
     
-    self = [self initWithLocalPath:localPath size:imageSize  displayName:nil];
+    self = [self initWithLocalPath:localPath thumbnailPath:@"" size:imageSize displayName:nil conversationId:conversationId];
+
     if (self) {
-        NSString *thumbnailPath = [self getLocalConversationId:conversationId fileName:[NSString stringWithFormat:@"thumb_%@",fileName]];
-        [aThumbnailData writeToFile:thumbnailPath atomically:YES];
-        [self setsendThumbnailPath:thumbnailPath];
+        if (aThumbnailData.length > 0) {
+            NSString *thumbnailPath = [self getLocalConversationId:conversationId fileName:[NSString stringWithFormat:@"thumb_%@",fileName]];
+            [aThumbnailData writeToFile:thumbnailPath atomically:YES];
+            [self setsendThumbnailPath:thumbnailPath];
+        }
     }
     
     
@@ -57,15 +60,35 @@
 }
 
 - (instancetype)initWithLocalPath:(NSString *)aLocalPath
+                    thumbnailPath:(NSString *)aThumbnailPath
                              size:(CGSize)size
-                      displayName:(NSString *)aDisplayName {
+                      displayName:(NSString *)aDisplayName
+                   conversationId:(NSString *)conversationId {
     self = [super init];
     if (self) {
-        
+//
+        if (![aLocalPath containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
+            NSData *data = [NSData dataWithContentsOfFile:aLocalPath];
+            self = [self initWithData:data thumbnailData:nil imageSize:size conversationId:conversationId];
+        } else {
         floo::BMXImageAttachment::Size tSize;
         tSize.mWidth = size.width;
         tSize.mHeight = size.height;
         self.imageAttachmentPtr = floo::BMXImageAttachmentPtr(new floo::BMXImageAttachment([aLocalPath UTF8String],tSize,[BMXStringUtil toStdString:aDisplayName]));
+        }
+        if (aThumbnailPath.length > 0) {
+            if (![aLocalPath containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
+                long long time = [[NSDate date] timeIntervalSince1970] * 1000;
+                NSString *fileName = [NSString stringWithFormat:@"%lld",time];
+                NSData *data = [NSData dataWithContentsOfFile:aThumbnailPath];
+                NSString *thumbnailPath = [self getLocalConversationId:conversationId fileName:[NSString stringWithFormat:@"thumb_%@",fileName]];
+                [data writeToFile:thumbnailPath atomically:YES];
+                [self setsendThumbnailPath:thumbnailPath];
+            }else {
+                [self setsendThumbnailPath:aThumbnailPath];
+            }
+            
+        }
 //        [self setThumbnailPath:[BMXStringUtil stdToNSString:self.imageAttachmentPtr->thumbnailPath()]];
     }
     
@@ -80,6 +103,10 @@
     NSString *base = [[[BMXClient sharedClient] chatService] getAttachmentDir];
     NSString *path = [[[BMXClient sharedClient] chatService] getAttachmentDirForConversationWith:conversationId];
     return [base stringByAppendingPathComponent:[path stringByAppendingPathComponent:fileName]];
+}
+
+- (NSString *)url {
+    return [BMXStringUtil stdToNSString:self.imageAttachmentPtr->url()];
 }
 
 
@@ -122,11 +149,29 @@
 
 - (NSString *)path {
     NSString *p = [BMXStringUtil stdToNSString:self.imageAttachmentPtr->path()];
-    if (![p containsString:@"Documents/ChatData"]) {
-        return[[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:p];
-//        MAXLog(@"%@", [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:p]);
+    if (![p containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
+        return [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:p];
     }
     return p;
+}
+
+
+- (NSString *)displayName {
+    if (_imageAttachmentPtr) {
+        return [BMXStringUtil stdToNSString:self.imageAttachmentPtr->displayName()];
+    }
+    return @"";
+}
+
+- (long long)fileLength {
+    if (_imageAttachmentPtr) {
+        return (long long)self.imageAttachmentPtr->fileLength();
+    }
+    return 0;
+}
+
+- (BMXAttachmentDownloadStatus)downLoadStatus {
+    return (BMXAttachmentDownloadStatus)self.imageAttachmentPtr->downloadStatus();
 }
 
 
@@ -141,16 +186,11 @@
         if (attachmentPtr) {
             self.imageAttachmentPtr = attachmentPtr;
             NSString *path = [BMXStringUtil stdToNSString:self.imageAttachmentPtr->thumbnailPath()];
-            if (![path containsString:@"Documents/ChatData"]) {
+            if (![path containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
                 [self setReceiveThumbnailUrl:[[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:path] thumbnailSize:[self pictureSize] fileLength:100];
             }else {
                 
-                NSArray *rePathArray = [path componentsSeparatedByString:@"Documents/ChatData"];
-                NSString *rePath = [rePathArray lastObject];
-                
-                NSArray *pthArrray = [[BMXClient sharedClient].chatService.getAttachmentDir componentsSeparatedByString:@"Documents/ChatData"];
-                NSString *local = [[pthArrray firstObject] stringByAppendingString:@"Documents/ChatData"];
-                 [self setReceiveThumbnailUrl:[local stringByAppendingPathComponent:rePath] thumbnailSize:[self pictureSize] fileLength:100];
+                 [self setReceiveThumbnailUrl:path thumbnailSize:[self pictureSize] fileLength:100];
                 
             }
             

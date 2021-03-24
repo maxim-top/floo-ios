@@ -44,6 +44,11 @@ enum class BMXErrorCode {
   UserKickedByOtherDevices,
   UserAbnormal,
   UserCancel,
+  UserOldPasswordNotMatch,
+
+  PushTokenInvalid,
+  PushAliasBindByOtherUser,
+  PushAliasTokenNotMatch,
 
   InvalidVerificationCode,
   InvalidRequestParameter,
@@ -53,6 +58,10 @@ enum class BMXErrorCode {
   CurrentUserIsInBlocklist,
   AnswerFailed,
   InvalidToken,
+  InvalidFileSign,
+  InvalidFileObjectType,
+  InvalidFileUploadToType,
+  InvalidFileDownloadUrl,
 
   RosterNotFriend,
   RosterBlockListExist,
@@ -115,7 +124,17 @@ enum class BMXErrorCode {
   ServerNotAllowOpenRegister,
   ServerFireplaceUnknownError,
   ServerResponseInvalid,
-  ServerInvalidUploadUrl
+  ServerInvalidUploadUrl,
+  ServerAppLicenseInvalid,
+  ServerAppLicenseExpired,
+  ServerAppLicenseExceedLimit,
+  ServerAppIdMissing,
+  ServerAppIdInvalid,
+  ServerAppSignInvalid,
+  ServerAppNotifierNotExist,
+  ServerNoClusterInfoForClusterId,
+  ServerFileDownloadFailure,
+  ServerAppStatusNotNormal,
 };
 
 /**

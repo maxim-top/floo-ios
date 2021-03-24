@@ -37,11 +37,11 @@ public:
 
   /**
    * @brief 构造函数，构建接收文件消息附件
-   * @param url 文件服务器地址
+   * @param ratelUrl ratel文件服务器地址
    * @param displayName 文件展示名
    * @param fileLength 文件大小
    **/
-  BMXFileAttachment(const std::string &url, const std::string& displayName, int64_t fileLength);
+  BMXFileAttachment(const std::string &ratelUrl, const std::string& displayName, int64_t fileLength);
 
   /**
    * @brief 析构函数
@@ -73,7 +73,13 @@ public:
   const std::string& displayName() const;
 
   /**
-   * @brief 远程URL
+   * @brief 远程ratel使用URL
+   * @return std::string
+   **/
+  const std::string& ratelUrl() const;
+
+  /**
+   * @brief 远程使用URL
    * @return std::string
    **/
   const std::string& url() const;
@@ -93,6 +99,7 @@ public:
 protected:
   std::string mPath;
   std::string mDisplayName;
+  std::string mRatelUrl;
   std::string mUrl;
   int64_t mFileLength;
   DownloadStatus mDownloadStatus;

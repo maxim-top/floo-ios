@@ -26,19 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) int duration;
 
 
-/**
- 初始化BMXFileAttachment
 
- @param url 音频路径
- @param displayName 显示名称
- @param fileLength 文件大小
- @param duration 时长
- @return BMXFileAttachment
- */
-- (instancetype)initWithUrlStr:(NSString *)url
-                   displayName:(NSString *)displayName
-                    fileLength:(NSInteger)fileLength
-                      duration:(NSInteger)duration;
+
+
+
 
 /**
  初始化BMXFileAttachment
@@ -50,7 +41,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithPath:(NSString *)path
                  displayName:(NSString *)displayName
-                    duration:(NSInteger)duration;
+                    duration:(NSInteger)duration
+              conversationId:(NSString *)conversationId;
+
+
+   
+
+/// 初始化BMXFileAttachment
+/// @param aData 音频Data
+/// @param displayName 显示名称
+/// @param duration 时长
+/// @param conversationId 会话Id
+- (instancetype)initWithData:(NSData *)aData
+                 displayName:(NSString *)displayName
+                  fileLength:(NSInteger)fileLength
+                    duration:(NSInteger)duration
+              conversationId:(NSString *)conversationId;
 
 
 @end

@@ -51,6 +51,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,assign, readonly) BOOL mAutoDownloadAttachment;
 
+
+@property (nonatomic,assign) int silenceStartTime;
+
+@property (nonatomic, assign) int silenceEndTime;
+
+@property (nonatomic,assign) int  pushStartTime;
+
+@property (nonatomic, assign) int mPushEndTime;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

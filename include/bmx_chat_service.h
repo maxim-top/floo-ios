@@ -81,6 +81,12 @@ public:
   virtual void ackMessage(BMXMessagePtr msg) = 0;
 
   /**
+   * @brief 发送音频/视频消息已播放回执
+   * @param msg 需要发送已读回执的消息
+   **/
+  virtual void ackPlayMessage(BMXMessagePtr msg) = 0;
+
+  /**
    * @brief 标记此消息为未读，该消息同步到当前用户的所有设备
    * @param msg 需要发送消息已读取消的消息
    **/
@@ -112,6 +118,11 @@ public:
    * @param msg 需要下载附件的消息
    **/
   virtual void downloadAttachment(BMXMessagePtr msg) = 0;
+
+  /**
+   * 下载附件，下载状态变化和进度通过listener通知
+   **/
+  virtual void downloadAttachmentByUrl(int64_t msgId, const std::string &url, const std::string &path) = 0;
 
   /**
    * @brief 取消上传附件
@@ -228,6 +239,22 @@ public:
    * @return BMXErrorCode
    **/
   virtual BMXErrorCode getGroupAckMessageUnreadUserIdList(BMXMessagePtr msg, std::vector<int64_t>& groupMemberIdList) = 0;
+
+  /**
+   * @brief 获取发送的群组音频/视频消息已播放用户id列表（仅用于音频/视频消息）
+   * @param msg 需要获取已播放用户id列表的消息
+   * @param groupMemberIdList 对该条消息已播放的用户id列表，初始传入为空列表
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode getGroupPlayAckMessageUserIdList(BMXMessagePtr msg, std::vector<int64_t>& groupMemberIdList) = 0;
+
+  /**
+   * @brief 获取发送的群组音频/视频消息未播放用户id列表（仅用于音频/视频消息）
+   * @param msg 需要获取未播放用户id列表的消息
+   * @param groupMemberIdList 对该条消息未播放的用户id列表，初始传入为空列表
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode getGroupUnPlayAckMessageUserIdList(BMXMessagePtr msg, std::vector<int64_t>& groupMemberIdList) = 0;
 
   /**
    * @brief 添加聊天监听者

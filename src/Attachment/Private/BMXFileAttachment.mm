@@ -30,11 +30,19 @@
 @implementation BMXFileAttachment
 
 - (instancetype)initWithPath:(NSString *)path
-                 displayName:(NSString *)displayName {
+                 displayName:(NSString *)displayName
+              conversationId:(NSString *)conversationId {
     if (self = [super init]) {
-        std::string pathString = path ? [path cStringUsingEncoding:NSUTF8StringEncoding] : "";
-        std::string displayNameString = displayName ? [displayName cStringUsingEncoding:NSUTF8StringEncoding] : "";
-        self.core = floo::BMXFileAttachmentPtr(new floo::BMXFileAttachment(pathString, displayNameString));
+        if (![path containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
+            NSData *data = [NSData dataWithContentsOfFile:path];
+            self = [self initWithData:data displayName:displayName conversationId:conversationId];
+            
+        }else {
+            std::string pathString = path ? [path cStringUsingEncoding:NSUTF8StringEncoding] : "";
+            std::string displayNameString = displayName ? [displayName cStringUsingEncoding:NSUTF8StringEncoding] : "";
+            self.core = floo::BMXFileAttachmentPtr(new floo::BMXFileAttachment(pathString, displayNameString));
+            
+        }
         
     }
     return self;
@@ -50,7 +58,7 @@
         localPath = [self getLocalConversationId:conversationId fileName:fileName];
         [aData writeToFile:localPath atomically:YES];
     }
-    self = [self initWithPath:localPath displayName:displayName];
+    self = [self initWithPath:localPath displayName:displayName conversationId:conversationId];
     return self;
 }
 
@@ -61,27 +69,12 @@
     return [base stringByAppendingPathComponent:[path stringByAppendingPathComponent:fileName]];
 }
 
-- (instancetype)initWithUrlStr:(NSString *)url
-                   displayName:(NSString *)displayName
-                    fileLength:(NSInteger)fileLength {
-    if (self = [super init]) {
-        std::string urlString = url ? [url cStringUsingEncoding:NSUTF8StringEncoding] : "";
-        std::string displayNameString = displayName ? [displayName cStringUsingEncoding:NSUTF8StringEncoding] : "";
-        self.core = floo::BMXFileAttachmentPtr(new floo::BMXFileAttachment(urlString, displayNameString, fileLength));
-        NSString *path = [BMXStringUtil stdToNSString:self.core->path()];
-        if (![path containsString:@"Documents/ChatData"]) {
-            self.path = [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:path];
-        }
-    }
-    return self;
-}
-
 - (instancetype)initWithBMXMessageAttachment:(floo::BMXFileAttachmentPtr)attachmentPtr {
     if (self = [super init]) {
         if (attachmentPtr) {
             self.core = attachmentPtr;
             NSString *path = [BMXStringUtil stdToNSString:self.core->path()];
-            if (![path containsString:@"Documents/ChatData"]) {
+            if (![path containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
                 self.path = [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:path];
             }
         }
@@ -92,10 +85,10 @@
 
 - (NSString *)path {
     NSString *p = [BMXStringUtil stdToNSString:self.core->path()];
-    if (![p containsString:@"Documents/ChatData"]) {
-        _path = [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:p];
+    if (![p containsString:[BMXClient sharedClient].chatService.getAttachmentDir]) {
+        return [[BMXClient sharedClient].chatService.getAttachmentDir stringByAppendingPathComponent:p];
     }
-    return _path;
+    return p;
 }
 
 

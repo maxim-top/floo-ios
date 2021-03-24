@@ -61,6 +61,10 @@ public:
       mNotificationSound = true;
       mNotificationVibrate = true;
       mAutoDownloadAttachment = true;
+      mSilenceStartTime = 0;
+      mSilenceEndTime = 0;
+      mPushStartTime = 0;
+      mPushEndTime = 23;
     }
 
     // 推送设定
@@ -82,6 +86,18 @@ public:
 
     /// 收到消息时是否自动下载缩略图或者语音
     bool mAutoDownloadAttachment;
+
+    /// 推送静默起始时间
+    int mSilenceStartTime;
+
+    /// 推送静默结束时间
+    int mSilenceEndTime;
+
+    /// 允许推送起始时间
+    int mPushStartTime;
+
+    /// 允许推送结束时间
+    int mPushEndTime;
   };
 
   /**
@@ -124,7 +140,13 @@ public:
   virtual const std::string& nickname() = 0;
 
   /**
-   * @brief 用户头像
+   * @brief 用户ratel服务器头像url
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
+   * @brief 用户头像url
    * @return std::string
    **/
   virtual std::string avatarUrl() = 0;

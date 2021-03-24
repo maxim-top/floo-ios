@@ -77,6 +77,12 @@ public:
   virtual const std::string& nickname() = 0;
 
   /**
+   * @brief 好友头像Ratel服务器地址
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
    * @brief 好友头像服务器地址
    * @return std::string
    **/
@@ -87,6 +93,12 @@ public:
    * @return std::string
    **/
   virtual std::string avatarPath() = 0;
+
+  /**
+   * @brief 好友头像缩略图服务器地址
+   * @return std::string
+   **/
+  virtual std::string avatarThumbnailUrl() = 0;
 
   /**
    * @brief 好友头像缩略图本地存储路径
