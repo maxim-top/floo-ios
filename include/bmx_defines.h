@@ -105,7 +105,7 @@ enum class BMXLogLevel {
 };
 
 /**
- * @brief 推送的提供商类型 1-APNS，2-华为，3-小米，4-魅族，5-VIVO， 6-OPPO
+ * @brief 推送的提供商类型 1-APNS，2-华为，3-小米，4-魅族，5-VIVO， 6-OPPO， 7-FCM
  **/
 enum class BMXPushProviderType {
   /// 未知客户端类型
@@ -121,7 +121,9 @@ enum class BMXPushProviderType {
   // VIVO
   VIVO,
   // OPPO
-  OPPS
+  OPPS,
+  // FCM
+  FCM,
 };
 
 /**

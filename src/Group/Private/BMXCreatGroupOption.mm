@@ -52,6 +52,12 @@
     self.option->mMessage = [BMXStringUtil toStdString:message];
 }
 
+
+- (void)setIsChatroom:(BOOL)isChatroom {
+    bool tmp = isChatroom ? true : false;
+    self.option->mIsChatroom = tmp;
+}
+
 - (void)setMembers:(NSArray<BMXGroupMember *> *)members {
     std::vector<int64_t> memberlist;
     for (NSString *userId in members) {

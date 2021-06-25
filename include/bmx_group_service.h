@@ -36,13 +36,14 @@ public:
    **/
   struct CreateGroupOptions {
     CreateGroupOptions() {}
-    CreateGroupOptions(const std::string& name, const std::string& description, bool isPublic = false) :
-      mName(name), mDescription(description), mIsPublic(isPublic) {
+    CreateGroupOptions(const std::string& name, const std::string& description, bool isPublic = false, bool isChatroom = false) :
+      mName(name), mDescription(description), mIsPublic(isPublic), mIsChatroom(isChatroom) {
     }
 
     std::string mName;                          // 群组名称
     std::string mDescription;                   // 群组描述
     bool mIsPublic;                             // 是否公开群
+    bool mIsChatroom;                           // 是否创建聊天室
     std::string mMessage;                       // 建群时成员收到的邀请信息
     std::vector<int64_t> mMembers;              // 建群时添加的成员
   };

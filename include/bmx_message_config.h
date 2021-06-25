@@ -35,6 +35,8 @@ static const std::string kAndroidConfig = "android";                    // strin
 static const std::string kPushShowBeginTime = "show_begin_time";        // int
 static const std::string kPushShowEndTime = "show_end_time";            // int
 static const std::string kPushTitle = "title";                          // string
+static const std::string kSilence = "silence";                          // bool
+static const std::string kBadge = "badge";                              // int
 
 class BMXMessageConfig;
 typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
@@ -44,6 +46,17 @@ typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
  **/
 class EXPORT_API BMXMessageConfig : public BMXBaseObject {
 public:
+
+  /**
+   * @brief 当前读取的Badge数字的操作类型
+   **/
+  enum class BadgeCountType{
+    /// 读取Badge计数的操作类型为增加或减少。正数为增加负数为减少
+    Change,
+    /// 设置Badge的计数为当前的计数值
+    Set
+  };
+
   virtual ~BMXMessageConfig() {}
 
   /**
@@ -195,6 +208,24 @@ public:
   std::string getPushTitle();
 
   /**
+   * @brief 获取当前的推送消息是否是静默消息
+   * @return bool
+   **/
+  bool isSilence();
+
+  /**
+   * @brief 获取当前的推送消息中badge计数
+   * @return BadgeCountType
+   **/
+  BadgeCountType getBadgeCountType();
+
+  /**
+   * @brief 获取当前的推送消息中badge计数
+   * @return int
+   **/
+  int getBadgeCount(int count);
+
+  /**
    * @brief 序列化操作
    * @return std::string
    **/
@@ -206,8 +237,8 @@ public:
   friend BMXMessageConfigPtr decodeBMXMessageConfig(const std::string& config);
 
 private:
-  
-  BMXMessageConfig() : mMentionAll(false) {}
+
+  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0) {}
 
   std::recursive_mutex mMutex;
   bool mMentionAll;
@@ -221,6 +252,9 @@ private:
   int mPushShowBeginTime;
   int mPushShowEndTime;
   std::string mPushTitle;
+  bool mIsSilence;
+  BadgeCountType mBadgeType;
+  int mBadgeCount;
 };
 
 std::string encodeBMXMessageConfig(BMXMessageConfigPtr);

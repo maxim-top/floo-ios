@@ -72,6 +72,10 @@
     return [BMXStringUtil stdToNSString:self.ptr->getUserAgent()];
 }
 
+- (NSString *)getDBCryptoKey {
+    return [BMXStringUtil stdToNSString:self.ptr->getDBCryptoKey()];
+}
+
 - (NSString *)dataDir {
     return [NSString stringWithUTF8String:self.ptr->getDataDir().c_str()];
 }
@@ -176,6 +180,10 @@
 
 - (void)setAppID:(NSString *)appID {
     self.ptr->setAppID([BMXStringUtil toStdString:appID]);
+}
+
+- (void)setDBCryptoKey:(NSString *)cryptoKey {
+    self.ptr->setDBCryptoKey([BMXStringUtil toStdString:cryptoKey]);
 }
 
 - (void)setDebugLogRecevierID:(NSString *)debugLogRecevierID {

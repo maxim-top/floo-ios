@@ -204,10 +204,22 @@ public:
   const std::string& getDeviceUuid();
 
   /**
-   * @brief 设置设备的唯一识别码，在app卸载之前应该始终保持一致，app删除后再次安装时可以产生不同的设备识别码。用于本地数据库加密。
+   * @brief 设置设备的唯一识别码，在app卸载之前应该始终保持一致，app删除后再次安装时可以产生不同的设备识别码。
    * @param uuid 设备的唯一识别码。
    **/
   void setDeviceUuid(const std::string &uuid);
+
+  /**
+   * @brief 获取设备的本地数据库加密密钥。
+   * @return std::string
+   **/
+  const std::string& getDBCryptoKey();
+
+  /**
+   * @brief 设置本地数据库的加密密钥，在app卸载之前应该始终保持一直，app删除后再次安装时可以产生不同的密钥。用于本地数据库加密。
+   * @param cryptoKey 本地数据库的加密密钥。
+   **/
+  void setDBCryptoKey(const std::string &cryptoKey);
 
   /**
    * @brief 获取https请求是否验证服务器端证书。
@@ -320,6 +332,7 @@ private:
   HostConfig mHostConfig;
   bool mLoadAllServerConversations;
   std::string mDeviceUuid;
+  std::string mDBCryptoKey;
   bool mVerifyCertificate;
   bool mEnableDNS;
   std::string mDNSAddress;

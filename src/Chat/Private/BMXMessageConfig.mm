@@ -30,6 +30,22 @@
     return (bool)_ptr->getMentionAll();
 }
 
+- (BOOL)isSilence {
+    return (bool)_ptr->isSilence();
+}
+
+- (floo::BMXMessageConfig::BadgeCountType)getBadgeCountType {
+    return (floo::BMXMessageConfig::BadgeCountType)_ptr->getBadgeCountType();
+}
+
+- (int)getBadgeCount:(int)count {
+    if (_ptr != nullptr) {
+        return (int)_ptr->getBadgeCount(count);
+    }
+    return 0;
+}
+
+
 - (void)setMentionAll:(BOOL)mentionAll {
     self.ptr->setMentionAll((bool)mentionAll);
 }

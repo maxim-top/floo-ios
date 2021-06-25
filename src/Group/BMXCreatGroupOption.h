@@ -34,6 +34,11 @@
 @property (nonatomic,copy) NSString *groupDescription;
 
 /**
+ 是否聊天室
+ */
+@property (nonatomic, assign) BOOL isChatroom;
+
+/**
  建群时成员收到的邀请信息
  */
 @property (nonatomic,copy) NSString *message;
