@@ -4,6 +4,8 @@ Floo iOS native codes 美信拓扑IM SDK，iOS本地库
 美信拓扑IM SDK（代号 floo ）底层使用 C++ 实现，各平台（Android、iOS、Linux等）在此基础上再行封装，
 完成本地库的开发，以达到多平台复用的目的，并保持跨平台协议实现的一致性。
 
+[![Scc Count Badge](https://sloc.xyz/github/maxim-top/floo-ios/?category=total&avg-wage=1)](https://github.com/maxim-top/floo-ios/) [![Scc Count Badge](https://sloc.xyz/github/maxim-top/floo-ios/?category=code&avg-wage=1)](https://github.com/maxim-top/floo-ios/)
+
 ## 介绍
 
 整个类库库分为三部分：
