@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXChatServiceProtocol Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/conversationDidCreatedConversation:message:">- conversationDidCreatedConversation:message:</option>
+		
+		<option value="//api/name/conversationDidDeletedConversationId:error:">- conversationDidDeletedConversationId:error:</option>
+		
+		<option value="//api/name/conversationTotalCountChanged:">- conversationTotalCountChanged:</option>
+		
+		<option value="//api/name/loadAllConversationDidFinished">- loadAllConversationDidFinished</option>
+		
+		<option value="//api/name/messageAttachmentStatusDidChanged:error:percent:">- messageAttachmentStatusDidChanged:error:percent:</option>
+		
+		<option value="//api/name/messageAttachmentUploadProgressChanged:percent:">- messageAttachmentUploadProgressChanged:percent:</option>
+		
+		<option value="//api/name/messageRecallStatusDidChanged:error:">- messageRecallStatusDidChanged:error:</option>
+		
+		<option value="//api/name/messageStatusChanged:error:">- messageStatusChanged:error:</option>
+		
+		<option value="//api/name/receiveDeleteMessages:">- receiveDeleteMessages:</option>
+		
+		<option value="//api/name/receiveReadAllMessages:">- receiveReadAllMessages:</option>
+		
+		<option value="//api/name/receiveReadCancelsMessages:">- receiveReadCancelsMessages:</option>
+		
+		<option value="//api/name/receivedCommandMessages:">- receivedCommandMessages:</option>
+		
+		<option value="//api/name/receivedDeliverAcks:">- receivedDeliverAcks:</option>
+		
+		<option value="//api/name/receivedMessages:">- receivedMessages:</option>
+		
+		<option value="//api/name/receivedReadAcks:">- receivedReadAcks:</option>
+		
+		<option value="//api/name/receivedRecallMessages:">- receivedRecallMessages:</option>
+		
+		<option value="//api/name/receivedSystemMessages:">- receivedSystemMessages:</option>
+		
+		<option value="//api/name/retrieveHistoryMessagesConversation:">- retrieveHistoryMessagesConversation:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXChatServiceProtocol Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BMXChatServiceProtocol.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/messageStatusChanged:error:" title="messageStatusChanged:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageStatusChanged:error:">&ndash;&nbsp;messageStatusChanged:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息发送状态发生变化</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)messageStatusChanged:(BMXMessageObject *)<em>message</em> error:(BMXError *)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>消息发送状态发生变化</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageAttachmentUploadProgressChanged:percent:" title="messageAttachmentUploadProgressChanged:percent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageAttachmentUploadProgressChanged:percent:">&ndash;&nbsp;messageAttachmentUploadProgressChanged:percent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>附件上传进度发送变化</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)messageAttachmentUploadProgressChanged:(BMXMessageObject *)<em>message</em> percent:(int)<em>percent</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>附件上传进度发送变化</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageRecallStatusDidChanged:error:" title="messageRecallStatusDidChanged:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageRecallStatusDidChanged:error:">&ndash;&nbsp;messageRecallStatusDidChanged:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息撤回状态发送变化</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)messageRecallStatusDidChanged:(BMXMessageObject *)<em>message</em> error:(BMXError *)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>消息撤回状态发送变化</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedMessages:" title="receivedMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedMessages:">&ndash;&nbsp;receivedMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedCommandMessages:" title="receivedCommandMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedCommandMessages:">&ndash;&nbsp;receivedCommandMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到命令消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedCommandMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到命令消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedSystemMessages:" title="receivedSystemMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedSystemMessages:">&ndash;&nbsp;receivedSystemMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到系统通知消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedSystemMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到系统通知消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedReadAcks:" title="receivedReadAcks:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedReadAcks:">&ndash;&nbsp;receivedReadAcks:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到消息已读回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedReadAcks:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到消息已读回执</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedDeliverAcks:" title="receivedDeliverAcks:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedDeliverAcks:">&ndash;&nbsp;receivedDeliverAcks:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到消息已送达回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedDeliverAcks:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到消息已送达回执</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receivedRecallMessages:" title="receivedRecallMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receivedRecallMessages:">&ndash;&nbsp;receivedRecallMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到撤回消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receivedRecallMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到撤回消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receiveReadCancelsMessages:" title="receiveReadCancelsMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receiveReadCancelsMessages:">&ndash;&nbsp;receiveReadCancelsMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到消息已读取消（多设备其他设备同步消息已读状态变为未读）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receiveReadCancelsMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到消息已读取消（多设备其他设备同步消息已读状态变为未读）</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receiveReadAllMessages:" title="receiveReadAllMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receiveReadAllMessages:">&ndash;&nbsp;receiveReadAllMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到消息全部已读（多设备同步某消息之前消息全部设置为已读）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receiveReadAllMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到消息全部已读（多设备同步某消息之前消息全部设置为已读）</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/receiveDeleteMessages:" title="receiveDeleteMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/receiveDeleteMessages:">&ndash;&nbsp;receiveDeleteMessages:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到删除消息 （多设备同步删除消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)receiveDeleteMessages:(NSArray&lt;BMXMessageObject*&gt; *)<em>messages</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到删除消息 （多设备同步删除消息）</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageAttachmentStatusDidChanged:error:percent:" title="messageAttachmentStatusDidChanged:error:percent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageAttachmentStatusDidChanged:error:percent:">&ndash;&nbsp;messageAttachmentStatusDidChanged:error:percent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>附件下载状态发生变化</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)messageAttachmentStatusDidChanged:(BMXMessageObject *)<em>message</em> error:(BMXError *)<em>error</em> percent:(int)<em>percent</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>附件下载状态发生变化</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/retrieveHistoryMessagesConversation:" title="retrieveHistoryMessagesConversation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/retrieveHistoryMessagesConversation:">&ndash;&nbsp;retrieveHistoryMessagesConversation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拉取历史消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)retrieveHistoryMessagesConversation:(BMXConversation *)<em>conversation</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>拉取历史消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadAllConversationDidFinished" title="loadAllConversationDidFinished"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadAllConversationDidFinished">&ndash;&nbsp;loadAllConversationDidFinished</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>已经加载完未读会话列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadAllConversationDidFinished</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>已经加载完未读会话列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/conversationDidCreatedConversation:message:" title="conversationDidCreatedConversation:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/conversationDidCreatedConversation:message:">&ndash;&nbsp;conversationDidCreatedConversation:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地创建新会话成功</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)conversationDidCreatedConversation:(BMXConversation *)<em>conversation</em> message:(BMXMessageObject *)<em>message</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversation</code></th>
+						<td><p>新创建的本地会话</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>会话的最新消息，存在返回不存在返回为空</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>本地创建新会话成功</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/conversationDidDeletedConversationId:error:" title="conversationDidDeletedConversationId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/conversationDidDeletedConversationId:error:">&ndash;&nbsp;conversationDidDeletedConversationId:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)conversationDidDeletedConversationId:(NSInteger)<em>conversationId</em> error:(BMXError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>删除的本地会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>状态错误码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除会话</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/conversationTotalCountChanged:" title="conversationTotalCountChanged:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/conversationTotalCountChanged:">&ndash;&nbsp;conversationTotalCountChanged:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新总未读数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)conversationTotalCountChanged:(NSInteger)<em>unreadCount</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>unreadCount</code></th>
+						<td><p>未读数</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>更新总未读数</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXChatServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2021 美信拓扑. All rights reserved. Updated: 2021-06-26</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

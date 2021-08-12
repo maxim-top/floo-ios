@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXRosterServiceProtocol Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/friendAddedSponsorId:recipientId:">- friendAddedSponsorId:recipientId:</option>
+		
+		<option value="//api/name/friendAddedtoBlockListSponsorId:recipientId:">- friendAddedtoBlockListSponsorId:recipientId:</option>
+		
+		<option value="//api/name/friendDidApplicationAcceptedFromSponsorId:recipientId:">- friendDidApplicationAcceptedFromSponsorId:recipientId:</option>
+		
+		<option value="//api/name/friendDidApplicationDeclinedFromSponsorId:recipientId:reson:">- friendDidApplicationDeclinedFromSponsorId:recipientId:reson:</option>
+		
+		<option value="//api/name/friendDidRecivedAppliedSponsorId:recipientId:message:">- friendDidRecivedAppliedSponsorId:recipientId:message:</option>
+		
+		<option value="//api/name/friendRemovedFromBlockListSponsorId:recipientId:">- friendRemovedFromBlockListSponsorId:recipientId:</option>
+		
+		<option value="//api/name/friendRemovedSponsorId:recipientId:">- friendRemovedSponsorId:recipientId:</option>
+		
+		<option value="//api/name/rosterInfoDidUpdate:">- rosterInfoDidUpdate:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXRosterServiceProtocol Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BMXRosterServiceProtocol.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/friendAddedSponsorId:recipientId:" title="friendAddedSponsorId:recipientId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendAddedSponsorId:recipientId:">&ndash;&nbsp;friendAddedSponsorId:recipientId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendAddedSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>添加好友</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendRemovedSponsorId:recipientId:" title="friendRemovedSponsorId:recipientId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendRemovedSponsorId:recipientId:">&ndash;&nbsp;friendRemovedSponsorId:recipientId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<pre><code>删除好友
+</code></pre>
+
+<ul>
+<li>用户B删除与用户A的好友关系后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendRemovedSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<pre><code>删除好友
+</code></pre>
+
+<ul>
+<li>用户B删除与用户A的好友关系后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendDidRecivedAppliedSponsorId:recipientId:message:" title="friendDidRecivedAppliedSponsorId:recipientId:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendDidRecivedAppliedSponsorId:recipientId:message:">&ndash;&nbsp;friendDidRecivedAppliedSponsorId:recipientId:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>收到加好友申请</li>
+<li>用户B申请加A为好友后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendDidRecivedAppliedSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em> message:(NSString *)<em>message</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>好友邀请信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>收到加好友申请</li>
+<li>用户B申请加A为好友后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendDidApplicationAcceptedFromSponsorId:recipientId:" title="friendDidApplicationAcceptedFromSponsorId:recipientId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendDidApplicationAcceptedFromSponsorId:recipientId:">&ndash;&nbsp;friendDidApplicationAcceptedFromSponsorId:recipientId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>加好友申请被通过了</li>
+<li>用户B同意用户A的加好友请求后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendDidApplicationAcceptedFromSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>加好友申请被通过了</li>
+<li>用户B同意用户A的加好友请求后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendDidApplicationDeclinedFromSponsorId:recipientId:reson:" title="friendDidApplicationDeclinedFromSponsorId:recipientId:reson:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendDidApplicationDeclinedFromSponsorId:recipientId:reson:">&ndash;&nbsp;friendDidApplicationDeclinedFromSponsorId:recipientId:reson:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>加好友申请被拒绝了</li>
+<li>用户B拒绝用户A的加好友请求后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendDidApplicationDeclinedFromSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em> reson:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reason</code></th>
+						<td><p>拒绝理由</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>加好友申请被拒绝了</li>
+<li>用户B拒绝用户A的加好友请求后，用户A会收到这个回调</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendAddedtoBlockListSponsorId:recipientId:" title="friendAddedtoBlockListSponsorId:recipientId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendAddedtoBlockListSponsorId:recipientId:">&ndash;&nbsp;friendAddedtoBlockListSponsorId:recipientId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>添加黑名单</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendAddedtoBlockListSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>添加黑名单</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/friendRemovedFromBlockListSponsorId:recipientId:" title="friendRemovedFromBlockListSponsorId:recipientId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendRemovedFromBlockListSponsorId:recipientId:">&ndash;&nbsp;friendRemovedFromBlockListSponsorId:recipientId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>删除黑名单</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)friendRemovedFromBlockListSponsorId:(long long)<em>sponsorId</em> recipientId:(long long)<em>recipientId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sponsorId</code></th>
+						<td><p>发起方</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recipientId</code></th>
+						<td><p>接受方</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>删除黑名单</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rosterInfoDidUpdate:" title="rosterInfoDidUpdate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rosterInfoDidUpdate:">&ndash;&nbsp;rosterInfoDidUpdate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户信息更新</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)rosterInfoDidUpdate:(BMXRoster *)<em>roster</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>用户信息更新</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2021 美信拓扑. All rights reserved. Updated: 2021-06-26</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

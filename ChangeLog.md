@@ -1,0 +1,83 @@
+# floo-ios更新日志
+
+## v3.5.0 - 2021/08/05
+1. 解决bug：上传文件时multipart/formdata里的文件名错误
+
+## v3.4.0 - 2021/07/16
+
+变更：
+
+1. 各种服务监听器释放时自动从服务上移除，避免崩溃
+2. 解决bug：本地数据库从未加密版本升级到加密版本时初次运行崩溃
+
+
+## v2.2.2 - 2020/05/07
+
+变更：
+
+1. 新增BMXHostConfig的属性setter方法
+
+
+## v2.1.1 - 2020/03/27
+
+变更：
+
+1. 统一参数类型：接口参数为群组id的数组或者好友id的数组，将数组内NSString类型统一为NSNumber类型
+2. 搜索消息接口命名变更为searchMessagesByKeyWords：   
+    searchMessages -> searchMessagesByKeyWords
+
+	```
+	/**
+	 * 搜索消息
+	 **/
+	- (void)searchMessagesByKeyWords:(NSString *)keywords
+	               refTime:(NSTimeInterval)refTime
+	                  size:(NSUInteger)size
+	         directionType:(BMXMessageDirection)directionType
+	            completion:(void (^)(NSArray *array, BMXError 		*error))aCompletionBlock;
+	
+	```
+
+
+
+## v2.1.0 - 2020/03/17
+
+新增:
+
+1. 会话：新增更新会话中消息的扩展字段接口
+
+	```
+	/// 更新一条数据库存储消息的扩展字段信息
+	/// @param message 需要更改扩展信息的消息此时msg部分已经更新扩展字椴信息
+	/// @param aCompletionBlock 更新结果
+	- (void)updateMessageExtension:(BMXMessageObject *)message
+	                    completion:(void(^)(BMXError *error))aCompletionBlock;
+	```
+
+2. 命令消息：新增创建命令消息的接口
+	
+	```
+	/// 创建发送命令消息(命令消息通过content字段或者extension字段存放命令信息)
+	/// @param content 消息内容
+	/// @param fromId 消息发送者
+	/// @param toId 消息接收者
+	/// @param mtype 消息类型
+	/// @param conversationId 会话id
+	- (instancetype)initWithBMXCommandMessageText:(NSString *)content
+	                                       fromId:(long long )fromId
+	                                         toId:(long long)toId
+	                                         type:(BMXMessageType)mtype
+	                               conversationId:(long long )conversationId;
+	```
+
+3.  新增收到命令消息通知接口
+
+	```
+	/**
+	 * 收到命令消息
+	 **/
+	- (void)receivedCommandMessages:(NSArray<BMXMessageObject*> *)messages;
+	```
+	
+
+

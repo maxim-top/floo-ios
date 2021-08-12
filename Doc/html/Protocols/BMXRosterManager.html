@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXRosterManager Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/acceptRosterById:withCompletion:">- acceptRosterById:withCompletion:</option>
+		
+		<option value="//api/name/addDelegate:">- addDelegate:</option>
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/addRosterListener:">- addRosterListener:</option>
+		
+		<option value="//api/name/addToBlockList:withCompletion:">- addToBlockList:withCompletion:</option>
+		
+		<option value="//api/name/applyAddRoster:reason:completion:">- applyAddRoster:reason:completion:</option>
+		
+		<option value="//api/name/declineRosterById:withReason:completion:">- declineRosterById:withReason:completion:</option>
+		
+		<option value="//api/name/downloadAvatarWithRoster:progress:completion:">- downloadAvatarWithRoster:progress:completion:</option>
+		
+		<option value="//api/name/getApplicationListWithCursor:pageSize:completion:">- getApplicationListWithCursor:pageSize:completion:</option>
+		
+		<option value="//api/name/getBlockListforceRefresh:completion:">- getBlockListforceRefresh:completion:</option>
+		
+		<option value="//api/name/getRosterListforceRefresh:completion:">- getRosterListforceRefresh:completion:</option>
+		
+		<option value="//api/name/muteNotificationByRoster:muteNotificationStatus:completion:">- muteNotificationByRoster:muteNotificationStatus:completion:</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeRosterById:withCompletion:">- removeRosterById:withCompletion:</option>
+		
+		<option value="//api/name/removeRosterFromBlockList:withCompletion:">- removeRosterFromBlockList:withCompletion:</option>
+		
+		<option value="//api/name/removeRosterListener:">- removeRosterListener:</option>
+		
+		<option value="//api/name/searchByRoserName:forceRefresh:completion:">- searchByRoserName:forceRefresh:completion:</option>
+		
+		<option value="//api/name/searchByRosterId:forceRefresh:completion:">- searchByRosterId:forceRefresh:completion:</option>
+		
+		<option value="//api/name/searchRostersByRosterIdList:forceRefresh:completion:">- searchRostersByRosterIdList:forceRefresh:completion:</option>
+		
+		<option value="//api/name/updateItemAliasByRoster:aliasJson:completion:">- updateItemAliasByRoster:aliasJson:completion:</option>
+		
+		<option value="//api/name/updateItemExtensionByRoster:extensionJson:completion:">- updateItemExtensionByRoster:extensionJson:completion:</option>
+		
+		<option value="//api/name/updateItemLocalExtensionByRoster:localExtensionJson:completion:">- updateItemLocalExtensionByRoster:localExtensionJson:completion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXRosterManager Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BMXRosterManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRosterListforceRefresh:completion:" title="getRosterListforceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRosterListforceRefresh:completion:">&ndash;&nbsp;getRosterListforceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>获取好友列表</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getRosterListforceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( NSArray *rostIdList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>如果forceRefresh == true，则强制从服务端拉取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>好友列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>获取好友列表</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchByRosterId:forceRefresh:completion:" title="searchByRosterId:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchByRosterId:forceRefresh:completion:">&ndash;&nbsp;searchByRosterId:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过好友ID搜索</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchByRosterId:(long long)<em>rosterId</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>好友ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>好友</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>通过好友ID搜索</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchByRoserName:forceRefresh:completion:" title="searchByRoserName:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchByRoserName:forceRefresh:completion:">&ndash;&nbsp;searchByRoserName:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过好友Name搜索</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchByRoserName:(NSString *)<em>name</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>好友name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>好友</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>通过好友Name搜索</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchRostersByRosterIdList:forceRefresh:completion:" title="searchRostersByRosterIdList:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchRostersByRosterIdList:forceRefresh:completion:">&ndash;&nbsp;searchRostersByRosterIdList:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>批量搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchRostersByRosterIdList:(NSArray&lt;NSNumber*&gt; *)<em>rosterIdList</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( NSArray&lt;BMXRoster*&gt; *rosterList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterIdList</code></th>
+						<td><p>id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>如果forceRefresh == true，则强制从服务端拉取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>rosterList,error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>批量搜索用户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateItemExtensionByRoster:extensionJson:completion:" title="updateItemExtensionByRoster:extensionJson:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateItemExtensionByRoster:extensionJson:completion:">&ndash;&nbsp;updateItemExtensionByRoster:extensionJson:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateItemExtensionByRoster:(BMXRoster *)<em>roster</em> extensionJson:(NSString *)<em>extensionJson</em> completion:(void ( ^ ) ( BMXRoster *roster , NSString *extensionJson ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>更新好友扩展信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateItemLocalExtensionByRoster:localExtensionJson:completion:" title="updateItemLocalExtensionByRoster:localExtensionJson:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateItemLocalExtensionByRoster:localExtensionJson:completion:">&ndash;&nbsp;updateItemLocalExtensionByRoster:localExtensionJson:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友本地扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateItemLocalExtensionByRoster:(BMXRoster *)<em>roster</em> localExtensionJson:(NSString *)<em>localExtensionJson</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>更新好友本地扩展信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateItemAliasByRoster:aliasJson:completion:" title="updateItemAliasByRoster:aliasJson:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateItemAliasByRoster:aliasJson:completion:">&ndash;&nbsp;updateItemAliasByRoster:aliasJson:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友别名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateItemAliasByRoster:(BMXRoster *)<em>roster</em> aliasJson:(NSString *)<em>aliasJson</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>更新好友别名</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteNotificationByRoster:muteNotificationStatus:completion:" title="muteNotificationByRoster:muteNotificationStatus:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteNotificationByRoster:muteNotificationStatus:completion:">&ndash;&nbsp;muteNotificationByRoster:muteNotificationStatus:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否拒收用户消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)muteNotificationByRoster:(BMXRoster *)<em>roster</em> muteNotificationStatus:(BOOL)<em>muteNotificationStatus</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置是否拒收用户消息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getApplicationListWithCursor:pageSize:completion:" title="getApplicationListWithCursor:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getApplicationListWithCursor:pageSize:completion:">&ndash;&nbsp;getApplicationListWithCursor:pageSize:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取申请添加好友列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getApplicationListWithCursor:(NSString *)<em>cursor</em> pageSize:(int)<em>pageSize</em> completion:(void ( ^ ) ( NSArray *applicationList , NSString *cursor , int offset , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取申请添加好友列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyAddRoster:reason:completion:" title="applyAddRoster:reason:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyAddRoster:reason:completion:">&ndash;&nbsp;applyAddRoster:reason:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>申请添加好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)applyAddRoster:(long long)<em>roster</em> reason:(NSString *)<em>reason</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>申请添加好友</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeRosterById:withCompletion:" title="removeRosterById:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRosterById:withCompletion:">&ndash;&nbsp;removeRosterById:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRosterById:(long long)<em>rostId</em> withCompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除好友</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptRosterById:withCompletion:" title="acceptRosterById:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptRosterById:withCompletion:">&ndash;&nbsp;acceptRosterById:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>接受加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acceptRosterById:(NSInteger)<em>rosterId</em> withCompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>接受加好友申请</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/declineRosterById:withReason:completion:" title="declineRosterById:withReason:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineRosterById:withReason:completion:">&ndash;&nbsp;declineRosterById:withReason:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拒绝加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)declineRosterById:(NSInteger)<em>rosterId</em> withReason:(NSString *)<em>reason</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>拒绝加好友申请</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addToBlockList:withCompletion:" title="addToBlockList:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addToBlockList:withCompletion:">&ndash;&nbsp;addToBlockList:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入黑名单</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addToBlockList:(long long)<em>rosterId</em> withCompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>加入黑名单</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeRosterFromBlockList:withCompletion:" title="removeRosterFromBlockList:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRosterFromBlockList:withCompletion:">&ndash;&nbsp;removeRosterFromBlockList:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>从黑名单移除</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRosterFromBlockList:(NSInteger)<em>rostId</em> withCompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>从黑名单移除</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAvatarWithRoster:progress:completion:" title="downloadAvatarWithRoster:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAvatarWithRoster:progress:completion:">&ndash;&nbsp;downloadAvatarWithRoster:progress:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载头像</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAvatarWithRoster:(BMXRoster *)<em>roster</em> progress:(void ( ^ ) ( int progress , BMXError *error ))<em>aProgress</em> completion:(void ( ^ ) ( BMXRoster *roster , BMXError *error ))<em>aCompletion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>下载头像</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlockListforceRefresh:completion:" title="getBlockListforceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlockListforceRefresh:completion:">&ndash;&nbsp;getBlockListforceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>获取黑名单</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getBlockListforceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( NSArray *blockList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>如果forceRefresh == true，则强制从服务端拉取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>BlockList ,Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>获取黑名单</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addRosterListener:" title="addRosterListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addRosterListener:">&ndash;&nbsp;addRosterListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addRosterListener:(id&lt;BMXRosterServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>添加好友变化监听者</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeRosterListener:" title="removeRosterListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRosterListener:">&ndash;&nbsp;removeRosterListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRosterListener:(id&lt;BMXRosterServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>移除好友变化监听者</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXRosterManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2021 美信拓扑. All rights reserved. Updated: 2021-06-26</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

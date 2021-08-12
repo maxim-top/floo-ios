@@ -17,8 +17,11 @@
 #include "bmx_message.h"
 #include "bmx_conversation.h"
 #include "bmx_error.h"
+#include "bmx_chat_service.h"
 
 namespace floo {
+
+class BMXChatService;
 
 /**
  * @brief 聊天监听者
@@ -26,9 +29,18 @@ namespace floo {
 class EXPORT_API BMXChatServiceListener {
 public:
   /**
+   * @brief 构造函数
+   **/
+  BMXChatServiceListener() : mService(nullptr) {}
+
+  /**
    * @brief 析构函数
    **/
-  virtual ~BMXChatServiceListener() {}
+  virtual ~BMXChatServiceListener() {
+    if (mService != nullptr) {
+      mService->removeChatListener(this);
+    }
+  }
 
   /**
    * @brief 消息发送状态发生变化
@@ -157,6 +169,18 @@ public:
    * @param unreadCount 本地全部会话未读总数
    **/
   virtual void onTotalUnreadCountChanged(int unreadCount) {}
+
+public:
+  /**
+   * @brief 注册BMXChatServiceListener绑定到的BMXChatService（SDK内部自动注册）
+   * @param service BMXChatService
+   **/
+  void registerChatService(BMXChatService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXChatService* mService;
 };
 
 }

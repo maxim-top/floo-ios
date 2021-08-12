@@ -15,8 +15,11 @@
 #define bmx_roster_service_listener_h
 
 #include "bmx_roster_item.h"
+#include "bmx_roster_service.h"
 
 namespace floo {
+
+class BMXRosterService;
 
 /**
  * @brief 好友变化监听者
@@ -24,9 +27,18 @@ namespace floo {
 class EXPORT_API BMXRosterServiceListener {
 public:
   /**
+   * @brief 构造函数
+   **/
+  BMXRosterServiceListener() : mService(nullptr) {}
+
+  /**
    * @brief 析构函数
    **/
-  virtual ~BMXRosterServiceListener() {}
+  virtual ~BMXRosterServiceListener() {
+    if (mService != nullptr) {
+      mService->removeRosterListener(this);
+    }
+  }
 
   /**
    * @brief 添加好友
@@ -89,6 +101,18 @@ public:
    * @brief 客户端从服务器拉取到新联系人时触发，用于用户联系人列表更新，从SDK调用本地获取联系人即可取得全部成员信息
    **/
   virtual void onRosterListUpdate() {}
+
+public:
+  /**
+   * @brief 注册BMXRosterServiceListener绑定到的BMXRosterService（SDK内部自动注册）
+   * @param service BMXRosterService
+   **/
+  void registerRosterService(BMXRosterService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXRosterService* mService;
 };
 
 }

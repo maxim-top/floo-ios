@@ -18,15 +18,30 @@
 #include "bmx_defines.h"
 #include "bmx_user_profile.h"
 #include "bmx_error.h"
+#include "bmx_user_service.h"
 
 namespace floo {
+
+class BMXUserService;
 
 /**
  * @brief 用户状态监听者
  **/
 class EXPORT_API BMXUserServiceListener {
 public:
-  virtual ~BMXUserServiceListener() {}
+  /**
+   * @brief 构造函数
+   **/
+  BMXUserServiceListener() : mService(nullptr) {}
+
+  /**
+   * @brief 析构函数
+   **/
+  virtual ~BMXUserServiceListener() {
+    if (mService != nullptr) {
+      mService->removeUserListener(this);
+    }
+  }
 
   /**
    * @brief 链接状态发生变化
@@ -63,6 +78,18 @@ public:
    * @param deviceSN 设备序列号
    **/
   virtual void onOtherDeviceSingOut(int deviceSN) {}
+
+public:
+  /**
+   * @brief 注册BMXUserServiceListener绑定到的BMXUserService（SDK内部自动注册）
+   * @param service BMXUserService
+   **/
+  void registerUserService(BMXUserService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXUserService* mService;
 };
 
 }

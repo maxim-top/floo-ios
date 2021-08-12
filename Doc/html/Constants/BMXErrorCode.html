@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXErrorCode Constants Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXErrorCode Constants Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>BMXErrorCode.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    <h3 class="subsubtitle method-title">BMXErrorCode</h3>
+                    
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSUInteger, BMXErrorCode ) {<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXNoError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGeneralError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXInvalidParam</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXNotFound</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserNotLogin</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserAlreadyLogin</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserAuthFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserPermissionDenied</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserNotExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserAlreadyExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserFrozen</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserBanned</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserRemoved</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserTooManyDevice</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserPasswordChanged</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserKickedBySameDevice</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserKickedByOtherDevices</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserAbnormal</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXUserCancel</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXInvalidVerificationCode</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXInvalidRequestParameter</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXInvalidUserNameParameter</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMissingAccessToken</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXCurrentUserIsInRoster</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXCurrentUserIsInBlocklist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXAnswerFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXInvalidToken</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXRosterNotFriend</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXRosterBlockListExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXRosterRejectApplication</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupServerDbError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupNotExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupNotMemberFound</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupMsgNotifyTypeUnknown</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupOwnerCannotLeave</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupTransferNotAllowed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupRecoveryMode</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupExceedLimitGlobal</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupExceedLimitUserCreate</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupExceedLimitUserJoin</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupCapacityExceedLimit</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupMemberPermissionRequired</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupAdminPermissionRequired</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupOwnerPermissionRequired</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupApplicationExpiredOrHandled</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupInvitationExpiredOrHandled</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupKickTooManyTimes</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupMemberExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupBlockListExist</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupAnnouncementNotFound</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupAnnouncementForbidden</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupSharedFileNotFound</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupSharedFileOperateNotAllowed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXGroupMemberBanned</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXSignInCancelled</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXSignInTimeout</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXSignInFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXDbOperationFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMessageInvalid</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMessageOutRecallTime</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMessageRecallDisabled</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMessageCensored</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXMessageInvalidType</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerNotReachable</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerUnknownError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerInvalid</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerDecryptionFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerEncryptMethodUnsupported</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerBusy</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerNeedRetry</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerTimeOut</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerConnectFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerDNSFailed</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerNeedReconnected</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerFileUploadUnknownError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerFileDownloadUnknownError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerInvalidLicense</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerLicenseLimit</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerAppFrozen</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerTooManyRequest</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerNotAllowOpenRegister</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerFireplaceUnknownError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerResponseInvalid</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">BMXServerInvalidUploadUrl</a>,<br>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="BMXNoError"></a><code>BMXNoError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGeneralError"></a><code>BMXGeneralError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXInvalidParam"></a><code>BMXInvalidParam</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXNotFound"></a><code>BMXNotFound</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserNotLogin"></a><code>BMXUserNotLogin</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserAlreadyLogin"></a><code>BMXUserAlreadyLogin</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserAuthFailed"></a><code>BMXUserAuthFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserPermissionDenied"></a><code>BMXUserPermissionDenied</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserNotExist"></a><code>BMXUserNotExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserAlreadyExist"></a><code>BMXUserAlreadyExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserFrozen"></a><code>BMXUserFrozen</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserBanned"></a><code>BMXUserBanned</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserRemoved"></a><code>BMXUserRemoved</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserTooManyDevice"></a><code>BMXUserTooManyDevice</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserPasswordChanged"></a><code>BMXUserPasswordChanged</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserKickedBySameDevice"></a><code>BMXUserKickedBySameDevice</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserKickedByOtherDevices"></a><code>BMXUserKickedByOtherDevices</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserAbnormal"></a><code>BMXUserAbnormal</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXUserCancel"></a><code>BMXUserCancel</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXInvalidVerificationCode"></a><code>BMXInvalidVerificationCode</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXInvalidRequestParameter"></a><code>BMXInvalidRequestParameter</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXInvalidUserNameParameter"></a><code>BMXInvalidUserNameParameter</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMissingAccessToken"></a><code>BMXMissingAccessToken</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXCurrentUserIsInRoster"></a><code>BMXCurrentUserIsInRoster</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXCurrentUserIsInBlocklist"></a><code>BMXCurrentUserIsInBlocklist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXAnswerFailed"></a><code>BMXAnswerFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXInvalidToken"></a><code>BMXInvalidToken</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXRosterNotFriend"></a><code>BMXRosterNotFriend</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXRosterBlockListExist"></a><code>BMXRosterBlockListExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXRosterRejectApplication"></a><code>BMXRosterRejectApplication</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupServerDbError"></a><code>BMXGroupServerDbError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupNotExist"></a><code>BMXGroupNotExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupNotMemberFound"></a><code>BMXGroupNotMemberFound</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupMsgNotifyTypeUnknown"></a><code>BMXGroupMsgNotifyTypeUnknown</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupOwnerCannotLeave"></a><code>BMXGroupOwnerCannotLeave</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupTransferNotAllowed"></a><code>BMXGroupTransferNotAllowed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupRecoveryMode"></a><code>BMXGroupRecoveryMode</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupExceedLimitGlobal"></a><code>BMXGroupExceedLimitGlobal</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupExceedLimitUserCreate"></a><code>BMXGroupExceedLimitUserCreate</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupExceedLimitUserJoin"></a><code>BMXGroupExceedLimitUserJoin</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupCapacityExceedLimit"></a><code>BMXGroupCapacityExceedLimit</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupMemberPermissionRequired"></a><code>BMXGroupMemberPermissionRequired</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupAdminPermissionRequired"></a><code>BMXGroupAdminPermissionRequired</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupOwnerPermissionRequired"></a><code>BMXGroupOwnerPermissionRequired</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupApplicationExpiredOrHandled"></a><code>BMXGroupApplicationExpiredOrHandled</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupInvitationExpiredOrHandled"></a><code>BMXGroupInvitationExpiredOrHandled</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupKickTooManyTimes"></a><code>BMXGroupKickTooManyTimes</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupMemberExist"></a><code>BMXGroupMemberExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupBlockListExist"></a><code>BMXGroupBlockListExist</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupAnnouncementNotFound"></a><code>BMXGroupAnnouncementNotFound</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupAnnouncementForbidden"></a><code>BMXGroupAnnouncementForbidden</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupSharedFileNotFound"></a><code>BMXGroupSharedFileNotFound</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupSharedFileOperateNotAllowed"></a><code>BMXGroupSharedFileOperateNotAllowed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXGroupMemberBanned"></a><code>BMXGroupMemberBanned</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXSignInCancelled"></a><code>BMXSignInCancelled</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXSignInTimeout"></a><code>BMXSignInTimeout</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXSignInFailed"></a><code>BMXSignInFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXDbOperationFailed"></a><code>BMXDbOperationFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMessageInvalid"></a><code>BMXMessageInvalid</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMessageOutRecallTime"></a><code>BMXMessageOutRecallTime</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMessageRecallDisabled"></a><code>BMXMessageRecallDisabled</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMessageCensored"></a><code>BMXMessageCensored</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXMessageInvalidType"></a><code>BMXMessageInvalidType</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerNotReachable"></a><code>BMXServerNotReachable</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerUnknownError"></a><code>BMXServerUnknownError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerInvalid"></a><code>BMXServerInvalid</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerDecryptionFailed"></a><code>BMXServerDecryptionFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerEncryptMethodUnsupported"></a><code>BMXServerEncryptMethodUnsupported</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerBusy"></a><code>BMXServerBusy</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerNeedRetry"></a><code>BMXServerNeedRetry</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerTimeOut"></a><code>BMXServerTimeOut</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerConnectFailed"></a><code>BMXServerConnectFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerDNSFailed"></a><code>BMXServerDNSFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerNeedReconnected"></a><code>BMXServerNeedReconnected</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerFileUploadUnknownError"></a><code>BMXServerFileUploadUnknownError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerFileDownloadUnknownError"></a><code>BMXServerFileDownloadUnknownError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerInvalidLicense"></a><code>BMXServerInvalidLicense</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerLicenseLimit"></a><code>BMXServerLicenseLimit</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerAppFrozen"></a><code>BMXServerAppFrozen</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerTooManyRequest"></a><code>BMXServerTooManyRequest</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerNotAllowOpenRegister"></a><code>BMXServerNotAllowOpenRegister</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerFireplaceUnknownError"></a><code>BMXServerFireplaceUnknownError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerResponseInvalid"></a><code>BMXServerResponseInvalid</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="BMXServerInvalidUploadUrl"></a><code>BMXServerInvalidUploadUrl</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">BMXErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                    
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2021 美信拓扑. All rights reserved. Updated: 2021-06-26</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

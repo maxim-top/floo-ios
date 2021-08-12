@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXGroupServiceProtocol Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/groupAdminsAddedGroup:members:">- groupAdminsAddedGroup:members:</option>
+		
+		<option value="//api/name/groupAdminsRemovedFromGroup:members:reason:">- groupAdminsRemovedFromGroup:members:reason:</option>
+		
+		<option value="//api/name/groupAnnouncementUpdate:announcement:">- groupAnnouncementUpdate:announcement:</option>
+		
+		<option value="//api/name/groupApplicationAccepted:approver:">- groupApplicationAccepted:approver:</option>
+		
+		<option value="//api/name/groupApplicationDeclined:approver:reason:">- groupApplicationDeclined:approver:reason:</option>
+		
+		<option value="//api/name/groupDidCreated:">- groupDidCreated:</option>
+		
+		<option value="//api/name/groupDidRecieveApplied:applicantId:message:">- groupDidRecieveApplied:applicantId:message:</option>
+		
+		<option value="//api/name/groupDidRecieveInviter:groupId:message:">- groupDidRecieveInviter:groupId:message:</option>
+		
+		<option value="//api/name/groupInfoDidUpdate:updateInfoType:">- groupInfoDidUpdate:updateInfoType:</option>
+		
+		<option value="//api/name/groupInvitationAccepted:inviteeId:">- groupInvitationAccepted:inviteeId:</option>
+		
+		<option value="//api/name/groupInvitationDeclined:inviteeId:reason:">- groupInvitationDeclined:inviteeId:reason:</option>
+		
+		<option value="//api/name/groupLeft:reason:">- groupLeft:reason:</option>
+		
+		<option value="//api/name/groupMemberDidChangeNickName:memberId:nickName:">- groupMemberDidChangeNickName:memberId:nickName:</option>
+		
+		<option value="//api/name/groupMemberJoined:memberId:inviter:">- groupMemberJoined:memberId:inviter:</option>
+		
+		<option value="//api/name/groupMemberLeft:memberId:reason:">- groupMemberLeft:memberId:reason:</option>
+		
+		<option value="//api/name/groupMembersMutedGroup:members:duration:">- groupMembersMutedGroup:members:duration:</option>
+		
+		<option value="//api/name/groupMembersUnMutedGroup:Unmuted:">- groupMembersUnMutedGroup:Unmuted:</option>
+		
+		<option value="//api/name/groupOwnerAssigned:">- groupOwnerAssigned:</option>
+		
+		<option value="//api/name/groupShareFileDidUpdated:sharedFile:">- groupShareFileDidUpdated:sharedFile:</option>
+		
+		<option value="//api/name/groupSharedFileDeleted:sharedFile:">- groupSharedFileDeleted:sharedFile:</option>
+		
+		<option value="//api/name/groupSharedFileUploaded:sharedFile:">- groupSharedFileUploaded:sharedFile:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXGroupServiceProtocol Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BMXGroupServiceProtocol.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/groupDidCreated:" title="groupDidCreated:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupDidCreated:">&ndash;&nbsp;groupDidCreated:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>多设备同步创建群组</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupDidCreated:(BMXGroup *)<em>group</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>多设备同步创建群组</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupLeft:reason:" title="groupLeft:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupLeft:reason:">&ndash;&nbsp;groupLeft:reason:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>退出了某群</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupLeft:(BMXGroup *)<em>group</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>退出了某群</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupDidRecieveInviter:groupId:message:" title="groupDidRecieveInviter:groupId:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupDidRecieveInviter:groupId:message:">&ndash;&nbsp;groupDidRecieveInviter:groupId:message:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到入群邀请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupDidRecieveInviter:(NSInteger)<em>inviter</em> groupId:(NSInteger)<em>groupId</em> message:(NSString *)<em>message</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到入群邀请</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupInvitationAccepted:inviteeId:" title="groupInvitationAccepted:inviteeId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInvitationAccepted:inviteeId:">&ndash;&nbsp;groupInvitationAccepted:inviteeId:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>入群邀请被接受</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupInvitationAccepted:(BMXGroup *)<em>group</em> inviteeId:(NSInteger)<em>inviteeId</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>入群邀请被接受</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupInvitationDeclined:inviteeId:reason:" title="groupInvitationDeclined:inviteeId:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInvitationDeclined:inviteeId:reason:">&ndash;&nbsp;groupInvitationDeclined:inviteeId:reason:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>入群申请被拒绝</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupInvitationDeclined:(BMXGroup *)<em>group</em> inviteeId:(NSInteger)<em>inviteeId</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>入群申请被拒绝</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupDidRecieveApplied:applicantId:message:" title="groupDidRecieveApplied:applicantId:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupDidRecieveApplied:applicantId:message:">&ndash;&nbsp;groupDidRecieveApplied:applicantId:message:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到入群申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupDidRecieveApplied:(BMXGroup *)<em>group</em> applicantId:(NSInteger)<em>applicantId</em> message:(NSString *)<em>message</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到入群申请</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupApplicationAccepted:approver:" title="groupApplicationAccepted:approver:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupApplicationAccepted:approver:">&ndash;&nbsp;groupApplicationAccepted:approver:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>入群申请被接受</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupApplicationAccepted:(BMXGroup *)<em>group</em> approver:(NSInteger)<em>approver</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>入群申请被接受</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupApplicationDeclined:approver:reason:" title="groupApplicationDeclined:approver:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupApplicationDeclined:approver:reason:">&ndash;&nbsp;groupApplicationDeclined:approver:reason:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>入群申请被拒绝</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupApplicationDeclined:(BMXGroup *)<em>group</em> approver:(NSInteger)<em>approver</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>入群申请被拒绝</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupMembersMutedGroup:members:duration:" title="groupMembersMutedGroup:members:duration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupMembersMutedGroup:members:duration:">&ndash;&nbsp;groupMembersMutedGroup:members:duration:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群成员被禁言</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupMembersMutedGroup:(BMXGroup *)<em>group</em> members:(NSArray&lt;NSNumber*&gt; *)<em>members</em> duration:(NSInteger)<em>duration</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>群成员被禁言</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupMembersUnMutedGroup:Unmuted:" title="groupMembersUnMutedGroup:Unmuted:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupMembersUnMutedGroup:Unmuted:">&ndash;&nbsp;groupMembersUnMutedGroup:Unmuted:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群成员被解除禁言</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupMembersUnMutedGroup:(BMXGroup *)<em>group</em> Unmuted:(NSArray&lt;NSNumber*&gt; *)<em>members</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>群成员被解除禁言</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupMemberJoined:memberId:inviter:" title="groupMemberJoined:memberId:inviter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupMemberJoined:memberId:inviter:">&ndash;&nbsp;groupMemberJoined:memberId:inviter:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入新成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupMemberJoined:(BMXGroup *)<em>group</em> memberId:(NSInteger)<em>memberId</em> inviter:(NSInteger)<em>inviter</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>加入新成员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupMemberLeft:memberId:reason:" title="groupMemberLeft:memberId:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupMemberLeft:memberId:reason:">&ndash;&nbsp;groupMemberLeft:memberId:reason:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群成员退出</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupMemberLeft:(BMXGroup *)<em>group</em> memberId:(NSInteger)<em>memberId</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>群成员退出</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAdminsAddedGroup:members:" title="groupAdminsAddedGroup:members:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAdminsAddedGroup:members:">&ndash;&nbsp;groupAdminsAddedGroup:members:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加了新管理员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupAdminsAddedGroup:(BMXGroup *)<em>group</em> members:(NSArray&lt;NSNumber*&gt; *)<em>members</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>添加了新管理员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAdminsRemovedFromGroup:members:reason:" title="groupAdminsRemovedFromGroup:members:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAdminsRemovedFromGroup:members:reason:">&ndash;&nbsp;groupAdminsRemovedFromGroup:members:reason:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除了管理员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupAdminsRemovedFromGroup:(BMXGroup *)<em>group</em> members:(NSArray&lt;NSNumber*&gt; *)<em>members</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>移除了管理员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupOwnerAssigned:" title="groupOwnerAssigned:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupOwnerAssigned:">&ndash;&nbsp;groupOwnerAssigned:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>成为群主</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupOwnerAssigned:(BMXGroup *)<em>group</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>成为群主</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupInfoDidUpdate:updateInfoType:" title="groupInfoDidUpdate:updateInfoType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInfoDidUpdate:updateInfoType:">&ndash;&nbsp;groupInfoDidUpdate:updateInfoType:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群组信息变更</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupInfoDidUpdate:(BMXGroup *)<em>group</em> updateInfoType:(BMXGroupUpdateInfoType)<em>type</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>群组信息变更</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupMemberDidChangeNickName:memberId:nickName:" title="groupMemberDidChangeNickName:memberId:nickName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupMemberDidChangeNickName:memberId:nickName:">&ndash;&nbsp;groupMemberDidChangeNickName:memberId:nickName:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群成员更改群内昵称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupMemberDidChangeNickName:(BMXGroup *)<em>group</em> memberId:(long long)<em>memberId</em> nickName:(NSString *)<em>nickName</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>群成员更改群内昵称</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAnnouncementUpdate:announcement:" title="groupAnnouncementUpdate:announcement:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAnnouncementUpdate:announcement:">&ndash;&nbsp;groupAnnouncementUpdate:announcement:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到群公告</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupAnnouncementUpdate:(BMXGroup *)<em>group</em> announcement:(BMXGroupAnnounment *)<em>announcement</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到群公告</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupSharedFileUploaded:sharedFile:" title="groupSharedFileUploaded:sharedFile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupSharedFileUploaded:sharedFile:">&ndash;&nbsp;groupSharedFileUploaded:sharedFile:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收到共享文件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupSharedFileUploaded:(BMXGroup *)<em>group</em> sharedFile:(BMXGroupSharedFile *)<em>sharedFile</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>收到共享文件</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupSharedFileDeleted:sharedFile:" title="groupSharedFileDeleted:sharedFile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupSharedFileDeleted:sharedFile:">&ndash;&nbsp;groupSharedFileDeleted:sharedFile:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除了共享文件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupSharedFileDeleted:(BMXGroup *)<em>group</em> sharedFile:(BMXGroupSharedFile *)<em>sharedFile</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除了共享文件</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupShareFileDidUpdated:sharedFile:" title="groupShareFileDidUpdated:sharedFile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupShareFileDidUpdated:sharedFile:">&ndash;&nbsp;groupShareFileDidUpdated:sharedFile:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>共享文件更新文件名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)groupShareFileDidUpdated:(BMXGroup *)<em>group</em> sharedFile:(BMXGroupSharedFile *)<em>sharedFile</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>共享文件更新文件名</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BMXGroupServiceProtocol.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2021 美信拓扑. All rights reserved. Updated: 2021-06-26</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

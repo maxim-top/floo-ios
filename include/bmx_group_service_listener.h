@@ -15,8 +15,11 @@
 #define bmx_group_service_listener_h
 
 #include "bmx_group.h"
+#include "bmx_group_service.h"
 
 namespace floo {
+
+class BMXGroupService;
 
 /**
  * @brief 群组变化监听者
@@ -24,9 +27,18 @@ namespace floo {
 class EXPORT_API BMXGroupServiceListener {
 public:
   /**
+   * @brief 构造函数
+  **/
+  BMXGroupServiceListener() : mService(nullptr) {}
+
+  /**
    * @brief 析构函数
    **/
-  virtual ~BMXGroupServiceListener() {}
+  virtual ~BMXGroupServiceListener() {
+    if (mService != nullptr) {
+      mService->removeGroupListener(this);
+    }
+  }
 
   /**
    * @brief 多设备同步创建群组
@@ -212,6 +224,18 @@ public:
    * @brief 客户端从服务器拉取到新群组时触发，用于用户群组列表更新，从SDK调用本地获取群组即可取得全部成员信息
    **/
   virtual void onGroupListUpdate() {}
+
+public:
+  /**
+   * @brief 注册BMXGroupServiceListener绑定到的BMXGroupService（SDK内部自动注册）
+   * @param service BMXGroupService
+   **/
+  void registerGroupService(BMXGroupService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXGroupService* mService;
 };
 
 }

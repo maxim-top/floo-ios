@@ -53,9 +53,12 @@
               conversationId:(NSString *)conversationId {
     NSString *localPath = nil;
     long long time = [[NSDate date] timeIntervalSince1970] * 1000;
-    NSString *fileName = [NSString stringWithFormat:@"%lld-%@",time,displayName];
     if ([aData length]) {
-        localPath = [self getLocalConversationId:conversationId fileName:fileName];
+        NSString *dirName = [NSString stringWithFormat:@"%lld",time];
+        NSString *dir = [self getLocalConversationId:conversationId fileName:dirName];
+        localPath = [NSString stringWithFormat:@"%@/%@",dir,displayName];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
         [aData writeToFile:localPath atomically:YES];
     }
     self = [self initWithPath:localPath displayName:displayName conversationId:conversationId];

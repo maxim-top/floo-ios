@@ -16,15 +16,28 @@
 
 #include "bmx_message.h"
 #include "bmx_error.h"
+#include "bmx_push_service.h"
 
 namespace floo {
 
+class BMXPushService;
+
 class EXPORT_API BMXPushServiceListener {
 public:
+
+  /**
+   * @brief 构造函数
+   **/
+  BMXPushServiceListener() : mService(nullptr) {}
+
   /**
    * @brief 析构函数
    **/
-  virtual ~BMXPushServiceListener() {}
+  virtual ~BMXPushServiceListener() {
+    if (mService != nullptr) {
+      mService->removePushListener(this);
+    }
+  }
 
   /**
    * @brief Push初始化完成通知。
@@ -79,6 +92,18 @@ public:
    * @param error 状态错误码
    **/
   virtual void onStatusChanged(BMXMessagePtr msg, BMXErrorCode error) {}
+
+public:
+  /**
+   * @brief 注册BMXPushServiceListener绑定到的BMXPushService（SDK内部自动注册）
+   * @param service BMXPushService
+   **/
+  void registerPushService(BMXPushService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXPushService* mService;
 };
 
 }
