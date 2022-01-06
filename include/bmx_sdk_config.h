@@ -138,6 +138,18 @@ public:
   const std::string& getUserAgent();
 
   /**
+   * @brief 发送消息的config中是否携带
+   * @return bool
+   **/
+  bool carryUsernameInMessage();
+
+  /**
+   * @brief 设置发送消息的config中是否携带用户名
+   * @param bool 设置是否在送消息的config中携带用户名
+   **/
+  void setCarryUsernameInMessage(bool);
+
+  /**
    * @brief 是否发送消息送达回执
    * @return bool
    **/
@@ -328,6 +340,7 @@ private:
   bool mConsoleOutput;
   std::string mPushCertName;
   std::string mUserAgent;
+  bool mCarryUsername;
   bool mEnableDeliveryAck;
   HostConfig mHostConfig;
   bool mLoadAllServerConversations;

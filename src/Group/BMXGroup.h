@@ -66,6 +66,7 @@ typedef enum {
     BMXGroupUpdateInfoTypeMsgMuteMode,          // 修改是否提醒消息
     BMXGroupUpdateInfoTypeReadAckMode,          // 是否开启群消息已读功能
     BMXGroupUpdateInfoTypeHistoryVisibleMode,   // 新群成员是否可见群历史聊天记录
+    BMXGroupUpdateInfoTypeBanExpireTime,        // 群组全员禁言到期时间
     
 } BMXGroupUpdateInfoType;
 
@@ -233,6 +234,11 @@ typedef enum {
 @property (nonatomic,assign,readonly) BOOL isMember;
 
 @property (nonatomic,assign) BMXGroupMemberRoleType roleType;
+/**
+ * 全群禁言到期时间
+ **/
+@property (nonatomic,assign, readonly) long long banExpireTime;
+
 
 @end
 

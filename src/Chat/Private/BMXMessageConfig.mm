@@ -89,6 +89,13 @@
     return [BMXStringUtil stdToNSString:_ptr->getSenderNickname()];
 }
 
+- (NSString*)username{
+    if (_ptr == nullptr) {
+        return @"";
+    }
+    return [BMXStringUtil stdToNSString:_ptr->getUsername()];
+}
+
 - (void)setSenderName:(NSString *)senderName {
     self.ptr->setSenderNickname([BMXStringUtil toStdString:senderName]);
 }

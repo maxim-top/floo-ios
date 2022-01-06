@@ -38,6 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,assign) BOOL enableDeliveryAck;
 
+/**
+ * 获取和设置是否在消息config字段里携带username功能（方便在未获取到对方user info时展示其用户名），默认是关闭的。
+ **/
+@property (nonatomic,assign) BOOL carryUsernameInMessage;
+
 @property (nonatomic, assign, readonly) BMXLogLevel logoLevelType;
 
 @property (nonatomic, assign) BOOL consoleOutput;

@@ -228,7 +228,9 @@ public:
     /// 是否开启群消息已读功能
     ReadAckMode,
     /// 新群成员是否可见群历史聊天记录
-    HistoryVisibleMode
+    HistoryVisibleMode,
+    /// 群组全员禁言到期时间
+    BanExpireTime,
   };
 
   /**
@@ -458,6 +460,12 @@ public:
    * @return MemberRoleType
    **/
   virtual MemberRoleType roleType() = 0;
+
+  /**
+   * @brief 群组全员禁言到期时间
+   * @return int64_t
+   **/
+  virtual int64_t banExpireTime() = 0;
 
 protected:
   BMXGroup() {}

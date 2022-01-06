@@ -52,7 +52,7 @@
     return nil;
 }
 
-- (NSString *)description {
+- (NSString *)groupDescription {
     if (_ptr.get() != nullptr) {
         return [BMXStringUtil stdToNSString:_ptr->description()];
     }
@@ -171,6 +171,12 @@
     return (BOOL)_ptr->isMember();
 }
 
+- (long long)banExpireTime {
+    if (_ptr.get() != nullptr) {
+        return (long long)_ptr->banExpireTime();
+    }
+    return 0;
+}
 
 @end
 

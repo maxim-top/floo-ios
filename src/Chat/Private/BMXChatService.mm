@@ -142,6 +142,22 @@
         self->clientPtr->getChatService().downloadThumbnail([message getMessagePtr], (floo::BMXChatService::ThumbnailStrategy)strategy);
 }
 
+
+/**
+ *  发送送达回执
+ **/
+- (void)ackMessageDelivered:(BMXMessageObject *)message {
+        self->clientPtr->getChatService().ackMessageDelivered([message getMessagePtr]);
+}
+
+/**
+ *  上传或下载中的文件数
+ **/
+- (int)transferingNum{
+    return self->clientPtr->getChatService().transferingNum();
+}
+
+
 /**
  * 下载附件，下载状态变化和进度通过listener通知
  **/

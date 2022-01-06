@@ -149,6 +149,13 @@
     return 0;
 }
 
+- (long long)clientMsgId {
+    if (self.messagePtr != nullptr) {
+        return (long long)self.messagePtr->clientMsgId();
+    }
+    return 0;
+}
+
 - (void)setDeliverystatus:(BMXDeliveryStatus)deliverystatus {
     self.messagePtr->setDeliveryStatus((floo::BMXMessage::DeliveryStatus)deliverystatus);
 }
@@ -195,6 +202,9 @@
 
 - (BMXMessageConfig *)messageconfig {
     floo::BMXMessageConfigPtr ptr = _messagePtr->config();
+    if (ptr == nullptr) {
+        return nil;
+    }
     BMXMessageConfig *config = [[BMXMessageConfig alloc] initWithBMXMessageConfigPtr:ptr];
     return config;
 }

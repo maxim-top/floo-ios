@@ -299,12 +299,27 @@ public:
   virtual BMXErrorCode banMembers(BMXGroupPtr group, const std::vector<int64_t>& members, int64_t duration, const std::string& reason = "") = 0;
 
   /**
+   * @brief 全员禁言，当前服务器时间加上禁言时长后计算出全员禁言到期时间（只有管理和群主可以发言）
+   * @param group 进行操作的群组
+   * @param duration 禁言时长(分钟)
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode banGroup(BMXGroupPtr group, int64_t duration) = 0;
+
+  /**
    * @brief 解除禁言
    * @param group 进行操作的群组
    * @param members 被解除禁言的群成员id列表
    * @return BMXErrorCode
    **/
   virtual BMXErrorCode unbanMembers(BMXGroupPtr group, const std::vector<int64_t>& members) = 0;
+
+  /**
+   * @brief 全员解除禁言
+   * @param group 进行操作的群组
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode unbanGroup(BMXGroupPtr group) = 0;
 
   /**
    * @brief 分页获取禁言列表

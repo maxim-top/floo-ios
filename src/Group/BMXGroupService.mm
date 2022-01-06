@@ -475,6 +475,19 @@
     } completion:aCompletionBlock];
 }
 
+- (void)banGroup:(BMXGroup *)group
+          duration:(long long)duration
+        completion:(void(^)(BMXError *error))aCompletionBlock {
+    if (!group) {
+        BMXError *error = [BMXError errorCode:BMXInvalidParam];
+        aCompletionBlock(error);
+    }
+    [self handleGroupRequest:^floo::BMXErrorCode(floo::BMXGroupPtr &groupPtr) {
+        return self->clientPtr->getGroupService().banGroup([group getBMXGroupPtr],
+                                                                          int64_t(duration));
+    } completion:aCompletionBlock];
+}
+
 - (void)unbanMembersByGroup:(BMXGroup *)group
                      members:(NSArray <NSNumber *>*)members
                       reason:(NSString *)reason
@@ -492,6 +505,17 @@
                                                           bannedMembers);
     } completion:aCompletionBlock];
     
+}
+
+- (void)unbanGroup:(BMXGroup *)group
+        completion:(void(^)(BMXError *error))aCompletionBlock {
+    if (!group) {
+        BMXError *error = [BMXError errorCode:BMXInvalidParam];
+        aCompletionBlock(error);
+    }
+    [self handleGroupRequest:^floo::BMXErrorCode(floo::BMXGroupPtr &groupPtr) {
+        return self->clientPtr->getGroupService().unbanGroup([group getBMXGroupPtr]);
+    } completion:aCompletionBlock];
 }
 
 /**

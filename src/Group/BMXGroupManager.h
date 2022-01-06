@@ -302,11 +302,24 @@
          completion:(void(^)(BMXError *error))aCompletionBlock;
 
 /**
+ * 全员禁言
+ **/
+- (void)banGroup:(BMXGroup *)group
+           duration:(long long)duration
+         completion:(void(^)(BMXError *error))aCompletionBlock;
+
+/**
  * 解除禁言
  **/
 - (void)unbanMembersByGroup:(BMXGroup *)group
                      members:(NSArray <NSNumber *>*)members
                       reason:(NSString *)reason
+                  completion:(void(^)(BMXError *error))aCompletionBlock;
+
+/**
+ * 解除全员禁言
+ **/
+- (void)unbanGroup:(BMXGroup *)group
                   completion:(void(^)(BMXError *error))aCompletionBlock;
 
 /**

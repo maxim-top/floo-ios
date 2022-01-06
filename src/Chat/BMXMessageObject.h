@@ -58,6 +58,8 @@ typedef enum {
 
 @property (nonatomic, assign, readonly) long long msgId;
 
+@property (nonatomic, assign, readonly) long long clientMsgId;
+
 @property (nonatomic, assign, readonly) long long fromId;
 
 @property (nonatomic, assign, readonly) long long toId;

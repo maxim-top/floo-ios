@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addGroupMember:(NSString *)rosterId;
 - (void)removeGroupMember:(NSString *)rosterId;
 - (void)clealerGroupMemberList;
+- (NSString*)username;
 
 @end
 

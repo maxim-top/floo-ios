@@ -81,6 +81,11 @@ public:
   virtual void ackMessage(BMXMessagePtr msg) = 0;
 
   /**
+   * 发送送达回执
+   **/
+  virtual void ackMessageDelivered(BMXMessagePtr msg) = 0;
+
+  /**
    * @brief 发送音频/视频消息已播放回执
    * @param msg 需要发送已读回执的消息
    **/
@@ -135,6 +140,12 @@ public:
    * @param msg 需要取消下载附件的消息
    **/
   virtual void cancelDownloadAttachment(BMXMessagePtr msg) = 0;
+
+  /**
+     * @brief 上传或下载中的文件数
+     * @return 文件数
+   **/
+  virtual int transferingNum() = 0;
 
   /**
    * @brief 插入消息

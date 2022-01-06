@@ -142,7 +142,7 @@ enum class BMXErrorCode {
  * @param errorCode 错误码
  * @return std::string
  **/
-std::string getErrorMessage(BMXErrorCode errorCode);
+EXPORT_API std::string getErrorMessage(BMXErrorCode errorCode);
 
 class BMXError {
 public:

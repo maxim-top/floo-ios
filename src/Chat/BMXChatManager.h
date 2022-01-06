@@ -79,6 +79,16 @@ typedef enum {
 - (void)ackMessage:(BMXMessageObject *)message;
 
 /**
+ *  发送送达回执
+ **/
+- (void)ackMessageDelivered:(BMXMessageObject *)message;
+
+/**
+ *  上传或下载中的文件数
+ **/
+- (int)transferingNum;
+
+/**
  * 标记此消息为未读，该消息同步到当前用户的所有设备
  **/
 - (void)readCancel:(BMXMessageObject *)message;

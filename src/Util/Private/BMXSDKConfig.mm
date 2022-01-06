@@ -64,6 +64,10 @@
     return (BOOL)self.ptr->enableDeliveryAck();
 }
 
+- (BOOL)carryUsernameInMessage {
+    return (BOOL)self.ptr->carryUsernameInMessage();
+}
+
 - (BOOL)consoleOutput {
     return (BOOL)self.ptr->getConsoleOutput();
 }
@@ -144,6 +148,10 @@
 
 - (void)setEnableDeliveryAck:(BOOL)enableDeliveryAck {
     self.ptr -> setEnableDeliveryAck((bool)enableDeliveryAck);
+}
+
+- (void)setCarryUsernameInMessage:(BOOL)carryUsernameInMessage {
+    self.ptr -> setCarryUsernameInMessage((bool)carryUsernameInMessage);
 }
 
 - (void)setLogoLevelType:(BMXLogLevel)logoLevelType {

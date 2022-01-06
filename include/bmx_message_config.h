@@ -37,6 +37,7 @@ static const std::string kPushShowEndTime = "show_end_time";            // int
 static const std::string kPushTitle = "title";                          // string
 static const std::string kSilence = "silence";                          // bool
 static const std::string kBadge = "badge";                              // int
+static const std::string kUsername = "username";                        // string
 
 class BMXMessageConfig;
 typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
@@ -226,6 +227,18 @@ public:
   int getBadgeCount(int count);
 
   /**
+  * @brief 设置用户名
+  * @param username
+  **/
+  void setUsername(const std::string& username);
+
+  /**
+  * @brief 获得用户名
+  * @return std::string
+  **/
+  std::string getUsername();
+
+  /**
    * @brief 序列化操作
    * @return std::string
    **/
@@ -238,7 +251,7 @@ public:
 
 private:
 
-  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0) {}
+  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0),mUsername("") {}
 
   std::recursive_mutex mMutex;
   bool mMentionAll;
@@ -255,6 +268,7 @@ private:
   bool mIsSilence;
   BadgeCountType mBadgeType;
   int mBadgeCount;
+  std::string mUsername;
 };
 
 std::string encodeBMXMessageConfig(BMXMessageConfigPtr);
