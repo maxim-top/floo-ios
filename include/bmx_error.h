@@ -23,13 +23,17 @@ namespace floo {
  * @brief 错误码
  **/
 enum class BMXErrorCode {
-  NoError,
+  NoError = 0,
 
   GeneralError,
   InvalidParam,
   NotFound,
+  DbOperationFailed,
+  SignInCancelled,
+  SignInTimeout,
+  SignInFailed,
 
-  UserNotLogin,
+  UserNotLogin = 100,
   UserAlreadyLogin,
   UserAuthFailed,
   UserPermissionDenied,
@@ -46,11 +50,11 @@ enum class BMXErrorCode {
   UserCancel,
   UserOldPasswordNotMatch,
 
-  PushTokenInvalid,
+  PushTokenInvalid = 200,
   PushAliasBindByOtherUser,
   PushAliasTokenNotMatch,
 
-  InvalidVerificationCode,
+  InvalidVerificationCode = 300,
   InvalidRequestParameter,
   InvalidUserNameParameter,
   MissingAccessToken,
@@ -63,11 +67,17 @@ enum class BMXErrorCode {
   InvalidFileUploadToType,
   InvalidFileDownloadUrl,
 
-  RosterNotFriend,
+  MessageInvalid = 400,
+  MessageOutRecallTime,
+  MessageRecallDisabled,
+  MessageCensored,
+  MessageInvalidType,
+
+  RosterNotFriend = 500,
   RosterBlockListExist,
   RosterRejectApplication,
 
-  GroupServerDbError,
+  GroupServerDbError = 600,
   GroupNotExist,
   GroupNotMemberFound,
   GroupMsgNotifyTypeUnknown,
@@ -92,19 +102,7 @@ enum class BMXErrorCode {
   GroupSharedFileOperateNotAllowed,
   GroupMemberBanned,
 
-  SignInCancelled,
-  SignInTimeout,
-  SignInFailed,
-
-  DbOperationFailed,
-
-  MessageInvalid,
-  MessageOutRecallTime,
-  MessageRecallDisabled,
-  MessageCensored,
-  MessageInvalidType,
-
-  ServerNotReachable,
+  ServerNotReachable = 700,
   ServerUnknownError,
   ServerInvalid,
   ServerDecryptionFailed,

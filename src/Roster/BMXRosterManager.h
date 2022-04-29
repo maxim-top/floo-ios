@@ -158,6 +158,7 @@
  * 下载头像
  **/
 - (void)downloadAvatarWithRoster:(BMXRoster *)roster
+                        isThumbnail:(BOOL)isThumbnail
                         progress:(void(^)(int progress, BMXError *error))aProgress
                       completion:(void(^)(BMXRoster *roster, BMXError *error))aCompletion;
 /**

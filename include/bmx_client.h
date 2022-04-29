@@ -34,6 +34,7 @@ class BMXGroupService;
 class BMXChatService;
 class BMXUserService;
 class BMXPushService;
+class BMXRTCService;
 
 /**
  * @brief 客户端
@@ -87,6 +88,12 @@ public:
    * @return BMXPushService
    **/
   virtual BMXPushService& getPushService() = 0;
+
+  /**
+   * @brief 获取BMXRTCService对象
+   * @return BMXRTCService
+   **/
+  virtual BMXRTCService& getRTCService() = 0;
 
   /**
    * @brief 注册新用户，username和password是必填参数

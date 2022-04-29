@@ -105,6 +105,9 @@ typedef enum {
     BMXGroupTypeChatroom,
 } BMXGroupType;
 
+/**
+ * 群
+ **/
 @interface BMXGroup : NSObject
 /**
  * 群Id
@@ -159,8 +162,6 @@ typedef enum {
  **/
 @property (nonatomic, copy, readonly) NSString *jsonextension;
 
-
-@property (nonatomic, strong, readonly) BMXGroupSharedFile *shareFile;
 
 /**
  * 群成员

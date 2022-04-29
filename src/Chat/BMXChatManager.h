@@ -31,7 +31,9 @@ typedef enum {
 @class BMXMessagePageObject;
 
 
-
+/**
+ * 聊天管理器
+ **/
 @protocol BMXChatManager <NSObject>
 
 @required

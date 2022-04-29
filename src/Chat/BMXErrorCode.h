@@ -13,13 +13,17 @@
 // ----------------------------------------------------------------------
 
 typedef NS_ENUM(NSUInteger, BMXErrorCode) {
-    BMXNoError,
+    BMXNoError = 0,
     
     BMXGeneralError,
     BMXInvalidParam,
     BMXNotFound,
+    BMXDbOperationFailed,
+    BMXSignInCancelled,
+    BMXSignInTimeout,
+    BMXSignInFailed,
 
-    BMXUserNotLogin,
+    BMXUserNotLogin = 100,
     BMXUserAlreadyLogin,
     BMXUserAuthFailed,
     BMXUserPermissionDenied,
@@ -34,8 +38,13 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXUserKickedByOtherDevices,
     BMXUserAbnormal,
     BMXUserCancel,
-    
-    BMXInvalidVerificationCode,
+    BMXUserOldPasswordNotMatch,
+
+    BMXPushTokenInvalid = 200,
+    BMXPushAliasBindByOtherUser,
+    BMXPushAliasTokenNotMatch,
+
+    BMXInvalidVerificationCode = 300,
     BMXInvalidRequestParameter,
     BMXInvalidUserNameParameter,
     BMXMissingAccessToken,
@@ -43,12 +52,22 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXCurrentUserIsInBlocklist,
     BMXAnswerFailed,
     BMXInvalidToken,
-    
-    BMXRosterNotFriend,
+    BMXInvalidFileSign,
+    BMXInvalidFileObjectType,
+    BMXInvalidFileUploadToType,
+    BMXInvalidFileDownloadUrl,
+
+    BMXMessageInvalid = 400,
+    BMXMessageOutRecallTime,
+    BMXMessageRecallDisabled,
+    BMXMessageCensored,
+    BMXMessageInvalidType,
+
+    BMXRosterNotFriend = 500,
     BMXRosterBlockListExist,
     BMXRosterRejectApplication,
-    
-    BMXGroupServerDbError,
+
+    BMXGroupServerDbError = 600,
     BMXGroupNotExist,
     BMXGroupNotMemberFound,
     BMXGroupMsgNotifyTypeUnknown,
@@ -73,19 +92,7 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXGroupSharedFileOperateNotAllowed,
     BMXGroupMemberBanned,
 
-    BMXSignInCancelled,
-    BMXSignInTimeout,
-    BMXSignInFailed,
-    
-    BMXDbOperationFailed,
-    
-    BMXMessageInvalid,
-    BMXMessageOutRecallTime,
-    BMXMessageRecallDisabled,
-    BMXMessageCensored,
-    BMXMessageInvalidType,
-    
-    BMXServerNotReachable,
+    BMXServerNotReachable = 700,
     BMXServerUnknownError,
     BMXServerInvalid,
     BMXServerDecryptionFailed,
@@ -105,7 +112,17 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXServerNotAllowOpenRegister,
     BMXServerFireplaceUnknownError,
     BMXServerResponseInvalid,
-    BMXServerInvalidUploadUrl
+    BMXServerInvalidUploadUrl,
+    BMXServerAppLicenseInvalid,
+    BMXServerAppLicenseExpired,
+    BMXServerAppLicenseExceedLimit,
+    BMXServerAppIdMissing,
+    BMXServerAppIdInvalid,
+    BMXServerAppSignInvalid,
+    BMXServerAppNotifierNotExist,
+    BMXServerNoClusterInfoForClusterId,
+    BMXServerFileDownloadFailure,
+    BMXServerAppStatusNotNormal,
 
 };
 

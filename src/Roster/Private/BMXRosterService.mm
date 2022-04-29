@@ -170,11 +170,12 @@
 }
 
 - (void)downloadAvatarWithRoster:(BMXRoster *)roster
-                         progress:(void(^)(int progress, BMXError *error))aProgress
-                       completion:(void(^)(BMXRoster *roster, BMXError *error))aCompletion {
+                     isThumbnail:(BOOL)isThumbnail
+                        progress:(void(^)(int progress, BMXError *error))aProgress
+                      completion:(void(^)(BMXRoster *roster, BMXError *error))aCompletion {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        floo::BMXErrorCode code = self->clientPtr->getRosterService().downloadAvatar([roster getBMXRosterPtr], true,[=](int percent){
+        floo::BMXErrorCode code = self->clientPtr->getRosterService().downloadAvatar([roster getBMXRosterPtr], isThumbnail,[=](int percent){
             dispatch_async(dispatch_get_main_queue(), ^{
                 aProgress(percent, nil);
             });

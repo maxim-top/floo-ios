@@ -28,6 +28,9 @@ typedef NS_ENUM(NSUInteger, BMXAttachmentDownloadStatus) {
 
 };
 
+/**
+ * 消息附件
+ **/
 @interface BMXMessageAttachment : NSObject
 
 @property (nonatomic) CGSize size;

@@ -63,7 +63,7 @@
 /**
  群扩展信息
  */
-@property (nonatomic,copy) NSString *extion;
+@property (nonatomic,copy) NSString *extension;
 
 
 /**

@@ -44,7 +44,7 @@ typedef enum {
 @property (nonatomic,copy, readonly) NSString *nickName;
 
 /**
- 好友头像
+ 好友头像地址
  */
 @property (nonatomic,copy, readonly) NSString *avatarUrl;
 

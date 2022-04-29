@@ -369,7 +369,7 @@ public:
   /**
    * @brief 设置消息的扩散优先级，默认为0。0表示扩散，数字越小扩散的越多。
    * @brief 取值范围0-10。普通人在聊天室发送的消息级别默认为5，可以丢弃。管理员默认为0不会丢弃。其它值可以根据业务自行设置。
-   * @param priority 设置群消息未读数目
+   * @param priority 优先级
    */
   void setPriority(int priority);
 

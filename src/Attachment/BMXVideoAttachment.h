@@ -19,6 +19,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * 视频消息附件
+ **/
 @interface BMXVideoAttachment : BMXFileAttachment
 
 /**
