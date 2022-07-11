@@ -89,7 +89,9 @@ enum class BMXSignInStatus {
   /// 未登录状态
   SignOut,
   /// 登录状态
-  SignIn
+  SignIn,
+    /// 登录中
+  SigningIn,
 };
 
 /**

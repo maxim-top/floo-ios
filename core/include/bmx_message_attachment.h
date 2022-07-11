@@ -20,37 +20,53 @@
 
 namespace floo {
 
+/**
+ * @brief 消息附件
+ **/
 class EXPORT_API BMXMessageAttachment : public BMXBaseObject
 {
 public:
 
   /**
-   * 附件类型
+   * @brief 附件类型
    **/
   enum class Type
   {
-    Image = 1,      // 图片
-    Voice,          // 语音
-    Video,          // 视频片段
-    File,           // 文件
-    Location,       // 位置
-    Command,        // 命令消息
-    Forward,        // 转发消息
+    /// 图片
+    Image = 1,
+    /// 语音
+    Voice,
+    /// 视频片段
+    Video,
+    /// 文件
+    File,
+    /// 位置
+    Location,
+    /// 命令消息
+    Command,
+    /// 转发消息
+    Forward,
   };
 
   /**
-   * 附件下载状态
+   * @brief 附件下载状态
    **/
   enum class DownloadStatus
   {
-    Downloaing,     // 下载中
-    Successed,      // 下载成功
-    Failed,         // 下载失败
-    NotStart        // 下载尚未开始
+    /// 下载中
+    Downloaing,
+    /// 下载成功
+    Successed,
+    /// 下载失败
+    Failed,
+    /// 下载尚未开始
+    NotStart,
+    /// 下载被取消
+    Canceled,
   };
 
   /**
-   * 图片/视频大小
+   * @brief 图片/视频大小
    **/
   struct Size
   {
@@ -60,22 +76,24 @@ public:
   };
 
   /**
-   * 构造函数
+   * @brief 构造函数
    **/
   BMXMessageAttachment() {}
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXMessageAttachment() {}
 
   /**
-   * 附件类型
+   * @brief 附件类型
+   * @return Type
    **/
   virtual Type type() const = 0;
 
   /**
-   * 复制附件
+   * @brief 复制附件
+   * @return BMXMessageAttachmentPtr
    **/
   virtual std::shared_ptr<BMXMessageAttachment> clone() const = 0;
 

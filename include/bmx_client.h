@@ -145,6 +145,13 @@ public:
   virtual BMXErrorCode signOut(int64_t uid = 0, bool ignoreUnbindDevice = false) = 0;
 
   /**
+   * @brief 删除账号
+   * @param password 密码
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode deleteAccount(std::string password) = 0;
+
+  /**
    * @brief 获取当前和服务器的连接状态
    * @return BMXConnectStatus
    **/

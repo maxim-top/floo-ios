@@ -100,7 +100,7 @@
     return [BMXStringUtil stdToNSString:self.ptr->getPushCertName()];
 }
 
-- (BMXLogLevel)logoLevelType {
+- (BMXLogLevel)logLevelType {
     return [BMXDefinesTransform transformBMXLogLevel:self.ptr->getLogLevel()];
 }
 
@@ -154,8 +154,8 @@
     self.ptr -> setCarryUsernameInMessage((bool)carryUsernameInMessage);
 }
 
-- (void)setLogoLevelType:(BMXLogLevel)logoLevelType {
-    self.ptr -> setLogLevel([BMXDefinesTransform oc_transformBMXLogLevel:logoLevelType]);
+- (void)setLogLevelType:(BMXLogLevel)logLevelType {
+    self.ptr -> setLogLevel([BMXDefinesTransform oc_transformBMXLogLevel:logLevelType]);
 }
 
 - (void)setConsoleOutput:(BOOL)ConsoleOutput {

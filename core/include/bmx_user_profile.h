@@ -18,29 +18,42 @@
 
 namespace floo {
 
+/**
+ * @brief 用户Profile
+ **/
 class EXPORT_API BMXUserProfile: public BMXBaseObject {
 
 public:
   /**
-   * 对方申请加好友时的验证方式
+   * @brief 对方申请加好友时的验证方式
    **/
   enum class AddFriendAuthMode {
-    Open,             // 无需验证，任何人可以加为好友
-    NeedApproval,     // 需要同意方可加为好友
-    AnswerQuestion,   // 需要回答问题正确方可加为好友
-    RejectAll         // 拒绝所有加好友申请
+    /// 无需验证，任何人可以加为好友
+    Open,
+    /// 需要同意方可加为好友
+    NeedApproval,
+    /// 需要回答问题正确方可加为好友
+    AnswerQuestion,
+    /// 拒绝所有加好友申请
+    RejectAll
   };
 
   /**
-   * 添加好友时的校验问题
+   * @brief 添加好友时的校验问题
    **/
   struct AuthQuestion {
     AuthQuestion() {}
 
+    /// 好友验证问题
     std::string mQuestion;
+
+    /// 好友验证问题答案
     std::string mAnswer;
   };
 
+  /**
+   * @brief 用户消息设置
+   **/
   struct MessageSetting {
     MessageSetting() {
       mPushEnabled = true;
@@ -48,125 +61,155 @@ public:
       mNotificationSound = true;
       mNotificationVibrate = true;
       mAutoDownloadAttachment = true;
+      mSilenceStartTime = 0;
+      mSilenceEndTime = 0;
+      mPushStartTime = 0;
+      mPushEndTime = 23;
     }
 
     // 推送设定
-    /**
-     * 当APP未打开时是否允许推送
-     **/
+    /// 当APP未打开时是否允许推送
     bool mPushEnabled;
 
-    /**
-     * 是否推送消息详情
-     **/
+    /// 是否推送消息详情
     bool mPushDetail;
 
-    /**
-     * 对方收到推送消息时显示的名称
-     **/
+    /// 对方收到推送消息时显示的名称
     std::string mPushNickname;
 
     // 在线消息设定
-    /**
-     * 收到消息时是否通过声音提醒
-     **/
+    /// 收到消息时是否通过声音提醒
     bool mNotificationSound;
 
-    /**
-     * 收到消息时是否通过震动提醒
-     **/
+    /// 收到消息时是否通过震动提醒
     bool mNotificationVibrate;
 
-    /**
-     * 收到消息时是否自动下载缩略图或者语音
-     **/
+    /// 收到消息时是否自动下载缩略图或者语音
     bool mAutoDownloadAttachment;
+
+    /// 推送静默起始时间
+    int mSilenceStartTime;
+
+    /// 推送静默结束时间
+    int mSilenceEndTime;
+
+    /// 允许推送起始时间
+    int mPushStartTime;
+
+    /// 允许推送结束时间
+    int mPushEndTime;
   };
 
   /**
-   * 用户类型
+   * @brief 用户类型
    **/
   enum class UserCategory {
-    Normal,         // 普通用户
-    Advanced        // 高级用户
+    /// 普通用户
+    Normal,
+    /// 高级用户
+    Advanced
   };
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXUserProfile() {}
 
   /**
-   * 用户ID（唯一）
+   * @brief 用户ID（唯一）
+   * @return int64_t
    **/
   virtual int64_t userId() = 0;
 
+  /**
+   * @brief 用户策略
+   * @return UserCategory
+   **/
   virtual UserCategory category() = 0;
 
   /**
-   * 用户名（唯一）
+   * @brief 用户名（唯一）
+   * @return std::string
    **/
   virtual const std::string& username() = 0;
 
   /**
-   * 用户昵称
+   * @brief 用户昵称
+   * @return std::string
    **/
   virtual const std::string& nickname() = 0;
 
   /**
-   * 用户头像
+   * @brief 用户ratel服务器头像url
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
+   * @brief 用户头像url
+   * @return std::string
    **/
   virtual std::string avatarUrl() = 0;
 
   /**
-   * 用户头像本地存储路径
+   * @brief 用户头像本地存储路径
+   * @return std::string
    **/
   virtual std::string avatarPath() = 0;
 
   /**
-   * 用户头像缩略图本地存储路径
+   * @brief 用户头像缩略图本地存储路径
+   * @return std::string
    **/
   virtual std::string avatarThumbnailPath() = 0;
 
   /**
-   * 用户手机
+   * @brief 用户手机
+   * @return std::string
    **/
   virtual const std::string& mobilePhone() = 0;
 
   /**
-   * 用户公开扩展信息，好友可见
+   * @brief 用户邮箱
+   * @return std::string
+   **/
+  virtual const std::string& email() = 0;
+
+  /**
+   * @brief 用户公开扩展信息，好友可见
+   * @return JSON(std::string)
    **/
   virtual const JSON& publicInfo() = 0;
 
   /**
-   * 用户私有扩展信息，好友不可见
+   * @brief 用户私有扩展信息，好友不可见
+   * @return JSON(std::string)
    **/
   virtual const JSON& privateInfo() = 0;
 
   /**
-   * 加好友校验方式
+   * @brief 加好友校验方式
+   * @return AddFriendAuthMode
    **/
   virtual AddFriendAuthMode addFriendAuthMode() = 0;
 
   /**
-   * 添加好友时的验证问题
+   * @brief 添加好友时的验证问题
+   * @return AuthQuestion
    **/
   virtual const AuthQuestion& authQuestion() = 0;
 
   /**
-   * 用户消息设定
+   * @brief 用户消息设定
+   * @return MessageSetting
    **/
   virtual const MessageSetting& messageSetting() = 0;
 
   /**
-   * 收到群组邀请进群时是否自动同意进群
+   * @brief 收到群组邀请进群时是否自动同意进群
+   * @return bool
    **/
   virtual bool isAutoAcceptGroupInvite() = 0;
-
-  /**
-   * 用户当前设备的序列号
-   **/
-  virtual int deviceSN() = 0;
 
 protected:
   BMXUserProfile() {}

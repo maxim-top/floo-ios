@@ -23,39 +23,53 @@
 namespace floo
 {
 
+/**
+ * @brief 分页结果
+ **/
 template<typename T>
 class EXPORT_API BMXResultPage : public BMXBaseObject
 {
 public:
   /**
-   * 构造函数
+   * @brief 构造函数
    **/
   BMXResultPage() : mOffset(-1) {}
 
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param result 列表数据
+   * @param offset 偏移量
    **/
   BMXResultPage(const std::vector<T> &result, int64_t offset) :
     mResult(result), mOffset(offset) {}
 
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param result 列表结果
+   * @param cursor cursor偏移量
    **/
   BMXResultPage(const std::vector<T> &result, std::string cursor) :
     mResult(result), mCursor(cursor), mOffset(-1) {}
 
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param from BMXResultPage对象
    **/
   BMXResultPage(const BMXResultPage& from) :
     mResult(from.mResult), mCursor(from.mCursor), mOffset(from.mOffset) {}
 
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param from BMXResultPage对象
    **/
   BMXResultPage(BMXResultPage&& from) :
     mResult(std::move(from.mResult)), mCursor(from.mCursor), mOffset(from.mOffset) {}
 
+  /**
+   * @brief 赋值函数
+   * @param from BMXResultPage对象
+   * @return BMXResultPage
+   **/
   BMXResultPage& operator=(const BMXResultPage& from) {
     if (this != &from) {
       mResult = from.mResult;
@@ -66,13 +80,32 @@ public:
   }
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXResultPage() {};
 
+  /**
+   * @brief vector对象数组大小
+   * @return size_t
+   **/
   size_t count() const { return mResult.size(); }
+
+  /**
+   * @brief 偏移量
+   * @return int64_t
+   **/
   int64_t offset() const { return mOffset; }
+
+  /**
+   * @brief cursor偏移量
+   * @return std::string
+   **/
   const std::string& cursor() const { return mCursor; }
+
+  /**
+   * @brief vector对象数组
+   * @return std::vector<T>
+   **/
   const std::vector<T>& result() const { return mResult; }
 
 private:

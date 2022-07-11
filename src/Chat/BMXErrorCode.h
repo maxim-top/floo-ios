@@ -39,6 +39,7 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXUserAbnormal,
     BMXUserCancel,
     BMXUserOldPasswordNotMatch,
+    BMXUserSigningIn,
 
     BMXPushTokenInvalid = 200,
     BMXPushAliasBindByOtherUser,

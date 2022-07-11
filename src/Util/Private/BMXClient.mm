@@ -229,6 +229,17 @@ ignoreUnbindDevice:(BOOL)ignoreUnbindDevice
     } completion:aCompletionBlock];
 }
 
+/**
+ * 删除账号
+ **/
+- (void)deleteAccountWithPassword:(NSString *)password
+       completion:(void(^)(BMXError *error))aCompletionBlock {
+    [self handle:^floo::BMXErrorCode{
+        return self->clientPtr->deleteAccount([BMXStringUtil toStdString:password]);
+    } completion:aCompletionBlock];
+}
+
+
 - (void)signOutignoreUnbindDevice:(BOOL)ignoreUnbindDevice
                        completion:(void(^)(BMXError *error))aCompletionBlock {
     [self handle:^floo::BMXErrorCode{

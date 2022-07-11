@@ -115,6 +115,12 @@ NS_ASSUME_NONNULL_BEGIN
 ignoreUnbindDevice:(BOOL)ignoreUnbindDevice
    completion:(void(^)(BMXError *error))aCompletionBlock;
 
+/**
+ * 删除账号
+ **/
+- (void)deleteAccountWithPassword:(NSString *)password
+   completion:(void(^)(BMXError *error))aCompletionBlock;
+
 
 - (void)signOutignoreUnbindDevice:(BOOL)ignoreUnbindDevice
    completion:(void(^)(BMXError *error))aCompletionBlock;

@@ -19,240 +19,451 @@
 #include <mutex>
 #include "bmx_base_object.h"
 #include "bmx_message_attachment.h"
+#include "bmx_message_config.h"
 
 namespace floo {
 class BMXMessage;
 typedef std::shared_ptr<BMXMessage> BMXMessagePtr;
 typedef std::vector<BMXMessagePtr> BMXMessageList;
 class BMXChatService;
+
+/**
+ * @brief 消息
+ **/
 class EXPORT_API BMXMessage : public BMXBaseObject
 {
 public:
   /**
-   *  消息投递状态
+   *  @brief 消息投递状态
    **/
   enum class DeliveryStatus {
-    New,              // 新创建消息
-    Delivering,       // 消息投递中
-    Deliveried,       // 消息已投递
-    Failed,           // 消息投递失败
-    Recalled          // 消息已撤回
+    /// 新创建消息
+    New,
+    /// 消息投递中
+    Delivering,
+    /// 消息已投递
+    Deliveried,
+    /// 消息投递失败
+    Failed,
+    /// 消息已撤回
+    Recalled
   };
 
   /**
-   *  消息类型
+   *  @brief 消息类型
    **/
   enum class MessageType {
-    Single,     // 单聊消息
-    Group,      // 群聊消息
+    /// 单聊消息
+    Single,
+    /// 群聊消息
+    Group,
+    /// 系统消息
+    System,
   };
 
   /**
-   *  消息内容类型
+   *  @brief 消息内容类型
    **/
   enum class ContentType {
-    Text,       // 文本消息
-    Image,      // 图片消息
-    Voice,      // 语音消息
-    Video,      // 视频片段消息
-    File,       // 文件消息
-    Location,   // 位置消息
-    Command,    // 命令消息
-    Forward,    // 转发消息
+    /// 文本消息
+    Text,
+    /// 图片消息
+    Image,
+    /// 语音消息
+    Voice,
+    /// 视频片段消息
+    Video,
+    /// 文件消息
+    File,
+    /// 位置消息
+    Location,
+    /// 命令消息
+    Command,
+    /// 转发消息
+    Forward,
   };
 
   /**
-   *  消息投递质量
+   *  @brief 消息投递质量
    **/
   enum class DeliveryQos {
-    AtLastOnce,       // 最少投递一次
-    AtMostOnce,       // 最多投递一次
-    ExactlyOnce       // 仅投递一次
+    /// 最少投递一次
+    AtLastOnce,
+    /// 最多投递一次
+    AtMostOnce,
+    /// 仅投递一次
+    ExactlyOnce
   };
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXMessage();
 
   /**
-   * 消息唯一ID
+   * @brief 消息唯一ID
+   * @return int64_t
    **/
   int64_t msgId();
 
   /**
-   * 消息发送方ID
+   * @brief 消息客户端ID,仅在消息发送端存在
+   * @return int64_t
+   **/
+  int64_t clientMsgId();
+
+  /**
+   * @brief 消息发送方ID
+   * @return int64_t
    **/
   int64_t fromId();
 
   /**
-   * 消息接收方ID
+   * @brief 消息接收方ID
+   * @return int64_t
    */
   int64_t toId();
 
   /**
-   * 消息类型
+   * @brief 消息类型
+   * @return MessageType
    */
   MessageType type();
 
   /**
-   * 消息所属会话ID
+   * @brief 消息所属会话ID
+   * @return int64_t
    */
   int64_t conversationId();
 
   /**
-   * 消息投递状态
+   * @brief 消息投递状态
+   * @return DeliveryStatus
    */
   DeliveryStatus deliveryStatus();
 
   /**
-   * 设置消息投递状态
+   * @brief 设置消息投递状态
    */
   void setDeliveryStatus(DeliveryStatus);
 
   /**
-   * 消息时间戳（服务端收到时的时间）
+   * @brief 消息时间戳（服务端收到时的时间）
+   * @return int64_t
    */
   int64_t serverTimestamp();
 
   /**
-   * 设置时间戳（服务端收到时的时间）
+   * @brief 设置时间戳（服务端收到时的时间）
    */
   void setServerTimestamp(int64_t);
 
   /**
-   * 本地时间戳（消息创建或者收到时的本地时间）
+   * @brief 本地时间戳（消息创建或者收到时的本地时间）
+   * @return int64_t
    */
   int64_t clientTimestamp();
 
   /**
-   * 设置消息本地时间戳
+   * @brief 设置消息本地时间戳
    */
   void setClientTimestamp(int64_t);
 
   /**
-   * 语音或者视频消息是否播放过，仅对收到的音视频消息有效
+   * @brief 语音或者视频消息是否播放过，仅对收到的音视频消息有效
+   * @return bool
    */
   bool isPlayed();
 
   /**
-   * 设置语音或者视频消息是否播放过，仅对收到的音视频消息有效
+   * @brief 设置语音或者视频消息是否播放过，仅对收到的音视频消息有效
    */
   void setIsPlayed(bool);
 
   /**
-   * 是否接收的消息
+   * @brief 对于发送方表示是否收到了已播放回执，对于接收方表示是否发送了已播放回执
+   * @return bool
+   */
+  bool isPlayAcked();
+
+
+  /**
+   * @brief 设置已播放回执
+   */
+  void setIsPlayAcked(bool);
+
+  /**
+   * @brief 是否接收的消息
+   * @return bool
    */
   bool isReceiveMsg();
 
   /**
-   * 设置是否接收的消息
+   * @brief 设置是否接收的消息
    */
   void setIsReceiveMsg(bool);
 
   /**
-   * 消息是否已读标志
+   * @brief 消息是否已读标志
+   * @return bool
    */
   bool isRead();
 
   /**
-   * 消息是否已读标志
+   * @brief 消息是否已读标志
    */
   void setIsRead(bool);
 
   /**
-   * 对于发送方表示是否收到了已读回执，对于接收方表示是否发送了已读回执
+   * @brief 对于发送方表示是否收到了已读回执，对于接收方表示是否发送了已读回执
+   * @return bool
    */
   bool isReadAcked();
 
   /**
-   * 设置已读回执
+   * @brief 设置已读回执
    */
   void setIsReadAcked(bool);
 
   /**
-   * 对于发送方表示消息是否已投递到对方，对于接收方表示是否发送了消息已到达回执
+   * @brief 对于发送方表示消息是否已投递到对方，对于接收方表示是否发送了消息已到达回执
+   * @return bool
    */
   bool isDeliveryAcked();
 
   /**
-   * 设置投递回执
+   * @brief 设置投递回执
    */
   void setIsDeliveryAcked(bool);
 
   /**
-   * 消息文本内容
+   * @brief 消息文本内容
+   * @return std::string
    */
   const std::string& content();
 
   /**
-   * 消息文本内容
+   * @brief 消息文本内容
+   * @param content 消息文本内容
    */
   void setContent(const std::string& content);
 
   /**
-   * 消息内容类型，如果带附件就表示附件类型，不带附件就是文本类型
+   * @brief 消息内容类型，如果带附件就表示附件类型，不带附件就是文本类型
+   * @return ContentType
    */
   ContentType contentType();
 
   /**
-   * 消息附件，BMXMessage拥有附件的所有权，负责释放
+   * @brief 消息附件，BMXMessage拥有附件的所有权，负责释放
+   * @return BMXMessageAttachmentPtr
    */
   BMXMessageAttachmentPtr attachment();
 
   /**
-   * 消息的推送设置
+   * @brief 消息的配置信息
+   * @return JSON(std::string)
    */
-  const JSON& config();
+  BMXMessageConfigPtr config();
 
   /**
-   * 设置消息推送设置
+   * @brief 设置消息配置信息
    */
-  void setConfig(const JSON&);
+  void setConfig(BMXMessageConfigPtr);
 
   /**
-   * 消息扩展信息
+   * @brief 消息扩展信息
+   * @return JSON(std::string)
    */
   const JSON& extension();
 
   /**
-   * 设置消息扩展信息
+   * @brief 设置消息扩展信息
    */
   void setExtension(const JSON&);
 
   /**
-   * 消息投递QOS
+   * @brief 消息投递QOS
+   * @return DeliveryQos
    */
   DeliveryQos deliveryQos();
 
   /**
-   * 设置消息投递QOS
+   * @brief 设置消息投递QOS
+   * @param qos 消息投递QOS
    */
   void setDeliveryQos(DeliveryQos qos);
 
+  /**
+   * @brief 消息发送者的显示名称
+   * @return std::string
+   */
+  const std::string& senderName();
+
+  /**
+   * @brief 设置消息的发送者显示名称
+   * @param senderName 消息文本内容
+   */
+  void setSenderName(const std::string& senderName);
+
+  /**
+   * @brief 群消息已读AckCount数目
+   * @return int
+   */
+  int groupAckCount();
+
+  /**
+   * @brief 设置消息已读groupAckCount数目(SDK 内部调用接口，上层不应该调用)
+   * @param count 设置群消息已读数目
+   */
+  void setGroupAckCount(int count);
+
+  /**
+   * @brief 群消息未读AckCount数目
+   * @return int
+   */
+  int groupAckUnreadCount();
+
+  /**
+   * @brief 设置消息未读groupAckCount数目(SDK 内部调用接口，上层不应该调用)
+   * @param count 设置群消息未读数目
+   */
+  void setGroupAckUnreadCount(int count);
+
+  /**
+   * @brief 群消息是否全部已读
+   * @return bool
+   */
+  bool groupAckReadAll();
+
+  /**
+   * @brief 群消息已播放AckCount数目（仅用于音频/视频附件消息）
+   * @return int
+   */
+  int groupPlayAckCount();
+
+  /**
+   * @brief 设置消息已播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）
+   * @param count 设置群消息已读数目
+   */
+  void setGroupPlayAckCount(int count);
+
+  /**
+   * @brief 群消息未播放AckCount数目（仅用于音频/视频附件消息）
+   * @return int
+   */
+  int groupPlayAckUnreadCount();
+
+  /**
+   * @brief 设置消息未播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）
+   * @param count 设置群消息未播放数目
+   */
+  void setGroupPlayAckUnreadCount(int count);
+
+  /**
+   * @brief 群消息是否全部已播放
+   * @return bool
+   */
+  bool groupPlayAckReadAll();
+
+  /**
+   * @brief 设置消息的扩散优先级，默认为0。0表示扩散，数字越小扩散的越多。
+   * @brief 取值范围0-10。普通人在聊天室发送的消息级别默认为5，可以丢弃。管理员默认为0不会丢弃。其它值可以根据业务自行设置。
+   * @param priority 优先级
+   */
+  void setPriority(int priority);
+
+  /**
+   * @brief 消息的扩散优先级
+   * @return int
+   */
+  int priority();
+
+  /**
+   * @brief 设置消息是否为推送消息。
+   */
+  void setPushMessageMode(bool);
+
+  /**
+   * @brief 消息是否是推送消息
+   * @return bool
+   */
+  bool isPushMessage();
+
 public:
   /**
-   * 创建文本消息
+   * @brief 创建发送文本消息
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
    **/
   static BMXMessagePtr createMessage(int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content);
 
   /**
-   * 创建附件消息
+   * @brief 创建发送附件消息
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param attachment 附件
    **/
   static BMXMessagePtr createMessage(int64_t from, int64_t to, MessageType type, int64_t conversationId, BMXMessageAttachmentPtr attachment);
 
   /**
-   * 创建收到的消息
+   * @brief 创建发送命令消息(命令消息通过content字段或者extension字段存放命令信息)
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
+   **/
+  static BMXMessagePtr createCommandMessage(int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content);
+
+  /**
+   * @brief 创建收到的消息
+   * @param msgId 消息id
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
+   * @param serverTimestamp 服务器时间戳
    **/
   static BMXMessagePtr createMessage(int64_t msgId, int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content, int64_t serverTimestamp);
 
   /**
-   * 创建收到的消息
+   * @brief 创建收到的消息
+   * @param msgId 消息id
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param attachment 附件
+   * @param serverTimestamp 服务器时间戳
    **/
   static BMXMessagePtr createMessage(int64_t msgId, int64_t from, int64_t to, MessageType type, int64_t conversationId, BMXMessageAttachmentPtr attachment, int64_t serverTimestamp);
 
   /**
-   * 创建转发消息
+   * @brief 创建收到的命令消息(命令消息通过content字段或者extension字段存放命令信息)
+   * @param msgId 消息id
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
+   * @param serverTimestamp 服务器时间戳
+   **/
+  static BMXMessagePtr createCommandMessage(int64_t msgId, int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content, int64_t serverTimestamp);
+
+  /**
+   * @brief 创建转发消息
+   * @param msg 要转发的消息
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
    **/
   static BMXMessagePtr createForwardMessage(BMXMessagePtr msg, int64_t from, int64_t to, MessageType type, int64_t conversationId);
 
@@ -264,6 +475,7 @@ private:
   friend BMXChatService;
 
   int64_t mMsgId;
+  int64_t mClientMsgId;
   int64_t mFromId;
   int64_t mToId;
   MessageType mType;
@@ -272,6 +484,7 @@ private:
   int64_t mClientTimestamp;
   int64_t mServerTimestamp;
   bool mIsPlayed;
+  bool mIsPlayedAcked;
   bool mIsReceiveMsg;
   bool mIsRead;
   bool mIsReadAcked;
@@ -279,9 +492,17 @@ private:
   std::string mContent;
   ContentType mContentType;
   BMXMessageAttachmentPtr mAttachment;
-  JSON mConfig;
+  BMXMessageConfigPtr mConfig;
   JSON mExtension;
   DeliveryQos mDeliveryQos;
+  std::string mSenderName;
+  bool mIsGroupAck;
+  int mGroupAckCount;
+  int mGroupAckUnreadCount;
+  int mGroupPlayAckCount;
+  int mGroupPlayAckUnreadCount;
+  int mPriority;
+  bool mIsPushMessage;
   std::recursive_mutex mMutex;
 };
 

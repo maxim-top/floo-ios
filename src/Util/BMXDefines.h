@@ -31,6 +31,7 @@ typedef NS_ENUM(NSUInteger, BMXConnectStatus) {
 typedef NS_ENUM(NSUInteger, BMXSignInStatus) {
     BMXSignInStatusSignOut,
     BMXSignInStatusSignIn,
+    BMXSignInStatusSigningIn,
 };
 
 typedef NS_ENUM(NSUInteger, BMXLogLevel) {

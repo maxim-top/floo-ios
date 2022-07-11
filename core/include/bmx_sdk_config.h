@@ -21,10 +21,16 @@
 
 namespace floo {
 
+/**
+ * @brief SDK设置管理
+ **/
 class EXPORT_API BMXSDKConfig {
 public:
   /**
-   * 服务设置
+   * @brief 服务设置
+   * @param imHost IM服务器地址
+   * @param imPort IM服务器端口
+   * @param restHost ratel服务器地址
    **/
   struct HostConfig {
     HostConfig() {}
@@ -35,7 +41,15 @@ public:
   };
 
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param type 客户端类型
+   * @param vsn 客户端OS版本
+   * @param dataDir 聊天数据存储路径
+   * @param cacheDir 缓存数据存储路径
+   * @param SDKVersion SDK版本
+   * @param pushCertName Push证书名字
+   * @param userAgent 用户代理信息
+   * @param deliveryAck 是否发送消息送达回执
    **/
   BMXSDKConfig(BMXClientType type,
                const std::string& vsn,
@@ -47,144 +61,273 @@ public:
                bool deliveryAck = false);
 
   /**
-   * 析构函数
+   * @brief 构造函数
+   * @param type 客户端类型
+   * @param vsn 客户端OS版本
+   * @param dataDir 聊天数据存储路径
+   * @param cacheDir 缓存数据存储路径
+   * @param SDKVersion SDK版本
+   * @param pushCertName Push证书名字
+   * @param userAgent 用户代理信息
+   * @param appId 用户的appId
+   * @param appSecret 用户的appSecret（对于使用推送的用户，必须同时设置appId和appSecret）
+   * @param deliveryAck 是否发送消息送达回执
+   **/
+  BMXSDKConfig(BMXClientType type,
+               const std::string& vsn,
+               const std::string &dataDir,
+               const std::string &cacheDir,
+               const std::string &SDKVersion,
+               const std::string &pushCertName,
+               const std::string &userAgent,
+               const std::string &appId,
+               const std::string &appSecret,
+               bool deliveryAck = false);
+
+  /**
+   * @brief 析构函数
    **/
   virtual ~BMXSDKConfig();
 
   /**
-   * 获取聊天数据存储路径，包含消息、附件等
+   * @brief 获取聊天数据存储路径，包含消息、附件等
+   * @return std::string
    **/
   const std::string& getDataDir();
 
   /**
-   * 获取缓存数据存储路径，比如用户头像
+   * @brief 获取缓存数据存储路径，比如用户头像
+   * @return std::string
    **/
   const std::string& getCacheDir();
 
   /**
-   * 客户端类型
+   * @brief 客户端类型
+   * @return BMXClientType
    **/
   BMXClientType getClientType();
 
   /**
-   * 客户端OS版本
+   * @brief 客户端OS版本
+   * @return std::string
    **/
   const std::string& getVsn();
 
   /**
-   * SDK版本
+   * @brief SDK版本
+   * @return std::string
    **/
   const std::string& getSDKVersion();
 
   /**
-   * 获取Push证书名字
+   * @brief 获取Push证书名字
+   * @return std::string
    **/
   const std::string& getPushCertName();
 
   /**
-   * 获取用户代理信息
+   * @brief 设置Push证书名字
+   * @return std::string
+   **/
+  void setPushCertName(const std::string&);
+
+  /**
+   * @brief 获取用户代理信息
+   * @return std::string
    **/
   const std::string& getUserAgent();
 
   /**
-   * 是否发送消息送达回执
+   * @brief 发送消息的config中是否携带
+   * @return bool
+   **/
+  bool carryUsernameInMessage();
+
+  /**
+   * @brief 设置发送消息的config中是否携带用户名
+   * @param bool 设置是否在送消息的config中携带用户名
+   **/
+  void setCarryUsernameInMessage(bool);
+
+  /**
+   * @brief 是否发送消息送达回执
+   * @return bool
    **/
   bool enableDeliveryAck();
 
   /**
-   * 设置是否发送消息送达回执
+   * @brief 设置是否发送消息送达回执
+   * @param bool 是否发送消息送达回执
    **/
   void setEnableDeliveryAck(bool);
 
   /**
-   * Log输出等级
+   * @brief Log输出等级
+   * @return BMXLogLevel
    **/
   BMXLogLevel getLogLevel();
 
   /**
-   * 设置Log输出等级
+   * @brief 设置Log输出等级
+   * @param BMXLogLevel Log输出等级
    **/
   void setLogLevel(BMXLogLevel);
 
   /**
-   * Log是否输出到Console
+   * @brief Log是否输出到Console
+   * @return bool
    **/
   bool getConsoleOutput();
 
   /**
-   * 设置Log是否输出到Console
+   * @brief 设置Log是否输出到Console
+   * @param bool 设置Log是否输出到Console
    **/
   void setConsoleOutput(bool);
 
   /**
-   * 设置服务器配置
+   * @brief 设置服务器配置
+   * @param config 服务器配置
    **/
   void setHostConfig(const HostConfig& config);
 
   /**
-   * 获取服务器配置
+   * @brief 获取服务器配置
+   * @return HostConfig
    **/
   const HostConfig& getHostConfig();
 
   /**
-   * 是否根据服务器返回未读列表创建所有会话.
+   * @brief 是否根据服务器返回未读列表创建所有会话.
+   * @return bool
    **/
   bool getLoadAllServerConversations();
 
   /**
-   * 是否根据服务器返回未读列表创建所有会话，默认为false，只会创建有未读消息的会话。
+   * @brief 是否根据服务器返回未读列表创建所有会话，默认为false，只会创建有未读消息的会话。
+   * @param enable 是否根据服务器返回未读列表创建所有会话
    **/
   void setLoadAllServerConversations(bool enable = false);
 
   /**
-   * 获取设备的唯一识别码
+   * @brief 获取设备的唯一识别码
+   * @return std::string
    **/
   const std::string& getDeviceUuid();
 
   /**
-   * 设置设备的唯一识别码，在app卸载之前应该始终保持一致，app删除后再次安装时可以产生不同的设备识别码。
+   * @brief 设置设备的唯一识别码，在app卸载之前应该始终保持一致，app删除后再次安装时可以产生不同的设备识别码。
+   * @param uuid 设备的唯一识别码。
    **/
   void setDeviceUuid(const std::string &uuid);
 
   /**
-   * 获取https请求是否验证服务器端证书。
+   * @brief 获取设备的本地数据库加密密钥。
+   * @return std::string
+   **/
+  const std::string& getDBCryptoKey();
+
+  /**
+   * @brief 设置本地数据库的加密密钥，在app卸载之前应该始终保持一直，app删除后再次安装时可以产生不同的密钥。用于本地数据库加密。
+   * @param cryptoKey 本地数据库的加密密钥。
+   **/
+  void setDBCryptoKey(const std::string &cryptoKey);
+
+  /**
+   * @brief 获取https请求是否验证服务器端证书。
+   * @return bool
    **/
   bool getVerifyCertificate();
 
   /**
    * 设置https请求是否验证服务器端证书。
+   * @param verify https请求是否验证服务器端证书
    **/
   void setVerifyCertificate(bool verify = true);
 
   /**
-   * 获取是否启用dns功能。
+   * @brief 获取是否启用dns功能。
+   * @return bool
    **/
   bool getEnableDNS();
 
   /**
-   * 设置是否启用dns功能，默认是开启的。
+   * @brief 设置是否启用dns功能，默认是开启的。
+   * @param enable 是否启用dns功能
    **/
   void setEnableDNS(bool enable = true);
 
   /**
-   * 获取用户自定义dns服务器地址。
+   * @brief 获取用户自定义dns服务器地址。
+   * @return std::string
    **/
   std::string getUserDNSAddress();
 
   /**
-   * 设置用户自定义dns服务器地址，在用户设置了dns服务器的情况下优先使用用户dns。
+   * @brief 设置用户自定义dns服务器地址，在用户设置了dns服务器的情况下优先使用用户dns。
+   * @param dns 用户自定义dns服务器地址
    **/
   void setUserDNSAddress(const std::string &dns);
 
   /**
-   * 获取用户的appId。
+   * @brief 获取用户的appID。
+   * @return std::string
    **/
-  std::string getAppKey();
+  std::string getAppID();
 
   /**
-   * 设置用户的appId。
+   * @brief 设置用户的appID。
+   * @param appID 用户的appID
    **/
-  void setAppKey(const std::string &appKey);
+  void setAppID(const std::string &appID);
+
+  /**
+   * @brief 获取用户的appSecret。
+   * @return std::string
+   **/
+  std::string getAppSecret();
+
+  /**
+   * @brief 设置用户的appSecret。
+   * @param appID 用户的appSecret
+   **/
+  void setAppSecret(const std::string &appSecret);
+
+  /**
+   * @brief 获取用户的推送提供商类型。
+   * @return BMXPushProviderType
+   **/
+  BMXPushProviderType getPushProviderType();
+
+  /**
+   * @brief 设置用户的推送提供商类型。
+   * @param type 用户的推送提供商类型
+   **/
+  void setPushProviderType(BMXPushProviderType type);
+
+  /**
+   * @brief 获取用户的推送环境类型。
+   * @return BMXPushEnvironmentType
+   **/
+  BMXPushEnvironmentType getPushEnvironmentType();
+
+  /**
+   * @brief 设置用户的推送环境类型。
+   * @param type 用户的推送环境类型
+   **/
+  void setEnvironmentType(BMXPushEnvironmentType type);
+
+  /**
+   * @brief 获取调试log接收着账号(仅用于SDK调试，接收客户端log日志使用)
+   * @return int64_t
+   **/
+  int64_t getDebugLogReceiverId();
+
+  /**
+   * @brief 设置调试log接收账号(仅用于SDK调试，接收客户端log日志使用)
+   * @param uid 调试log接收者id
+   **/
+  void setDebugLogReceiverId(int64_t uid);
 
 private:
   std::recursive_mutex mMutex;
@@ -197,14 +340,20 @@ private:
   bool mConsoleOutput;
   std::string mPushCertName;
   std::string mUserAgent;
+  bool mCarryUsername;
   bool mEnableDeliveryAck;
   HostConfig mHostConfig;
   bool mLoadAllServerConversations;
   std::string mDeviceUuid;
+  std::string mDBCryptoKey;
   bool mVerifyCertificate;
   bool mEnableDNS;
   std::string mDNSAddress;
-  std::string mAppKey;
+  std::string mAppID;
+  std::string mAppSecret;
+  BMXPushProviderType mPushProviderType;
+  BMXPushEnvironmentType mPushEnvironmentType;
+  int64_t mLogReceiverId;
 };
 
 typedef std::shared_ptr<BMXSDKConfig> BMXSDKConfigPtr;

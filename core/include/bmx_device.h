@@ -19,38 +19,52 @@
 
 namespace floo {
 
+/**
+ * @brief 设备信息
+ **/
 class EXPORT_API BMXDevice : public BMXBaseObject {
 public:
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXDevice() {}
 
   /**
-   * 设备序列号
+   * @brief 设备序列号
+   * @return int
    **/
   virtual int deviceSN() = 0;
 
   /**
-   * 用户id
+   * @brief 用户id
+   * @return int64_t
    **/
   virtual int64_t userId() = 0;
 
   /**
-   * 软件平台
+   * @brief 软件平台
+   * @return int
    **/
   virtual int platform() = 0;
 
   /**
-   * 用户代理信息
+   * @brief 用户代理信息
+   * @return std::string
    **/
   virtual std::string userAgent() = 0;
 
   /**
-   * 设置用户代理信息
+   * @brief 设置用户代理信息
+   * @param userAgent 用户代理信息
    **/
   virtual void setUserAgent(const std::string& userAgent) = 0;
+
+  /**
+   * @brief 是否是当前设备
+   * @return bool
+   **/
+  virtual bool isCurrentDevice() = 0;
 
 protected:
   BMXDevice() {}

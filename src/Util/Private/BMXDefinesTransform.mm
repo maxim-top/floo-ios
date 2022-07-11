@@ -44,6 +44,8 @@
 + (floo::BMXSignInStatus)oc_transformBMXSignInStatus:(BMXSignInStatus)status {
     if (status == BMXSignInStatusSignOut) {
         return floo::BMXSignInStatus::SignOut;
+    } else if (status == BMXSignInStatusSigningIn) {
+        return floo::BMXSignInStatus::SigningIn;
     } else {
         return floo::BMXSignInStatus::SignIn;
     }

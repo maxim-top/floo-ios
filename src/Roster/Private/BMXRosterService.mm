@@ -244,11 +244,11 @@
                          completion:(void(^)(BMXRoster *roster,
                                              NSString *extensionJson))aCompletionBlock {
     [self handleRosterParam:^floo::BMXRosterItemPtr(floo::BMXErrorCode &error) {
-        std::string json = extensionJson ? [extensionJson cStringUsingEncoding:kCFStringEncodingUTF8] : "";
+        std::string json = [BMXStringUtil toStdString:extensionJson];
         error = self->clientPtr->getRosterService().setItemExtension([roster getBMXRosterPtr], json);
         return [roster getBMXRosterPtr];
     } completion:^(BMXRoster *roster, BMXError *aError) {
-            aCompletionBlock(roster, roster.json_alias);
+            aCompletionBlock(roster, roster.json_ext);
     }];
 }
 

@@ -15,140 +15,227 @@
 #define bmx_group_service_listener_h
 
 #include "bmx_group.h"
+#include "bmx_group_service.h"
 
 namespace floo {
 
+class BMXGroupService;
+
+/**
+ * @brief 群组变化监听者
+ **/
 class EXPORT_API BMXGroupServiceListener {
 public:
   /**
-   * 析构函数
-   **/
-  virtual ~BMXGroupServiceListener() {}
+   * @brief 构造函数
+  **/
+  BMXGroupServiceListener() : mService(nullptr) {}
 
   /**
-   * 多设备同步创建群组
+   * @brief 析构函数
+   **/
+  virtual ~BMXGroupServiceListener() {
+    if (mService != nullptr) {
+      mService->removeGroupListener(this);
+    }
+  }
+
+  /**
+   * @brief 多设备同步创建群组
+   * @param group 新创建的群组
    **/
   virtual void onGroupCreate(BMXGroupPtr group) {}
 
   /**
-   * 群列表更新了
+   * @brief 群列表更新了
+   * @param list 更新的群组列表
    **/
   virtual void onGroupListUpdate(const BMXGroupList& list)  {}
 
   /**
-   * 加入了某群
+   * @brief 加入了某群
+   * @param group 加入的群组
    **/
   virtual void onGroupJoined(BMXGroupPtr group)  {}
 
   /**
-   * 退出了某群
+   * @brief 退出了某群
+   * @param group 退出的群组
+   * @param reason 退出原因
    **/
   virtual void onGroupLeft(BMXGroupPtr group, const std::string& reason)  {}
 
   /**
-   * 收到入群邀请
+   * @brief 收到入群邀请
+   * @param groupId 邀请进入的群组id
+   * @param inviter 邀请者id
+   * @param message 邀请原因
    **/
   virtual void onInvitated(int64_t groupId, int64_t inviter, const std::string& message)  {}
 
   /**
-   * 入群邀请被接受
+   * @brief 入群邀请被接受
+   * @param group 邀请被同意的群组
+   * @param inviteeId 被邀请者id
    **/
   virtual void onInvitationAccepted(BMXGroupPtr group, int64_t inviteeId)  {}
 
   /**
-   * 入群申请被拒绝
+   * @brief 入群申请被拒绝
+   * @param group 邀请被拒绝的群组
+   * @param inviteeId 被邀请者id
+   * @param reason 拒绝原因
    **/
   virtual void onInvitationDeclined(BMXGroupPtr group, int64_t inviteeId, const std::string& reason)  {}
 
   /**
-   * 收到入群申请
+   * @brief 收到入群申请
+   * @param group 收到入群申请的群组
+   * @param applicantId 申请者id
+   * @param message 申请原因
    **/
   virtual void onApplied(BMXGroupPtr group, int64_t applicantId, const std::string& message)  {}
 
   /**
-   * 入群申请被接受
+   * @brief 入群申请被接受
+   * @param group 入群申请被接受的群组
+   * @param approver 申请的批准者
    **/
   virtual void onApplicationAccepted(BMXGroupPtr group, int64_t approver)  {}
 
   /**
-   * 入群申请被拒绝
+   * @brief 入群申请被拒绝
+   * @param group 入群申请被拒绝的群组
+   * @param approver 申请的批准者
+   * @param reason 拒绝的原因
    **/
   virtual void onApplicationDeclined(BMXGroupPtr group, int64_t approver, const std::string& reason)  {}
 
   /**
-   * 群成员被禁言
+   * @brief 群成员被禁言
+   * @param group 群成员被禁言的群组
+   * @param members 被禁言的群成员id列表
+   * @param duration 禁言时长
    **/
   virtual void onMembersBanned(BMXGroupPtr group, const std::vector<int64_t>& members, int64_t duration)  {}
 
   /**
-   * 群成员被解除禁言
+   * @brief 群成员被解除禁言
+   * @param group 群成员被解除禁言的群组
+   * @param members 被解除禁言的群成员id列表
    **/
   virtual void onMembersUnbanned(BMXGroupPtr group, const std::vector<int64_t>& members)  {}
 
   /**
-   * 加入新成员
+   * @brief 加入新成员
+   * @param group 有成员加入的群组
+   * @param memberId 加入成员的id
+   * @param inviter 邀请者id
    **/
   virtual void onMemberJoined(BMXGroupPtr group, int64_t memberId, int64_t inviter)  {}
 
   /**
-   * 群成员退出
+   * @brief 群成员退出
+   * @param group 有成员退出的群组
+   * @param memberId 退出的群成员id
+   * @param reason 退出的原因
    **/
   virtual void onMemberLeft(BMXGroupPtr group, int64_t memberId, const std::string& reason)  {}
 
   /**
-   * 添加了新管理员
+   * @brief 添加了新管理员
+   * @param group 发生添加新管理员的群组
+   * @param members 被提升为管理员的成员列表
    **/
   virtual void onAdminsAdded(BMXGroupPtr group, const std::vector<int64_t>& members)  {}
 
   /**
-   * 移除了管理员
+   * @brief 移除了管理员
+   * @param group 发生移除管理员的群组
+   * @param members 被移除了管理员的成员列表
+   * @param reason 被移除的原因
    **/
   virtual void onAdminsRemoved(BMXGroupPtr group, const std::vector<int64_t>& members, const std::string& reason)  {}
 
   /**
-   * 成为群主
+   * @brief 成为群主
+   * @param group 被转让为群主的群组
    **/
   virtual void onOwnerAssigned(BMXGroupPtr group)  {}
 
   /**
-   * 群组信息变更
+   * @brief 群组信息变更
+   * @param group 群信息发生变更的群组
+   * @param type 发生变更的群信息类型
    **/
   virtual void onGroupInfoUpdate(BMXGroupPtr group, BMXGroup::UpdateInfoType type) {}
 
   /**
-   * 群成员更改群内昵称
+   * @brief 群成员更改群内昵称
+   * @param group 发生群成员变更群昵称的群组
+   * @param memberId 变更群昵称的群成员id
+   * @param nickName 变更后的群昵称
    **/
   virtual void onMemberChangeNickName(BMXGroupPtr group, int64_t memberId, const std::string& nickName) {}
 
   /**
-   * 收到群公告
+   * @brief 收到群公告
+   * @param group 发生群公告更新的群组
+   * @param announcement 变更后的最新的群更高
    **/
   virtual void onAnnouncementUpdate(BMXGroupPtr group, BMXGroup::AnnouncementPtr announcement) {}
 
   /**
-   * 收到共享文件
+   * @brief 收到共享文件
+   * @param group 发生群共享文件上传的群组
+   * @param sharedFile 新上传的群共享文件
    **/
   virtual void onSharedFileUploaded(BMXGroupPtr group, BMXGroup::SharedFilePtr sharedFile) {}
 
   /**
-   * 删除了共享文件
+   * @brief 删除了共享文件
+   * @param group 发生群共享文件删除的群组
+   * @param sharedFile 被删除的群共享文件
    **/
   virtual void onSharedFileDeleted(BMXGroupPtr group, BMXGroup::SharedFilePtr sharedFile) {}
 
   /**
-   * 共享文件更新文件名
+   * @brief 共享文件更新文件名
+   * @param group 发生群共享文件更新的群组
+   * @param sharedFile 更新的群共享文件
    **/
   virtual void onSharedFileUpdated(BMXGroupPtr group, BMXGroup::SharedFilePtr sharedFile) {}
 
   /**
-   * 添加黑名单
+   * @brief 添加黑名单
+   * @param group 添加黑名单的群组
+   * @param members 添加的黑名单成员列表
    **/
   virtual void onBlockListAdded(BMXGroupPtr group, const std::vector<int64_t>& members) {}
 
   /**
-   * 删除黑名单
+   * @brief 删除黑名单
+   * @param group 删除黑名单的群组
+   * @param members 删除的黑名单成员列表
    **/
   virtual void onBlockListRemoved(BMXGroupPtr group, const std::vector<int64_t>& members) {}
+
+  /**
+   * @brief 客户端从服务器拉取到新群组时触发，用于用户群组列表更新，从SDK调用本地获取群组即可取得全部成员信息
+   **/
+  virtual void onGroupListUpdate() {}
+
+public:
+  /**
+   * @brief 注册BMXGroupServiceListener绑定到的BMXGroupService（SDK内部自动注册）
+   * @param service BMXGroupService
+   **/
+  void registerGroupService(BMXGroupService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXGroupService* mService;
 };
 
 }

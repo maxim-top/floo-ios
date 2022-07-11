@@ -20,31 +20,51 @@ namespace floo {
 
 template <typename T> class Encoder;
 template <typename T> class Decoder;
+
+/**
+ * @brief 音频消息附件
+ **/
 class EXPORT_API BMXVoiceAttachment : public BMXFileAttachment
 {
 public:
 
   /**
-   * 构造函数
+   * @brief 构造函数，构建发送音频消息附件
+   * @param path 文件的本地路径
+   * @param duration 音频时长
+   * @param displayName 文件展示名
    **/
   BMXVoiceAttachment(const std::string& path, int duration, const std::string& displayName = "");
 
   /**
-   * 构造函数
+   * @brief 构造函数，构建接收音频消息附件
+   * @param ratelUrl ratel文件服务器地址
+   * @param duration 音频时长
+   * @param displayName 文件展示名
+   * @param fileLength 文件大小
    **/
-  BMXVoiceAttachment(const std::string &url, int duration, const std::string& displayName, int64_t fileLength);
+  BMXVoiceAttachment(const std::string &ratelUrl, int duration, const std::string& displayName, int64_t fileLength);
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXVoiceAttachment() {}
 
+  /**
+   * @brief 返回文件类型
+   * @return Type
+   **/
   virtual Type type() const { return Type::Voice; }
 
+  /**
+   * @brief 克隆函数
+   * @return BMXMessageAttachmentPtr
+   **/
   virtual BMXMessageAttachmentPtr clone() const;
 
   /**
-   * 语音时长
+   * @brief 语音时长
+   * @return int32_t
    **/
   int32_t duration() const;
 

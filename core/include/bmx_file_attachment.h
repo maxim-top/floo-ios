@@ -20,57 +20,86 @@ namespace floo {
 
 template <typename T> class Encoder;
 template <typename T> class Decoder;
+
+/**
+ * @brief 消息文件附件
+ **/
 class EXPORT_API BMXFileAttachment : public BMXMessageAttachment
 {
 public:
 
   /**
-   * 构造函数
+   * @brief 构造函数，构建发送文件消息附件
+   * @param path 文件的本地路径
+   * @param displayName 文件展示名
    **/
   BMXFileAttachment(const std::string& path, const std::string& displayName = "");
 
   /**
-   * 构造函数
+   * @brief 构造函数，构建接收文件消息附件
+   * @param ratelUrl ratel文件服务器地址
+   * @param displayName 文件展示名
+   * @param fileLength 文件大小
    **/
-  BMXFileAttachment(const std::string &url, const std::string& displayName, int64_t fileLength);
+  BMXFileAttachment(const std::string &ratelUrl, const std::string& displayName, int64_t fileLength);
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXFileAttachment() {}
 
+  /**
+   * @brief 返回文件类型
+   * @return Type
+   **/
   virtual Type type() const { return Type::File; }
 
+  /**
+   * @brief 克隆函数
+   * @return BMXMessageAttachmentPtr
+   **/
   virtual BMXMessageAttachmentPtr clone() const;
 
   /**
-   * 本地路径
+   * @brief 本地路径
+   * @return std::string
    **/
   const std::string& path() const;
 
   /**
-   * 显示名
+   * @brief 显示名
+   * @return std::string
    **/
   const std::string& displayName() const;
 
   /**
-   * 远程URL
+   * @brief 远程ratel使用URL
+   * @return std::string
+   **/
+  const std::string& ratelUrl() const;
+
+  /**
+   * @brief 远程使用URL
+   * @return std::string
    **/
   const std::string& url() const;
 
   /**
-   * 文件长度
+   * @brief 文件长度
+   * @return std::string
    **/
   int64_t fileLength() const;
 
   /**
-   * 附件下载状态
+   * @brief 附件下载状态
+   * @return DownloadStatus
    **/
   DownloadStatus downloadStatus() const;
 
 protected:
   std::string mPath;
   std::string mDisplayName;
+  std::string mRatelUrl;
   std::string mUrl;
   int64_t mFileLength;
   DownloadStatus mDownloadStatus;

@@ -20,35 +20,53 @@ namespace floo {
 
 template <typename T> class Encoder;
 template <typename T> class Decoder;
+
+/**
+ * @brief 位置消息附件
+ **/
 class EXPORT_API BMXLocationAttachment : public BMXMessageAttachment
 {
 public:
   /**
-   * 构造函数
+   * @brief 构造函数
+   * @param latitude 纬度
+   * @param longitude 经度
+   * @param address 地址名称
    **/
   BMXLocationAttachment(double latitude, double longitude, const std::string& address);
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXLocationAttachment() {}
 
+  /**
+   * @brief 返回位置附件类型
+   * @return Type
+   **/
   virtual Type type() const { return Type::Location; }
 
+  /**
+   * @brief 克隆函数
+   * @return BMXMessageAttachmentPtr
+   **/
   virtual BMXMessageAttachmentPtr clone() const;
 
   /**
-   * 纬度
+   * @brief 纬度
+   * @return double
    **/
   double latitude() const;
 
   /**
-   * 经度
+   * @brief 经度
+   * @return double
    **/
   double longitude() const;
 
   /**
-   * 地址
+   * @brief 地址
+   * @return std::string
    **/
   const std::string& address() const;
 

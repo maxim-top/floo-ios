@@ -251,7 +251,7 @@ public:
 
 private:
 
-  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0),mUsername("") {}
+  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0), mUsername("") {}
 
   std::recursive_mutex mMutex;
   bool mMentionAll;

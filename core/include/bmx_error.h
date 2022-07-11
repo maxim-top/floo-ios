@@ -19,14 +19,21 @@
 
 namespace floo {
 
+/**
+ * @brief 错误码
+ **/
 enum class BMXErrorCode {
-  NoError,
+  NoError = 0,
 
   GeneralError,
   InvalidParam,
   NotFound,
+  DbOperationFailed,
+  SignInCancelled,
+  SignInTimeout,
+  SignInFailed,
 
-  UserNotLogin,
+  UserNotLogin = 100,
   UserAlreadyLogin,
   UserAuthFailed,
   UserPermissionDenied,
@@ -40,16 +47,38 @@ enum class BMXErrorCode {
   UserKickedBySameDevice,
   UserKickedByOtherDevices,
   UserAbnormal,
+  UserCancel,
+  UserOldPasswordNotMatch,
+  UserSigningIn,
 
-  InvalidVerificationCode,
+  PushTokenInvalid = 200,
+  PushAliasBindByOtherUser,
+  PushAliasTokenNotMatch,
+
+  InvalidVerificationCode = 300,
   InvalidRequestParameter,
+  InvalidUserNameParameter,
   MissingAccessToken,
   CurrentUserIsInRoster,
   CurrentUserIsInBlocklist,
   AnswerFailed,
   InvalidToken,
+  InvalidFileSign,
+  InvalidFileObjectType,
+  InvalidFileUploadToType,
+  InvalidFileDownloadUrl,
 
-  GroupServerDbError,
+  MessageInvalid = 400,
+  MessageOutRecallTime,
+  MessageRecallDisabled,
+  MessageCensored,
+  MessageInvalidType,
+
+  RosterNotFriend = 500,
+  RosterBlockListExist,
+  RosterRejectApplication,
+
+  GroupServerDbError = 600,
   GroupNotExist,
   GroupNotMemberFound,
   GroupMsgNotifyTypeUnknown,
@@ -72,20 +101,9 @@ enum class BMXErrorCode {
   GroupAnnouncementForbidden,
   GroupSharedFileNotFound,
   GroupSharedFileOperateNotAllowed,
+  GroupMemberBanned,
 
-  SignInCancelled,
-  SignInTimeout,
-  SignInFailed,
-
-  DbOperationFailed,
-
-  MessageInvalid,
-  MessageOutRecallTime,
-  MessageRecallDisabled,
-  MessageCensored,
-  MessageInvalidType,
-
-  ServerNotReachable,
+  ServerNotReachable = 700,
   ServerUnknownError,
   ServerInvalid,
   ServerDecryptionFailed,
@@ -96,9 +114,34 @@ enum class BMXErrorCode {
   ServerConnectFailed,
   ServerDNSFailed,
   ServerNeedReconnected,
+  ServerFileUploadUnknownError,
+  ServerFileDownloadUnknownError,
+  ServerInvalidLicense,
+  ServerLicenseLimit,
+  ServerAppFrozen,
+  ServerTooManyRequest,
+  ServerNotAllowOpenRegister,
+  ServerFireplaceUnknownError,
+  ServerResponseInvalid,
+  ServerInvalidUploadUrl,
+  ServerAppLicenseInvalid,
+  ServerAppLicenseExpired,
+  ServerAppLicenseExceedLimit,
+  ServerAppIdMissing,
+  ServerAppIdInvalid,
+  ServerAppSignInvalid,
+  ServerAppNotifierNotExist,
+  ServerNoClusterInfoForClusterId,
+  ServerFileDownloadFailure,
+  ServerAppStatusNotNormal,
 };
 
-std::string getErrorMessage(BMXErrorCode errorCode);
+/**
+ * @brief 通过错误码获取错误详细描述信息
+ * @param errorCode 错误码
+ * @return std::string
+ **/
+EXPORT_API std::string getErrorMessage(BMXErrorCode errorCode);
 
 class BMXError {
 public:

@@ -18,42 +18,78 @@
 #include "bmx_defines.h"
 #include "bmx_user_profile.h"
 #include "bmx_error.h"
+#include "bmx_user_service.h"
 
 namespace floo {
 
+class BMXUserService;
+
+/**
+ * @brief 用户状态监听者
+ **/
 class EXPORT_API BMXUserServiceListener {
 public:
-  virtual ~BMXUserServiceListener() {}
+  /**
+   * @brief 构造函数
+   **/
+  BMXUserServiceListener() : mService(nullptr) {}
 
   /**
-   * 链接状态发生变化
+   * @brief 析构函数
+   **/
+  virtual ~BMXUserServiceListener() {
+    if (mService != nullptr) {
+      mService->removeUserListener(this);
+    }
+  }
+
+  /**
+   * @brief 链接状态发生变化
+   * @param status 连接状态
    **/
   virtual void onConnectStatusChanged(BMXConnectStatus status) {}
 
   /**
-   * 用户登陆
+   * @brief 用户登陆
+   * @param profile 用户profile
    **/
   virtual void onUserSignIn(BMXUserProfilePtr profile) {}
 
   /**
-   * 用户登出
+   * @brief 用户登出
+   * @param error 状态错误码
    **/
-  virtual void onUserSignOut(BMXErrorCode error) {}
+  virtual void onUserSignOut(BMXErrorCode error, int64_t userId) {}
 
   /**
-   * 同步用户信息更新（其他设备操作发生用户信息变更）
+   * @brief 同步用户信息更新（其他设备操作发生用户信息变更）
+   * @param profile 用户profile
    **/
   virtual void onInfoUpdated(BMXUserProfilePtr profile) {}
 
   /**
-   * 用户在其他设备上登陆
+   * @brief 用户在其他设备上登陆
+   * @param deviceSN 设备序列号
    **/
   virtual void onOtherDeviceSingIn(int deviceSN) {}
 
   /**
-   * 用户在其他设备上登出
+   * @brief 用户在其他设备上登出
+   * @param deviceSN 设备序列号
    **/
   virtual void onOtherDeviceSingOut(int deviceSN) {}
+
+public:
+  /**
+   * @brief 注册BMXUserServiceListener绑定到的BMXUserService（SDK内部自动注册）
+   * @param service BMXUserService
+   **/
+  void registerUserService(BMXUserService* service) {
+    mService = service;
+  }
+
+protected:
+  BMXUserService* mService;
 };
 
 }

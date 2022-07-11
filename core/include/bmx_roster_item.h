@@ -19,79 +19,140 @@
 
 namespace floo {
 
+/**
+ * @brief 联系人
+ **/
 class EXPORT_API BMXRosterItem : public BMXBaseObject {
 public:
+
+  /**
+   * @brief 好友关系
+   **/
   enum class RosterRelation {
-    Friend,       // 好友
-    Deleted,      // 被删除
-    Stranger,     // 陌生人
-    Blocked,      // 被加入黑名单
+    /// 好友
+    Friend,
+    /// 被删除
+    Deleted,
+    /// 陌生人
+    Stranger,
+    /// 被加入黑名单
+    Blocked,
   };
 
   /**
-   * 析构函数
+   * @brief roster 被申请加好友时的验证方式
+   **/
+  enum class AddFriendAuthMode {
+    /// 无需验证，任何人可以加为好友
+    Open,
+    /// 需要同意方可加为好友
+    NeedApproval,
+    /// 需要回答问题正确方可加为好友
+    AnswerQuestion,
+    /// 拒绝所有加好友申请
+    RejectAll
+  };
+
+  /**
+   * @brief 析构函数
    **/
   virtual ~BMXRosterItem() {}
 
   /**
-   * 好友Id
+   * @brief 好友Id
+   * @return int64_t
    **/
   virtual int64_t rosterId() = 0;
 
   /**
-   * 好友名
+   * @brief 好友名
+   * @return std::string
    **/
   virtual const std::string& username() = 0;
 
   /**
-   * 好友昵称
+   * @brief 好友昵称
+   * @return std::string
    **/
   virtual const std::string& nickname() = 0;
 
   /**
-   * 好友头像
+   * @brief 好友头像Ratel服务器地址
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
+   * @brief 好友头像服务器地址
+   * @return std::string
    **/
   virtual std::string avatarUrl() = 0;
 
   /**
-   * 好友头像本地存储路径
+   * @brief 好友头像本地存储路径
+   * @return std::string
    **/
   virtual std::string avatarPath() = 0;
 
   /**
-   * 好友头像缩略图本地存储路径
+   * @brief 好友头像缩略图服务器地址
+   * @return std::string
+   **/
+  virtual std::string avatarThumbnailUrl() = 0;
+
+  /**
+   * @brief 好友头像缩略图本地存储路径
+   * @return std::string
    **/
   virtual std::string avatarThumbnailPath() = 0;
 
   /**
-   * 扩展信息，用户设置的好友可以看到的信息，比如地址，个性签名等
+   * @brief 扩展信息，用户设置的好友可以看到的信息，比如地址，个性签名等
+   * @return JSON(std::string)
    **/
   virtual const JSON& publicInfo() = 0;
 
   /**
-   * 用户对好友添加的备注等信息
+   * @brief 用户对好友添加的备注等信息
+   * @return JSON(std::string)
    **/
   virtual const JSON& alias() = 0;
 
   /**
-   * 用户的服务器扩展信息
+   * @brief 用户的服务器扩展信息
+   * @return JSON(std::string)
    **/
   virtual const JSON& ext() = 0;
 
   /**
-   * 用户的本地扩展信息
+   * @brief 用户的本地扩展信息
+   * @return JSON(std::string)
    **/
   virtual const JSON& localExt() = 0;
 
   /**
-   * 联系人关系
+   * @brief 联系人关系
+   * @return RosterRelation
    **/
   virtual RosterRelation relation() = 0;
 
   /**
-   * 是否提醒用户消息
+   * @brief 是否提醒用户消息
+   * @return bool
    **/
   virtual bool isMuteNotification() = 0;
+  
+  /**
+   * @brief roster的好友添加验证方式。
+   * @return AddFriendAuthMode
+   **/
+  virtual AddFriendAuthMode addFriendAuthMode() = 0;
+
+  /**
+   * @brief roster的好友验证问题。
+   * @return std::string
+   **/
+  virtual const std::string& authQuestion() = 0;
 
 protected:
   BMXRosterItem() {}

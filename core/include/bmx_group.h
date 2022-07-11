@@ -19,11 +19,14 @@
 
 namespace floo {
 
+/**
+ * @brief 群组
+ **/
 class EXPORT_API BMXGroup: public BMXBaseObject {
 public:
 
   /**
-   * 群成员
+   * @brief 群成员
    **/
   struct Member {
     Member(int64_t uid, const std::string& nickname, int64_t createTime) :
@@ -38,7 +41,7 @@ public:
   typedef std::vector<MemberPtr> MemberList;
 
   /**
-   * 群禁言成员
+   * @brief 群禁言成员
    **/
   struct BannedMember {
     BannedMember() {}
@@ -53,7 +56,7 @@ public:
   typedef std::vector<BannedMemberPtr> BannedMemberList;
 
   /**
-   * 群共享文件
+   * @brief 群共享文件
    **/
   struct SharedFile {
     SharedFile() {}
@@ -65,7 +68,8 @@ public:
     int mSize;
     int64_t mCreateTime;
     int64_t mUpdateTime;
-    std::string mUrl;
+    std::string mRatelUrl;  //群共享文件Ratel服务器Url
+    std::string mUrl;       //群共享文件服务器Url
     std::string mPath;
     std::string mDisplayName;
     std::string mType;
@@ -74,7 +78,7 @@ public:
   typedef std::vector<SharedFilePtr> SharedFileList;
 
   /**
-   * 群公告
+   * @brief 群公告
    **/
   struct Announcement {
     Announcement() {}
@@ -90,16 +94,19 @@ public:
   typedef std::vector<AnnouncementPtr> AnnouncementList;
 
   /**
-   * 群邀请状态
+   * @brief 群邀请状态
    **/
   enum class InvitationStatus {
-    Pending,        // 请求待处理
-    Accepted,       // 请求已接受
-    Declined        // 请求已拒绝
+    /// 请求待处理
+    Pending,
+    /// 请求已接受
+    Accepted,
+    /// 请求已拒绝
+    Declined
   };
 
   /**
-   * 群邀请
+   * @brief 群邀请
    **/
   struct Invitation {
     Invitation() {}
@@ -115,16 +122,19 @@ public:
   typedef std::vector<InvitationPtr> InvitationList;
 
   /**
-   * 群申请状态
+   * @brief 群申请状态
    **/
   enum class ApplicationStatus {
-    Pending,        // 请求待处理
-    Accepted,       // 请求已接受
-    Declined        // 请求已拒绝
+    /// 请求待处理
+    Pending,
+    /// 请求已接受
+    Accepted,
+    /// 请求已拒绝
+    Declined
   };
 
   /**
-   * 群申请
+   * @brief 群申请
    **/
   struct Application {
     Application() {}
@@ -140,194 +150,322 @@ public:
   typedef std::vector<ApplicationPtr> ApplicationList;
 
   /**
-   * 消息通知类型
+   * @brief 消息通知类型
    **/
   enum class MsgPushMode {
-    All,                  // 通知所有群消息
-    None,                 // 所有消息都不通知
-    AdminOrAt,            // 只通知管理员或者被@消息
-    Admin,                // 只通知知管理员消息
-    At                    // 只通知被@消息
+    /// 通知所有群消息
+    All,
+    /// 所有消息都不通知
+    None,
+    /// 只通知管理员或者被@消息
+    AdminOrAt,
+    /// 只通知知管理员消息
+    Admin,
+    /// 只通知被@消息
+    At
   };
 
   /**
-   * 群信息修改模式
+   * @brief 群信息修改模式
    **/
   enum class ModifyMode {
-    Open,                // 所有群成员都可以修改
-    AdminOnly           // 只有管理员可以
+    /// 只有管理员可以
+    AdminOnly,
+    /// 所有群成员都可以修改
+    Open,
   };
 
   /**
-   * 进群验证方式
+   * @brief 进群验证方式
    **/
   enum class JoinAuthMode {
-    Open,             // 无需验证
-    NeedApproval,     // 需要管理员批准
-    RejectAll         // 拒绝所有申请
+    /// 无需验证
+    Open,
+    /// 需要管理员批准
+    NeedApproval,
+    /// 拒绝所有申请
+    RejectAll
   };
 
   /**
-   * 邀请入群模式
+   * @brief 邀请入群模式
    **/
   enum class InviteMode {
-    Open,           // 所有人都可以邀请他人进群
-    AdminOnly       // 只有管理员可以邀请他人进群
-  };
-
-  enum class UpdateInfoType {
-    UnKnown,              // 默认初始化值
-    Name,                 // 修改群名称
-    Description,          // 修改群描述
-    Avatar,               // 修改群头像
-    Owner,                // 修改群主
-    Ext,                  // 修改群扩展
-    NickName,             // 群成员修改群名片
-    ModifyMode,           // 修改群信息模式
-    JoinAuthMode,         // 修改进群验证方式
-    InviteMode,           // 修改邀请入群模式
-    MsgPushMode,          // 修改群消息推送类型
-    MsgMuteMode           // 修改是否提醒消息
+    /// 只有管理员可以邀请他人进群
+    AdminOnly,
+    /// 所有人都可以邀请他人进群
+    Open
   };
 
   /**
-   * 群组状态
+   * @brief 群组信息更新类型
+   **/
+  enum class UpdateInfoType {
+    /// 默认初始化值
+    UnKnown,
+    /// 修改群名称
+    Name,
+    /// 修改群描述
+    Description,
+    /// 修改群头像
+    Avatar,
+    /// 修改群主
+    Owner,
+    /// 修改群扩展
+    Ext,
+    /// 群成员修改昵称
+    NickName,
+    /// 修改群信息模式
+    ModifyMode,
+    /// 修改进群验证方式
+    JoinAuthMode,
+    /// 修改邀请入群模式
+    InviteMode,
+    /// 修改群消息推送类型
+    MsgPushMode,
+    /// 修改是否提醒消息
+    MsgMuteMode,
+    /// 是否开启群消息已读功能
+    ReadAckMode,
+    /// 新群成员是否可见群历史聊天记录
+    HistoryVisibleMode,
+    /// 群组全员禁言到期时间
+    BanExpireTime,
+  };
+
+  /**
+   * @brief 群组状态
    **/
   enum class GroupStatus {
-    Normal,         // 群组状态正常
-    Destroyed,      // 群组已销毁
-  };
-
-  enum class MsgMuteMode {
-    None,               // 不屏蔽
-    MuteNotification,   // 屏蔽本地消息通知
-    MuteChat            // 屏蔽消息，不接收消息
+    /// 群组状态正常
+    Normal,
+    /// 群组已销毁
+    Destroyed,
   };
 
   /**
-   * 析构函数
+   * @brief 群组消息屏蔽模式
+   **/
+  enum class MsgMuteMode {
+    /// 不屏蔽
+    None,
+    /// 屏蔽本地消息通知
+    MuteNotification,
+    /// 屏蔽消息，不接收消息
+    MuteChat
+  };
+
+  enum class MemberRoleType {
+    /// 群成员
+    GroupMember,
+    /// 群管理员
+    GroupAdmin,
+    /// 群主
+    GroupOwner,
+    /// 非群成员
+    NotGroupMember
+  };
+
+  enum class GroupType {
+    /// 私有群组
+    Private,
+    /// 公开群组(现在暂时没有开放次类型群组)
+    Public,
+    /// 聊天室
+    Chatroom
+  };
+
+  /**
+   * @brief 析构函数
    **/
   virtual ~BMXGroup() {}
 
   /**
-   * 群Id
+   * @brief 群Id
+   * @return int64_t
    **/
   virtual int64_t groupId() = 0;
 
   /**
-   * 在群里的昵称
+   * @brief 当前群组的群组类型（Private 私有群组，Public 公开群组，Chatroom 聊天室）
+   * @return GroupType
+   **/
+  virtual GroupType groupType() = 0;
+
+  /**
+   * @brief 在群里的昵称
+   * @return std::string
    **/
   virtual const std::string& myNickname() = 0;
 
   /**
-   * 群名称
+   * @brief 群名称
+   * @return std::string
    **/
   virtual const std::string& name() = 0;
 
   /**
-   * 群描述
+   * @brief 群描述
+   * @return std::string
    **/
   virtual const std::string& description() = 0;
 
   /**
-   * 群头像
+   * @brief 群头像Ratel服务器Url
+   * @return std::string
+   **/
+  virtual std::string avatarRatelUrl() = 0;
+
+  /**
+   * @brief 群头像服务器Url
+   * @return std::string
    **/
   virtual std::string avatarUrl() = 0;
 
   /**
-   * 群头像下载后的本地路径
+   * @brief 群头像下载后的本地路径
+   * @return std::string
    **/
   virtual std::string avatarPath() = 0;
 
   /**
-   * 群头像缩略图下载后的本地路径
+   * @brief 群头像缩略图服务器Url
+   * @return std::string
+   **/
+  virtual std::string avatarThumbnailUrl() = 0;
+
+  /**
+   * @brief 群头像缩略图下载后的本地路径
+   * @return std::string
    **/
   virtual std::string avatarThumbnailPath() = 0;
 
   /**
-   * 群创建时间
+   * @brief 群创建时间
+   * @return int64_t
    **/
   virtual int64_t createTime() = 0;
 
   /**
-   * 群扩展信息
+   * @brief 群扩展信息
+   * @return JSON(std::string)
    **/
   virtual const JSON& extension() = 0;
 
   /**
-   * 群Owner
+   * @brief 群Owner
+   * @return int64_t
    **/
   virtual int64_t ownerId() = 0;
 
   /**
-   * 最大人数
+   * @brief 最大人数
+   * @return int
    **/
   virtual int capacity() = 0;
 
   /**
-   * 群成员数量，包含Owner，admins 和members
+   * @brief 群成员数量，包含Owner，admins 和members
+   * @return int
    **/
   virtual int membersCount() = 0;
 
   /**
-   * 群管理员数量
+   * @brief 群管理员数量
+   * @return int
    **/
   virtual int adminsCount() = 0;
 
   /**
-   * 黑名单数量
+   * @brief 黑名单数量
+   * @return int
    **/
   virtual int blockListSize() = 0;
 
   /**
-   * 禁言数量
+   * @brief 禁言数量
+   * @return int
    **/
   virtual int bannedListSize() = 0;
 
   /**
-   * 群共享文件数量
+   * @brief 群共享文件数量
+   * @return int
    **/
   virtual int sharedFilesCount() = 0;
 
   /**
-   * 最新群公告id
+   * @brief 最新群公告id
+   * @return int64_t
    **/
   virtual int64_t latestAnnouncementId() = 0;
 
   /**
-   * 群消息通知类型
+   * @brief 群消息通知类型
+   * @return MsgPushMode
    **/
   virtual MsgPushMode msgPushMode() = 0;
 
   /**
-   * 群信息修改模式
+   * @brief 群信息修改模式
+   * @return ModifyMode
    **/
   virtual ModifyMode modifyMode() = 0;
 
   /**
-   * 入群审批模式
+   * @brief 入群审批模式
+   * @return JoinAuthMode
    **/
   virtual JoinAuthMode joinAuthMode() = 0;
 
   /**
-   * 入群邀请模式
+   * @brief 入群邀请模式
+   * @return InviteMode
    **/
   virtual InviteMode inviteMode() = 0;
 
   /**
-   * 群消息屏蔽模式
+   * @brief 群消息屏蔽模式
+   * @return MsgMuteMode
    **/
   virtual MsgMuteMode msgMuteMode() = 0;
 
   /**
-   * 当前群组的状态。（Normal 正常， Destroyed 以销毁）
+   * @brief 当前群组的状态。（Normal 正常， Destroyed 以销毁）
+   * @return GroupStatus
    **/
   virtual GroupStatus groupStatus() = 0;
 
   /**
-   * 当前用户是否是群成员
+   * Deprecated use roleType instead.
+   * @brief 当前用户是否是群成员
+   * @return bool
    **/
   virtual bool isMember() = 0;
+
+  /**
+   * @brief 是否开启群消息已读功能
+   * @return bool
+   **/
+  virtual bool enableReadAck() = 0;
+
+  /**
+   * @brief 是否可以加载显示历史聊天记录
+   * @return bool
+   **/
+  virtual bool historyVisible() = 0;
+
+  /**
+   * @brief 成员在群组内的角色类型
+   * @return MemberRoleType
+   **/
+  virtual MemberRoleType roleType() = 0;
+
+  /**
+   * @brief 群组全员禁言到期时间
+   * @return int64_t
+   **/
+  virtual int64_t banExpireTime() = 0;
 
 protected:
   BMXGroup() {}

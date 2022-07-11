@@ -20,10 +20,17 @@
 namespace floo {
 
 class BMXMessage;
+
+/**
+ * @brief 消息转发附件
+ **/
 class EXPORT_API BMXForwardAttachment : public BMXMessageAttachment
 {
 public:
 
+  /**
+   * @brief 转发消息附件自定义消息
+   **/
   class Message {
   public:
     Message(std::shared_ptr<BMXMessage> msg);
@@ -40,20 +47,25 @@ public:
   };
 
   /**
-   * 构造函数
+   * @brief 构造函数
    **/
   BMXForwardAttachment() {}
 
   /**
-   * 析构函数
+   * @brief 析构函数
    **/
   virtual ~BMXForwardAttachment() {}
 
   /**
-   * 附件类型
+   * @brief 附件类型
+   * @return Type
    **/
   virtual Type type() const { return Type::Forward; }
 
+  /**
+   * @brief 克隆函数
+   * @return BMXMessageAttachmentPtr
+   **/
   virtual BMXMessageAttachmentPtr clone() const;
 
 private:

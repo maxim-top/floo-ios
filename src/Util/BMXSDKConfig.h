@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 @property (nonatomic,assign) BOOL carryUsernameInMessage;
 
-@property (nonatomic, assign, readonly) BMXLogLevel logoLevelType;
+@property (nonatomic, assign) BMXLogLevel logLevelType;
 
 @property (nonatomic, assign) BOOL consoleOutput;
 
