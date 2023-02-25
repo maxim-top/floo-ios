@@ -39,6 +39,14 @@ static const std::string kSilence = "silence";                          // bool
 static const std::string kBadge = "badge";                              // int
 static const std::string kUsername = "username";                        // string
 
+static const std::string kRTCAction = "action";                         // string
+static const std::string kRTCCallType = "type";                         // int
+static const std::string kRTCRoomId = "roomId";                         // int64_t
+static const std::string kRTCInitiator = "initiator";                   // int64_t
+static const std::string kRTCCallId = "callId";                         // string
+static const std::string kRTCRoomType = "roomType";                     // int
+static const std::string kRTCPin = "pin";                               // string
+
 class BMXMessageConfig;
 typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
 
@@ -51,11 +59,31 @@ public:
   /**
    * @brief 当前读取的Badge数字的操作类型
    **/
-  enum class BadgeCountType{
+  enum class BadgeCountType {
     /// 读取Badge计数的操作类型为增加或减少。正数为增加负数为减少
     Change,
     /// 设置Badge的计数为当前的计数值
     Set
+  };
+
+  /**
+   * @brief RTC通话类型
+   */
+  enum class RTCCallType {
+    /// 语音通话
+    AudioCall,
+    /// 视频通话
+    VideoCall
+  };
+
+  /**
+   * @brief RTC通话房间类型
+   */
+  enum class RTCRoomType {
+    /// 会议模式
+    Communication,
+    /// 直播模式
+    Broadcast
   };
 
   virtual ~BMXMessageConfig() {}
@@ -239,6 +267,70 @@ public:
   std::string getUsername();
 
   /**
+  * @brief 设置呼叫消息信息
+  * @param calltype 通话类型（语音电话、视频电话）
+  * @param roomId 房间id
+  * @param initiator 发起者id
+  * @param roomType 房间类型（会议模式，直播模式）
+  * @param pin 加入房间的pin码
+  **/
+  void setRTCCallInfo(RTCCallType calltype, int64_t roomId, int64_t initiator, RTCRoomType roomType, const std::string& pin);
+
+  /**
+  * @brief 设置接通消息信息
+  * @param callId 通话id
+  **/
+  void setRTCPickupInfo(const std::string& callId);
+
+  /**
+  * @brief 设置挂断消息信息
+  * @param callId 通话id
+  **/
+  void setRTCHangupInfo(const std::string& callId);
+
+  /**
+  * @brief 获得RTC相关操作类型信息（呼叫、接通、挂断等）。
+  * @return int
+  **/
+  std::string getRTCAction();
+
+  /**
+  * @brief 获得RTC相关通话类型（音频通话、视频通话类型）。
+  * @return RTCCallType
+  **/
+  RTCCallType getRTCCallType();
+
+  /**
+  * @brief 获得RTC相关房间id信息。
+  * @return int64_t
+  **/
+  int64_t getRTCRoomId();
+
+  /**
+  * @brief 获得RTC相关发起者id信息。
+  * @return int64_t
+  **/
+  int64_t getRTCInitiator();
+
+  /**
+  * @brief 获得RTC相关callId信息。
+  * @return std::string
+  **/
+  std::string getRTCCallId();
+
+  /**
+  * @brief 获得RTC相关房间类型信息。
+  * @return RTCRoomType
+  **/
+  RTCRoomType getRTCRoomType();
+
+  /**
+  * @brief 获得RTC相关pin码信息。
+  * @return std::string
+  **/
+  std::string getRTCPin();
+
+  /**
    * @brief 序列化操作
    * @return std::string
    **/
@@ -269,6 +361,13 @@ private:
   BadgeCountType mBadgeType;
   int mBadgeCount;
   std::string mUsername;
+  std::string mRTCAction;
+  RTCCallType mRTCCallType;
+  int64_t mRTCRoomId;
+  int64_t mRTCInitiator;
+  std::string mRTCCallId;
+  RTCRoomType mRTCRoomType;
+  std::string mRTCPin;
 };
 
 std::string encodeBMXMessageConfig(BMXMessageConfigPtr);

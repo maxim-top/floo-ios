@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,37 +54,101 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+	<optgroup label="Class Methods">
 		
-		<option value="//api/name/groupMemberList">groupMemberList</option>
-		
-		<option value="//api/name/mentionAll">mentionAll</option>
-		
-		<option value="//api/name/mentionList">mentionList</option>
-		
-		<option value="//api/name/mentionMessage">mentionMessage</option>
-		
-		<option value="//api/name/pushMessage">pushMessage</option>
-		
-		<option value="//api/name/senderName">senderName</option>
+		<option value="//api/name/createMessageConfigWithMentionAll:">+ createMessageConfigWithMentionAll:</option>
 		
 	</optgroup>
 	
 
 	
-
-	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/addGroupMember:">- addGroupMember:</option>
+		<option value="//api/name/addGroupMemberWithMemberId:">- addGroupMemberWithMemberId:</option>
 		
-		<option value="//api/name/clealerGroupMemberList">- clealerGroupMemberList</option>
+		<option value="//api/name/clearGroupMemberList">- clearGroupMemberList</option>
 		
-		<option value="//api/name/initConfigWithMentionAll:">- initConfigWithMentionAll:</option>
+		<option value="//api/name/dealloc">- dealloc</option>
 		
-		<option value="//api/name/removeGroupMember:">- removeGroupMember:</option>
+		<option value="//api/name/getAndroidConfig">- getAndroidConfig</option>
 		
-		<option value="//api/name/username">- username</option>
+		<option value="//api/name/getBadgeCount:">- getBadgeCount:</option>
+		
+		<option value="//api/name/getBadgeCountType">- getBadgeCountType</option>
+		
+		<option value="//api/name/getGroupMemberList">- getGroupMemberList</option>
+		
+		<option value="//api/name/getIOSConfig">- getIOSConfig</option>
+		
+		<option value="//api/name/getMentionAll">- getMentionAll</option>
+		
+		<option value="//api/name/getMentionList">- getMentionList</option>
+		
+		<option value="//api/name/getMentionedMessage">- getMentionedMessage</option>
+		
+		<option value="//api/name/getPushMessage">- getPushMessage</option>
+		
+		<option value="//api/name/getPushShowBeginTime">- getPushShowBeginTime</option>
+		
+		<option value="//api/name/getPushShowEndTime">- getPushShowEndTime</option>
+		
+		<option value="//api/name/getPushTitle">- getPushTitle</option>
+		
+		<option value="//api/name/getRTCAction">- getRTCAction</option>
+		
+		<option value="//api/name/getRTCCallId">- getRTCCallId</option>
+		
+		<option value="//api/name/getRTCCallType">- getRTCCallType</option>
+		
+		<option value="//api/name/getRTCInitiator">- getRTCInitiator</option>
+		
+		<option value="//api/name/getRTCPin">- getRTCPin</option>
+		
+		<option value="//api/name/getRTCRoomId">- getRTCRoomId</option>
+		
+		<option value="//api/name/getRTCRoomType">- getRTCRoomType</option>
+		
+		<option value="//api/name/getSenderNickname">- getSenderNickname</option>
+		
+		<option value="//api/name/getUsername">- getUsername</option>
+		
+		<option value="//api/name/isSilence">- isSilence</option>
+		
+		<option value="//api/name/removeGroupMemberWithMemberId:">- removeGroupMemberWithMemberId:</option>
+		
+		<option value="//api/name/serialize">- serialize</option>
+		
+		<option value="//api/name/setAndroidConfig:">- setAndroidConfig:</option>
+		
+		<option value="//api/name/setGroupMemberList:">- setGroupMemberList:</option>
+		
+		<option value="//api/name/setIOSConfig:">- setIOSConfig:</option>
+		
+		<option value="//api/name/setMentionAll:">- setMentionAll:</option>
+		
+		<option value="//api/name/setMentionList:">- setMentionList:</option>
+		
+		<option value="//api/name/setMentionedMessage:">- setMentionedMessage:</option>
+		
+		<option value="//api/name/setPushMessage:">- setPushMessage:</option>
+		
+		<option value="//api/name/setPushShowBeginTime:">- setPushShowBeginTime:</option>
+		
+		<option value="//api/name/setPushShowEndTime:">- setPushShowEndTime:</option>
+		
+		<option value="//api/name/setPushTitle:">- setPushTitle:</option>
+		
+		<option value="//api/name/setRTCCallInfo:roomId:initiator:roomType:pin:">- setRTCCallInfo:roomId:initiator:roomType:pin:</option>
+		
+		<option value="//api/name/setRTCHangupInfo:">- setRTCHangupInfo:</option>
+		
+		<option value="//api/name/setRTCPickupInfo:">- setRTCPickupInfo:</option>
+		
+		<option value="//api/name/setSenderNickname:">- setSenderNickname:</option>
+		
+		<option value="//api/name/setUsername:">- setUsername:</option>
 		
 	</optgroup>
 	
@@ -105,15 +171,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXMessageConfig.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 消息配置</p>
+					</div>
+					
+					
 
 					
 					
@@ -126,8 +200,1877 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/mentionAll" title="mentionAll"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mentionAll">&nbsp;&nbsp;mentionAll</a></code>
+	<a name="//api/name/setMentionAll:" title="setMentionAll:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMentionAll:">&ndash;&nbsp;setMentionAll:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否@全员
+@param mentionAll</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMentionAll:(BOOL)<em>mentionAll</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMentionAll" title="getMentionAll"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMentionAll">&ndash;&nbsp;getMentionAll</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取是否@全员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)getMentionAll</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMentionList:" title="setMentionList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMentionList:">&ndash;&nbsp;setMentionList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置通知成员id列表
+@param mentionList</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMentionList:(ListOfLongLong *)<em>mentionList</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMentionList" title="getMentionList"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMentionList">&ndash;&nbsp;getMentionList</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取@成员列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ListOfLongLong *)getMentionList</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/ListOfLongLong.html">ListOfLongLong</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMentionedMessage:" title="setMentionedMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMentionedMessage:">&ndash;&nbsp;setMentionedMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置@消息
+@param mentionedMessage</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMentionedMessage:(NSString *)<em>mentionedMessage</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMentionedMessage" title="getMentionedMessage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMentionedMessage">&ndash;&nbsp;getMentionedMessage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取@消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getMentionedMessage</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPushMessage:" title="setPushMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPushMessage:">&ndash;&nbsp;setPushMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置推送消息
+@param pushMessage</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPushMessage:(NSString *)<em>pushMessage</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPushMessage" title="getPushMessage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushMessage">&ndash;&nbsp;getPushMessage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取推送消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getPushMessage</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSenderNickname:" title="setSenderNickname:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSenderNickname:">&ndash;&nbsp;setSenderNickname:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置发送者昵称
+@param senderNickname</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSenderNickname:(NSString *)<em>senderNickname</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSenderNickname" title="getSenderNickname"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSenderNickname">&ndash;&nbsp;getSenderNickname</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送者昵称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getSenderNickname</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGroupMemberList:" title="setGroupMemberList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGroupMemberList:">&ndash;&nbsp;setGroupMemberList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置需要群已读消息的群成员id列表
+@param groupMemberList</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGroupMemberList:(ListOfLongLong *)<em>groupMemberList</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupMemberList" title="getGroupMemberList"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupMemberList">&ndash;&nbsp;getGroupMemberList</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取需要群已读消息的群成员id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (ListOfLongLong *)getGroupMemberList</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/ListOfLongLong.html">ListOfLongLong</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addGroupMemberWithMemberId:" title="addGroupMemberWithMemberId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addGroupMemberWithMemberId:">&ndash;&nbsp;addGroupMemberWithMemberId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加群已读消息的群成员id列表成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addGroupMemberWithMemberId:(long long)<em>memberId</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeGroupMemberWithMemberId:" title="removeGroupMemberWithMemberId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeGroupMemberWithMemberId:">&ndash;&nbsp;removeGroupMemberWithMemberId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>清除需要群已读消息的群成员id列表成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeGroupMemberWithMemberId:(long long)<em>memberId</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/ListOfLongLong.html">ListOfLongLong</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clearGroupMemberList" title="clearGroupMemberList"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearGroupMemberList">&ndash;&nbsp;clearGroupMemberList</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>清空群已读消息的群成员id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)clearGroupMemberList</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIOSConfig:" title="setIOSConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIOSConfig:">&ndash;&nbsp;setIOSConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置IOS系统配置信息
+@param iosConfig</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIOSConfig:(NSString *)<em>iosConfig</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getIOSConfig" title="getIOSConfig"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getIOSConfig">&ndash;&nbsp;getIOSConfig</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取IOS系统配置信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getIOSConfig</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAndroidConfig:" title="setAndroidConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAndroidConfig:">&ndash;&nbsp;setAndroidConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置Android系统配置信息
+@param androidConfig</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAndroidConfig:(NSString *)<em>androidConfig</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAndroidConfig" title="getAndroidConfig"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAndroidConfig">&ndash;&nbsp;getAndroidConfig</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取Android系统配置信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getAndroidConfig</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPushShowBeginTime:" title="setPushShowBeginTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPushShowBeginTime:">&ndash;&nbsp;setPushShowBeginTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置推送显示开始时间
+@param beginTime</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPushShowBeginTime:(int)<em>beginTime</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPushShowBeginTime" title="getPushShowBeginTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushShowBeginTime">&ndash;&nbsp;getPushShowBeginTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取推送显示开始时间</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)getPushShowBeginTime</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPushShowEndTime:" title="setPushShowEndTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPushShowEndTime:">&ndash;&nbsp;setPushShowEndTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置推送显示结束时间
+@param endTime</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPushShowEndTime:(int)<em>endTime</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPushShowEndTime" title="getPushShowEndTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushShowEndTime">&ndash;&nbsp;getPushShowEndTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取推送显示结束时间</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)getPushShowEndTime</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPushTitle:" title="setPushTitle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPushTitle:">&ndash;&nbsp;setPushTitle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置推送标题
+@param pushTitle</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPushTitle:(NSString *)<em>pushTitle</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPushTitle" title="getPushTitle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushTitle">&ndash;&nbsp;getPushTitle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取推送标题</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getPushTitle</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isSilence" title="isSilence"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSilence">&ndash;&nbsp;isSilence</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前的推送消息是否是静默消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isSilence</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBadgeCountType" title="getBadgeCountType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBadgeCountType">&ndash;&nbsp;getBadgeCountType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前的推送消息中badge计数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageConfig_BadgeCountType)getBadgeCountType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BadgeCountType</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBadgeCount:" title="getBadgeCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBadgeCount:">&ndash;&nbsp;getBadgeCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前的推送消息中badge计数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)getBadgeCount:(int)<em>count</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setUsername:" title="setUsername:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUsername:">&ndash;&nbsp;setUsername:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置用户名
+@param username</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setUsername:(NSString *)<em>username</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getUsername" title="getUsername"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getUsername">&ndash;&nbsp;getUsername</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得用户名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getUsername</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setRTCCallInfo:roomId:initiator:roomType:pin:" title="setRTCCallInfo:roomId:initiator:roomType:pin:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setRTCCallInfo:roomId:initiator:roomType:pin:">&ndash;&nbsp;setRTCCallInfo:roomId:initiator:roomType:pin:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置呼叫消息信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setRTCCallInfo:(BMXMessageConfig_RTCCallType)<em>calltype</em> roomId:(long long)<em>roomId</em> initiator:(long long)<em>initiator</em> roomType:(BMXMessageConfig_RTCRoomType)<em>roomType</em> pin:(NSString *)<em>pin</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>calltype</code></th>
+						<td><p>通话类型（语音电话、视频电话）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>initiator</code></th>
+						<td><p>发起者id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomType</code></th>
+						<td><p>房间类型（会议模式，直播模式）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pin</code></th>
+						<td><p>加入房间的pin码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setRTCPickupInfo:" title="setRTCPickupInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setRTCPickupInfo:">&ndash;&nbsp;setRTCPickupInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置接通消息信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setRTCPickupInfo:(NSString *)<em>callId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callId</code></th>
+						<td><p>通话id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setRTCHangupInfo:" title="setRTCHangupInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setRTCHangupInfo:">&ndash;&nbsp;setRTCHangupInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置挂断消息信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setRTCHangupInfo:(NSString *)<em>callId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callId</code></th>
+						<td><p>通话id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCAction" title="getRTCAction"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCAction">&ndash;&nbsp;getRTCAction</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关操作类型信息（呼叫、接通、挂断等）。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getRTCAction</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCCallType" title="getRTCCallType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCCallType">&ndash;&nbsp;getRTCCallType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关通话类型（音频通话、视频通话类型）。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageConfig_RTCCallType)getRTCCallType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>RTCCallType</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCRoomId" title="getRTCRoomId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCRoomId">&ndash;&nbsp;getRTCRoomId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关房间id信息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)getRTCRoomId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCInitiator" title="getRTCInitiator"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCInitiator">&ndash;&nbsp;getRTCInitiator</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关发起者id信息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)getRTCInitiator</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCCallId" title="getRTCCallId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCCallId">&ndash;&nbsp;getRTCCallId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关callId信息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getRTCCallId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCRoomType" title="getRTCRoomType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCRoomType">&ndash;&nbsp;getRTCRoomType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关房间类型信息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageConfig_RTCRoomType)getRTCRoomType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessageConfig_RTCRoomType.html">BMXMessageConfig_RTCRoomType</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCPin" title="getRTCPin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCPin">&ndash;&nbsp;getRTCPin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得RTC相关pin码信息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getRTCPin</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serialize" title="serialize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serialize">&ndash;&nbsp;serialize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>序列化操作</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)serialize</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createMessageConfigWithMentionAll:" title="createMessageConfigWithMentionAll:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createMessageConfigWithMentionAll:">+&nbsp;createMessageConfigWithMentionAll:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -136,14 +2079,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL mentionAll</code></div>
+			<div class="method-subsection method-declaration"><code>+ (BMXMessageConfig *)createMessageConfigWithMentionAll:(BOOL)<em>mentionAll</em></code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/mentionList" title="mentionList"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mentionList">&nbsp;&nbsp;mentionList</a></code>
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,151 +2095,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray&lt;NSString*&gt; *mentionList</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/mentionMessage" title="mentionMessage"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mentionMessage">&nbsp;&nbsp;mentionMessage</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *mentionMessage</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pushMessage" title="pushMessage"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pushMessage">&nbsp;&nbsp;pushMessage</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *pushMessage</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/senderName" title="senderName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/senderName">&nbsp;&nbsp;senderName</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *senderName</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/groupMemberList" title="groupMemberList"></a>
-	<h3 class="method-title"><code><a href="#//api/name/groupMemberList">&nbsp;&nbsp;groupMemberList</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray&lt;NSString*&gt; *groupMemberList</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initConfigWithMentionAll:" title="initConfigWithMentionAll:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initConfigWithMentionAll:">&ndash;&nbsp;initConfigWithMentionAll:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (instancetype)initConfigWithMentionAll:(BOOL)<em>isMentionAll</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addGroupMember:" title="addGroupMember:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addGroupMember:">&ndash;&nbsp;addGroupMember:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)addGroupMember:(NSString *)<em>rosterId</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/removeGroupMember:" title="removeGroupMember:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeGroupMember:">&ndash;&nbsp;removeGroupMember:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)removeGroupMember:(NSString *)<em>rosterId</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/clealerGroupMemberList" title="clealerGroupMemberList"></a>
-	<h3 class="method-title"><code><a href="#//api/name/clealerGroupMemberList">&ndash;&nbsp;clealerGroupMemberList</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)clealerGroupMemberList</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/username" title="username"></a>
-	<h3 class="method-title"><code><a href="#//api/name/username">&ndash;&nbsp;username</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (NSString *)username</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
 
 		    
 		</div>
@@ -316,7 +2115,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

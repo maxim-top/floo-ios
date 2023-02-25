@@ -127,13 +127,20 @@ public:
    * @brief 房间配置参数
    */
   struct BMXRoomPubConfigureOptions {
-    BMXRoomPubConfigureOptions(bool enableAudio = true, bool enableVideo = true, bool enableData = true, const std::string& display = "") : 
-      mEnableAudio(enableAudio), mEnableVideo(enableVideo), mEnableData(enableData), mDisplay(display) {
+    BMXRoomPubConfigureOptions(bool enableAudio = true, bool enableVideo = true,
+                               int width = 0, int height = 0, int bitrate = 0,
+                               bool enableData = true, const std::string& display = "") :
+      mEnableAudio(enableAudio), mEnableVideo(enableVideo),
+      mWidth(width), mHeight(height), mBitrate(bitrate),
+      mEnableData(enableData), mDisplay(display) {
     }
     bool mEnableAudio;            // 是否启用音频
     bool mEnableVideo;            // 是否启用视频
     bool mEnableData;             // 是否启用数据
     std::string mDisplay;         // 用户描述
+    int mWidth;                   // 视频宽度
+    int mHeight;                  // 视频高度
+    int mBitrate;                 // 视频帧率
   };
   typedef std::shared_ptr<BMXRoomPubConfigureOptions> BMXRoomPubConfigureOptionsPtr;
 

@@ -73,10 +73,13 @@ enum class BMXErrorCode {
   MessageRecallDisabled,
   MessageCensored,
   MessageInvalidType,
+  MessageBadArg,
+  MessageRateLimitExceeded,
 
   RosterNotFriend = 500,
   RosterBlockListExist,
   RosterRejectApplication,
+  RosterHasDeletedFromSystem,
 
   GroupServerDbError = 600,
   GroupNotExist,
@@ -134,6 +137,9 @@ enum class BMXErrorCode {
   ServerNoClusterInfoForClusterId,
   ServerFileDownloadFailure,
   ServerAppStatusNotNormal,
+  ServerPlatformNotAllowed,
+  ServerCannotCreateDeviceSn,
+  ServerRtcNotOpen,
 };
 
 /**

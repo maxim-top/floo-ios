@@ -67,6 +67,7 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXRosterNotFriend = 500,
     BMXRosterBlockListExist,
     BMXRosterRejectApplication,
+    BMXErrorCode_RosterHasDeletedFromSystem,
 
     BMXGroupServerDbError = 600,
     BMXGroupNotExist,

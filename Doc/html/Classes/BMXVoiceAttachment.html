@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,21 +54,31 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+	<optgroup label="Class Methods">
 		
-		<option value="//api/name/duration">duration</option>
+		<option value="//api/name/dynamicCastWithAttachment:">+ dynamicCastWithAttachment:</option>
 		
 	</optgroup>
 	
 
 	
-
-	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/initWithData:displayName:fileLength:duration:conversationId:">- initWithData:displayName:fileLength:duration:conversationId:</option>
+		<option value="//api/name/clone">- clone</option>
 		
-		<option value="//api/name/initWithPath:displayName:duration:conversationId:">- initWithPath:displayName:duration:conversationId:</option>
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/duration">- duration</option>
+		
+		<option value="//api/name/initWithPath:duration:">- initWithPath:duration:</option>
+		
+		<option value="//api/name/initWithPath:duration:displayName:">- initWithPath:duration:displayName:</option>
+		
+		<option value="//api/name/initWithRatelUrl:duration:displayName:fileLength:">- initWithRatelUrl:duration:displayName:fileLength:</option>
+		
+		<option value="//api/name/type">- type</option>
 		
 	</optgroup>
 	
@@ -89,15 +101,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a> : <a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a> : NSObject</td>
+	<td><a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a> : <a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a> : <a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXVoiceAttachment.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 音频消息附件</p>
+					</div>
+					
+					
 
 					
 					
@@ -110,8 +130,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/duration" title="duration"></a>
-	<h3 class="method-title"><code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+	<a name="//api/name/initWithPath:duration:displayName:" title="initWithPath:duration:displayName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPath:duration:displayName:">&ndash;&nbsp;initWithPath:duration:displayName:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -121,58 +141,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>时长</p>
+				<p>构造函数，构建发送音频消息附件</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int duration</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>时长</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXVoiceAttachment.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithPath:displayName:duration:conversationId:" title="initWithPath:displayName:duration:conversationId:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithPath:displayName:duration:conversationId:">&ndash;&nbsp;initWithPath:displayName:duration:conversationId:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>初始化<a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithPath:(NSString *)<em>path</em> displayName:(NSString *)<em>displayName</em> duration:(NSInteger)<em>duration</em> conversationId:(NSString *)<em>conversationId</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)initWithPath:(NSString *)<em>path</em> duration:(int)<em>duration</em> displayName:(NSString *)<em>displayName</em></code></div>
 
 		    
 			
@@ -182,17 +156,17 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>path</code></th>
-						<td><p>音频路径</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>displayName</code></th>
-						<td><p>显示</p></td>
+						<td><p>文件的本地路径</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>duration</code></th>
-						<td><p>时长</p></td>
+						<td><p>音频时长</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>displayName</code></th>
+						<td><p>文件展示名</p></td>
 					</tr>
 				
 				</table>
@@ -200,19 +174,9 @@
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p><a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a></p>
-			</div>
-			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>初始化<a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a></p>
-			</div>
 			
 
 			
@@ -222,15 +186,31 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXVoiceAttachment.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithData:displayName:fileLength:duration:conversationId:" title="initWithData:displayName:fileLength:duration:conversationId:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithData:displayName:fileLength:duration:conversationId:">&ndash;&nbsp;initWithData:displayName:fileLength:duration:conversationId:</a></code>
+	<a name="//api/name/initWithPath:duration:" title="initWithPath:duration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPath:duration:">&ndash;&nbsp;initWithPath:duration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithPath:(NSString *)<em>path</em> duration:(int)<em>duration</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithRatelUrl:duration:displayName:fileLength:" title="initWithRatelUrl:duration:displayName:fileLength:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRatelUrl:duration:displayName:fileLength:">&ndash;&nbsp;initWithRatelUrl:duration:displayName:fileLength:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -240,12 +220,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>初始化<a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a></p>
+				<p>构造函数，构建接收音频消息附件</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithData:(NSData *)<em>aData</em> displayName:(NSString *)<em>displayName</em> fileLength:(NSInteger)<em>fileLength</em> duration:(NSInteger)<em>duration</em> conversationId:(NSString *)<em>conversationId</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)initWithRatelUrl:(NSString *)<em>ratelUrl</em> duration:(int)<em>duration</em> displayName:(NSString *)<em>displayName</em> fileLength:(long long)<em>fileLength</em></code></div>
 
 		    
 			
@@ -254,23 +234,23 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aData</code></th>
-						<td><p>音频Data</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>displayName</code></th>
-						<td><p>显示名称</p></td>
+						<th scope="row" class="argument-name"><code>ratelUrl</code></th>
+						<td><p>ratel文件服务器地址</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>duration</code></th>
-						<td><p>时长</p></td>
+						<td><p>音频时长</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>conversationId</code></th>
-						<td><p>会话Id</p></td>
+						<th scope="row" class="argument-name"><code>displayName</code></th>
+						<td><p>文件展示名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileLength</code></th>
+						<td><p>文件大小</p></td>
 					</tr>
 				
 				</table>
@@ -282,10 +262,51 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>初始化<a href="../Classes/BMXFileAttachment.html">BMXFileAttachment</a></p>
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&ndash;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>返回文件类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageAttachment_Type)type</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessageAttachment_Type.html">BMXMessageAttachment_Type</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -295,10 +316,176 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXVoiceAttachment.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clone" title="clone"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clone">&ndash;&nbsp;clone</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>克隆函数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageAttachment *)clone</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/duration" title="duration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/duration">&ndash;&nbsp;duration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>语音时长</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)duration</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dynamicCastWithAttachment:" title="dynamicCastWithAttachment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dynamicCastWithAttachment:">+&nbsp;dynamicCastWithAttachment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息附件强制转换为语音附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXVoiceAttachment *)dynamicCastWithAttachment:(BMXMessageAttachment *)<em>attachment</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attachment</code></th>
+						<td><p>附件</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BMXVoiceAttachment</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -316,7 +503,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

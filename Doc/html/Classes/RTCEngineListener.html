@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RTCEngineListener Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addDelegate:queue:">- addDelegate:queue:</option>
+		
+		<option value="//api/name/onErrorWithInfo:error:">- onErrorWithInfo:error:</option>
+		
+		<option value="//api/name/onJoinRoomWithInfo:roomId:error:">- onJoinRoomWithInfo:roomId:error:</option>
+		
+		<option value="//api/name/onKickoffWithInfo:error:">- onKickoffWithInfo:error:</option>
+		
+		<option value="//api/name/onLeaveRoomWithInfo:roomId:error:reason:">- onLeaveRoomWithInfo:roomId:error:reason:</option>
+		
+		<option value="//api/name/onLocalAudioLevelWithVolume:">- onLocalAudioLevelWithVolume:</option>
+		
+		<option value="//api/name/onLocalPublishWithStream:info:error:">- onLocalPublishWithStream:info:error:</option>
+		
+		<option value="//api/name/onLocalStreamMuteRspWithStream:trackType:mute:info:error:">- onLocalStreamMuteRspWithStream:trackType:mute:info:error:</option>
+		
+		<option value="//api/name/onLocalUnPublishWithStream:info:error:">- onLocalUnPublishWithStream:info:error:</option>
+		
+		<option value="//api/name/onMemberExitedWithRoomId:usedId:reason:">- onMemberExitedWithRoomId:usedId:reason:</option>
+		
+		<option value="//api/name/onMemberJoinedWithRoomId:usedId:">- onMemberJoinedWithRoomId:usedId:</option>
+		
+		<option value="//api/name/onNetworkQualityWithStream:info:error:">- onNetworkQualityWithStream:info:error:</option>
+		
+		<option value="//api/name/onReJoinRoomWithInfo:roomId:error:">- onReJoinRoomWithInfo:roomId:error:</option>
+		
+		<option value="//api/name/onRejoiningWithRoomId:error:">- onRejoiningWithRoomId:error:</option>
+		
+		<option value="//api/name/onRemoteAudioLevelWithUserId:volume:">- onRemoteAudioLevelWithUserId:volume:</option>
+		
+		<option value="//api/name/onRemotePublishWithStream:info:error:">- onRemotePublishWithStream:info:error:</option>
+		
+		<option value="//api/name/onRemoteRTCStatsWithStreamStats:info:error:">- onRemoteRTCStatsWithStreamStats:info:error:</option>
+		
+		<option value="//api/name/onRemoteStreamMuteRspWithStream:trackType:mute:info:error:">- onRemoteStreamMuteRspWithStream:trackType:mute:info:error:</option>
+		
+		<option value="//api/name/onRemoteTrackNotifyWithStream:trackType:info:error:">- onRemoteTrackNotifyWithStream:trackType:info:error:</option>
+		
+		<option value="//api/name/onRemoteUnPublishWithStream:info:error:">- onRemoteUnPublishWithStream:info:error:</option>
+		
+		<option value="//api/name/onSendRTCStatsWithStreamStats:info:error:">- onSendRTCStatsWithStreamStats:info:error:</option>
+		
+		<option value="//api/name/onSubscribeWithStream:info:error:">- onSubscribeWithStream:info:error:</option>
+		
+		<option value="//api/name/onUnSubscribeWithStream:info:error:">- onUnSubscribeWithStream:info:error:</option>
+		
+		<option value="//api/name/onWarningWithInfo:error:">- onWarningWithInfo:error:</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RTCEngineListener Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface RTC监听者</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addDelegate:queue:" title="addDelegate:queue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:queue:">&ndash;&nbsp;addDelegate:queue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRTCEngineProtocol&gt;)<em>delegate</em> queue:(dispatch_queue_t)<em>queue</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;BMXRTCEngineProtocol&gt;)<em>delegate</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onJoinRoomWithInfo:roomId:error:" title="onJoinRoomWithInfo:roomId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onJoinRoomWithInfo:roomId:error:">&ndash;&nbsp;onJoinRoomWithInfo:roomId:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户加入房间回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onJoinRoomWithInfo:(NSString *)<em>info</em> roomId:(long long)<em>roomId</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLeaveRoomWithInfo:roomId:error:reason:" title="onLeaveRoomWithInfo:roomId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLeaveRoomWithInfo:roomId:error:reason:">&ndash;&nbsp;onLeaveRoomWithInfo:roomId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户离开房间回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onLeaveRoomWithInfo:(NSString *)<em>info</em> roomId:(long long)<em>roomId</em> error:(BMXErrorCode)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reason</code></th>
+						<td><p>离开原因</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRejoiningWithRoomId:error:" title="onRejoiningWithRoomId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRejoiningWithRoomId:error:">&ndash;&nbsp;onRejoiningWithRoomId:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@brief断线重新加入房间回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRejoiningWithRoomId:(long long)<em>roomId</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@brief断线重新加入房间回调</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onReJoinRoomWithInfo:roomId:error:" title="onReJoinRoomWithInfo:roomId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onReJoinRoomWithInfo:roomId:error:">&ndash;&nbsp;onReJoinRoomWithInfo:roomId:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重新加入房间完成回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onReJoinRoomWithInfo:(NSString *)<em>info</em> roomId:(long long)<em>roomId</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMemberJoinedWithRoomId:usedId:" title="onMemberJoinedWithRoomId:usedId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMemberJoinedWithRoomId:usedId:">&ndash;&nbsp;onMemberJoinedWithRoomId:usedId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>其他用户加入房间回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onMemberJoinedWithRoomId:(long long)<em>roomId</em> usedId:(long long)<em>usedId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>usedId</code></th>
+						<td><p>用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMemberExitedWithRoomId:usedId:reason:" title="onMemberExitedWithRoomId:usedId:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMemberExitedWithRoomId:usedId:reason:">&ndash;&nbsp;onMemberExitedWithRoomId:usedId:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>其他用户离开房间回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onMemberExitedWithRoomId:(long long)<em>roomId</em> usedId:(long long)<em>usedId</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roomId</code></th>
+						<td><p>房间Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>usedId</code></th>
+						<td><p>用户Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reason</code></th>
+						<td><p>离开原因</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLocalPublishWithStream:info:error:" title="onLocalPublishWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLocalPublishWithStream:info:error:">&ndash;&nbsp;onLocalPublishWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地流发布回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onLocalPublishWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLocalUnPublishWithStream:info:error:" title="onLocalUnPublishWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLocalUnPublishWithStream:info:error:">&ndash;&nbsp;onLocalUnPublishWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地流停止发布回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onLocalUnPublishWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemotePublishWithStream:info:error:" title="onRemotePublishWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemotePublishWithStream:info:error:">&ndash;&nbsp;onRemotePublishWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远程流发布回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemotePublishWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemoteUnPublishWithStream:info:error:" title="onRemoteUnPublishWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemoteUnPublishWithStream:info:error:">&ndash;&nbsp;onRemoteUnPublishWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远程流停止发布回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemoteUnPublishWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubscribeWithStream:info:error:" title="onSubscribeWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubscribeWithStream:info:error:">&ndash;&nbsp;onSubscribeWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>订阅流回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubscribeWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onUnSubscribeWithStream:info:error:" title="onUnSubscribeWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onUnSubscribeWithStream:info:error:">&ndash;&nbsp;onUnSubscribeWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止订阅流回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onUnSubscribeWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemoteTrackNotifyWithStream:trackType:info:error:" title="onRemoteTrackNotifyWithStream:trackType:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemoteTrackNotifyWithStream:trackType:info:error:">&ndash;&nbsp;onRemoteTrackNotifyWithStream:trackType:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远端流信息变更通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemoteTrackNotifyWithStream:(BMXStream *)<em>stream</em> trackType:(BMXTrackType)<em>trackType</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>trackType</code></th>
+						<td><p>音轨或者视频轨类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLocalStreamMuteRspWithStream:trackType:mute:info:error:" title="onLocalStreamMuteRspWithStream:trackType:mute:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLocalStreamMuteRspWithStream:trackType:mute:info:error:">&ndash;&nbsp;onLocalStreamMuteRspWithStream:trackType:mute:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地音频或视频启用禁用通知回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onLocalStreamMuteRspWithStream:(BMXStream *)<em>stream</em> trackType:(BMXTrackType)<em>trackType</em> mute:(BOOL)<em>mute</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>trackType</code></th>
+						<td><p>音轨或者视频轨类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>启用或禁用</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemoteStreamMuteRspWithStream:trackType:mute:info:error:" title="onRemoteStreamMuteRspWithStream:trackType:mute:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemoteStreamMuteRspWithStream:trackType:mute:info:error:">&ndash;&nbsp;onRemoteStreamMuteRspWithStream:trackType:mute:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远端音频或视频启用禁用通知回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemoteStreamMuteRspWithStream:(BMXStream *)<em>stream</em> trackType:(BMXTrackType)<em>trackType</em> mute:(BOOL)<em>mute</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>trackType</code></th>
+						<td><p>音轨或者视频轨类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>启用或禁用</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSendRTCStatsWithStreamStats:info:error:" title="onSendRTCStatsWithStreamStats:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSendRTCStatsWithStreamStats:info:error:">&ndash;&nbsp;onSendRTCStatsWithStreamStats:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送端统计信息回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onSendRTCStatsWithStreamStats:(BMXStreamStats *)<em>streamStats</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>streamStats</code></th>
+						<td><p>本地流统计信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemoteRTCStatsWithStreamStats:info:error:" title="onRemoteRTCStatsWithStreamStats:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemoteRTCStatsWithStreamStats:info:error:">&ndash;&nbsp;onRemoteRTCStatsWithStreamStats:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远端统计信息回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemoteRTCStatsWithStreamStats:(BMXStreamStats *)<em>streamStats</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>streamStats</code></th>
+						<td><p>远端流统计信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLocalAudioLevelWithVolume:" title="onLocalAudioLevelWithVolume:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLocalAudioLevelWithVolume:">&ndash;&nbsp;onLocalAudioLevelWithVolume:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地音量调节回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onLocalAudioLevelWithVolume:(int)<em>volume</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>volume</code></th>
+						<td><p>音量信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRemoteAudioLevelWithUserId:volume:" title="onRemoteAudioLevelWithUserId:volume:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRemoteAudioLevelWithUserId:volume:">&ndash;&nbsp;onRemoteAudioLevelWithUserId:volume:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>远端音量调节回复</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onRemoteAudioLevelWithUserId:(long long)<em>userId</em> volume:(int)<em>volume</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userId</code></th>
+						<td><p>用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>volume</code></th>
+						<td><p>音量信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onKickoffWithInfo:error:" title="onKickoffWithInfo:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onKickoffWithInfo:error:">&ndash;&nbsp;onKickoffWithInfo:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>被踢信息回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onKickoffWithInfo:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onWarningWithInfo:error:" title="onWarningWithInfo:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onWarningWithInfo:error:">&ndash;&nbsp;onWarningWithInfo:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>警告信息回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onWarningWithInfo:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onErrorWithInfo:error:" title="onErrorWithInfo:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onErrorWithInfo:error:">&ndash;&nbsp;onErrorWithInfo:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>错误信息回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onErrorWithInfo:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onNetworkQualityWithStream:info:error:" title="onNetworkQualityWithStream:info:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onNetworkQualityWithStream:info:error:">&ndash;&nbsp;onNetworkQualityWithStream:info:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>网络质量回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onNetworkQualityWithStream:(BMXStream *)<em>stream</em> info:(NSString *)<em>info</em> error:(BMXErrorCode)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>流信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>info</code></th>
+						<td><p>通知信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误码信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

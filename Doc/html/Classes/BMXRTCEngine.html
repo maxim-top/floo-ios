@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXRTCEngine Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/swigCMemOwn">swigCMemOwn</option>
+		
+		<option value="//api/name/swigCPtr">swigCPtr</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addDelegate:">- addDelegate:</option>
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/addRTCEngineListener:">- addRTCEngineListener:</option>
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/destroy">- destroy</option>
+		
+		<option value="//api/name/getRTCConfig">- getRTCConfig</option>
+		
+		<option value="//api/name/initWithCptr:swigOwnCObject:">- initWithCptr:swigOwnCObject:</option>
+		
+		<option value="//api/name/joinRoomWithAuth:">- joinRoomWithAuth:</option>
+		
+		<option value="//api/name/leaveRoom">- leaveRoom</option>
+		
+		<option value="//api/name/muteLocalAudioWithMute:">- muteLocalAudioWithMute:</option>
+		
+		<option value="//api/name/muteLocalVideoWithType:mute:">- muteLocalVideoWithType:mute:</option>
+		
+		<option value="//api/name/muteRemoteAudioWithStream:mute:">- muteRemoteAudioWithStream:mute:</option>
+		
+		<option value="//api/name/muteRemoteVideoWithStream:mute:">- muteRemoteVideoWithStream:mute:</option>
+		
+		<option value="//api/name/publishWithType:hasVideo:hasAudio:">- publishWithType:hasVideo:hasAudio:</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeRTCEngineListener:">- removeRTCEngineListener:</option>
+		
+		<option value="//api/name/setAudioProfile:">- setAudioProfile:</option>
+		
+		<option value="//api/name/setRoomType:">- setRoomType:</option>
+		
+		<option value="//api/name/setStreamRole:">- setStreamRole:</option>
+		
+		<option value="//api/name/setVideoCodec:">- setVideoCodec:</option>
+		
+		<option value="//api/name/setVideoProfile:">- setVideoProfile:</option>
+		
+		<option value="//api/name/startPreviewWithCanvas:">- startPreviewWithCanvas:</option>
+		
+		<option value="//api/name/startRemoteViewWithCanvas:">- startRemoteViewWithCanvas:</option>
+		
+		<option value="//api/name/stopPreviewWithCanvas:">- stopPreviewWithCanvas:</option>
+		
+		<option value="//api/name/stopRemoteViewWithCanvas:">- stopRemoteViewWithCanvas:</option>
+		
+		<option value="//api/name/subscribeWithStream:">- subscribeWithStream:</option>
+		
+		<option value="//api/name/switchCamera">- switchCamera</option>
+		
+		<option value="//api/name/unPublishWithType:">- unPublishWithType:</option>
+		
+		<option value="//api/name/unSubscribeWithStream:">- unSubscribeWithStream:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXRTCEngine Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface RTC Engine</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/swigCPtr" title="swigCPtr"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCPtr">&nbsp;&nbsp;swigCPtr</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) void *swigCPtr</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swigCMemOwn" title="swigCMemOwn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCMemOwn">&nbsp;&nbsp;swigCMemOwn</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL swigCMemOwn</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithCptr:swigOwnCObject:" title="initWithCptr:swigOwnCObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithCptr:swigOwnCObject:">&ndash;&nbsp;initWithCptr:swigOwnCObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithCptr:(void *)<em>cptr</em> swigOwnCObject:(BOOL)<em>ownCObject</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroy" title="destroy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroy">&ndash;&nbsp;destroy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>销毁音视频Engine</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRTCConfig" title="getRTCConfig"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRTCConfig">&ndash;&nbsp;getRTCConfig</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取RTC设置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXRTCConfig *)getRTCConfig</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXRTCConfig.html">BMXRTCConfig</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setRoomType:" title="setRoomType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setRoomType:">&ndash;&nbsp;setRoomType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置Room的类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setRoomType:(BMXRoomType)<em>type</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>Room类型</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setStreamRole:" title="setStreamRole:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setStreamRole:">&ndash;&nbsp;setStreamRole:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置流操作权限</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setStreamRole:(BMXStreamRole)<em>role</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>role</code></th>
+						<td><p>操作权限，推流、拉流、推拉流。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setVideoCodec:" title="setVideoCodec:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setVideoCodec:">&ndash;&nbsp;setVideoCodec:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置视频编码格式类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setVideoCodec:(BMXVideoCodec)<em>codec</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>codec</code></th>
+						<td><p>VP8编码、H264编码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setVideoProfile:" title="setVideoProfile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setVideoProfile:">&ndash;&nbsp;setVideoProfile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置视频编码格式类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setVideoProfile:(BMXVideoConfig *)<em>videoConfig</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>codec</code></th>
+						<td><p>VP8编码、H264编码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAudioProfile:" title="setAudioProfile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAudioProfile:">&ndash;&nbsp;setAudioProfile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置音频编码格式</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setAudioProfile:(BMXAudioProfile)<em>profile</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>profile</code></th>
+						<td><p>音频编码格式</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/joinRoomWithAuth:" title="joinRoomWithAuth:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinRoomWithAuth:">&ndash;&nbsp;joinRoomWithAuth:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入频道</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)joinRoomWithAuth:(BMXRoomAuth *)<em>auth</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>auth</code></th>
+						<td><p>加入频道时的认证信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/leaveRoom" title="leaveRoom"></a>
+	<h3 class="method-title"><code><a href="#//api/name/leaveRoom">&ndash;&nbsp;leaveRoom</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>离开频道</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)leaveRoom</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/publishWithType:hasVideo:hasAudio:" title="publishWithType:hasVideo:hasAudio:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/publishWithType:hasVideo:hasAudio:">&ndash;&nbsp;publishWithType:hasVideo:hasAudio:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发布流信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)publishWithType:(BMXVideoMediaType)<em>type</em> hasVideo:(BOOL)<em>hasVideo</em> hasAudio:(BOOL)<em>hasAudio</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>流媒体类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hasVideo</code></th>
+						<td><p>是否存在视频流</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hasAudio</code></th>
+						<td><p>是否存在音频流</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unPublishWithType:" title="unPublishWithType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unPublishWithType:">&ndash;&nbsp;unPublishWithType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止发布流</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)unPublishWithType:(BMXVideoMediaType)<em>type</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>流媒体类型</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/subscribeWithStream:" title="subscribeWithStream:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/subscribeWithStream:">&ndash;&nbsp;subscribeWithStream:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>订阅流信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)subscribeWithStream:(BMXStream *)<em>stream</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unSubscribeWithStream:" title="unSubscribeWithStream:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unSubscribeWithStream:">&ndash;&nbsp;unSubscribeWithStream:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止订阅流</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)unSubscribeWithStream:(BMXStream *)<em>stream</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startPreviewWithCanvas:" title="startPreviewWithCanvas:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startPreviewWithCanvas:">&ndash;&nbsp;startPreviewWithCanvas:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开启本地渲染</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)startPreviewWithCanvas:(BMXVideoCanvas *)<em>canvas</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>canvas</code></th>
+						<td><p>画布属性信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopPreviewWithCanvas:" title="stopPreviewWithCanvas:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopPreviewWithCanvas:">&ndash;&nbsp;stopPreviewWithCanvas:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止本地渲染</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)stopPreviewWithCanvas:(BMXVideoCanvas *)<em>canvas</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>canvas</code></th>
+						<td><p>画布属性信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startRemoteViewWithCanvas:" title="startRemoteViewWithCanvas:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startRemoteViewWithCanvas:">&ndash;&nbsp;startRemoteViewWithCanvas:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开启远端渲染</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)startRemoteViewWithCanvas:(BMXVideoCanvas *)<em>canvas</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>canvas</code></th>
+						<td><p>画布属性信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopRemoteViewWithCanvas:" title="stopRemoteViewWithCanvas:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopRemoteViewWithCanvas:">&ndash;&nbsp;stopRemoteViewWithCanvas:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止远端渲染</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)stopRemoteViewWithCanvas:(BMXVideoCanvas *)<em>canvas</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>canvas</code></th>
+						<td><p>画布属性信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteLocalAudioWithMute:" title="muteLocalAudioWithMute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteLocalAudioWithMute:">&ndash;&nbsp;muteLocalAudioWithMute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>打开关闭本地音频</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)muteLocalAudioWithMute:(BOOL)<em>mute</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>true为打开，false为关闭</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteLocalVideoWithType:mute:" title="muteLocalVideoWithType:mute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteLocalVideoWithType:mute:">&ndash;&nbsp;muteLocalVideoWithType:mute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>打开关闭本地视频</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)muteLocalVideoWithType:(BMXVideoMediaType)<em>type</em> mute:(BOOL)<em>mute</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>视频流类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>true为打开，false为关闭</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteRemoteAudioWithStream:mute:" title="muteRemoteAudioWithStream:mute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteRemoteAudioWithStream:mute:">&ndash;&nbsp;muteRemoteAudioWithStream:mute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>打开关闭远端音频</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)muteRemoteAudioWithStream:(BMXStream *)<em>stream</em> mute:(BOOL)<em>mute</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>远端流</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>true为打开，false为关闭</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteRemoteVideoWithStream:mute:" title="muteRemoteVideoWithStream:mute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteRemoteVideoWithStream:mute:">&ndash;&nbsp;muteRemoteVideoWithStream:mute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>打开关闭远端视频</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)muteRemoteVideoWithStream:(BMXStream *)<em>stream</em> mute:(BOOL)<em>mute</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stream</code></th>
+						<td><p>远端流</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mute</code></th>
+						<td><p>true为打开，false为关闭</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchCamera" title="switchCamera"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchCamera">&ndash;&nbsp;switchCamera</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>切换摄像头</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)switchCamera</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加聊天监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRTCEngineProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>聊天监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRTCEngineProtocol&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除聊天监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;BMXRTCEngineProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>聊天监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addRTCEngineListener:" title="addRTCEngineListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addRTCEngineListener:">&ndash;&nbsp;addRTCEngineListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addRTCEngineListener:(id&lt;BMXRTCEngineProtocol&gt;)<em>listener</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeRTCEngineListener:" title="removeRTCEngineListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRTCEngineListener:">&ndash;&nbsp;removeRTCEngineListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRTCEngineListener:(id&lt;BMXRTCEngineProtocol&gt;)<em>listener</em></code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

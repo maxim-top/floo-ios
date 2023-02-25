@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,21 +54,23 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+
+	
+	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/pushAlias">pushAlias</option>
+		<option value="//api/name/dealloc">- dealloc</option>
 		
-		<option value="//api/name/pushToken">pushToken</option>
+		<option value="//api/name/messagePushSetting">- messagePushSetting</option>
 		
-		<option value="//api/name/setting">setting</option>
+		<option value="//api/name/pushAlias">- pushAlias</option>
 		
-		<option value="//api/name/userId">userId</option>
+		<option value="//api/name/pushToken">- pushToken</option>
+		
+		<option value="//api/name/userId">- userId</option>
 		
 	</optgroup>
-	
-
-	
-
 	
 	
 </select>
@@ -87,15 +91,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXPushUserProfile.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface Push用户Profile</p>
+					</div>
+					
+					
 
 					
 					
@@ -109,7 +121,7 @@
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/userId" title="userId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userId">&nbsp;&nbsp;userId</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/userId">&ndash;&nbsp;userId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -124,20 +136,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger userId</code></div>
+			<div class="method-subsection method-declaration"><code>- (long long)userId</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>用户ID（唯一）</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -147,7 +159,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXPushUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -155,7 +167,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/pushAlias" title="pushAlias"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pushAlias">&nbsp;&nbsp;pushAlias</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/pushAlias">&ndash;&nbsp;pushAlias</a></code>
 </h3>
 
 	<div class="method-info">
@@ -170,20 +182,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *pushAlias</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)pushAlias</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>推送用户别名</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -193,7 +205,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXPushUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -201,7 +213,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/pushToken" title="pushToken"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pushToken">&nbsp;&nbsp;pushToken</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/pushToken">&ndash;&nbsp;pushToken</a></code>
 </h3>
 
 	<div class="method-info">
@@ -216,20 +228,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *pushToken</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)pushToken</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>推送用户token</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -239,15 +251,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXPushUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setting" title="setting"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setting">&nbsp;&nbsp;setting</a></code>
+	<a name="//api/name/messagePushSetting" title="messagePushSetting"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messagePushSetting">&ndash;&nbsp;messagePushSetting</a></code>
 </h3>
 
 	<div class="method-info">
@@ -262,20 +274,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) BMXMessagePushSetting *setting</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXPushUserProfileMessagePushSetting *)messagePushSetting</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>推送用户消息设定</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXPushUserProfileMessagePushSetting.html">BMXPushUserProfileMessagePushSetting</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -285,10 +297,26 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXPushUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -306,7 +334,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

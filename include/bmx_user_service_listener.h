@@ -79,6 +79,11 @@ public:
    **/
   virtual void onOtherDeviceSingOut(int deviceSN) {}
 
+  /**
+   * @brief 用户流量超限通知
+   **/
+  virtual void onTrafficLimitExceeded() {}
+
 public:
   /**
    * @brief 注册BMXUserServiceListener绑定到的BMXUserService（SDK内部自动注册）

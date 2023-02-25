@@ -47,13 +47,25 @@ public:
    * @param msg 发生变化的信令消息
    * @param error 
    **/
-  virtual void onRTCNoticeStatusChanged(BMXMessagePtr msg, BMXErrorCode error)  {}
+  virtual void onRTCMessageStatusChanged(BMXMessagePtr msg, BMXErrorCode error)  {}
 
   /**
-   * @brief 收到信令消息
-   * @param list 接收到的信令消息列表
+   * @brief 接收到通话请求消息
+   * @param msg 
    **/
-  virtual void onRTCNoticeReceive(const BMXMessageList& list)  {}
+  virtual void onRTCCallMessageReceive(BMXMessagePtr msg) {}
+
+  /**
+   * @brief 接收到接通消息
+   * @param msg 
+   **/
+  virtual void onRTCPickupMessageReceive(BMXMessagePtr msg) {}
+
+  /**
+   * @brief 接收到挂断消息
+   * @param msg 
+   **/
+  virtual void onRTCHangupMessageReceive(BMXMessagePtr msg) {}
 
 public:
   void registerRTCService(BMXRTCService* service) {

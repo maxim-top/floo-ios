@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,45 +54,47 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+
+	
+	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/addFriendAuthMode">addFriendAuthMode</option>
+		<option value="//api/name/addFriendAuthMode">- addFriendAuthMode</option>
 		
-		<option value="//api/name/authQuestion">authQuestion</option>
+		<option value="//api/name/authQuestion">- authQuestion</option>
 		
-		<option value="//api/name/avatarPath">avatarPath</option>
+		<option value="//api/name/avatarPath">- avatarPath</option>
 		
-		<option value="//api/name/avatarThumbnailPath">avatarThumbnailPath</option>
+		<option value="//api/name/avatarRatelUrl">- avatarRatelUrl</option>
 		
-		<option value="//api/name/avatarThumbnailUrl">avatarThumbnailUrl</option>
+		<option value="//api/name/avatarThumbnailPath">- avatarThumbnailPath</option>
 		
-		<option value="//api/name/avatarUrl">avatarUrl</option>
+		<option value="//api/name/avatarUrl">- avatarUrl</option>
 		
-		<option value="//api/name/email">email</option>
+		<option value="//api/name/category">- category</option>
 		
-		<option value="//api/name/isAutoAcceptGroupInvite">isAutoAcceptGroupInvite</option>
+		<option value="//api/name/dealloc">- dealloc</option>
 		
-		<option value="//api/name/messageSetting">messageSetting</option>
+		<option value="//api/name/email">- email</option>
 		
-		<option value="//api/name/mobilePhone">mobilePhone</option>
+		<option value="//api/name/isAutoAcceptGroupInvite">- isAutoAcceptGroupInvite</option>
 		
-		<option value="//api/name/nickName">nickName</option>
+		<option value="//api/name/messageSetting">- messageSetting</option>
 		
-		<option value="//api/name/privateInfoJson">privateInfoJson</option>
+		<option value="//api/name/mobilePhone">- mobilePhone</option>
 		
-		<option value="//api/name/publicInfoJson">publicInfoJson</option>
+		<option value="//api/name/nickname">- nickname</option>
 		
-		<option value="//api/name/userCategory">userCategory</option>
+		<option value="//api/name/privateInfo">- privateInfo</option>
 		
-		<option value="//api/name/userId">userId</option>
+		<option value="//api/name/publicInfo">- publicInfo</option>
 		
-		<option value="//api/name/userName">userName</option>
+		<option value="//api/name/userId">- userId</option>
+		
+		<option value="//api/name/username">- username</option>
 		
 	</optgroup>
-	
-
-	
-
 	
 	
 </select>
@@ -111,15 +115,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXUserProfile.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 用户Profile</p>
+					</div>
+					
+					
 
 					
 					
@@ -133,7 +145,7 @@
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/userId" title="userId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userId">&nbsp;&nbsp;userId</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/userId">&ndash;&nbsp;userId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -143,25 +155,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>用户id</p>
+				<p>用户ID（唯一）</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) long long userId</code></div>
+			<div class="method-subsection method-declaration"><code>- (long long)userId</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>用户id</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -171,15 +183,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/userCategory" title="userCategory"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userCategory">&nbsp;&nbsp;userCategory</a></code>
+	<a name="//api/name/category" title="category"></a>
+	<h3 class="method-title"><code><a href="#//api/name/category">&ndash;&nbsp;category</a></code>
 </h3>
 
 	<div class="method-info">
@@ -189,25 +201,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>用户级别</p>
+				<p>用户策略</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BMXUserCategory userCategory</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXUserProfile_UserCategory)category</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>用户级别</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXUserProfile_UserCategory.html">BMXUserProfile_UserCategory</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -217,15 +229,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/userName" title="userName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userName">&nbsp;&nbsp;userName</a></code>
+	<a name="//api/name/username" title="username"></a>
+	<h3 class="method-title"><code><a href="#//api/name/username">&ndash;&nbsp;username</a></code>
 </h3>
 
 	<div class="method-info">
@@ -235,25 +247,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>用户名</p>
+				<p>用户名（唯一）</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *userName</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)username</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>用户名</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -263,15 +275,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nickName" title="nickName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nickName">&nbsp;&nbsp;nickName</a></code>
+	<a name="//api/name/nickname" title="nickname"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nickname">&ndash;&nbsp;nickname</a></code>
 </h3>
 
 	<div class="method-info">
@@ -281,25 +293,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>昵称</p>
+				<p>用户昵称</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *nickName</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)nickname</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>昵称</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -309,7 +321,53 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/avatarRatelUrl" title="avatarRatelUrl"></a>
+	<h3 class="method-title"><code><a href="#//api/name/avatarRatelUrl">&ndash;&nbsp;avatarRatelUrl</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户ratel服务器头像url</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)avatarRatelUrl</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -317,7 +375,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/avatarUrl" title="avatarUrl"></a>
-	<h3 class="method-title"><code><a href="#//api/name/avatarUrl">&nbsp;&nbsp;avatarUrl</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/avatarUrl">&ndash;&nbsp;avatarUrl</a></code>
 </h3>
 
 	<div class="method-info">
@@ -327,25 +385,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>头像url</p>
+				<p>用户头像url</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *avatarUrl</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)avatarUrl</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>头像url</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -355,7 +413,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -363,7 +421,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/avatarPath" title="avatarPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/avatarPath">&nbsp;&nbsp;avatarPath</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/avatarPath">&ndash;&nbsp;avatarPath</a></code>
 </h3>
 
 	<div class="method-info">
@@ -373,25 +431,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>头像本地路径</p>
+				<p>用户头像本地存储路径</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *avatarPath</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)avatarPath</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>头像本地路径</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -401,53 +459,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/avatarThumbnailUrl" title="avatarThumbnailUrl"></a>
-	<h3 class="method-title"><code><a href="#//api/name/avatarThumbnailUrl">&nbsp;&nbsp;avatarThumbnailUrl</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>头像缩略图url</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *avatarThumbnailUrl</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>头像缩略图url</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -455,7 +467,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/avatarThumbnailPath" title="avatarThumbnailPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/avatarThumbnailPath">&nbsp;&nbsp;avatarThumbnailPath</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/avatarThumbnailPath">&ndash;&nbsp;avatarThumbnailPath</a></code>
 </h3>
 
 	<div class="method-info">
@@ -465,25 +477,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>头像缩略图本地路径</p>
+				<p>用户头像缩略图本地存储路径</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *avatarThumbnailPath</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)avatarThumbnailPath</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>头像缩略图本地路径</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -493,7 +505,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -501,7 +513,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/mobilePhone" title="mobilePhone"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mobilePhone">&nbsp;&nbsp;mobilePhone</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/mobilePhone">&ndash;&nbsp;mobilePhone</a></code>
 </h3>
 
 	<div class="method-info">
@@ -511,25 +523,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>手机号</p>
+				<p>用户手机</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *mobilePhone</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)mobilePhone</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>手机号</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -539,7 +551,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -547,7 +559,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/email" title="email"></a>
-	<h3 class="method-title"><code><a href="#//api/name/email">&nbsp;&nbsp;email</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/email">&ndash;&nbsp;email</a></code>
 </h3>
 
 	<div class="method-info">
@@ -557,25 +569,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>  用户邮箱</p>
+				<p>用户邮箱</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *email</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)email</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>  用户邮箱</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -585,15 +597,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/publicInfoJson" title="publicInfoJson"></a>
-	<h3 class="method-title"><code><a href="#//api/name/publicInfoJson">&nbsp;&nbsp;publicInfoJson</a></code>
+	<a name="//api/name/publicInfo" title="publicInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/publicInfo">&ndash;&nbsp;publicInfo</a></code>
 </h3>
 
 	<div class="method-info">
@@ -603,25 +615,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>公开信息</p>
+				<p>用户公开扩展信息，好友可见</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *publicInfoJson</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)publicInfo</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>公开信息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -631,15 +643,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/privateInfoJson" title="privateInfoJson"></a>
-	<h3 class="method-title"><code><a href="#//api/name/privateInfoJson">&nbsp;&nbsp;privateInfoJson</a></code>
+	<a name="//api/name/privateInfo" title="privateInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/privateInfo">&ndash;&nbsp;privateInfo</a></code>
 </h3>
 
 	<div class="method-info">
@@ -649,25 +661,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>私密信息</p>
+				<p>用户私有扩展信息，好友不可见</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *privateInfoJson</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)privateInfo</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>私密信息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -677,99 +689,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/authQuestion" title="authQuestion"></a>
-	<h3 class="method-title"><code><a href="#//api/name/authQuestion">&nbsp;&nbsp;authQuestion</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>验证问题</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) BMXAuthQuestion *authQuestion</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>验证问题</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/messageSetting" title="messageSetting"></a>
-	<h3 class="method-title"><code><a href="#//api/name/messageSetting">&nbsp;&nbsp;messageSetting</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>消息设置</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) BMXMessageSetting *messageSetting</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>消息设置</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -777,7 +697,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/addFriendAuthMode" title="addFriendAuthMode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addFriendAuthMode">&nbsp;&nbsp;addFriendAuthMode</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/addFriendAuthMode">&ndash;&nbsp;addFriendAuthMode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -787,25 +707,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>好友验证模式</p>
+				<p>加好友校验方式</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BMXAddFriendAuthMode addFriendAuthMode</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXUserProfile_AddFriendAuthMode)addFriendAuthMode</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>好友验证模式</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXUserProfile_AddFriendAuthMode.html">BMXUserProfile_AddFriendAuthMode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -815,7 +735,99 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/authQuestion" title="authQuestion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authQuestion">&ndash;&nbsp;authQuestion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加好友时的验证问题</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXUserProfileAuthQuestion *)authQuestion</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>AuthQuestion</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageSetting" title="messageSetting"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageSetting">&ndash;&nbsp;messageSetting</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户消息设定</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXUserProfileMessageSetting *)messageSetting</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXUserProfileMessageSetting.html">BMXUserProfileMessageSetting</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -823,7 +835,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/isAutoAcceptGroupInvite" title="isAutoAcceptGroupInvite"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isAutoAcceptGroupInvite">&nbsp;&nbsp;isAutoAcceptGroupInvite</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/isAutoAcceptGroupInvite">&ndash;&nbsp;isAutoAcceptGroupInvite</a></code>
 </h3>
 
 	<div class="method-info">
@@ -833,25 +845,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>自动接收群邀请</p>
+				<p>收到群组邀请进群时是否自动同意进群</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isAutoAcceptGroupInvite</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isAutoAcceptGroupInvite</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>自动接收群邀请</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -861,10 +873,26 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXUserProfile.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -882,7 +910,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

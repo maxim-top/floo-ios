@@ -1,0 +1,2968 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXRosterService Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/swigCMemOwn">swigCMemOwn</option>
+		
+		<option value="//api/name/swigCPtr">swigCPtr</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/acceptWithRosterId:">- acceptWithRosterId:</option>
+		
+		<option value="//api/name/acceptWithRosterId:completion:">- acceptWithRosterId:completion:</option>
+		
+		<option value="//api/name/addDelegate:">- addDelegate:</option>
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/addRosterListener:">- addRosterListener:</option>
+		
+		<option value="//api/name/applyWithRosterId:message:">- applyWithRosterId:message:</option>
+		
+		<option value="//api/name/applyWithRosterId:message:authAnswer:">- applyWithRosterId:message:authAnswer:</option>
+		
+		<option value="//api/name/applyWithRosterId:message:authAnswer:completion:">- applyWithRosterId:message:authAnswer:completion:</option>
+		
+		<option value="//api/name/applyWithRosterId:message:completion:">- applyWithRosterId:message:completion:</option>
+		
+		<option value="//api/name/blockWithRosterId:">- blockWithRosterId:</option>
+		
+		<option value="//api/name/blockWithRosterId:completion:">- blockWithRosterId:completion:</option>
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/declineWithRosterId:reason:">- declineWithRosterId:reason:</option>
+		
+		<option value="//api/name/declineWithRosterId:reason:completion:">- declineWithRosterId:reason:completion:</option>
+		
+		<option value="//api/name/downloadAvatarWithItem:thumbnail:callback:">- downloadAvatarWithItem:thumbnail:callback:</option>
+		
+		<option value="//api/name/downloadAvatarWithItem:thumbnail:callback:completion:">- downloadAvatarWithItem:thumbnail:callback:completion:</option>
+		
+		<option value="//api/name/fetchRosterByIdWithRosterId:forceRefresh:completion:">- fetchRosterByIdWithRosterId:forceRefresh:completion:</option>
+		
+		<option value="//api/name/fetchRosterByIdWithRosterId:forceRefresh:item:">- fetchRosterByIdWithRosterId:forceRefresh:item:</option>
+		
+		<option value="//api/name/fetchRosterByNameWithName:forceRefresh:completion:">- fetchRosterByNameWithName:forceRefresh:completion:</option>
+		
+		<option value="//api/name/fetchRosterByNameWithName:forceRefresh:item:">- fetchRosterByNameWithName:forceRefresh:item:</option>
+		
+		<option value="//api/name/fetchRostersByIdListWithRosterIdList:forceRefresh:completion:">- fetchRostersByIdListWithRosterIdList:forceRefresh:completion:</option>
+		
+		<option value="//api/name/fetchRostersByIdListWithRosterIdList:list:forceRefresh:">- fetchRostersByIdListWithRosterIdList:list:forceRefresh:</option>
+		
+		<option value="//api/name/get:completion:">- get:completion:</option>
+		
+		<option value="//api/name/get:forceRefresh:">- get:forceRefresh:</option>
+		
+		<option value="//api/name/getApplicationList:completion:">- getApplicationList:completion:</option>
+		
+		<option value="//api/name/getApplicationList:cursor:">- getApplicationList:cursor:</option>
+		
+		<option value="//api/name/getApplicationList:cursor:pageSize:">- getApplicationList:cursor:pageSize:</option>
+		
+		<option value="//api/name/getApplicationList:pageSize:completion:">- getApplicationList:pageSize:completion:</option>
+		
+		<option value="//api/name/getBlockList:completion:">- getBlockList:completion:</option>
+		
+		<option value="//api/name/getBlockList:forceRefresh:">- getBlockList:forceRefresh:</option>
+		
+		<option value="//api/name/initWithCptr:swigOwnCObject:">- initWithCptr:swigOwnCObject:</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeRosterListener:">- removeRosterListener:</option>
+		
+		<option value="//api/name/removeWithRosterId:">- removeWithRosterId:</option>
+		
+		<option value="//api/name/removeWithRosterId:completion:">- removeWithRosterId:completion:</option>
+		
+		<option value="//api/name/searchWithName:forceRefresh:completion:">- searchWithName:forceRefresh:completion:</option>
+		
+		<option value="//api/name/searchWithName:forceRefresh:item:">- searchWithName:forceRefresh:item:</option>
+		
+		<option value="//api/name/searchWithRosterId:forceRefresh:completion:">- searchWithRosterId:forceRefresh:completion:</option>
+		
+		<option value="//api/name/searchWithRosterId:forceRefresh:item:">- searchWithRosterId:forceRefresh:item:</option>
+		
+		<option value="//api/name/searchWithRosterIdList:forceRefresh:completion:">- searchWithRosterIdList:forceRefresh:completion:</option>
+		
+		<option value="//api/name/searchWithRosterIdList:list:forceRefresh:">- searchWithRosterIdList:list:forceRefresh:</option>
+		
+		<option value="//api/name/setItemAlias:alias:">- setItemAlias:alias:</option>
+		
+		<option value="//api/name/setItemAlias:alias:completion:">- setItemAlias:alias:completion:</option>
+		
+		<option value="//api/name/setItemExtension:extension:">- setItemExtension:extension:</option>
+		
+		<option value="//api/name/setItemExtension:extension:completion:">- setItemExtension:extension:completion:</option>
+		
+		<option value="//api/name/setItemLocalExtension:extension:">- setItemLocalExtension:extension:</option>
+		
+		<option value="//api/name/setItemLocalExtension:extension:completion:">- setItemLocalExtension:extension:completion:</option>
+		
+		<option value="//api/name/setItemMuteNotification:status:">- setItemMuteNotification:status:</option>
+		
+		<option value="//api/name/setItemMuteNotification:status:completion:">- setItemMuteNotification:status:completion:</option>
+		
+		<option value="//api/name/unblockWithRosterId:">- unblockWithRosterId:</option>
+		
+		<option value="//api/name/unblockWithRosterId:completion:">- unblockWithRosterId:completion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXRosterService Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 好友Service</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/swigCPtr" title="swigCPtr"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCPtr">&nbsp;&nbsp;swigCPtr</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) void *swigCPtr</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swigCMemOwn" title="swigCMemOwn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCMemOwn">&nbsp;&nbsp;swigCMemOwn</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL swigCMemOwn</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithCptr:swigOwnCObject:" title="initWithCptr:swigOwnCObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithCptr:swigOwnCObject:">&ndash;&nbsp;initWithCptr:swigOwnCObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithCptr:(void *)<em>cptr</em> swigOwnCObject:(BOOL)<em>ownCObject</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/get:forceRefresh:" title="get:forceRefresh:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/get:forceRefresh:">&ndash;&nbsp;get:forceRefresh:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取好友列表，如果forceRefresh == true，则强制从服务端拉取</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)get:(ListOfLongLong *)<em>list</em> forceRefresh:(BOOL)<em>forceRefresh</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>好友id列表，传入空列表函数返回后从此处获取返回的好友id列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否从服务器读取数据，true为强制从服务器获取，false情况下本地读取列表为空的情况下会自动从服务器读取</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRosterByIdWithRosterId:forceRefresh:item:" title="fetchRosterByIdWithRosterId:forceRefresh:item:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRosterByIdWithRosterId:forceRefresh:item:">&ndash;&nbsp;fetchRosterByIdWithRosterId:forceRefresh:item:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过联系人id搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)fetchRosterByIdWithRosterId:(long long)<em>rosterId</em> forceRefresh:(BOOL)<em>forceRefresh</em> item:(BMXRosterItem *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>搜索的好友id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithRosterId:forceRefresh:item:" title="searchWithRosterId:forceRefresh:item:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithRosterId:forceRefresh:item:">&ndash;&nbsp;searchWithRosterId:forceRefresh:item:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchWithRosterId:(long long)<em>rosterId</em> forceRefresh:(BOOL)<em>forceRefresh</em> item:(BMXRosterItem *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>搜索的好友id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Deprecated. use fetchRosterById instead.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRosterByNameWithName:forceRefresh:item:" title="fetchRosterByNameWithName:forceRefresh:item:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRosterByNameWithName:forceRefresh:item:">&ndash;&nbsp;fetchRosterByNameWithName:forceRefresh:item:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户名搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)fetchRosterByNameWithName:(NSString *)<em>name</em> forceRefresh:(BOOL)<em>forceRefresh</em> item:(BMXRosterItem *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>搜索的用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithName:forceRefresh:item:" title="searchWithName:forceRefresh:item:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithName:forceRefresh:item:">&ndash;&nbsp;searchWithName:forceRefresh:item:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchWithName:(NSString *)<em>name</em> forceRefresh:(BOOL)<em>forceRefresh</em> item:(BMXRosterItem *)<em>item</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRostersByIdListWithRosterIdList:list:forceRefresh:" title="fetchRostersByIdListWithRosterIdList:list:forceRefresh:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRostersByIdListWithRosterIdList:list:forceRefresh:">&ndash;&nbsp;fetchRostersByIdListWithRosterIdList:list:forceRefresh:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过联系人id列表批量搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)fetchRostersByIdListWithRosterIdList:(ListOfLongLong *)<em>rosterIdList</em> list:(BMXRosterItemList *)<em>list</em> forceRefresh:(BOOL)<em>forceRefresh</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterIdList</code></th>
+						<td><p>需要搜索的用户id列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>返回的好友信息列表，传入空列表函数返回后从此处获取返回的好友信息列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否强制从服务器获取，为true则强制从服务器获取</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithRosterIdList:list:forceRefresh:" title="searchWithRosterIdList:list:forceRefresh:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithRosterIdList:list:forceRefresh:">&ndash;&nbsp;searchWithRosterIdList:list:forceRefresh:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchWithRosterIdList:(ListOfLongLong *)<em>rosterIdList</em> list:(BMXRosterItemList *)<em>list</em> forceRefresh:(BOOL)<em>forceRefresh</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemLocalExtension:extension:" title="setItemLocalExtension:extension:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemLocalExtension:extension:">&ndash;&nbsp;setItemLocalExtension:extension:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友本地扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setItemLocalExtension:(BMXRosterItem *)<em>item</em> extension:(NSString *)<em>extension</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extension</code></th>
+						<td><p>本地扩展信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemExtension:extension:" title="setItemExtension:extension:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemExtension:extension:">&ndash;&nbsp;setItemExtension:extension:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友服务器扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setItemExtension:(BMXRosterItem *)<em>item</em> extension:(NSString *)<em>extension</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extension</code></th>
+						<td><p>服务器扩展信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemAlias:alias:" title="setItemAlias:alias:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemAlias:alias:">&ndash;&nbsp;setItemAlias:alias:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友别名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setItemAlias:(BMXRosterItem *)<em>item</em> alias:(NSString *)<em>alias</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>alias</code></th>
+						<td><p>好友别名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemMuteNotification:status:" title="setItemMuteNotification:status:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemMuteNotification:status:">&ndash;&nbsp;setItemMuteNotification:status:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否拒收用户消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setItemMuteNotification:(BMXRosterItem *)<em>item</em> status:(BOOL)<em>status</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>status</code></th>
+						<td><p>是否拒收用户消息，true拒收，false不拒收</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getApplicationList:cursor:pageSize:" title="getApplicationList:cursor:pageSize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getApplicationList:cursor:pageSize:">&ndash;&nbsp;getApplicationList:cursor:pageSize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取申请添加好友列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getApplicationList:(BMXRosterApplicationResultPage *)<em>result</em> cursor:(NSString *)<em>cursor</em> pageSize:(int)<em>pageSize</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>返回的申请好友列表信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cursor</code></th>
+						<td><p>分页获取的起始cursor，第一次传入为空，后续传入上次操作返回的result中的cursor</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pageSize</code></th>
+						<td><p>分页大小</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getApplicationList:cursor:" title="getApplicationList:cursor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getApplicationList:cursor:">&ndash;&nbsp;getApplicationList:cursor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getApplicationList:(BMXRosterApplicationResultPage *)<em>result</em> cursor:(NSString *)<em>cursor</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyWithRosterId:message:authAnswer:" title="applyWithRosterId:message:authAnswer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyWithRosterId:message:authAnswer:">&ndash;&nbsp;applyWithRosterId:message:authAnswer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>申请添加好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)applyWithRosterId:(long long)<em>rosterId</em> message:(NSString *)<em>message</em> authAnswer:(NSString *)<em>authAnswer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请添加的用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>好友申请信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyWithRosterId:message:" title="applyWithRosterId:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyWithRosterId:message:">&ndash;&nbsp;applyWithRosterId:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)applyWithRosterId:(long long)<em>rosterId</em> message:(NSString *)<em>message</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeWithRosterId:" title="removeWithRosterId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeWithRosterId:">&ndash;&nbsp;removeWithRosterId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)removeWithRosterId:(long long)<em>rosterId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>删除的好友id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptWithRosterId:" title="acceptWithRosterId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptWithRosterId:">&ndash;&nbsp;acceptWithRosterId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>接受加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)acceptWithRosterId:(long long)<em>rosterId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请加为好友的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/declineWithRosterId:reason:" title="declineWithRosterId:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineWithRosterId:reason:">&ndash;&nbsp;declineWithRosterId:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拒绝加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)declineWithRosterId:(long long)<em>rosterId</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请加为好友的用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reason</code></th>
+						<td><p>拒绝的原因</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/blockWithRosterId:" title="blockWithRosterId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blockWithRosterId:">&ndash;&nbsp;blockWithRosterId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入黑名单</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)blockWithRosterId:(long long)<em>rosterId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>加入黑名单的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unblockWithRosterId:" title="unblockWithRosterId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unblockWithRosterId:">&ndash;&nbsp;unblockWithRosterId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>从黑名单移除</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)unblockWithRosterId:(long long)<em>rosterId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>从黑名单移除的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlockList:forceRefresh:" title="getBlockList:forceRefresh:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlockList:forceRefresh:">&ndash;&nbsp;getBlockList:forceRefresh:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取黑名单，如果forceRefresh == true，则强制从服务端拉取</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getBlockList:(ListOfLongLong *)<em>list</em> forceRefresh:(BOOL)<em>forceRefresh</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>好友id列表，传入空列表函数返回后从此处获取返回的黑名单id列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否从服务器读取数据，true为强制从服务器获取，false情况下本地读取列表为空的情况下会自动从服务器读取</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAvatarWithItem:thumbnail:callback:" title="downloadAvatarWithItem:thumbnail:callback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAvatarWithItem:thumbnail:callback:">&ndash;&nbsp;downloadAvatarWithItem:thumbnail:callback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载头像</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)downloadAvatarWithItem:(BMXRosterItem *)<em>item</em> thumbnail:(BOOL)<em>thumbnail</em> callback:(void ( ^ ) ( int progress ))<em>callback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>thumbnail</code></th>
+						<td><p>是否下载缩略图，ture为缩略图，false为原图</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callback</code></th>
+						<td><p>下载回调函数</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/get:completion:" title="get:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/get:completion:">&ndash;&nbsp;get:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取好友列表，如果forceRefresh == true，则强制从服务端拉取</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)get:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( ListOfLongLong *list , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否从服务器读取数据，true为强制从服务器获取，false情况下本地读取列表为空的情况下会自动从服务器读取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>好友id列表，传入空列表函数返回后从此处获取返回的好友id列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRosterByIdWithRosterId:forceRefresh:completion:" title="fetchRosterByIdWithRosterId:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRosterByIdWithRosterId:forceRefresh:completion:">&ndash;&nbsp;fetchRosterByIdWithRosterId:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过联系人id搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchRosterByIdWithRosterId:(long long)<em>rosterId</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItem *item , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>搜索的好友id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithRosterId:forceRefresh:completion:" title="searchWithRosterId:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithRosterId:forceRefresh:completion:">&ndash;&nbsp;searchWithRosterId:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchWithRosterId:(long long)<em>rosterId</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItem *item , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>搜索的好友id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Deprecated. use fetchRosterById instead.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRosterByNameWithName:forceRefresh:completion:" title="fetchRosterByNameWithName:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRosterByNameWithName:forceRefresh:completion:">&ndash;&nbsp;fetchRosterByNameWithName:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户名搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchRosterByNameWithName:(NSString *)<em>name</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItem *item , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>搜索的用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>为true强制从服务器获取，为false情况下查询结果为空时自动从服务器获取。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>查询返回的用户的信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithName:forceRefresh:completion:" title="searchWithName:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithName:forceRefresh:completion:">&ndash;&nbsp;searchWithName:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)searchWithName:(NSString *)<em>name</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItem *item , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRostersByIdListWithRosterIdList:forceRefresh:completion:" title="fetchRostersByIdListWithRosterIdList:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRostersByIdListWithRosterIdList:forceRefresh:completion:">&ndash;&nbsp;fetchRostersByIdListWithRosterIdList:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过联系人id列表批量搜索用户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchRostersByIdListWithRosterIdList:(ListOfLongLong *)<em>rosterIdList</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItemList *list , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterIdList</code></th>
+						<td><p>需要搜索的用户id列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否强制从服务器获取，为true则强制从服务器获取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>返回的好友信息列表，传入空列表函数返回后从此处获取返回的好友信息列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchWithRosterIdList:forceRefresh:completion:" title="searchWithRosterIdList:forceRefresh:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchWithRosterIdList:forceRefresh:completion:">&ndash;&nbsp;searchWithRosterIdList:forceRefresh:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)searchWithRosterIdList:(ListOfLongLong *)<em>rosterIdList</em> forceRefresh:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( BMXRosterItemList *list , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemLocalExtension:extension:completion:" title="setItemLocalExtension:extension:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemLocalExtension:extension:completion:">&ndash;&nbsp;setItemLocalExtension:extension:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友本地扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItemLocalExtension:(BMXRosterItem *)<em>item</em> extension:(NSString *)<em>extension</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extension</code></th>
+						<td><p>本地扩展信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemExtension:extension:completion:" title="setItemExtension:extension:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemExtension:extension:completion:">&ndash;&nbsp;setItemExtension:extension:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友服务器扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItemExtension:(BMXRosterItem *)<em>item</em> extension:(NSString *)<em>extension</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extension</code></th>
+						<td><p>服务器扩展信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemAlias:alias:completion:" title="setItemAlias:alias:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemAlias:alias:completion:">&ndash;&nbsp;setItemAlias:alias:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新好友别名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItemAlias:(BMXRosterItem *)<em>item</em> alias:(NSString *)<em>alias</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>alias</code></th>
+						<td><p>好友别名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItemMuteNotification:status:completion:" title="setItemMuteNotification:status:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItemMuteNotification:status:completion:">&ndash;&nbsp;setItemMuteNotification:status:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否拒收用户消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItemMuteNotification:(BMXRosterItem *)<em>item</em> status:(BOOL)<em>status</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>status</code></th>
+						<td><p>是否拒收用户消息，true拒收，false不拒收</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getApplicationList:pageSize:completion:" title="getApplicationList:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getApplicationList:pageSize:completion:">&ndash;&nbsp;getApplicationList:pageSize:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取申请添加好友列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getApplicationList:(NSString *)<em>cursor</em> pageSize:(int)<em>pageSize</em> completion:(void ( ^ ) ( BMXRosterApplicationResultPage *res , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cursor</code></th>
+						<td><p>分页获取的起始cursor，第一次传入为空，后续传入上次操作返回的result中的cursor</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pageSize</code></th>
+						<td><p>分页大小</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>返回的申请好友列表信息，传入指向为空的shared_ptr对象函数执行后会自动赋值。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getApplicationList:completion:" title="getApplicationList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getApplicationList:completion:">&ndash;&nbsp;getApplicationList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)getApplicationList:(NSString *)<em>cursor</em> completion:(void ( ^ ) ( BMXRosterApplicationResultPage *res , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyWithRosterId:message:authAnswer:completion:" title="applyWithRosterId:message:authAnswer:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyWithRosterId:message:authAnswer:completion:">&ndash;&nbsp;applyWithRosterId:message:authAnswer:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>申请添加好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)applyWithRosterId:(long long)<em>rosterId</em> message:(NSString *)<em>message</em> authAnswer:(NSString *)<em>authAnswer</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请添加的用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>好友申请信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyWithRosterId:message:completion:" title="applyWithRosterId:message:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyWithRosterId:message:completion:">&ndash;&nbsp;applyWithRosterId:message:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)applyWithRosterId:(long long)<em>rosterId</em> message:(NSString *)<em>message</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeWithRosterId:completion:" title="removeWithRosterId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeWithRosterId:completion:">&ndash;&nbsp;removeWithRosterId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除好友</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeWithRosterId:(long long)<em>rosterId</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>删除的好友id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptWithRosterId:completion:" title="acceptWithRosterId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptWithRosterId:completion:">&ndash;&nbsp;acceptWithRosterId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>接受加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acceptWithRosterId:(long long)<em>rosterId</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请加为好友的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/declineWithRosterId:reason:completion:" title="declineWithRosterId:reason:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineWithRosterId:reason:completion:">&ndash;&nbsp;declineWithRosterId:reason:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拒绝加好友申请</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)declineWithRosterId:(long long)<em>rosterId</em> reason:(NSString *)<em>reason</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>申请加为好友的用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reason</code></th>
+						<td><p>拒绝的原因</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/blockWithRosterId:completion:" title="blockWithRosterId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blockWithRosterId:completion:">&ndash;&nbsp;blockWithRosterId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入黑名单</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)blockWithRosterId:(long long)<em>rosterId</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>加入黑名单的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unblockWithRosterId:completion:" title="unblockWithRosterId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unblockWithRosterId:completion:">&ndash;&nbsp;unblockWithRosterId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>从黑名单移除</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unblockWithRosterId:(long long)<em>rosterId</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rosterId</code></th>
+						<td><p>从黑名单移除的用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlockList:completion:" title="getBlockList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlockList:completion:">&ndash;&nbsp;getBlockList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取黑名单，如果forceRefresh == true，则强制从服务端拉取</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getBlockList:(BOOL)<em>forceRefresh</em> completion:(void ( ^ ) ( ListOfLongLong *list , BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>forceRefresh</code></th>
+						<td><p>是否从服务器读取数据，true为强制从服务器获取，false情况下本地读取列表为空的情况下会自动从服务器读取</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>好友id列表，传入空列表函数返回后从此处获取返回的黑名单id列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAvatarWithItem:thumbnail:callback:completion:" title="downloadAvatarWithItem:thumbnail:callback:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAvatarWithItem:thumbnail:callback:completion:">&ndash;&nbsp;downloadAvatarWithItem:thumbnail:callback:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载头像</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAvatarWithItem:(BMXRosterItem *)<em>item</em> thumbnail:(BOOL)<em>thumbnail</em> callback:(void ( ^ ) ( int progress ))<em>callback</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>用户信息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>thumbnail</code></th>
+						<td><p>是否下载缩略图，ture为缩略图，false为原图</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callback</code></th>
+						<td><p>下载回调函数</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>好友变化监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;BMXRosterServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>好友变化监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addRosterListener:" title="addRosterListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addRosterListener:">&ndash;&nbsp;addRosterListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addRosterListener:(id&lt;BMXRosterServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>好友变化监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeRosterListener:" title="removeRosterListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRosterListener:">&ndash;&nbsp;removeRosterListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除好友变化监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRosterListener:(id&lt;BMXRosterServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>好友变化监听者</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXMessage Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/createCommandMessageWithFrom:to:type:conversationId:content:">+ createCommandMessageWithFrom:to:type:conversationId:content:</option>
+		
+		<option value="//api/name/createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+ createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</option>
+		
+		<option value="//api/name/createForwardMessageWithMsg:from:to:type:conversationId:">+ createForwardMessageWithMsg:from:to:type:conversationId:</option>
+		
+		<option value="//api/name/createMessageWithFrom:to:type:conversationId:attachment:">+ createMessageWithFrom:to:type:conversationId:attachment:</option>
+		
+		<option value="//api/name/createMessageWithFrom:to:type:conversationId:content:">+ createMessageWithFrom:to:type:conversationId:content:</option>
+		
+		<option value="//api/name/createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:">+ createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:</option>
+		
+		<option value="//api/name/createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+ createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</option>
+		
+		<option value="//api/name/createRTCMessageWithFrom:to:type:conversationId:content:">+ createRTCMessageWithFrom:to:type:conversationId:content:</option>
+		
+		<option value="//api/name/createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+ createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/attachment">- attachment</option>
+		
+		<option value="//api/name/clientMsgId">- clientMsgId</option>
+		
+		<option value="//api/name/clientTimestamp">- clientTimestamp</option>
+		
+		<option value="//api/name/config">- config</option>
+		
+		<option value="//api/name/content">- content</option>
+		
+		<option value="//api/name/contentType">- contentType</option>
+		
+		<option value="//api/name/conversationId">- conversationId</option>
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/deliveryQos">- deliveryQos</option>
+		
+		<option value="//api/name/deliveryStatus">- deliveryStatus</option>
+		
+		<option value="//api/name/extension">- extension</option>
+		
+		<option value="//api/name/fromId">- fromId</option>
+		
+		<option value="//api/name/groupAckCount">- groupAckCount</option>
+		
+		<option value="//api/name/groupAckReadAll">- groupAckReadAll</option>
+		
+		<option value="//api/name/groupAckUnreadCount">- groupAckUnreadCount</option>
+		
+		<option value="//api/name/groupPlayAckCount">- groupPlayAckCount</option>
+		
+		<option value="//api/name/groupPlayAckReadAll">- groupPlayAckReadAll</option>
+		
+		<option value="//api/name/groupPlayAckUnreadCount">- groupPlayAckUnreadCount</option>
+		
+		<option value="//api/name/isDeliveryAcked">- isDeliveryAcked</option>
+		
+		<option value="//api/name/isPlayAcked">- isPlayAcked</option>
+		
+		<option value="//api/name/isPlayed">- isPlayed</option>
+		
+		<option value="//api/name/isPushMessage">- isPushMessage</option>
+		
+		<option value="//api/name/isRead">- isRead</option>
+		
+		<option value="//api/name/isReadAcked">- isReadAcked</option>
+		
+		<option value="//api/name/isReceiveMsg">- isReceiveMsg</option>
+		
+		<option value="//api/name/msgId">- msgId</option>
+		
+		<option value="//api/name/priority">- priority</option>
+		
+		<option value="//api/name/senderName">- senderName</option>
+		
+		<option value="//api/name/serverTimestamp">- serverTimestamp</option>
+		
+		<option value="//api/name/setClientTimestamp:">- setClientTimestamp:</option>
+		
+		<option value="//api/name/setConfig:">- setConfig:</option>
+		
+		<option value="//api/name/setContent:">- setContent:</option>
+		
+		<option value="//api/name/setDeliveryQos:">- setDeliveryQos:</option>
+		
+		<option value="//api/name/setDeliveryStatus:">- setDeliveryStatus:</option>
+		
+		<option value="//api/name/setExtension:">- setExtension:</option>
+		
+		<option value="//api/name/setGroupAckCount:">- setGroupAckCount:</option>
+		
+		<option value="//api/name/setGroupAckUnreadCount:">- setGroupAckUnreadCount:</option>
+		
+		<option value="//api/name/setGroupPlayAckCount:">- setGroupPlayAckCount:</option>
+		
+		<option value="//api/name/setGroupPlayAckUnreadCount:">- setGroupPlayAckUnreadCount:</option>
+		
+		<option value="//api/name/setIsDeliveryAcked:">- setIsDeliveryAcked:</option>
+		
+		<option value="//api/name/setIsPlayAcked:">- setIsPlayAcked:</option>
+		
+		<option value="//api/name/setIsPlayed:">- setIsPlayed:</option>
+		
+		<option value="//api/name/setIsRead:">- setIsRead:</option>
+		
+		<option value="//api/name/setIsReadAcked:">- setIsReadAcked:</option>
+		
+		<option value="//api/name/setIsReceiveMsg:">- setIsReceiveMsg:</option>
+		
+		<option value="//api/name/setPriority:">- setPriority:</option>
+		
+		<option value="//api/name/setPushMessageMode:">- setPushMessageMode:</option>
+		
+		<option value="//api/name/setSenderName:">- setSenderName:</option>
+		
+		<option value="//api/name/setServerTimestamp:">- setServerTimestamp:</option>
+		
+		<option value="//api/name/toId">- toId</option>
+		
+		<option value="//api/name/type">- type</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXMessage Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 消息</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/msgId" title="msgId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/msgId">&ndash;&nbsp;msgId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息唯一ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)msgId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clientMsgId" title="clientMsgId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clientMsgId">&ndash;&nbsp;clientMsgId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息客户端ID,仅在消息发送端存在</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)clientMsgId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fromId" title="fromId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fromId">&ndash;&nbsp;fromId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息发送方ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)fromId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/toId" title="toId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/toId">&ndash;&nbsp;toId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息接收方ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)toId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&ndash;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage_MessageType)type</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessage_MessageType.html">BMXMessage_MessageType</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/conversationId" title="conversationId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/conversationId">&ndash;&nbsp;conversationId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息所属会话ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)conversationId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deliveryStatus" title="deliveryStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deliveryStatus">&ndash;&nbsp;deliveryStatus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息投递状态</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage_DeliveryStatus)deliveryStatus</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessage_DeliveryStatus.html">BMXMessage_DeliveryStatus</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDeliveryStatus:" title="setDeliveryStatus:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDeliveryStatus:">&ndash;&nbsp;setDeliveryStatus:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息投递状态</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setDeliveryStatus:(BMXMessage_DeliveryStatus)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serverTimestamp" title="serverTimestamp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serverTimestamp">&ndash;&nbsp;serverTimestamp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息时间戳（服务端收到时的时间）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)serverTimestamp</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setServerTimestamp:" title="setServerTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setServerTimestamp:">&ndash;&nbsp;setServerTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置时间戳（服务端收到时的时间）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setServerTimestamp:(long long)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clientTimestamp" title="clientTimestamp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clientTimestamp">&ndash;&nbsp;clientTimestamp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本地时间戳（消息创建或者收到时的本地时间）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)clientTimestamp</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setClientTimestamp:" title="setClientTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setClientTimestamp:">&ndash;&nbsp;setClientTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息本地时间戳</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setClientTimestamp:(long long)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPlayed" title="isPlayed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPlayed">&ndash;&nbsp;isPlayed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>语音或者视频消息是否播放过，仅对收到的音视频消息有效</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isPlayed</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsPlayed:" title="setIsPlayed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsPlayed:">&ndash;&nbsp;setIsPlayed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置语音或者视频消息是否播放过，仅对收到的音视频消息有效</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsPlayed:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPlayAcked" title="isPlayAcked"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPlayAcked">&ndash;&nbsp;isPlayAcked</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>对于发送方表示是否收到了已播放回执，对于接收方表示是否发送了已播放回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isPlayAcked</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsPlayAcked:" title="setIsPlayAcked:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsPlayAcked:">&ndash;&nbsp;setIsPlayAcked:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置已播放回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsPlayAcked:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isReceiveMsg" title="isReceiveMsg"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isReceiveMsg">&ndash;&nbsp;isReceiveMsg</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否接收的消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isReceiveMsg</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsReceiveMsg:" title="setIsReceiveMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsReceiveMsg:">&ndash;&nbsp;setIsReceiveMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否接收的消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsReceiveMsg:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isRead" title="isRead"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isRead">&ndash;&nbsp;isRead</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息是否已读标志</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isRead</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsRead:" title="setIsRead:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsRead:">&ndash;&nbsp;setIsRead:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息是否已读标志</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsRead:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isReadAcked" title="isReadAcked"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isReadAcked">&ndash;&nbsp;isReadAcked</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>对于发送方表示是否收到了已读回执，对于接收方表示是否发送了已读回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isReadAcked</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsReadAcked:" title="setIsReadAcked:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsReadAcked:">&ndash;&nbsp;setIsReadAcked:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置已读回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsReadAcked:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isDeliveryAcked" title="isDeliveryAcked"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isDeliveryAcked">&ndash;&nbsp;isDeliveryAcked</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>对于发送方表示消息是否已投递到对方，对于接收方表示是否发送了消息已到达回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isDeliveryAcked</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setIsDeliveryAcked:" title="setIsDeliveryAcked:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setIsDeliveryAcked:">&ndash;&nbsp;setIsDeliveryAcked:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置投递回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setIsDeliveryAcked:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/content" title="content"></a>
+	<h3 class="method-title"><code><a href="#//api/name/content">&ndash;&nbsp;content</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息文本内容</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)content</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setContent:" title="setContent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setContent:">&ndash;&nbsp;setContent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息文本内容</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setContent:(NSString *)<em>content</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息文本内容</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/contentType" title="contentType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/contentType">&ndash;&nbsp;contentType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息内容类型，如果带附件就表示附件类型，不带附件就是文本类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage_ContentType)contentType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>ContentType</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attachment" title="attachment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attachment">&ndash;&nbsp;attachment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息附件，BMXMessage拥有附件的所有权，负责释放</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageAttachment *)attachment</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/config" title="config"></a>
+	<h3 class="method-title"><code><a href="#//api/name/config">&ndash;&nbsp;config</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息的配置信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageConfig *)config</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessageConfig.html">BMXMessageConfig</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setConfig:" title="setConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setConfig:">&ndash;&nbsp;setConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息配置信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setConfig:(BMXMessageConfig *)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/extension" title="extension"></a>
+	<h3 class="method-title"><code><a href="#//api/name/extension">&ndash;&nbsp;extension</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)extension</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtension:" title="setExtension:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtension:">&ndash;&nbsp;setExtension:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setExtension:(NSString *)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deliveryQos" title="deliveryQos"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deliveryQos">&ndash;&nbsp;deliveryQos</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息投递QOS</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage_DeliveryQos)deliveryQos</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessage_DeliveryQos.html">BMXMessage_DeliveryQos</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDeliveryQos:" title="setDeliveryQos:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDeliveryQos:">&ndash;&nbsp;setDeliveryQos:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息投递QOS</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setDeliveryQos:(BMXMessage_DeliveryQos)<em>qos</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qos</code></th>
+						<td><p>消息投递QOS</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/senderName" title="senderName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/senderName">&ndash;&nbsp;senderName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息发送者的显示名称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)senderName</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSenderName:" title="setSenderName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSenderName:">&ndash;&nbsp;setSenderName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息的发送者显示名称</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSenderName:(NSString *)<em>senderName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>senderName</code></th>
+						<td><p>消息文本内容</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAckCount" title="groupAckCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAckCount">&ndash;&nbsp;groupAckCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息已读AckCount数目</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)groupAckCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGroupAckCount:" title="setGroupAckCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGroupAckCount:">&ndash;&nbsp;setGroupAckCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息已读groupAckCount数目(SDK 内部调用接口，上层不应该调用)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGroupAckCount:(int)<em>count</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>count</code></th>
+						<td><p>设置群消息已读数目</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAckUnreadCount" title="groupAckUnreadCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAckUnreadCount">&ndash;&nbsp;groupAckUnreadCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息未读AckCount数目</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)groupAckUnreadCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGroupAckUnreadCount:" title="setGroupAckUnreadCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGroupAckUnreadCount:">&ndash;&nbsp;setGroupAckUnreadCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息未读groupAckCount数目(SDK 内部调用接口，上层不应该调用)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGroupAckUnreadCount:(int)<em>count</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>count</code></th>
+						<td><p>设置群消息未读数目</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupAckReadAll" title="groupAckReadAll"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupAckReadAll">&ndash;&nbsp;groupAckReadAll</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息是否全部已读</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)groupAckReadAll</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupPlayAckCount" title="groupPlayAckCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPlayAckCount">&ndash;&nbsp;groupPlayAckCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息已播放AckCount数目（仅用于音频/视频附件消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)groupPlayAckCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGroupPlayAckCount:" title="setGroupPlayAckCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGroupPlayAckCount:">&ndash;&nbsp;setGroupPlayAckCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息已播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGroupPlayAckCount:(int)<em>count</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>count</code></th>
+						<td><p>设置群消息已读数目</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupPlayAckUnreadCount" title="groupPlayAckUnreadCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPlayAckUnreadCount">&ndash;&nbsp;groupPlayAckUnreadCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息未播放AckCount数目（仅用于音频/视频附件消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)groupPlayAckUnreadCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGroupPlayAckUnreadCount:" title="setGroupPlayAckUnreadCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGroupPlayAckUnreadCount:">&ndash;&nbsp;setGroupPlayAckUnreadCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息未播放groupAckCount数目(SDK 内部调用接口，上层不应该调用)（仅用于音频/视频附件消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGroupPlayAckUnreadCount:(int)<em>count</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>count</code></th>
+						<td><p>设置群消息未播放数目</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/groupPlayAckReadAll" title="groupPlayAckReadAll"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPlayAckReadAll">&ndash;&nbsp;groupPlayAckReadAll</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>群消息是否全部已播放</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)groupPlayAckReadAll</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPriority:" title="setPriority:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPriority:">&ndash;&nbsp;setPriority:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取值范围0-10。普通人在聊天室发送的消息级别默认为5，可以丢弃。管理员默认为0不会丢弃。其它值可以根据业务自行设置。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPriority:(int)<em>priority</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>priority</code></th>
+						<td><p>优先级</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/priority" title="priority"></a>
+	<h3 class="method-title"><code><a href="#//api/name/priority">&ndash;&nbsp;priority</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息的扩散优先级</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)priority</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPushMessageMode:" title="setPushMessageMode:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPushMessageMode:">&ndash;&nbsp;setPushMessageMode:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息是否为推送消息。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setPushMessageMode:(BOOL)<em>arg1</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPushMessage" title="isPushMessage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPushMessage">&ndash;&nbsp;isPushMessage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息是否是推送消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isPushMessage</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createMessageWithFrom:to:type:conversationId:content:" title="createMessageWithFrom:to:type:conversationId:content:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createMessageWithFrom:to:type:conversationId:content:">+&nbsp;createMessageWithFrom:to:type:conversationId:content:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建发送文本消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createMessageWithFrom:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createMessageWithFrom:to:type:conversationId:attachment:" title="createMessageWithFrom:to:type:conversationId:attachment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createMessageWithFrom:to:type:conversationId:attachment:">+&nbsp;createMessageWithFrom:to:type:conversationId:attachment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建发送附件消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createMessageWithFrom:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> attachment:(BMXMessageAttachment *)<em>attachment</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attachment</code></th>
+						<td><p>附件</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createCommandMessageWithFrom:to:type:conversationId:content:" title="createCommandMessageWithFrom:to:type:conversationId:content:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createCommandMessageWithFrom:to:type:conversationId:content:">+&nbsp;createCommandMessageWithFrom:to:type:conversationId:content:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建发送命令消息(命令消息通过content字段或者extension字段存放命令信息)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createCommandMessageWithFrom:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createRTCMessageWithFrom:to:type:conversationId:content:" title="createRTCMessageWithFrom:to:type:conversationId:content:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createRTCMessageWithFrom:to:type:conversationId:content:">+&nbsp;createRTCMessageWithFrom:to:type:conversationId:content:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建发送RTC消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createRTCMessageWithFrom:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:" title="createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+&nbsp;createMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建收到的消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createMessageWithMsgId:(long long)<em>msgId</em> from:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em> serverTimestamp:(long long)<em>serverTimestamp</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>消息id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverTimestamp</code></th>
+						<td><p>服务器时间戳</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:" title="createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:">+&nbsp;createMessageWithMsgId:from:to:type:conversationId:attachment:serverTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建收到的消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createMessageWithMsgId:(long long)<em>msgId</em> from:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> attachment:(BMXMessageAttachment *)<em>attachment</em> serverTimestamp:(long long)<em>serverTimestamp</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>消息id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attachment</code></th>
+						<td><p>附件</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverTimestamp</code></th>
+						<td><p>服务器时间戳</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:" title="createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+&nbsp;createCommandMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建收到的命令消息(命令消息通过content字段或者extension字段存放命令信息)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createCommandMessageWithMsgId:(long long)<em>msgId</em> from:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em> serverTimestamp:(long long)<em>serverTimestamp</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>消息id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverTimestamp</code></th>
+						<td><p>服务器时间戳</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:" title="createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:">+&nbsp;createRTCMessageWithMsgId:from:to:type:conversationId:content:serverTimestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建收到的RTC消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createRTCMessageWithMsgId:(long long)<em>msgId</em> from:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em> content:(NSString *)<em>content</em> serverTimestamp:(long long)<em>serverTimestamp</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>消息id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>content</code></th>
+						<td><p>消息内容</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverTimestamp</code></th>
+						<td><p>服务器时间戳</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createForwardMessageWithMsg:from:to:type:conversationId:" title="createForwardMessageWithMsg:from:to:type:conversationId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createForwardMessageWithMsg:from:to:type:conversationId:">+&nbsp;createForwardMessageWithMsg:from:to:type:conversationId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建转发消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXMessage *)createForwardMessageWithMsg:(BMXMessage *)<em>msg</em> from:(long long)<em>from</em> to:(long long)<em>to</em> type:(BMXMessage_MessageType)<em>type</em> conversationId:(long long)<em>conversationId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>要转发的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>消息发送者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息接收者</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>消息类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>会话id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

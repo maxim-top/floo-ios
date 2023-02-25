@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,23 +54,31 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+	<optgroup label="Class Methods">
 		
-		<option value="//api/name/address">address</option>
-		
-		<option value="//api/name/latitude">latitude</option>
-		
-		<option value="//api/name/longitude">longitude</option>
+		<option value="//api/name/dynamicCastWithAttachment:">+ dynamicCastWithAttachment:</option>
 		
 	</optgroup>
 	
 
 	
-
-	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/address">- address</option>
+		
+		<option value="//api/name/clone">- clone</option>
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
 		<option value="//api/name/initWithLatitude:longitude:address:">- initWithLatitude:longitude:address:</option>
+		
+		<option value="//api/name/latitude">- latitude</option>
+		
+		<option value="//api/name/longitude">- longitude</option>
+		
+		<option value="//api/name/type">- type</option>
 		
 	</optgroup>
 	
@@ -91,15 +101,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a> : NSObject</td>
+	<td><a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a> : <a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXLocationAttachment.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 位置消息附件</p>
+					</div>
+					
+					
 
 					
 					
@@ -112,84 +130,6 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/latitude" title="latitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) double latitude</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/longitude" title="longitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) double longitude</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/address" title="address"></a>
-	<h3 class="method-title"><code><a href="#//api/name/address">&nbsp;&nbsp;address</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>地址</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *address</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>地址</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXLocationAttachment.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/initWithLatitude:longitude:address:" title="initWithLatitude:longitude:address:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/initWithLatitude:longitude:address:">&ndash;&nbsp;initWithLatitude:longitude:address:</a></code>
 </h3>
@@ -201,12 +141,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>初始化BMXLocationAttachment</p>
+				<p>构造函数</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithLatitude:(double)<em>aLatitude</em> longitude:(double)<em>aLongitude</em> address:(NSString *)<em>aAddress</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)initWithLatitude:(double)<em>latitude</em> longitude:(double)<em>longitude</em> address:(NSString *)<em>address</em></code></div>
 
 		    
 			
@@ -215,18 +155,301 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aLatitude</code></th>
+						<th scope="row" class="argument-name"><code>latitude</code></th>
 						<td><p>纬度</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aLongitude</code></th>
+						<th scope="row" class="argument-name"><code>longitude</code></th>
 						<td><p>经度</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aAddress</code></th>
-						<td><p>地址</p></td>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>地址名称</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&ndash;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>返回位置附件类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageAttachment_Type)type</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXMessageAttachment_Type.html">BMXMessageAttachment_Type</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clone" title="clone"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clone">&ndash;&nbsp;clone</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>克隆函数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessageAttachment *)clone</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessageAttachment.html">BMXMessageAttachment</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/latitude" title="latitude"></a>
+	<h3 class="method-title"><code><a href="#//api/name/latitude">&ndash;&nbsp;latitude</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>纬度</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (double)latitude</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>double</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/longitude" title="longitude"></a>
+	<h3 class="method-title"><code><a href="#//api/name/longitude">&ndash;&nbsp;longitude</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>经度</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (double)longitude</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>double</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/address" title="address"></a>
+	<h3 class="method-title"><code><a href="#//api/name/address">&ndash;&nbsp;address</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>地址</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)address</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dynamicCastWithAttachment:" title="dynamicCastWithAttachment:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dynamicCastWithAttachment:">+&nbsp;dynamicCastWithAttachment:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>消息附件强制转换为位置附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BMXLocationAttachment *)dynamicCastWithAttachment:(BMXMessageAttachment *)<em>attachment</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attachment</code></th>
+						<td><p>附件</p></td>
 					</tr>
 				
 				</table>
@@ -243,11 +466,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>初始化BMXLocationAttachment</p>
-			</div>
-			
 
 			
 
@@ -256,10 +474,26 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXLocationAttachment.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -277,7 +511,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

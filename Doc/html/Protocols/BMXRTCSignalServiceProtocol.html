@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXRTCSignalServiceProtocol Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/onHangupWithSession:senderId:reason:">- onHangupWithSession:senderId:reason:</option>
+		
+		<option value="//api/name/onLeaveRoomWithSession:roomId:senderId:error:reason:">- onLeaveRoomWithSession:roomId:senderId:error:reason:</option>
+		
+		<option value="//api/name/onMediaInfoWithSession:senderId:type:receiving:mid:">- onMediaInfoWithSession:senderId:type:receiving:mid:</option>
+		
+		<option value="//api/name/onOtherPubJoinRoomWithSession:room:publishers:">- onOtherPubJoinRoomWithSession:room:publishers:</option>
+		
+		<option value="//api/name/onPubConfigureWithSession:room:sdp:streams:error:reason:">- onPubConfigureWithSession:room:sdp:streams:error:reason:</option>
+		
+		<option value="//api/name/onPubJoinRoomWithSession:room:publishers:error:reason:">- onPubJoinRoomWithSession:room:publishers:error:reason:</option>
+		
+		<option value="//api/name/onPubUnPublishWithSession:room:senderId:error:reason:">- onPubUnPublishWithSession:room:senderId:error:reason:</option>
+		
+		<option value="//api/name/onPublishWebrtcUpWithSession:">- onPublishWebrtcUpWithSession:</option>
+		
+		<option value="//api/name/onRoomAllowedWithSession:room:tokens:error:reason:">- onRoomAllowedWithSession:room:tokens:error:reason:</option>
+		
+		<option value="//api/name/onRoomCreateWithSession:room:error:reason:">- onRoomCreateWithSession:room:error:reason:</option>
+		
+		<option value="//api/name/onRoomDestroyWithSession:roomId:error:reason:">- onRoomDestroyWithSession:roomId:error:reason:</option>
+		
+		<option value="//api/name/onRoomEditWithSession:room:error:reason:">- onRoomEditWithSession:room:error:reason:</option>
+		
+		<option value="//api/name/onRoomExistWithSession:roomId:exist:error:reason:">- onRoomExistWithSession:roomId:exist:error:reason:</option>
+		
+		<option value="//api/name/onRoomKickWithSession:room:userId:error:reason:">- onRoomKickWithSession:room:userId:error:reason:</option>
+		
+		<option value="//api/name/onRoomListParticipantsWithSession:room:participants:error:reason:">- onRoomListParticipantsWithSession:room:participants:error:reason:</option>
+		
+		<option value="//api/name/onRoomListWithSession:rooms:error:reason:">- onRoomListWithSession:rooms:error:reason:</option>
+		
+		<option value="//api/name/onRoomModerateWithSession:room:userId:error:reason:">- onRoomModerateWithSession:room:userId:error:reason:</option>
+		
+		<option value="//api/name/onSessionAttachWithSession:type:error:reason:">- onSessionAttachWithSession:type:error:reason:</option>
+		
+		<option value="//api/name/onSessionCreateWithSession:error:reason:">- onSessionCreateWithSession:error:reason:</option>
+		
+		<option value="//api/name/onSessionDestroyWithSessionId:error:reason:">- onSessionDestroyWithSessionId:error:reason:</option>
+		
+		<option value="//api/name/onSessionDetachWithSession:type:error:reason:">- onSessionDetachWithSession:type:error:reason:</option>
+		
+		<option value="//api/name/onSessionHangupWithSession:error:reason:">- onSessionHangupWithSession:error:reason:</option>
+		
+		<option value="//api/name/onSlowlinkWithSession:senderId:uplink:nacks:">- onSlowlinkWithSession:senderId:uplink:nacks:</option>
+		
+		<option value="//api/name/onSubConfigureWithSession:room:error:reason:">- onSubConfigureWithSession:room:error:reason:</option>
+		
+		<option value="//api/name/onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:">- onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:</option>
+		
+		<option value="//api/name/onSubPauseWithSession:room:error:reason:">- onSubPauseWithSession:room:error:reason:</option>
+		
+		<option value="//api/name/onSubStartWithSession:room:error:reason:">- onSubStartWithSession:room:error:reason:</option>
+		
+		<option value="//api/name/onSubSwitchWithSession:room:publisher:error:reason:">- onSubSwitchWithSession:room:publisher:error:reason:</option>
+		
+		<option value="//api/name/onSubUnsubscribeWithSession:room:streams:error:reason:">- onSubUnsubscribeWithSession:room:streams:error:reason:</option>
+		
+		<option value="//api/name/onSubscribeWebrtcUpWithSession:senderId:">- onSubscribeWebrtcUpWithSession:senderId:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXRTCSignalServiceProtocol Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/onSessionCreateWithSession:error:reason:" title="onSessionCreateWithSession:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSessionCreateWithSession:error:reason:">&ndash;&nbsp;onSessionCreateWithSession:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSessionCreateWithSession:(BMXRTCSession *)<em>session</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSessionAttachWithSession:type:error:reason:" title="onSessionAttachWithSession:type:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSessionAttachWithSession:type:error:reason:">&ndash;&nbsp;onSessionAttachWithSession:type:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSessionAttachWithSession:(BMXRTCSession *)<em>session</em> type:(BMXRTCSignalService_HandlerType)<em>type</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomCreateWithSession:room:error:reason:" title="onRoomCreateWithSession:room:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomCreateWithSession:room:error:reason:">&ndash;&nbsp;onRoomCreateWithSession:room:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomCreateWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomDestroyWithSession:roomId:error:reason:" title="onRoomDestroyWithSession:roomId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomDestroyWithSession:roomId:error:reason:">&ndash;&nbsp;onRoomDestroyWithSession:roomId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomDestroyWithSession:(BMXRTCSession *)<em>session</em> roomId:(long long)<em>roomId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomEditWithSession:room:error:reason:" title="onRoomEditWithSession:room:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomEditWithSession:room:error:reason:">&ndash;&nbsp;onRoomEditWithSession:room:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomEditWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomExistWithSession:roomId:exist:error:reason:" title="onRoomExistWithSession:roomId:exist:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomExistWithSession:roomId:exist:error:reason:">&ndash;&nbsp;onRoomExistWithSession:roomId:exist:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomExistWithSession:(BMXRTCSession *)<em>session</em> roomId:(long long)<em>roomId</em> exist:(BOOL)<em>exist</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomAllowedWithSession:room:tokens:error:reason:" title="onRoomAllowedWithSession:room:tokens:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomAllowedWithSession:room:tokens:error:reason:">&ndash;&nbsp;onRoomAllowedWithSession:room:tokens:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomAllowedWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> tokens:(TagList *)<em>tokens</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomKickWithSession:room:userId:error:reason:" title="onRoomKickWithSession:room:userId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomKickWithSession:room:userId:error:reason:">&ndash;&nbsp;onRoomKickWithSession:room:userId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomKickWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> userId:(long long)<em>userId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomModerateWithSession:room:userId:error:reason:" title="onRoomModerateWithSession:room:userId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomModerateWithSession:room:userId:error:reason:">&ndash;&nbsp;onRoomModerateWithSession:room:userId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomModerateWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> userId:(long long)<em>userId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomListWithSession:rooms:error:reason:" title="onRoomListWithSession:rooms:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomListWithSession:rooms:error:reason:">&ndash;&nbsp;onRoomListWithSession:rooms:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomListWithSession:(BMXRTCSession *)<em>session</em> rooms:(BMXRTCRooms *)<em>rooms</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onRoomListParticipantsWithSession:room:participants:error:reason:" title="onRoomListParticipantsWithSession:room:participants:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onRoomListParticipantsWithSession:room:participants:error:reason:">&ndash;&nbsp;onRoomListParticipantsWithSession:room:participants:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onRoomListParticipantsWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> participants:(BMXRTCRoomParticipants *)<em>participants</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onPubJoinRoomWithSession:room:publishers:error:reason:" title="onPubJoinRoomWithSession:room:publishers:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPubJoinRoomWithSession:room:publishers:error:reason:">&ndash;&nbsp;onPubJoinRoomWithSession:room:publishers:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onPubJoinRoomWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> publishers:(BMXRTCPublishers *)<em>publishers</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onOtherPubJoinRoomWithSession:room:publishers:" title="onOtherPubJoinRoomWithSession:room:publishers:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onOtherPubJoinRoomWithSession:room:publishers:">&ndash;&nbsp;onOtherPubJoinRoomWithSession:room:publishers:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onOtherPubJoinRoomWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> publishers:(BMXRTCPublishers *)<em>publishers</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onPubConfigureWithSession:room:sdp:streams:error:reason:" title="onPubConfigureWithSession:room:sdp:streams:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPubConfigureWithSession:room:sdp:streams:error:reason:">&ndash;&nbsp;onPubConfigureWithSession:room:sdp:streams:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onPubConfigureWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> sdp:(BMXRoomSDPInfo *)<em>sdp</em> streams:(BMXRTCStreams *)<em>streams</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onPubUnPublishWithSession:room:senderId:error:reason:" title="onPubUnPublishWithSession:room:senderId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPubUnPublishWithSession:room:senderId:error:reason:">&ndash;&nbsp;onPubUnPublishWithSession:room:senderId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onPubUnPublishWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> senderId:(int)<em>senderId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onPublishWebrtcUpWithSession:" title="onPublishWebrtcUpWithSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPublishWebrtcUpWithSession:">&ndash;&nbsp;onPublishWebrtcUpWithSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onPublishWebrtcUpWithSession:(BMXRTCSession *)<em>session</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:" title="onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:">&ndash;&nbsp;onSubJoinRoomUpdateWithSession:room:sdp:senderId:streams:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubJoinRoomUpdateWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> sdp:(BMXRoomSDPInfo *)<em>sdp</em> senderId:(long long)<em>senderId</em> streams:(BMXRTCStreams *)<em>streams</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubStartWithSession:room:error:reason:" title="onSubStartWithSession:room:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubStartWithSession:room:error:reason:">&ndash;&nbsp;onSubStartWithSession:room:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubStartWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubPauseWithSession:room:error:reason:" title="onSubPauseWithSession:room:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubPauseWithSession:room:error:reason:">&ndash;&nbsp;onSubPauseWithSession:room:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubPauseWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubUnsubscribeWithSession:room:streams:error:reason:" title="onSubUnsubscribeWithSession:room:streams:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubUnsubscribeWithSession:room:streams:error:reason:">&ndash;&nbsp;onSubUnsubscribeWithSession:room:streams:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubUnsubscribeWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> streams:(BMXRTCStreams *)<em>streams</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubConfigureWithSession:room:error:reason:" title="onSubConfigureWithSession:room:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubConfigureWithSession:room:error:reason:">&ndash;&nbsp;onSubConfigureWithSession:room:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubConfigureWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubSwitchWithSession:room:publisher:error:reason:" title="onSubSwitchWithSession:room:publisher:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubSwitchWithSession:room:publisher:error:reason:">&ndash;&nbsp;onSubSwitchWithSession:room:publisher:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubSwitchWithSession:(BMXRTCSession *)<em>session</em> room:(BMXRTCRoom *)<em>room</em> publisher:(long long)<em>publisher</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onLeaveRoomWithSession:roomId:senderId:error:reason:" title="onLeaveRoomWithSession:roomId:senderId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onLeaveRoomWithSession:roomId:senderId:error:reason:">&ndash;&nbsp;onLeaveRoomWithSession:roomId:senderId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onLeaveRoomWithSession:(BMXRTCSession *)<em>session</em> roomId:(long long)<em>roomId</em> senderId:(long long)<em>senderId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSubscribeWebrtcUpWithSession:senderId:" title="onSubscribeWebrtcUpWithSession:senderId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSubscribeWebrtcUpWithSession:senderId:">&ndash;&nbsp;onSubscribeWebrtcUpWithSession:senderId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSubscribeWebrtcUpWithSession:(BMXRTCSession *)<em>session</em> senderId:(long long)<em>senderId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onMediaInfoWithSession:senderId:type:receiving:mid:" title="onMediaInfoWithSession:senderId:type:receiving:mid:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onMediaInfoWithSession:senderId:type:receiving:mid:">&ndash;&nbsp;onMediaInfoWithSession:senderId:type:receiving:mid:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onMediaInfoWithSession:(BMXRTCSession *)<em>session</em> senderId:(long long)<em>senderId</em> type:(BMXTrackType)<em>type</em> receiving:(BOOL)<em>receiving</em> mid:(NSString *)<em>mid</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSlowlinkWithSession:senderId:uplink:nacks:" title="onSlowlinkWithSession:senderId:uplink:nacks:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSlowlinkWithSession:senderId:uplink:nacks:">&ndash;&nbsp;onSlowlinkWithSession:senderId:uplink:nacks:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSlowlinkWithSession:(BMXRTCSession *)<em>session</em> senderId:(long long)<em>senderId</em> uplink:(BOOL)<em>uplink</em> nacks:(int)<em>nacks</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onHangupWithSession:senderId:reason:" title="onHangupWithSession:senderId:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onHangupWithSession:senderId:reason:">&ndash;&nbsp;onHangupWithSession:senderId:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onHangupWithSession:(BMXRTCSession *)<em>session</em> senderId:(long long)<em>senderId</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSessionHangupWithSession:error:reason:" title="onSessionHangupWithSession:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSessionHangupWithSession:error:reason:">&ndash;&nbsp;onSessionHangupWithSession:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSessionHangupWithSession:(BMXRTCSession *)<em>session</em> error:(long long)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSessionDetachWithSession:type:error:reason:" title="onSessionDetachWithSession:type:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSessionDetachWithSession:type:error:reason:">&ndash;&nbsp;onSessionDetachWithSession:type:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSessionDetachWithSession:(BMXRTCSession *)<em>session</em> type:(BMXRTCSignalService_HandlerType)<em>type</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSessionDestroyWithSessionId:error:reason:" title="onSessionDestroyWithSessionId:error:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSessionDestroyWithSessionId:error:reason:">&ndash;&nbsp;onSessionDestroyWithSessionId:error:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)onSessionDestroyWithSessionId:(long long)<em>sessionId</em> error:(int)<em>error</em> reason:(NSString *)<em>reason</em></code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

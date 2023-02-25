@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,51 +54,89 @@
 
 	
 	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/conversationId">conversationId</option>
-		
-		<option value="//api/name/editMessage">editMessage</option>
-		
-		<option value="//api/name/extensionJson">extensionJson</option>
-		
-		<option value="//api/name/isMuteNotication">isMuteNotication</option>
-		
-		<option value="//api/name/lastMessage">lastMessage</option>
-		
-		<option value="//api/name/messageCount">messageCount</option>
-		
-		<option value="//api/name/type">type</option>
-		
-		<option value="//api/name/unreadNumber">unreadNumber</option>
-		
-	</optgroup>
-	
 
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/insertMessage:completion:">- insertMessage:completion:</option>
+		<option value="//api/name/conversationId">- conversationId</option>
 		
-		<option value="//api/name/loadMessage:completion:">- loadMessage:completion:</option>
+		<option value="//api/name/dealloc">- dealloc</option>
 		
-		<option value="//api/name/loadMessageFromMessageId:size:completion:">- loadMessageFromMessageId:size:completion:</option>
+		<option value="//api/name/editMessage">- editMessage</option>
 		
-		<option value="//api/name/removeAllMessagescompletion:">- removeAllMessagescompletion:</option>
+		<option value="//api/name/extension">- extension</option>
 		
-		<option value="//api/name/searchMessagesByKeyWords:refTime:size:directionType:completion:">- searchMessagesByKeyWords:refTime:size:directionType:completion:</option>
+		<option value="//api/name/insertMessageWithMsg:">- insertMessageWithMsg:</option>
 		
-		<option value="//api/name/searchMessagesBycontentType:refTime:size:directionType:completion:">- searchMessagesBycontentType:refTime:size:directionType:completion:</option>
+		<option value="//api/name/insertMessageWithMsg:completion:">- insertMessageWithMsg:completion:</option>
 		
-		<option value="//api/name/setAllMessagesReadCompletion:">- setAllMessagesReadCompletion:</option>
+		<option value="//api/name/isMuteNotification">- isMuteNotification</option>
+		
+		<option value="//api/name/lastMsg">- lastMsg</option>
+		
+		<option value="//api/name/loadMessageWithMsgId:">- loadMessageWithMsgId:</option>
+		
+		<option value="//api/name/loadMessageWithMsgId:completion:">- loadMessageWithMsgId:completion:</option>
+		
+		<option value="//api/name/loadMessagesWithRefMsgId:size:arg4:completion:">- loadMessagesWithRefMsgId:size:arg4:completion:</option>
+		
+		<option value="//api/name/loadMessagesWithRefMsgId:size:completion:">- loadMessagesWithRefMsgId:size:completion:</option>
+		
+		<option value="//api/name/loadMessagesWithRefMsgId:size:result:">- loadMessagesWithRefMsgId:size:result:</option>
+		
+		<option value="//api/name/loadMessagesWithRefMsgId:size:result:arg4:">- loadMessagesWithRefMsgId:size:result:arg4:</option>
+		
+		<option value="//api/name/messageCount">- messageCount</option>
+		
+		<option value="//api/name/refreshConversation">- refreshConversation</option>
+		
+		<option value="//api/name/refreshConversationWithCompletion:">- refreshConversationWithCompletion:</option>
+		
+		<option value="//api/name/removeAllMessages">- removeAllMessages</option>
+		
+		<option value="//api/name/removeAllMessagesWithCompletion:">- removeAllMessagesWithCompletion:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:">- searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:">- searchMessagesByKeyWordsWithKeywords:refTime:size:completion:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:">- searchMessagesByKeyWordsWithKeywords:refTime:size:result:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:">- searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:</option>
+		
+		<option value="//api/name/searchMessagesByTypeWithType:refTime:size:arg5:completion:">- searchMessagesByTypeWithType:refTime:size:arg5:completion:</option>
+		
+		<option value="//api/name/searchMessagesByTypeWithType:refTime:size:completion:">- searchMessagesByTypeWithType:refTime:size:completion:</option>
+		
+		<option value="//api/name/searchMessagesByTypeWithType:refTime:size:result:">- searchMessagesByTypeWithType:refTime:size:result:</option>
+		
+		<option value="//api/name/searchMessagesByTypeWithType:refTime:size:result:arg5:">- searchMessagesByTypeWithType:refTime:size:result:arg5:</option>
+		
+		<option value="//api/name/setAllMessagesRead">- setAllMessagesRead</option>
+		
+		<option value="//api/name/setAllMessagesReadWithCompletion:">- setAllMessagesReadWithCompletion:</option>
+		
+		<option value="//api/name/setEditMessage:">- setEditMessage:</option>
+		
+		<option value="//api/name/setExtension:">- setExtension:</option>
+		
+		<option value="//api/name/setMessagePlayedStatus:status:">- setMessagePlayedStatus:status:</option>
 		
 		<option value="//api/name/setMessagePlayedStatus:status:completion:">- setMessagePlayedStatus:status:completion:</option>
 		
+		<option value="//api/name/setMessageReadStatus:status:">- setMessageReadStatus:status:</option>
+		
 		<option value="//api/name/setMessageReadStatus:status:completion:">- setMessageReadStatus:status:completion:</option>
 		
-		<option value="//api/name/updateMessageExtension:completion:">- updateMessageExtension:completion:</option>
+		<option value="//api/name/type">- type</option>
+		
+		<option value="//api/name/unreadNumber">- unreadNumber</option>
+		
+		<option value="//api/name/updateMessageExtensionWithMsg:">- updateMessageExtensionWithMsg:</option>
+		
+		<option value="//api/name/updateMessageExtensionWithMsg:completion:">- updateMessageExtensionWithMsg:completion:</option>
 		
 	</optgroup>
 	
@@ -119,15 +159,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/BMXBaseObject.html">BMXBaseObject</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXConversation.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 会话</p>
+					</div>
+					
+					
 
 					
 					
@@ -141,7 +189,7 @@
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/conversationId" title="conversationId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/conversationId">&nbsp;&nbsp;conversationId</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/conversationId">&ndash;&nbsp;conversationId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -156,20 +204,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) long long conversationId</code></div>
+			<div class="method-subsection method-declaration"><code>- (long long)conversationId</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>会话Id</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -179,7 +227,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -187,7 +235,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/type" title="type"></a>
-	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/type">&ndash;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -202,20 +250,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BMXConversationType type</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXConversation_Type)type</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>会话类型</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXConversation_Type.html">BMXConversation_Type</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -225,15 +273,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lastMessage" title="lastMessage"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lastMessage">&nbsp;&nbsp;lastMessage</a></code>
+	<a name="//api/name/lastMsg" title="lastMsg"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lastMsg">&ndash;&nbsp;lastMsg</a></code>
 </h3>
 
 	<div class="method-info">
@@ -248,20 +296,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXMessageObject *lastMessage</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXMessage *)lastMsg</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>最新消息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessage.html">BMXMessage</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -271,7 +319,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -279,7 +327,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/unreadNumber" title="unreadNumber"></a>
-	<h3 class="method-title"><code><a href="#//api/name/unreadNumber">&nbsp;&nbsp;unreadNumber</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/unreadNumber">&ndash;&nbsp;unreadNumber</a></code>
 </h3>
 
 	<div class="method-info">
@@ -289,25 +337,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>未读消息数量</p>
+				<p>未读消息数</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger unreadNumber</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)unreadNumber</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>未读消息数量</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -317,7 +365,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -325,7 +373,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/messageCount" title="messageCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/messageCount">&nbsp;&nbsp;messageCount</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/messageCount">&ndash;&nbsp;messageCount</a></code>
 </h3>
 
 	<div class="method-info">
@@ -335,25 +383,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>会话中所有消息数量</p>
+				<p>会话中所有消息的数量</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger messageCount</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)messageCount</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>会话中所有消息数量</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -363,15 +411,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isMuteNotication" title="isMuteNotication"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isMuteNotication">&nbsp;&nbsp;isMuteNotication</a></code>
+	<a name="//api/name/isMuteNotification" title="isMuteNotification"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMuteNotification">&ndash;&nbsp;isMuteNotification</a></code>
 </h3>
 
 	<div class="method-info">
@@ -386,20 +434,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isMuteNotication</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMuteNotification</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>是否提醒用户消息,不提醒的情况下会话总未读数不会统计该会话计数。</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -409,15 +457,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/extensionJson" title="extensionJson"></a>
-	<h3 class="method-title"><code><a href="#//api/name/extensionJson">&nbsp;&nbsp;extensionJson</a></code>
+	<a name="//api/name/extension" title="extension"></a>
+	<h3 class="method-title"><code><a href="#//api/name/extension">&ndash;&nbsp;extension</a></code>
 </h3>
 
 	<div class="method-info">
@@ -432,20 +480,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *extensionJson</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)extension</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>扩展信息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -455,7 +503,65 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setExtension:" title="setExtension:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtension:">&ndash;&nbsp;setExtension:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置扩展信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setExtension:(NSString *)<em>ext</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ext</code></th>
+						<td><p>会话扩展消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -463,7 +569,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/editMessage" title="editMessage"></a>
-	<h3 class="method-title"><code><a href="#//api/name/editMessage">&nbsp;&nbsp;editMessage</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/editMessage">&ndash;&nbsp;editMessage</a></code>
 </h3>
 
 	<div class="method-info">
@@ -478,20 +584,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *editMessage</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)editMessage</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>编辑消息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -501,7 +607,780 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setEditMessage:" title="setEditMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setEditMessage:">&ndash;&nbsp;setEditMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置编辑消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setEditMessage:(NSString *)<em>editMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>editMessage</code></th>
+						<td><p>会话正在编辑的文本消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMessagePlayedStatus:status:" title="setMessagePlayedStatus:status:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMessagePlayedStatus:status:">&ndash;&nbsp;setMessagePlayedStatus:status:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息播放状态（只对语音/视频消息有效）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setMessagePlayedStatus:(BMXMessage *)<em>msg</em> status:(BOOL)<em>status</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要设置播放状态的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>status</code></th>
+						<td><p>消息是否已经播放</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMessageReadStatus:status:" title="setMessageReadStatus:status:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMessageReadStatus:status:">&ndash;&nbsp;setMessageReadStatus:status:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置消息未读状态，更新未读消息数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setMessageReadStatus:(BMXMessage *)<em>msg</em> status:(BOOL)<em>status</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要设置消息已读状态的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>status</code></th>
+						<td><p>消息是否设置已读</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAllMessagesRead" title="setAllMessagesRead"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAllMessagesRead">&ndash;&nbsp;setAllMessagesRead</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>把所有消息设置为已读，更新未读消息数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)setAllMessagesRead</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateMessageExtensionWithMsg:" title="updateMessageExtensionWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateMessageExtensionWithMsg:">&ndash;&nbsp;updateMessageExtensionWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新一条数据库存储消息的扩展字段信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)updateMessageExtensionWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要更改扩展信息的消息此时msg部分已经更新扩展字椴信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertMessageWithMsg:" title="insertMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertMessageWithMsg:">&ndash;&nbsp;insertMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>插入一条消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)insertMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>插入的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessageWithMsgId:" title="loadMessageWithMsgId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessageWithMsgId:">&ndash;&nbsp;loadMessageWithMsgId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取一条消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage *)loadMessageWithMsgId:(long long)<em>msgId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>需要读取的消息的消息id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessage.html">BMXMessage</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAllMessages" title="removeAllMessages"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAllMessages">&ndash;&nbsp;removeAllMessages</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除会话中的所有消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)removeAllMessages</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessagesWithRefMsgId:size:result:arg4:" title="loadMessagesWithRefMsgId:size:result:arg4:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessagesWithRefMsgId:size:result:arg4:">&ndash;&nbsp;loadMessagesWithRefMsgId:size:result:arg4:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加载消息，如果不指定则从最新消息开始</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)loadMessagesWithRefMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em> arg4:(BMXConversation_Direction)<em>arg4</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refMsgId</code></th>
+						<td><p>加载消息的起始id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>数据库返回的加载消息列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>加载消息的方向，默认是加载更早的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessagesWithRefMsgId:size:result:" title="loadMessagesWithRefMsgId:size:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessagesWithRefMsgId:size:result:">&ndash;&nbsp;loadMessagesWithRefMsgId:size:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)loadMessagesWithRefMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>搜索消息，如果不指定则从最新消息开始</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em> arg5:(BMXConversation_Direction)<em>arg5</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keywords</code></th>
+						<td><p>搜索消息的关键字</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>arg5</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByTypeWithType:refTime:size:result:arg5:" title="searchMessagesByTypeWithType:refTime:size:result:arg5:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByTypeWithType:refTime:size:result:arg5:">&ndash;&nbsp;searchMessagesByTypeWithType:refTime:size:result:arg5:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>按照类型搜索消息，如果不指定则从最新消息开始</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByTypeWithType:(BMXMessage_ContentType)<em>type</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em> arg5:(BMXConversation_Direction)<em>arg5</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>搜索消息的类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByTypeWithType:refTime:size:result:" title="searchMessagesByTypeWithType:refTime:size:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByTypeWithType:refTime:size:result:">&ndash;&nbsp;searchMessagesByTypeWithType:refTime:size:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByTypeWithType:(BMXMessage_ContentType)<em>type</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refreshConversation" title="refreshConversation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refreshConversation">&ndash;&nbsp;refreshConversation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取数据库当前会话所有消息数量，强制更新conversation的消息总数和未读消息数。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)refreshConversation</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -524,7 +1403,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setMessagePlayedStatus:(BMXMessageObject *)<em>message</em> status:(bool)<em>status</em> completion:(void ( ^ ) ( BMXMessageObject *aMessage , BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setMessagePlayedStatus:(BMXMessage *)<em>msg</em> status:(BOOL)<em>status</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
@@ -533,18 +1412,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>message</code></th>
-						<td><p>message</p></td>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要设置播放状态的消息</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>status</code></th>
-						<td><p>播放状态</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result</p></td>
+						<td><p>消息是否已经播放</p></td>
 					</tr>
 				
 				</table>
@@ -552,14 +1426,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>设置消息播放状态（只对语音/视频消息有效）</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -569,7 +1443,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -587,189 +1461,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>设置消息未读状态，更新未读消息数, 本地</p>
+				<p>设置消息未读状态，更新未读消息数</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setMessageReadStatus:(BMXMessageObject *)<em>message</em> status:(BOOL)<em>status</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>message</code></th>
-						<td><p>message</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>status</code></th>
-						<td><p>是否已读</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>设置消息未读状态，更新未读消息数, 本地</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setAllMessagesReadCompletion:" title="setAllMessagesReadCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setAllMessagesReadCompletion:">&ndash;&nbsp;setAllMessagesReadCompletion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>把所有消息设置为已读，更新未读消息数</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setAllMessagesReadCompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>把所有消息设置为已读，更新未读消息数</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateMessageExtension:completion:" title="updateMessageExtension:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateMessageExtension:completion:">&ndash;&nbsp;updateMessageExtension:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>更新一条数据库存储消息的扩展字段信息</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateMessageExtension:(BMXMessageObject *)<em>message</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>message</code></th>
-						<td><p>需要更改扩展信息的消息此时msg部分已经更新扩展字椴信息</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>更新结果</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>更新一条数据库存储消息的扩展字段信息</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/insertMessage:completion:" title="insertMessage:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/insertMessage:completion:">&ndash;&nbsp;insertMessage:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>插入一条消息</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)insertMessage:(BMXMessageObject *)<em>msg</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setMessageReadStatus:(BMXMessage *)<em>msg</em> status:(BOOL)<em>status</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
@@ -779,12 +1476,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>msg</code></th>
-						<td><p>message</p></td>
+						<td><p>需要设置消息已读状态的消息</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result</p></td>
+						<th scope="row" class="argument-name"><code>status</code></th>
+						<td><p>消息是否设置已读</p></td>
 					</tr>
 				
 				</table>
@@ -792,14 +1489,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>插入一条消息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -809,15 +1506,177 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/loadMessage:completion:" title="loadMessage:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadMessage:completion:">&ndash;&nbsp;loadMessage:completion:</a></code>
+	<a name="//api/name/setAllMessagesReadWithCompletion:" title="setAllMessagesReadWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAllMessagesReadWithCompletion:">&ndash;&nbsp;setAllMessagesReadWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>把所有消息设置为已读，更新未读消息数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAllMessagesReadWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateMessageExtensionWithMsg:completion:" title="updateMessageExtensionWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateMessageExtensionWithMsg:completion:">&ndash;&nbsp;updateMessageExtensionWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新一条数据库存储消息的扩展字段信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateMessageExtensionWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要更改扩展信息的消息此时msg部分已经更新扩展字椴信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertMessageWithMsg:completion:" title="insertMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertMessageWithMsg:completion:">&ndash;&nbsp;insertMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>插入一条消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)insertMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>插入的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessageWithMsgId:completion:" title="loadMessageWithMsgId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessageWithMsgId:completion:">&ndash;&nbsp;loadMessageWithMsgId:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -832,7 +1691,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)loadMessage:(long long)<em>msgId</em> completion:(void ( ^ ) ( BMXMessageObject *message ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loadMessageWithMsgId:(long long)<em>msgId</em> completion:(void ( ^ ) ( BMXMessage *res , BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
@@ -842,12 +1701,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>msgId</code></th>
-						<td><p>msgId</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result</p></td>
+						<td><p>需要读取的消息的消息id</p></td>
 					</tr>
 				
 				</table>
@@ -855,14 +1709,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>读取一条消息</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessage.html">BMXMessage</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -872,15 +1726,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/removeAllMessagescompletion:" title="removeAllMessagescompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeAllMessagescompletion:">&ndash;&nbsp;removeAllMessagescompletion:</a></code>
+	<a name="//api/name/removeAllMessagesWithCompletion:" title="removeAllMessagesWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAllMessagesWithCompletion:">&ndash;&nbsp;removeAllMessagesWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -895,32 +1749,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)removeAllMessagescompletion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)removeAllMessagesWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result</p></td>
-					</tr>
-				
-				</table>
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
 			
 
 			
 
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>删除会话中的所有消息</p>
-			</div>
 			
 
 			
@@ -930,15 +1772,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/loadMessageFromMessageId:size:completion:" title="loadMessageFromMessageId:size:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadMessageFromMessageId:size:completion:">&ndash;&nbsp;loadMessageFromMessageId:size:completion:</a></code>
+	<a name="//api/name/loadMessagesWithRefMsgId:size:arg4:completion:" title="loadMessagesWithRefMsgId:size:arg4:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessagesWithRefMsgId:size:arg4:completion:">&ndash;&nbsp;loadMessagesWithRefMsgId:size:arg4:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -948,12 +1790,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>加载消息，从参考消息向前加载，如果不指定则从最新消息开始</p>
+				<p>加载消息，如果不指定则从最新消息开始</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)loadMessageFromMessageId:(long long)<em>reMsgId</em> size:(NSUInteger)<em>size</em> completion:(void ( ^ ) ( NSArray *messageList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loadMessagesWithRefMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> arg4:(BMXConversation_Direction)<em>arg4</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
@@ -962,18 +1804,23 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>reMsgId</code></th>
-						<td><p>参考消息Id</p></td>
+						<th scope="row" class="argument-name"><code>refMsgId</code></th>
+						<td><p>加载消息的起始id</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>size</code></th>
-						<td><p>size</p></td>
+						<td><p>最大加载消息条数</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>Result：MessageList</p></td>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>数据库返回的加载消息列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>加载消息的方向，默认是加载更早的消息</p></td>
 					</tr>
 				
 				</table>
@@ -981,14 +1828,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>加载消息，从参考消息向前加载，如果不指定则从最新消息开始</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -998,15 +1845,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/searchMessagesByKeyWords:refTime:size:directionType:completion:" title="searchMessagesByKeyWords:refTime:size:directionType:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWords:refTime:size:directionType:completion:">&ndash;&nbsp;searchMessagesByKeyWords:refTime:size:directionType:completion:</a></code>
+	<a name="//api/name/loadMessagesWithRefMsgId:size:completion:" title="loadMessagesWithRefMsgId:size:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessagesWithRefMsgId:size:completion:">&ndash;&nbsp;loadMessagesWithRefMsgId:size:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1021,11 +1868,126 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByKeyWords:(NSString *)<em>keywords</em> refTime:(NSTimeInterval)<em>refTime</em> size:(NSUInteger)<em>size</em> directionType:(BMXMessageDirection)<em>directionType</em> completion:(void ( ^ ) ( NSArray&lt;BMXMessageObject*&gt; *messageList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loadMessagesWithRefMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keywords</code></th>
+						<td><p>搜索消息的关键字</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
 
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>搜索消息，如果不指定则从最新消息开始</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> arg5:(BMXConversation_Direction)<em>arg5</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keywords</code></th>
+						<td><p>搜索消息的关键字</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
 			
 
 			
@@ -1033,7 +1995,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>搜索消息，如果不指定则从最新消息开始</p>
+				<p>Deprecated. use searchMessagesByKeyWords instead.</p>
 			</div>
 			
 
@@ -1044,15 +2006,31 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/searchMessagesBycontentType:refTime:size:directionType:completion:" title="searchMessagesBycontentType:refTime:size:directionType:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/searchMessagesBycontentType:refTime:size:directionType:completion:">&ndash;&nbsp;searchMessagesBycontentType:refTime:size:directionType:completion:</a></code>
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByTypeWithType:refTime:size:arg5:completion:" title="searchMessagesByTypeWithType:refTime:size:arg5:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByTypeWithType:refTime:size:arg5:completion:">&ndash;&nbsp;searchMessagesByTypeWithType:refTime:size:arg5:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1067,20 +2045,52 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)searchMessagesBycontentType:(BMXContentType)<em>contentType</em> refTime:(NSTimeInterval)<em>refTime</em> size:(NSUInteger)<em>size</em> directionType:(BMXMessageDirection)<em>directionType</em> completion:(void ( ^ ) ( NSArray&lt;BMXMessageObject*&gt; *messageList , BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByTypeWithType:(BMXMessage_ContentType)<em>type</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> arg5:(BMXConversation_Direction)<em>arg5</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>按照类型搜索消息，如果不指定则从最新消息开始</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>搜索消息的类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>最大加载消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -1090,10 +2100,88 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXConversation.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByTypeWithType:refTime:size:completion:" title="searchMessagesByTypeWithType:refTime:size:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByTypeWithType:refTime:size:completion:">&ndash;&nbsp;searchMessagesByTypeWithType:refTime:size:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByTypeWithType:(BMXMessage_ContentType)<em>type</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> completion:(void ( ^ ) ( BMXMessageList *result , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refreshConversationWithCompletion:" title="refreshConversationWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refreshConversationWithCompletion:">&ndash;&nbsp;refreshConversationWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取数据库当前会话所有消息数量，强制更新conversation的消息总数和未读消息数。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)refreshConversationWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -1111,7 +2199,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

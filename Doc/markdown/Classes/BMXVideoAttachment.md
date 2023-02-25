@@ -2,109 +2,291 @@
 
   **Inherits from** <a href="../Classes/BMXFileAttachment.md">BMXFileAttachment</a> :   
 <a href="../Classes/BMXMessageAttachment.md">BMXMessageAttachment</a> :   
+<a href="../Classes/BMXBaseObject.md">BMXBaseObject</a> :   
 NSObject  
-  **Declared in** BMXVideoAttachment.h  
+  **Declared in** floo_proxy.h  
 
-## Properties
+## Overview
 
-<a name="//api/name/duration" title="duration"></a>
-### duration
+@interface 视频消息附件
 
-时长
+## Class Methods
 
-`@property (nonatomic, assign) int duration`
+<a name="//api/name/dynamicCastWithAttachment:" title="dynamicCastWithAttachment:"></a>
+### dynamicCastWithAttachment:
 
-#### Discussion
-时长
+消息附件强制转换为视频附件
 
-#### Declared In
-* `BMXVideoAttachment.h`
+`+ (BMXVideoAttachment *)dynamicCastWithAttachment:(BMXMessageAttachment *)*attachment*`
 
-<a name="//api/name/thumbnailFileLength" title="thumbnailFileLength"></a>
-### thumbnailFileLength
+#### Parameters
 
-thumbnail文件大小
+*attachment*  
+   附件  
 
-`@property (nonatomic) long long thumbnailFileLength`
-
-#### Discussion
-thumbnail文件大小
+#### Return Value
+BMXVideoAttachment
 
 #### Declared In
-* `BMXVideoAttachment.h`
-
-<a name="//api/name/thumbnailPath" title="thumbnailPath"></a>
-### thumbnailPath
-
-缩略图路径
-
-`@property (nonatomic, copy) NSString *thumbnailPath`
-
-#### Discussion
-缩略图路径
-
-#### Declared In
-* `BMXVideoAttachment.h`
-
-<a name="//api/name/thumbnailUrl" title="thumbnailUrl"></a>
-### thumbnailUrl
-
-缩略图url
-
-`@property (nonatomic, copy) NSString *thumbnailUrl`
-
-#### Discussion
-缩略图url
-
-#### Declared In
-* `BMXVideoAttachment.h`
-
-<a name="//api/name/thumbnaildownLoadStatus" title="thumbnaildownLoadStatus"></a>
-### thumbnaildownLoadStatus
-
-视频下载状态
-
-`@property (nonatomic, assign) BMXAttachmentDownloadStatus thumbnaildownLoadStatus`
-
-#### Discussion
-视频下载状态
-
-#### Declared In
-* `BMXVideoAttachment.h`
-
-<a name="//api/name/videoSize" title="videoSize"></a>
-### videoSize
-
-video大小
-
-`@property (nonatomic) CGSize videoSize`
-
-#### Discussion
-video大小
-
-#### Declared In
-* `BMXVideoAttachment.h`
+* `floo_proxy.h`
 
 <a title="Instance Methods" name="instance_methods"></a>
 ## Instance Methods
 
-<a name="//api/name/initWithData:duration:videoSize:displayName:conversationId:" title="initWithData:duration:videoSize:displayName:conversationId:"></a>
-### initWithData:duration:videoSize:displayName:conversationId:
+<a name="//api/name/clone" title="clone"></a>
+### clone
 
-`- (instancetype)initWithData:(NSData *)*aData* duration:(int)*duration* videoSize:(CGSize)*videoSize* displayName:(NSString *)*displayName* conversationId:(NSString *)*conversationId*`
+克隆函数
 
-<a name="//api/name/initWithData:duration:videoSize:displayName:thumbnailData:conversationId:" title="initWithData:duration:videoSize:displayName:thumbnailData:conversationId:"></a>
-### initWithData:duration:videoSize:displayName:thumbnailData:conversationId:
+`- (BMXMessageAttachment *)clone`
 
-`- (instancetype)initWithData:(NSData *)*aData* duration:(int)*duration* videoSize:(CGSize)*videoSize* displayName:(NSString *)*displayName* thumbnailData:(NSData *)*thumbnailData* conversationId:(NSString *)*conversationId*`
+#### Return Value
+<a href="../Classes/BMXMessageAttachment.md">BMXMessageAttachment</a>
 
-<a name="//api/name/initWithLocalPath:duration:size:displayName:conversationId:" title="initWithLocalPath:duration:size:displayName:conversationId:"></a>
-### initWithLocalPath:duration:size:displayName:conversationId:
+#### Declared In
+* `floo_proxy.h`
 
-`- (instancetype)initWithLocalPath:(NSString *)*aLocalPath* duration:(int)*duration* size:(CGSize)*size* displayName:(NSString *)*aDisplayName* conversationId:(NSString *)*conversationId*`
+<a name="//api/name/dealloc" title="dealloc"></a>
+### dealloc
 
-<a name="//api/name/initWithLocalPath:duration:size:thumbnailPath:displayName:conversationId:" title="initWithLocalPath:duration:size:thumbnailPath:displayName:conversationId:"></a>
-### initWithLocalPath:duration:size:thumbnailPath:displayName:conversationId:
+`- (void)dealloc`
 
-`- (instancetype)initWithLocalPath:(NSString *)*aLocalPath* duration:(int)*duration* size:(CGSize)*size* thumbnailPath:(NSString *)*thumbnailPath* displayName:(NSString *)*aDisplayName* conversationId:(NSString *)*conversationId*`
+<a name="//api/name/duration" title="duration"></a>
+### duration
+
+视频片段时长
+
+`- (int)duration`
+
+#### Return Value
+int
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/initWithPath:duration:size:" title="initWithPath:duration:size:"></a>
+### initWithPath:duration:size:
+
+`- (id)initWithPath:(NSString *)*path* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size*`
+
+<a name="//api/name/initWithPath:duration:size:displayName:" title="initWithPath:duration:size:displayName:"></a>
+### initWithPath:duration:size:displayName:
+
+构造函数，构建发送视频消息附件
+
+`- (id)initWithPath:(NSString *)*path* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size* displayName:(NSString *)*displayName*`
+
+#### Parameters
+
+*path*  
+   文件的本地路径  
+
+*duration*  
+   视频片段时长  
+
+*size*  
+   视频大小，宽度和高度  
+
+*displayName*  
+   文件展示名  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/initWithPath:thumbnailPath:duration:size:" title="initWithPath:thumbnailPath:duration:size:"></a>
+### initWithPath:thumbnailPath:duration:size:
+
+`- (id)initWithPath:(NSString *)*path* thumbnailPath:(NSString *)*thumbnailPath* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size*`
+
+<a name="//api/name/initWithPath:thumbnailPath:duration:size:displayName:" title="initWithPath:thumbnailPath:duration:size:displayName:"></a>
+### initWithPath:thumbnailPath:duration:size:displayName:
+
+构造函数，构建发送视频消息附件
+
+`- (id)initWithPath:(NSString *)*path* thumbnailPath:(NSString *)*thumbnailPath* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size* displayName:(NSString *)*displayName*`
+
+#### Parameters
+
+*path*  
+   文件的本地路径  
+
+*thumbnailPath*  
+   缩略图文件的本地路径  
+
+*duration*  
+   视频片段时长  
+
+*size*  
+   视频大小，宽度和高度  
+
+*displayName*  
+   文件展示名  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/initWithRatelUrl:duration:size:displayName:fileLength:" title="initWithRatelUrl:duration:size:displayName:fileLength:"></a>
+### initWithRatelUrl:duration:size:displayName:fileLength:
+
+构造函数，构建接收视频消息附件
+
+`- (id)initWithRatelUrl:(NSString *)*ratelUrl* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size* displayName:(NSString *)*displayName* fileLength:(long long)*fileLength*`
+
+#### Parameters
+
+*ratelUrl*  
+   ratel文件服务器地址  
+
+*duration*  
+   视频片段时长  
+
+*size*  
+   视频大小，宽度和高度  
+
+*displayName*  
+   文件展示名  
+
+*fileLength*  
+   文件大小  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/initWithRatelUrl:thumbnailRatelUrl:duration:size:displayName:fileLength:" title="initWithRatelUrl:thumbnailRatelUrl:duration:size:displayName:fileLength:"></a>
+### initWithRatelUrl:thumbnailRatelUrl:duration:size:displayName:fileLength:
+
+构造函数，构建接收视频消息附件
+
+`- (id)initWithRatelUrl:(NSString *)*ratelUrl* thumbnailRatelUrl:(NSString *)*thumbnailRatelUrl* duration:(int)*duration* size:(BMXMessageAttachmentSize *)*size* displayName:(NSString *)*displayName* fileLength:(long long)*fileLength*`
+
+#### Parameters
+
+*ratelUrl*  
+   ratel文件服务器地址  
+
+*thumbnailRatelUrl*  
+   缩略图ratel文件服务器地址  
+
+*duration*  
+   视频片段时长  
+
+*size*  
+   视频大小，宽度和高度  
+
+*displayName*  
+   文件展示名  
+
+*fileLength*  
+   文件大小  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/setThumbnail:" title="setThumbnail:"></a>
+### setThumbnail:
+
+设置发送视频片段消息缩略图
+
+`- (void)setThumbnail:(NSString *)*path*`
+
+#### Parameters
+
+*path*  
+   视频片段消息缩略图  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/setThumbnailRatelUrl:" title="setThumbnailRatelUrl:"></a>
+### setThumbnailRatelUrl:
+
+设置发送视频片段消息缩略图ratel服务器路径
+
+`- (void)setThumbnailRatelUrl:(NSString *)*thumbnailRatelUrl*`
+
+#### Parameters
+
+*thumbnailRatelUrl*  
+   视频片段消息缩略图服务器路径  
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/size" title="size"></a>
+### size
+
+视频大小，宽度和高度
+
+`- (BMXMessageAttachmentSize *)size`
+
+#### Return Value
+<a href="../Classes/BMXMessageAttachmentSize.md">BMXMessageAttachmentSize</a>
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/thumbnailDownloadStatus" title="thumbnailDownloadStatus"></a>
+### thumbnailDownloadStatus
+
+缩略图下载状态
+
+`- (BMXMessageAttachment_DownloadStatus)thumbnailDownloadStatus`
+
+#### Return Value
+DownloadStatus
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/thumbnailPath" title="thumbnailPath"></a>
+### thumbnailPath
+
+缩略图本地路径
+
+`- (NSString *)thumbnailPath`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/thumbnailRatelUrl" title="thumbnailRatelUrl"></a>
+### thumbnailRatelUrl
+
+缩略图ratel服务器路径
+
+`- (NSString *)thumbnailRatelUrl`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/thumbnailUrl" title="thumbnailUrl"></a>
+### thumbnailUrl
+
+远程缩略图使用URL
+
+`- (NSString *)thumbnailUrl`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/type" title="type"></a>
+### type
+
+返回文件类型
+
+`- (BMXMessageAttachment_Type)type`
+
+#### Return Value
+<a href="../Constants/BMXMessageAttachment_Type.md">BMXMessageAttachment_Type</a>
+
+#### Declared In
+* `floo_proxy.h`
 

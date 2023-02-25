@@ -1,24 +1,35 @@
 # BMXMessageAttachment Class Reference
 
-  **Inherits from** NSObject  
-  **Declared in** BMXMessageAttachment.h  
+  **Inherits from** <a href="../Classes/BMXBaseObject.md">BMXBaseObject</a> :   
+NSObject  
+  **Declared in** floo_proxy.h  
 
 ## Overview
 
-消息附件
+@interface 消息附件
 
-## Properties
-
-<a name="//api/name/size" title="size"></a>
-### size
-
-`@property (nonatomic) CGSize size`
-
-<a title="Instance Methods" name="instance_methods"></a>
 ## Instance Methods
 
-<a name="//api/name/init" title="init"></a>
-### init
+<a name="//api/name/clone" title="clone"></a>
+### clone
 
-`- (instancetype)init`
+`- (BMXMessageAttachment *)clone`
+
+<a name="//api/name/dealloc" title="dealloc"></a>
+### dealloc
+
+`- (void)dealloc`
+
+<a name="//api/name/type" title="type"></a>
+### type
+
+附件类型
+
+`- (BMXMessageAttachment_Type)type`
+
+#### Return Value
+Type
+
+#### Declared In
+* `floo_proxy.h`
 

@@ -81,6 +81,8 @@ public:
     Command,
     /// 转发消息
     Forward,
+    /// 音视频消息
+    RTC,
   };
 
   /**
@@ -422,6 +424,16 @@ public:
   static BMXMessagePtr createCommandMessage(int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content);
 
   /**
+   * @brief 创建发送RTC消息
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
+   **/
+  static BMXMessagePtr createRTCMessage(int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content);
+
+  /**
    * @brief 创建收到的消息
    * @param msgId 消息id
    * @param from 消息发送者
@@ -456,6 +468,18 @@ public:
    * @param serverTimestamp 服务器时间戳
    **/
   static BMXMessagePtr createCommandMessage(int64_t msgId, int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content, int64_t serverTimestamp);
+
+  /**
+   * @brief 创建收到的RTC消息
+   * @param msgId 消息id
+   * @param from 消息发送者
+   * @param to 消息接收者
+   * @param type 消息类型
+   * @param conversationId 会话id
+   * @param content 消息内容
+   * @param serverTimestamp 服务器时间戳
+   **/
+  static BMXMessagePtr createRTCMessage(int64_t msgId, int64_t from, int64_t to, MessageType type, int64_t conversationId, const std::string& content, int64_t serverTimestamp);
 
   /**
    * @brief 创建转发消息

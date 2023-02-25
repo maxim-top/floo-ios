@@ -151,7 +151,7 @@ public:
    * @param msg 插入的消息
    * @return BMXErrorCode
    **/
-  virtual BMXErrorCode insertMessage(BMXMessagePtr msg) = 0;
+  virtual BMXErrorCode insertMessage(BMXMessagePtr msg, bool isHistory = false) = 0;
 
   /**
    * @brief 读取一条消息

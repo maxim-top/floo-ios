@@ -1,0 +1,3742 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BMXChatService Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">floo-iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">美信拓扑</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/swigCMemOwn">swigCMemOwn</option>
+		
+		<option value="//api/name/swigCPtr">swigCPtr</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/ackMessageDeliveredWithMsg:">- ackMessageDeliveredWithMsg:</option>
+		
+		<option value="//api/name/ackMessageDeliveredWithMsg:completion:">- ackMessageDeliveredWithMsg:completion:</option>
+		
+		<option value="//api/name/ackMessageWithMsg:">- ackMessageWithMsg:</option>
+		
+		<option value="//api/name/ackMessageWithMsg:completion:">- ackMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/ackPlayMessageWithMsg:">- ackPlayMessageWithMsg:</option>
+		
+		<option value="//api/name/ackPlayMessageWithMsg:completion:">- ackPlayMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/addChatListener:">- addChatListener:</option>
+		
+		<option value="//api/name/addDelegate:">- addDelegate:</option>
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/attachmentDir">- attachmentDir</option>
+		
+		<option value="//api/name/attachmentDirForConversationWithConversationId:">- attachmentDirForConversationWithConversationId:</option>
+		
+		<option value="//api/name/cancelDownloadAttachmentWithMsg:">- cancelDownloadAttachmentWithMsg:</option>
+		
+		<option value="//api/name/cancelDownloadAttachmentWithMsg:completion:">- cancelDownloadAttachmentWithMsg:completion:</option>
+		
+		<option value="//api/name/cancelUploadAttachmentWithMsg:">- cancelUploadAttachmentWithMsg:</option>
+		
+		<option value="//api/name/cancelUploadAttachmentWithMsg:completion:">- cancelUploadAttachmentWithMsg:completion:</option>
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/deleteConversationWithConversationId:">- deleteConversationWithConversationId:</option>
+		
+		<option value="//api/name/deleteConversationWithConversationId:completion:">- deleteConversationWithConversationId:completion:</option>
+		
+		<option value="//api/name/deleteConversationWithConversationId:synchronize:">- deleteConversationWithConversationId:synchronize:</option>
+		
+		<option value="//api/name/deleteConversationWithConversationId:synchronize:completion:">- deleteConversationWithConversationId:synchronize:completion:</option>
+		
+		<option value="//api/name/downloadAttachmentByUrlWithMsgId:url:path:">- downloadAttachmentByUrlWithMsgId:url:path:</option>
+		
+		<option value="//api/name/downloadAttachmentByUrlWithMsgId:url:path:completion:">- downloadAttachmentByUrlWithMsgId:url:path:completion:</option>
+		
+		<option value="//api/name/downloadAttachmentWithMsg:">- downloadAttachmentWithMsg:</option>
+		
+		<option value="//api/name/downloadAttachmentWithMsg:completion:">- downloadAttachmentWithMsg:completion:</option>
+		
+		<option value="//api/name/downloadThumbnailWithMsg:">- downloadThumbnailWithMsg:</option>
+		
+		<option value="//api/name/downloadThumbnailWithMsg:completion:">- downloadThumbnailWithMsg:completion:</option>
+		
+		<option value="//api/name/downloadThumbnailWithMsg:strategy:">- downloadThumbnailWithMsg:strategy:</option>
+		
+		<option value="//api/name/downloadThumbnailWithMsg:strategy:completion:">- downloadThumbnailWithMsg:strategy:completion:</option>
+		
+		<option value="//api/name/forwardMessageWithList:to:newMsg:">- forwardMessageWithList:to:newMsg:</option>
+		
+		<option value="//api/name/forwardMessageWithMsg:">- forwardMessageWithMsg:</option>
+		
+		<option value="//api/name/forwardMessageWithMsg:completion:">- forwardMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/getAllConversations">- getAllConversations</option>
+		
+		<option value="//api/name/getAllConversationsUnreadCount">- getAllConversationsUnreadCount</option>
+		
+		<option value="//api/name/getAllConversationsWithCompletion:">- getAllConversationsWithCompletion:</option>
+		
+		<option value="//api/name/getGroupAckMessageUnreadUserIdList:completion:">- getGroupAckMessageUnreadUserIdList:completion:</option>
+		
+		<option value="//api/name/getGroupAckMessageUnreadUserIdList:groupMemberIdList:">- getGroupAckMessageUnreadUserIdList:groupMemberIdList:</option>
+		
+		<option value="//api/name/getGroupAckMessageUserIdList:completion:">- getGroupAckMessageUserIdList:completion:</option>
+		
+		<option value="//api/name/getGroupAckMessageUserIdList:groupMemberIdList:">- getGroupAckMessageUserIdList:groupMemberIdList:</option>
+		
+		<option value="//api/name/getGroupPlayAckMessageUserIdList:completion:">- getGroupPlayAckMessageUserIdList:completion:</option>
+		
+		<option value="//api/name/getGroupPlayAckMessageUserIdList:groupMemberIdList:">- getGroupPlayAckMessageUserIdList:groupMemberIdList:</option>
+		
+		<option value="//api/name/getGroupUnPlayAckMessageUserIdList:completion:">- getGroupUnPlayAckMessageUserIdList:completion:</option>
+		
+		<option value="//api/name/getGroupUnPlayAckMessageUserIdList:groupMemberIdList:">- getGroupUnPlayAckMessageUserIdList:groupMemberIdList:</option>
+		
+		<option value="//api/name/getMessage:">- getMessage:</option>
+		
+		<option value="//api/name/initWithCptr:swigOwnCObject:">- initWithCptr:swigOwnCObject:</option>
+		
+		<option value="//api/name/insertMessagesWithList:">- insertMessagesWithList:</option>
+		
+		<option value="//api/name/insertMessagesWithList:completion:">- insertMessagesWithList:completion:</option>
+		
+		<option value="//api/name/openConversationWithConversationId:type:">- openConversationWithConversationId:type:</option>
+		
+		<option value="//api/name/openConversationWithConversationId:type:createIfNotExist:">- openConversationWithConversationId:type:createIfNotExist:</option>
+		
+		<option value="//api/name/readAllMessageWithMsg:">- readAllMessageWithMsg:</option>
+		
+		<option value="//api/name/readAllMessageWithMsg:completion:">- readAllMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/readCancelWithMsg:">- readCancelWithMsg:</option>
+		
+		<option value="//api/name/readCancelWithMsg:completion:">- readCancelWithMsg:completion:</option>
+		
+		<option value="//api/name/recallMessageWithMsg:">- recallMessageWithMsg:</option>
+		
+		<option value="//api/name/recallMessageWithMsg:completion:">- recallMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/removeChatListener:">- removeChatListener:</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeMessageWithMsg:">- removeMessageWithMsg:</option>
+		
+		<option value="//api/name/removeMessageWithMsg:completion:">- removeMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/removeMessageWithMsg:synchronize:">- removeMessageWithMsg:synchronize:</option>
+		
+		<option value="//api/name/removeMessageWithMsg:synchronize:completion:">- removeMessageWithMsg:synchronize:completion:</option>
+		
+		<option value="//api/name/resendMessageWithMsg:">- resendMessageWithMsg:</option>
+		
+		<option value="//api/name/resendMessageWithMsg:completion:">- resendMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:completion:">- retrieveHistoryMessagesWithConversation:refMsgId:size:completion:</option>
+		
+		<option value="//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:result:">- retrieveHistoryMessagesWithConversation:refMsgId:size:result:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:">- searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:">- searchMessagesByKeyWordsWithKeywords:refTime:size:completion:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:">- searchMessagesByKeyWordsWithKeywords:refTime:size:result:</option>
+		
+		<option value="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:">- searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:</option>
+		
+		<option value="//api/name/sendMessageWithMsg:">- sendMessageWithMsg:</option>
+		
+		<option value="//api/name/sendMessageWithMsg:completion:">- sendMessageWithMsg:completion:</option>
+		
+		<option value="//api/name/transferingNum">- transferingNum</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BMXChatService Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>floo_proxy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 聊天Service</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/swigCPtr" title="swigCPtr"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCPtr">&nbsp;&nbsp;swigCPtr</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) void *swigCPtr</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swigCMemOwn" title="swigCMemOwn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCMemOwn">&nbsp;&nbsp;swigCMemOwn</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL swigCMemOwn</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithCptr:swigOwnCObject:" title="initWithCptr:swigOwnCObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithCptr:swigOwnCObject:">&ndash;&nbsp;initWithCptr:swigOwnCObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithCptr:(void *)<em>cptr</em> swigOwnCObject:(BOOL)<em>ownCObject</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessageWithMsg:" title="sendMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessageWithMsg:">&ndash;&nbsp;sendMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resendMessageWithMsg:" title="resendMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resendMessageWithMsg:">&ndash;&nbsp;resendMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重新发送消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resendMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>重新发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/recallMessageWithMsg:" title="recallMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/recallMessageWithMsg:">&ndash;&nbsp;recallMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>撤回消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)recallMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>撤回的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/forwardMessageWithList:to:newMsg:" title="forwardMessageWithList:to:newMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forwardMessageWithList:to:newMsg:">&ndash;&nbsp;forwardMessageWithList:to:newMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>合并转发消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)forwardMessageWithList:(BMXMessageList *)<em>list</em> to:(BMXConversation *)<em>to</em> newMsg:(BMXMessage *)<em>newMsg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>转发的消息列表</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>消息被转发到的会话</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newMsg</code></th>
+						<td><p>转发的消息列表合并后生成的新的单条转发消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/forwardMessageWithMsg:" title="forwardMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forwardMessageWithMsg:">&ndash;&nbsp;forwardMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>简单转发消息，用户应当通过<a href="../Classes/BMXMessage.html">BMXMessage</a>::createForwardMessage()先创建转发消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)forwardMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>转发的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackMessageWithMsg:" title="ackMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackMessageWithMsg:">&ndash;&nbsp;ackMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送已读回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送已读回执的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackMessageDeliveredWithMsg:" title="ackMessageDeliveredWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackMessageDeliveredWithMsg:">&ndash;&nbsp;ackMessageDeliveredWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送送达回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackMessageDeliveredWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>发送送达回执</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackPlayMessageWithMsg:" title="ackPlayMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackPlayMessageWithMsg:">&ndash;&nbsp;ackPlayMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送音频/视频消息已播放回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackPlayMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送已读回执的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCancelWithMsg:" title="readCancelWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCancelWithMsg:">&ndash;&nbsp;readCancelWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>标记此消息为未读，该消息同步到当前用户的所有设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readCancelWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送消息已读取消的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readAllMessageWithMsg:" title="readAllMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readAllMessageWithMsg:">&ndash;&nbsp;readAllMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>标记此消息及之前全部消息为已读，该消息同步到当前用户的所有设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readAllMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要标记为此消息以前全部消息为已读的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMessageWithMsg:synchronize:" title="removeMessageWithMsg:synchronize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMessageWithMsg:synchronize:">&ndash;&nbsp;removeMessageWithMsg:synchronize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除此消息，该消息同步到当前用户的其它设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMessageWithMsg:(BMXMessage *)<em>msg</em> synchronize:(BOOL)<em>synchronize</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要删除的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>synchronize</code></th>
+						<td><p>是否同步到其它设备，不同步的情况下只会删除本地存储的该条消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMessageWithMsg:" title="removeMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMessageWithMsg:">&ndash;&nbsp;removeMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadThumbnailWithMsg:strategy:" title="downloadThumbnailWithMsg:strategy:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadThumbnailWithMsg:strategy:">&ndash;&nbsp;downloadThumbnailWithMsg:strategy:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载缩略图，下载状态变化和进度通过listener通知
+缩略图生成策略，1 - 第三方服务器生成， 2 - 本地服务器生成，默认值是 1。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadThumbnailWithMsg:(BMXMessage *)<em>msg</em> strategy:(BMXChatService_ThumbnailStrategy)<em>strategy</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要下载缩略图的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>strategy</code></th>
+						<td><p>缩略图生成策略，1 - 第三方服务器生成， 2 - 本地服务器生成，默认值是 1。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadThumbnailWithMsg:" title="downloadThumbnailWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadThumbnailWithMsg:">&ndash;&nbsp;downloadThumbnailWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadThumbnailWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAttachmentWithMsg:" title="downloadAttachmentWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAttachmentWithMsg:">&ndash;&nbsp;downloadAttachmentWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAttachmentWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要下载附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAttachmentByUrlWithMsgId:url:path:" title="downloadAttachmentByUrlWithMsgId:url:path:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAttachmentByUrlWithMsgId:url:path:">&ndash;&nbsp;downloadAttachmentByUrlWithMsgId:url:path:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAttachmentByUrlWithMsgId:(long long)<em>msgId</em> url:(NSString *)<em>url</em> path:(NSString *)<em>path</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelUploadAttachmentWithMsg:" title="cancelUploadAttachmentWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelUploadAttachmentWithMsg:">&ndash;&nbsp;cancelUploadAttachmentWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消上传附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelUploadAttachmentWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要取消上传附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelDownloadAttachmentWithMsg:" title="cancelDownloadAttachmentWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelDownloadAttachmentWithMsg:">&ndash;&nbsp;cancelDownloadAttachmentWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消下载附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelDownloadAttachmentWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要取消下载附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/transferingNum" title="transferingNum"></a>
+	<h3 class="method-title"><code><a href="#//api/name/transferingNum">&ndash;&nbsp;transferingNum</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>上传或下载中的文件数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)transferingNum</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertMessagesWithList:" title="insertMessagesWithList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertMessagesWithList:">&ndash;&nbsp;insertMessagesWithList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>插入消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)insertMessagesWithList:(BMXMessageList *)<em>list</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>插入消息列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMessage:" title="getMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMessage:">&ndash;&nbsp;getMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取一条消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXMessage *)getMessage:(long long)<em>msgId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msgId</code></th>
+						<td><p>需要获取消息的消息id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXMessage.html">BMXMessage</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversationWithConversationId:synchronize:" title="deleteConversationWithConversationId:synchronize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversationWithConversationId:synchronize:">&ndash;&nbsp;deleteConversationWithConversationId:synchronize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteConversationWithConversationId:(long long)<em>conversationId</em> synchronize:(BOOL)<em>synchronize</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>需要删除会话的会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>synchronize</code></th>
+						<td><p>是否同步删除其它设备该会话，默认为false，仅删除本设备会话</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversationWithConversationId:" title="deleteConversationWithConversationId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversationWithConversationId:">&ndash;&nbsp;deleteConversationWithConversationId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteConversationWithConversationId:(long long)<em>conversationId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openConversationWithConversationId:type:createIfNotExist:" title="openConversationWithConversationId:type:createIfNotExist:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openConversationWithConversationId:type:createIfNotExist:">&ndash;&nbsp;openConversationWithConversationId:type:createIfNotExist:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>打开一个会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXConversation *)openConversationWithConversationId:(long long)<em>conversationId</em> type:(BMXConversation_Type)<em>type</em> createIfNotExist:(BOOL)<em>createIfNotExist</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>需要打开的会话的会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>会话的类型，单聊还是群聊。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>createIfNotExist</code></th>
+						<td><p>会话不存在的情况下是否要创建本地会话，默认为创建</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXConversation.html">BMXConversation</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openConversationWithConversationId:type:" title="openConversationWithConversationId:type:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openConversationWithConversationId:type:">&ndash;&nbsp;openConversationWithConversationId:type:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXConversation *)openConversationWithConversationId:(long long)<em>conversationId</em> type:(BMXConversation_Type)<em>type</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attachmentDir" title="attachmentDir"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attachmentDir">&ndash;&nbsp;attachmentDir</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取附件保存路径</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)attachmentDir</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attachmentDirForConversationWithConversationId:" title="attachmentDirForConversationWithConversationId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attachmentDirForConversationWithConversationId:">&ndash;&nbsp;attachmentDirForConversationWithConversationId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取会话的附件保存路径</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)attachmentDirForConversationWithConversationId:(long long)<em>conversationId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>需要获取会话附件路径的会话id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllConversations" title="getAllConversations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllConversations">&ndash;&nbsp;getAllConversations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取所有会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXConversationList *)getAllConversations</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXConversationList.html">BMXConversationList</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllConversationsUnreadCount" title="getAllConversationsUnreadCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllConversationsUnreadCount">&ndash;&nbsp;getAllConversationsUnreadCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取所有会话的全部未读数（标记为屏蔽的个人和群组的未读数不统计在内）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)getAllConversationsUnreadCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:result:" title="retrieveHistoryMessagesWithConversation:refMsgId:size:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:result:">&ndash;&nbsp;retrieveHistoryMessagesWithConversation:refMsgId:size:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拉取历史消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)retrieveHistoryMessagesWithConversation:(BMXConversation *)<em>conversation</em> refMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> result:(BMXMessageList *)<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversation</code></th>
+						<td><p>需要拉取历史消息的会话</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refMsgId</code></th>
+						<td><p>拉取会话消息的起始消息Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>拉取的最大消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>拉取操作获取的消息列表，外部初始化传入空列表。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:result:arg5:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>使用关键字搜索消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageListList *)<em>result</em> arg5:(BMXConversation_Direction)<em>arg5</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keywords</code></th>
+						<td><p>搜索的关键字</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>搜索的最大消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表，外部初始化传入空列表。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:result:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> result:(BMXMessageListList *)<em>result</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAckMessageUserIdList:groupMemberIdList:" title="getGroupAckMessageUserIdList:groupMemberIdList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAckMessageUserIdList:groupMemberIdList:">&ndash;&nbsp;getGroupAckMessageUserIdList:groupMemberIdList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组消息已读用户id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getGroupAckMessageUserIdList:(BMXMessage *)<em>msg</em> groupMemberIdList:(ListOfLongLong *)<em>groupMemberIdList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取已读用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息已读的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAckMessageUnreadUserIdList:groupMemberIdList:" title="getGroupAckMessageUnreadUserIdList:groupMemberIdList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAckMessageUnreadUserIdList:groupMemberIdList:">&ndash;&nbsp;getGroupAckMessageUnreadUserIdList:groupMemberIdList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组消息未读用户id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getGroupAckMessageUnreadUserIdList:(BMXMessage *)<em>msg</em> groupMemberIdList:(ListOfLongLong *)<em>groupMemberIdList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取未读用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息未读的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupPlayAckMessageUserIdList:groupMemberIdList:" title="getGroupPlayAckMessageUserIdList:groupMemberIdList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupPlayAckMessageUserIdList:groupMemberIdList:">&ndash;&nbsp;getGroupPlayAckMessageUserIdList:groupMemberIdList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组音频/视频消息已播放用户id列表（仅用于音频/视频消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getGroupPlayAckMessageUserIdList:(BMXMessage *)<em>msg</em> groupMemberIdList:(ListOfLongLong *)<em>groupMemberIdList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取已播放用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息已播放的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupUnPlayAckMessageUserIdList:groupMemberIdList:" title="getGroupUnPlayAckMessageUserIdList:groupMemberIdList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupUnPlayAckMessageUserIdList:groupMemberIdList:">&ndash;&nbsp;getGroupUnPlayAckMessageUserIdList:groupMemberIdList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组音频/视频消息未播放用户id列表（仅用于音频/视频消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)getGroupUnPlayAckMessageUserIdList:(BMXMessage *)<em>msg</em> groupMemberIdList:(ListOfLongLong *)<em>groupMemberIdList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取未播放用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息未播放的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessageWithMsg:completion:" title="sendMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessageWithMsg:completion:">&ndash;&nbsp;sendMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resendMessageWithMsg:completion:" title="resendMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resendMessageWithMsg:completion:">&ndash;&nbsp;resendMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重新发送消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resendMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>重新发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/recallMessageWithMsg:completion:" title="recallMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/recallMessageWithMsg:completion:">&ndash;&nbsp;recallMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>撤回消息，消息状态变化会通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)recallMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>撤回的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/forwardMessageWithMsg:completion:" title="forwardMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forwardMessageWithMsg:completion:">&ndash;&nbsp;forwardMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>简单转发消息，用户应当通过<a href="../Classes/BMXMessage.html">BMXMessage</a>::createForwardMessage()先创建转发消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)forwardMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>转发的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackMessageWithMsg:completion:" title="ackMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackMessageWithMsg:completion:">&ndash;&nbsp;ackMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送已读回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送已读回执的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackMessageDeliveredWithMsg:completion:" title="ackMessageDeliveredWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackMessageDeliveredWithMsg:completion:">&ndash;&nbsp;ackMessageDeliveredWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送送达回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackMessageDeliveredWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>发送送达回执</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ackPlayMessageWithMsg:completion:" title="ackPlayMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ackPlayMessageWithMsg:completion:">&ndash;&nbsp;ackPlayMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送音频/视频消息已播放回执</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)ackPlayMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送已读回执的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCancelWithMsg:completion:" title="readCancelWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCancelWithMsg:completion:">&ndash;&nbsp;readCancelWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>标记此消息为未读，该消息同步到当前用户的所有设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readCancelWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要发送消息已读取消的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readAllMessageWithMsg:completion:" title="readAllMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readAllMessageWithMsg:completion:">&ndash;&nbsp;readAllMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>标记此消息及之前全部消息为已读，该消息同步到当前用户的所有设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readAllMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要标记为此消息以前全部消息为已读的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMessageWithMsg:synchronize:completion:" title="removeMessageWithMsg:synchronize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMessageWithMsg:synchronize:completion:">&ndash;&nbsp;removeMessageWithMsg:synchronize:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除此消息，该消息同步到当前用户的其它设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMessageWithMsg:(BMXMessage *)<em>msg</em> synchronize:(BOOL)<em>synchronize</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要删除的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>synchronize</code></th>
+						<td><p>是否同步到其它设备，不同步的情况下只会删除本地存储的该条消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMessageWithMsg:completion:" title="removeMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMessageWithMsg:completion:">&ndash;&nbsp;removeMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadThumbnailWithMsg:strategy:completion:" title="downloadThumbnailWithMsg:strategy:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadThumbnailWithMsg:strategy:completion:">&ndash;&nbsp;downloadThumbnailWithMsg:strategy:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载缩略图，下载状态变化和进度通过listener通知
+缩略图生成策略，1 - 第三方服务器生成， 2 - 本地服务器生成，默认值是 1。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadThumbnailWithMsg:(BMXMessage *)<em>msg</em> strategy:(BMXChatService_ThumbnailStrategy)<em>strategy</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要下载缩略图的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>strategy</code></th>
+						<td><p>缩略图生成策略，1 - 第三方服务器生成， 2 - 本地服务器生成，默认值是 1。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadThumbnailWithMsg:completion:" title="downloadThumbnailWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadThumbnailWithMsg:completion:">&ndash;&nbsp;downloadThumbnailWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadThumbnailWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAttachmentWithMsg:completion:" title="downloadAttachmentWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAttachmentWithMsg:completion:">&ndash;&nbsp;downloadAttachmentWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAttachmentWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要下载附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadAttachmentByUrlWithMsgId:url:path:completion:" title="downloadAttachmentByUrlWithMsgId:url:path:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadAttachmentByUrlWithMsgId:url:path:completion:">&ndash;&nbsp;downloadAttachmentByUrlWithMsgId:url:path:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadAttachmentByUrlWithMsgId:(long long)<em>msgId</em> url:(NSString *)<em>url</em> path:(NSString *)<em>path</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>下载附件，下载状态变化和进度通过listener通知</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelUploadAttachmentWithMsg:completion:" title="cancelUploadAttachmentWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelUploadAttachmentWithMsg:completion:">&ndash;&nbsp;cancelUploadAttachmentWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消上传附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelUploadAttachmentWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要取消上传附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelDownloadAttachmentWithMsg:completion:" title="cancelDownloadAttachmentWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelDownloadAttachmentWithMsg:completion:">&ndash;&nbsp;cancelDownloadAttachmentWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消下载附件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelDownloadAttachmentWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要取消下载附件的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertMessagesWithList:completion:" title="insertMessagesWithList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertMessagesWithList:completion:">&ndash;&nbsp;insertMessagesWithList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>插入消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)insertMessagesWithList:(BMXMessageList *)<em>list</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>list</code></th>
+						<td><p>插入消息列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversationWithConversationId:synchronize:completion:" title="deleteConversationWithConversationId:synchronize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversationWithConversationId:synchronize:completion:">&ndash;&nbsp;deleteConversationWithConversationId:synchronize:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteConversationWithConversationId:(long long)<em>conversationId</em> synchronize:(BOOL)<em>synchronize</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversationId</code></th>
+						<td><p>需要删除会话的会话id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>synchronize</code></th>
+						<td><p>是否同步删除其它设备该会话，默认为false，仅删除本设备会话</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversationWithConversationId:completion:" title="deleteConversationWithConversationId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversationWithConversationId:completion:">&ndash;&nbsp;deleteConversationWithConversationId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteConversationWithConversationId:(long long)<em>conversationId</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllConversationsWithCompletion:" title="getAllConversationsWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllConversationsWithCompletion:">&ndash;&nbsp;getAllConversationsWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取所有会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getAllConversationsWithCompletion:(void ( ^ ) ( BMXConversationList *res ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXConversationList.html">BMXConversationList</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:completion:" title="retrieveHistoryMessagesWithConversation:refMsgId:size:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/retrieveHistoryMessagesWithConversation:refMsgId:size:completion:">&ndash;&nbsp;retrieveHistoryMessagesWithConversation:refMsgId:size:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>拉取历史消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)retrieveHistoryMessagesWithConversation:(BMXConversation *)<em>conversation</em> refMsgId:(long long)<em>refMsgId</em> size:(unsigned long)<em>size</em> completion:(void ( ^ ) ( BMXMessageList *res , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conversation</code></th>
+						<td><p>需要拉取历史消息的会话</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refMsgId</code></th>
+						<td><p>拉取会话消息的起始消息Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>拉取的最大消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>拉取操作获取的消息列表，外部初始化传入空列表。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:arg5:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>使用关键字搜索消息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> arg5:(BMXConversation_Direction)<em>arg5</em> completion:(void ( ^ ) ( BMXMessageListList *res , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keywords</code></th>
+						<td><p>搜索的关键字</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTime</code></th>
+						<td><p>搜索消息的起始时间</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>size</code></th>
+						<td><p>搜索的最大消息条数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>搜索到的消息结果列表，外部初始化传入空列表。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Direction</code></th>
+						<td><p>消息搜索方向，默认（Direction::Up）是从更早的消息中搜索</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:" title="searchMessagesByKeyWordsWithKeywords:refTime:size:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchMessagesByKeyWordsWithKeywords:refTime:size:completion:">&ndash;&nbsp;searchMessagesByKeyWordsWithKeywords:refTime:size:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)searchMessagesByKeyWordsWithKeywords:(NSString *)<em>keywords</em> refTime:(long long)<em>refTime</em> size:(unsigned long)<em>size</em> completion:(void ( ^ ) ( BMXMessageListList *res , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAckMessageUserIdList:completion:" title="getGroupAckMessageUserIdList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAckMessageUserIdList:completion:">&ndash;&nbsp;getGroupAckMessageUserIdList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组消息已读用户id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupAckMessageUserIdList:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( ListOfLongLong *res , BMXError *error ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取已读用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息已读的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAckMessageUnreadUserIdList:completion:" title="getGroupAckMessageUnreadUserIdList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAckMessageUnreadUserIdList:completion:">&ndash;&nbsp;getGroupAckMessageUnreadUserIdList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组消息未读用户id列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupAckMessageUnreadUserIdList:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( ListOfLongLong *res , BMXError *error ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取未读用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息未读的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupPlayAckMessageUserIdList:completion:" title="getGroupPlayAckMessageUserIdList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupPlayAckMessageUserIdList:completion:">&ndash;&nbsp;getGroupPlayAckMessageUserIdList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组音频/视频消息已播放用户id列表（仅用于音频/视频消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupPlayAckMessageUserIdList:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( ListOfLongLong *res , BMXError *error ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取已播放用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息已播放的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupUnPlayAckMessageUserIdList:completion:" title="getGroupUnPlayAckMessageUserIdList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupUnPlayAckMessageUserIdList:completion:">&ndash;&nbsp;getGroupUnPlayAckMessageUserIdList:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取发送的群组音频/视频消息未播放用户id列表（仅用于音频/视频消息）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupUnPlayAckMessageUserIdList:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( ListOfLongLong *res , BMXError *error ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>需要获取未播放用户id列表的消息</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupMemberIdList</code></th>
+						<td><p>对该条消息未播放的用户id列表，初始传入为空列表</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXChatServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;BMXChatServiceProtocol&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;BMXChatServiceProtocol&gt;)<em>aDelegate</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addChatListener:" title="addChatListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addChatListener:">&ndash;&nbsp;addChatListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加聊天监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addChatListener:(id&lt;BMXChatServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>添加聊天监听者</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeChatListener:" title="removeChatListener:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeChatListener:">&ndash;&nbsp;removeChatListener:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>移除聊天监听者</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeChatListener:(id&lt;BMXChatServiceProtocol&gt;)<em>listener</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>移除聊天监听者</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

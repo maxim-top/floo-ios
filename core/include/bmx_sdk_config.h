@@ -31,13 +31,17 @@ public:
    * @param imHost IM服务器地址
    * @param imPort IM服务器端口
    * @param restHost ratel服务器地址
+   * @param path 读取的本地配置文件的位置
    **/
   struct HostConfig {
     HostConfig() {}
-    HostConfig(const std::string& im, int port, const std::string& rest) : imHost(im), imPort(port), restHost(rest) {}
+    HostConfig(const std::string& im, int port, const std::string& rest, const std::string& rtc) : imHost(im), imPort(port), restHost(rest), rtcHost(rtc) {}
+    HostConfig(const std::string& hostConfig) : config(hostConfig) {}
     std::string imHost;
     int imPort;
     std::string restHost;
+    std::string rtcHost;
+    std::string config;
   };
 
   /**

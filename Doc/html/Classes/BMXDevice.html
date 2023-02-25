@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -54,21 +56,35 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/deviceSN">deviceSN</option>
+		<option value="//api/name/swigCMemOwn">swigCMemOwn</option>
 		
-		<option value="//api/name/isCurrentDevice">isCurrentDevice</option>
-		
-		<option value="//api/name/platform">platform</option>
-		
-		<option value="//api/name/userAgent">userAgent</option>
-		
-		<option value="//api/name/userId">userId</option>
+		<option value="//api/name/swigCPtr">swigCPtr</option>
 		
 	</optgroup>
 	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/deviceSN">- deviceSN</option>
+		
+		<option value="//api/name/initWithCptr:swigOwnCObject:">- initWithCptr:swigOwnCObject:</option>
+		
+		<option value="//api/name/isCurrentDevice">- isCurrentDevice</option>
+		
+		<option value="//api/name/platform">- platform</option>
+		
+		<option value="//api/name/setUserAgent:">- setUserAgent:</option>
+		
+		<option value="//api/name/userAgent">- userAgent</option>
+		
+		<option value="//api/name/userId">- userId</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -92,12 +108,20 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXDevice.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 设备信息</p>
+					</div>
+					
+					
 
 					
 					
@@ -110,8 +134,56 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/swigCPtr" title="swigCPtr"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCPtr">&nbsp;&nbsp;swigCPtr</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) void *swigCPtr</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swigCMemOwn" title="swigCMemOwn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swigCMemOwn">&nbsp;&nbsp;swigCMemOwn</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL swigCMemOwn</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithCptr:swigOwnCObject:" title="initWithCptr:swigOwnCObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithCptr:swigOwnCObject:">&ndash;&nbsp;initWithCptr:swigOwnCObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithCptr:(void *)<em>cptr</em> swigOwnCObject:(BOOL)<em>ownCObject</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/deviceSN" title="deviceSN"></a>
-	<h3 class="method-title"><code><a href="#//api/name/deviceSN">&nbsp;&nbsp;deviceSN</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/deviceSN">&ndash;&nbsp;deviceSN</a></code>
 </h3>
 
 	<div class="method-info">
@@ -126,20 +198,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) int deviceSN</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)deviceSN</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>设备序列号</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -149,7 +221,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXDevice.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -157,7 +229,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/userId" title="userId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userId">&nbsp;&nbsp;userId</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/userId">&ndash;&nbsp;userId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -172,20 +244,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) long long userId</code></div>
+			<div class="method-subsection method-declaration"><code>- (long long)userId</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>用户id</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>long long</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -195,7 +267,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXDevice.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -203,7 +275,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/platform" title="platform"></a>
-	<h3 class="method-title"><code><a href="#//api/name/platform">&nbsp;&nbsp;platform</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/platform">&ndash;&nbsp;platform</a></code>
 </h3>
 
 	<div class="method-info">
@@ -213,25 +285,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>平台</p>
+				<p>软件平台</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) int platform</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)platform</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>平台</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>int</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -241,7 +313,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXDevice.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -249,7 +321,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/userAgent" title="userAgent"></a>
-	<h3 class="method-title"><code><a href="#//api/name/userAgent">&nbsp;&nbsp;userAgent</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/userAgent">&ndash;&nbsp;userAgent</a></code>
 </h3>
 
 	<div class="method-info">
@@ -259,25 +331,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>UA</p>
+				<p>用户代理信息</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *userAgent</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)userAgent</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>UA</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -287,7 +359,60 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXDevice.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setUserAgent:" title="setUserAgent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUserAgent:">&ndash;&nbsp;setUserAgent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置用户代理信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setUserAgent:(NSString *)<em>userAgent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userAgent</code></th>
+						<td><p>用户代理信息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -295,7 +420,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/isCurrentDevice" title="isCurrentDevice"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isCurrentDevice">&nbsp;&nbsp;isCurrentDevice</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/isCurrentDevice">&ndash;&nbsp;isCurrentDevice</a></code>
 </h3>
 
 	<div class="method-info">
@@ -310,20 +435,20 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isCurrentDevice</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isCurrentDevice</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>是否是当前设备</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -333,10 +458,26 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXDevice.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -354,7 +495,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

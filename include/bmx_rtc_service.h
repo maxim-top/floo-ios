@@ -52,7 +52,7 @@ public:
   * @brief 发送消息，用来RTCService层进行交互信令发送的操作。
   * @param msg 发送的信息消息，消息的类型仅为信令消息
   **/
-  virtual void sendRTCNotice(BMXMessagePtr msg) = 0;
+  virtual void sendRTCMessage(BMXMessagePtr msg) = 0;
 
   /**
   * @brief 添加RTCService回调监听

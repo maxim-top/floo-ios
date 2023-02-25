@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -62,7 +64,7 @@
 		
 		<option value="//api/name/rosterService">rosterService</option>
 		
-		<option value="//api/name/sdkConfig">sdkConfig</option>
+		<option value="//api/name/rtcService">rtcService</option>
 		
 		<option value="//api/name/userService">userService</option>
 		
@@ -72,7 +74,7 @@
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/getCacheDir">+ getCacheDir</option>
+		<option value="//api/name/createWithConfig:">+ createWithConfig:</option>
 		
 		<option value="//api/name/sharedClient">+ sharedClient</option>
 		
@@ -82,37 +84,75 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/changeAppID:completion:">- changeAppID:completion:</option>
+		<option value="//api/name/changeAppIdWithAppId:">- changeAppIdWithAppId:</option>
+		
+		<option value="//api/name/changeAppIdWithAppId:appSecret:">- changeAppIdWithAppId:appSecret:</option>
+		
+		<option value="//api/name/changeAppIdWithAppId:appSecret:completion:">- changeAppIdWithAppId:appSecret:completion:</option>
+		
+		<option value="//api/name/changeAppIdWithAppId:completion:">- changeAppIdWithAppId:completion:</option>
 		
 		<option value="//api/name/connectStatus">- connectStatus</option>
 		
-		<option value="//api/name/disConnect">- disConnect</option>
+		<option value="//api/name/dealloc">- dealloc</option>
 		
-		<option value="//api/name/fastSignInById:password:completion:">- fastSignInById:password:completion:</option>
+		<option value="//api/name/deleteAccountWithPassword:">- deleteAccountWithPassword:</option>
 		
-		<option value="//api/name/fastSignInByName:password:completion:">- fastSignInByName:password:completion:</option>
+		<option value="//api/name/deleteAccountWithPassword:completion:">- deleteAccountWithPassword:completion:</option>
 		
-		<option value="//api/name/initializeServerConfig:">- initializeServerConfig:</option>
+		<option value="//api/name/disconnect">- disconnect</option>
 		
-		<option value="//api/name/networkDidChangedType:reconnect:">- networkDidChangedType:reconnect:</option>
+		<option value="//api/name/disconnectWithCompletion:">- disconnectWithCompletion:</option>
+		
+		<option value="//api/name/fastSignInByIdWithUid:password:">- fastSignInByIdWithUid:password:</option>
+		
+		<option value="//api/name/fastSignInByIdWithUid:password:completion:">- fastSignInByIdWithUid:password:completion:</option>
+		
+		<option value="//api/name/fastSignInByNameWithName:password:">- fastSignInByNameWithName:password:</option>
+		
+		<option value="//api/name/fastSignInByNameWithName:password:completion:">- fastSignInByNameWithName:password:completion:</option>
+		
+		<option value="//api/name/getSDKConfig">- getSDKConfig</option>
+		
+		<option value="//api/name/initializeServerConfigWithIsLocal:">- initializeServerConfigWithIsLocal:</option>
+		
+		<option value="//api/name/initializeServerConfigWithIsLocal:completion:">- initializeServerConfigWithIsLocal:completion:</option>
+		
+		<option value="//api/name/onNetworkChangedWithType:reconnect:">- onNetworkChangedWithType:reconnect:</option>
 		
 		<option value="//api/name/reconnect">- reconnect</option>
 		
-		<option value="//api/name/registerWithSDKConfig:">- registerWithSDKConfig:</option>
+		<option value="//api/name/reconnectWithCompletion:">- reconnectWithCompletion:</option>
 		
-		<option value="//api/name/signInById:password:completion:">- signInById:password:completion:</option>
+		<option value="//api/name/sendMessageWithMsg:">- sendMessageWithMsg:</option>
 		
-		<option value="//api/name/signInById:withToken:completion:">- signInById:withToken:completion:</option>
+		<option value="//api/name/sendMessageWithMsg:completion:">- sendMessageWithMsg:completion:</option>
 		
-		<option value="//api/name/signInByName:password:completion:">- signInByName:password:completion:</option>
+		<option value="//api/name/signInByIdWithArg1:password:">- signInByIdWithArg1:password:</option>
+		
+		<option value="//api/name/signInByIdWithArg1:password:completion:">- signInByIdWithArg1:password:completion:</option>
+		
+		<option value="//api/name/signInByNameWithName:password:">- signInByNameWithName:password:</option>
+		
+		<option value="//api/name/signInByNameWithName:password:completion:">- signInByNameWithName:password:completion:</option>
 		
 		<option value="//api/name/signInStatus">- signInStatus</option>
 		
-		<option value="//api/name/signOutID:ignoreUnbindDevice:completion:">- signOutID:ignoreUnbindDevice:completion:</option>
+		<option value="//api/name/signOut">- signOut</option>
 		
-		<option value="//api/name/signOutignoreUnbindDevice:completion:">- signOutignoreUnbindDevice:completion:</option>
+		<option value="//api/name/signOutWithCompletion:">- signOutWithCompletion:</option>
 		
-		<option value="//api/name/signUpNewUser:password:completion:">- signUpNewUser:password:completion:</option>
+		<option value="//api/name/signOutWithUid:">- signOutWithUid:</option>
+		
+		<option value="//api/name/signOutWithUid:completion:">- signOutWithUid:completion:</option>
+		
+		<option value="//api/name/signOutWithUid:ignoreUnbindDevice:">- signOutWithUid:ignoreUnbindDevice:</option>
+		
+		<option value="//api/name/signOutWithUid:ignoreUnbindDevice:completion:">- signOutWithUid:ignoreUnbindDevice:completion:</option>
+		
+		<option value="//api/name/signUpNewUserWithUsername:password:bmxUserProfilePtr:">- signUpNewUserWithUsername:password:bmxUserProfilePtr:</option>
+		
+		<option value="//api/name/signUpNewUserWithUsername:password:completion:">- signUpNewUserWithUsername:password:completion:</option>
 		
 	</optgroup>
 	
@@ -135,15 +175,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/BMXNetworkListener.html">BMXNetworkListener</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>BMXClient.h</td>
+	<td>floo_proxy.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@interface 客户端实例</p>
+					</div>
+					
+					
 
 					
 					
@@ -182,7 +230,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;BMXUserManager&gt; userService</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXUserService *userService</code></div>
 
 		    
 		</div>
@@ -198,7 +246,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;BMXRosterManager&gt; rosterService</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXRosterService *rosterService</code></div>
 
 		    
 		</div>
@@ -214,7 +262,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;BMXChatManager&gt; chatService</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXChatService *chatService</code></div>
 
 		    
 		</div>
@@ -230,7 +278,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;BMXGroupManager&gt; groupService</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXGroupService *groupService</code></div>
 
 		    
 		</div>
@@ -246,14 +294,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;BMXPushManager&gt; pushService</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXPushService *pushService</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sdkConfig" title="sdkConfig"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sdkConfig">&nbsp;&nbsp;sdkConfig</a></code>
+	<a name="//api/name/rtcService" title="rtcService"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rtcService">&nbsp;&nbsp;rtcService</a></code>
 </h3>
 
 	<div class="method-info">
@@ -262,46 +310,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) BMXSDKConfig *sdkConfig</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BMXRTCService *rtcService</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/registerWithSDKConfig:" title="registerWithSDKConfig:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/registerWithSDKConfig:">&ndash;&nbsp;registerWithSDKConfig:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)registerWithSDKConfig:(BMXSDKConfig *)<em>config</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getCacheDir" title="getCacheDir"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getCacheDir">+&nbsp;getCacheDir</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>+ (NSString *)getCacheDir</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/signUpNewUser:password:completion:" title="signUpNewUser:password:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signUpNewUser:password:completion:">&ndash;&nbsp;signUpNewUser:password:completion:</a></code>
+	<a name="//api/name/createWithConfig:" title="createWithConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createWithConfig:">+&nbsp;createWithConfig:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -311,12 +327,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>注册新用户，username和password是必填参数</p>
+				<p>创建BMXClient</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)signUpNewUser:(NSString *)<em>userName</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXUserProfile *profile , BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (BMXClient *)createWithConfig:(BMXSDKConfig *)<em>config</em></code></div>
 
 		    
 			
@@ -325,17 +341,121 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>userName</code></th>
+						<th scope="row" class="argument-name"><code>config</code></th>
+						<td><p>客户端本地已经创建好的<a href="../Classes/BMXSDKConfig.html">BMXSDKConfig</a> SDK配置对象</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BMXClient</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSDKConfig" title="getSDKConfig"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSDKConfig">&ndash;&nbsp;getSDKConfig</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取SDK设置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXSDKConfig *)getSDKConfig</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/BMXSDKConfig.html">BMXSDKConfig</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signUpNewUserWithUsername:password:bmxUserProfilePtr:" title="signUpNewUserWithUsername:password:bmxUserProfilePtr:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signUpNewUserWithUsername:password:bmxUserProfilePtr:">&ndash;&nbsp;signUpNewUserWithUsername:password:bmxUserProfilePtr:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册新用户，username和password是必填参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signUpNewUserWithUsername:(NSString *)<em>username</em> password:(NSString *)<em>password</em> bmxUserProfilePtr:(BMXUserProfile *)<em>bmxUserProfilePtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
 						<td><p>用户名</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>password</code></th>
-						<td><p>密码</p></td>
+						<td><p>用户密码</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<th scope="row" class="argument-name"><code>bmxUserProfilePtr</code></th>
 						<td><p>注册成功后从该函数处获取新注册用户的Profile信息，初始传入指向为空的shared_ptr对象即可。</p></td>
 					</tr>
 				
@@ -344,14 +464,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>注册新用户，username和password是必填参数</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -361,15 +481,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/signInByName:password:completion:" title="signInByName:password:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signInByName:password:completion:">&ndash;&nbsp;signInByName:password:completion:</a></code>
+	<a name="//api/name/signInByNameWithName:password:" title="signInByNameWithName:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signInByNameWithName:password:">&ndash;&nbsp;signInByNameWithName:password:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -384,21 +504,101 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)signInByName:(NSString *)<em>userName</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signInByNameWithName:(NSString *)<em>name</em> password:(NSString *)<em>password</em></code></div>
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
 
 			
 
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signInByIdWithArg1:password:" title="signInByIdWithArg1:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signInByIdWithArg1:password:">&ndash;&nbsp;signInByIdWithArg1:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
 				<p>通过用户名登录</p>
 			</div>
 			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signInByIdWithArg1:(long long)<em>arg1</em> password:(NSString *)<em>password</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
 
 			
 
@@ -407,15 +607,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/signInById:password:completion:" title="signInById:password:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signInById:password:completion:">&ndash;&nbsp;signInById:password:completion:</a></code>
+	<a name="//api/name/fastSignInByNameWithName:password:" title="fastSignInByNameWithName:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fastSignInByNameWithName:password:">&ndash;&nbsp;fastSignInByNameWithName:password:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -425,25 +625,42 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>通过用户ID登录</p>
+				<p>通过用户名快速登录（要求之前成功登录过，登录速度较快）</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)signInById:(long long)<em>userId</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)fastSignInByNameWithName:(NSString *)<em>name</em> password:(NSString *)<em>password</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>通过用户ID登录</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码(用于sdk在内部token到期时自动更新用户token)</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -453,15 +670,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/signInById:withToken:completion:" title="signInById:withToken:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signInById:withToken:completion:">&ndash;&nbsp;signInById:withToken:completion:</a></code>
+	<a name="//api/name/fastSignInByIdWithUid:password:" title="fastSignInByIdWithUid:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fastSignInByIdWithUid:password:">&ndash;&nbsp;fastSignInByIdWithUid:password:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -471,25 +688,42 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>通过用户ID和token登录</p>
+				<p>通过用户ID快速登录（要求之前成功登录过，登录速度较快）</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)signInById:(long long)<em>userId</em> withToken:(NSString *)<em>token</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)fastSignInByIdWithUid:(long long)<em>uid</em> password:(NSString *)<em>password</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>通过用户ID和token登录</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uid</code></th>
+						<td><p>用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码(用于sdk在内部token到期时自动更新用户token)</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -499,107 +733,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fastSignInByName:password:completion:" title="fastSignInByName:password:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fastSignInByName:password:completion:">&ndash;&nbsp;fastSignInByName:password:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>通过用户名自动登录（要求之前成功登录过，登录速度较快）</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fastSignInByName:(NSString *)<em>name</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>通过用户名自动登录（要求之前成功登录过，登录速度较快）</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fastSignInById:password:completion:" title="fastSignInById:password:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fastSignInById:password:completion:">&ndash;&nbsp;fastSignInById:password:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>通过用户ID自动登录（要求之前成功登录过，登录速度较快）</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fastSignInById:(long long)<em>uid</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>通过用户ID自动登录（要求之前成功登录过，登录速度较快）</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/signOutID:ignoreUnbindDevice:completion:" title="signOutID:ignoreUnbindDevice:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signOutID:ignoreUnbindDevice:completion:">&ndash;&nbsp;signOutID:ignoreUnbindDevice:completion:</a></code>
+	<a name="//api/name/signOutWithUid:ignoreUnbindDevice:" title="signOutWithUid:ignoreUnbindDevice:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOutWithUid:ignoreUnbindDevice:">&ndash;&nbsp;signOutWithUid:ignoreUnbindDevice:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -614,20 +756,37 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)signOutID:(NSInteger)<em>userID</em> ignoreUnbindDevice:(BOOL)<em>ignoreUnbindDevice</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signOutWithUid:(long long)<em>uid</em> ignoreUnbindDevice:(BOOL)<em>ignoreUnbindDevice</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>退出登录</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uid</code></th>
+						<td><p>退出用户的uid（默认输入0则退出当前登陆用户）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ignoreUnbindDevice</code></th>
+						<td><p>用户退出时是否忽略解绑定设备操作。对应某些服务器不可访问的情况下忽略服务器解绑定设备操作直接强制退出时设置为true</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -637,15 +796,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/signOutignoreUnbindDevice:completion:" title="signOutignoreUnbindDevice:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signOutignoreUnbindDevice:completion:">&ndash;&nbsp;signOutignoreUnbindDevice:completion:</a></code>
+	<a name="//api/name/signOutWithUid:" title="signOutWithUid:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOutWithUid:">&ndash;&nbsp;signOutWithUid:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -654,14 +813,30 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)signOutignoreUnbindDevice:(BOOL)<em>ignoreUnbindDevice</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signOutWithUid:(long long)<em>uid</em></code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/signInStatus" title="signInStatus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/signInStatus">&ndash;&nbsp;signInStatus</a></code>
+	<a name="//api/name/signOut" title="signOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOut">&ndash;&nbsp;signOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)signOut</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteAccountWithPassword:" title="deleteAccountWithPassword:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteAccountWithPassword:">&ndash;&nbsp;deleteAccountWithPassword:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -671,25 +846,37 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>获取当前的登录状态</p>
+				<p>删除账号</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BMXSignInStatus)signInStatus</code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)deleteAccountWithPassword:(NSString *)<em>password</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取当前的登录状态</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>密码</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -699,7 +886,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -728,14 +915,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取当前和服务器的连接状态</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXConnectStatus.html">BMXConnectStatus</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -745,15 +932,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/networkDidChangedType:reconnect:" title="networkDidChangedType:reconnect:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/networkDidChangedType:reconnect:">&ndash;&nbsp;networkDidChangedType:reconnect:</a></code>
+	<a name="//api/name/signInStatus" title="signInStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signInStatus">&ndash;&nbsp;signInStatus</a></code>
 </h3>
 
 	<div class="method-info">
@@ -763,42 +950,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>处理网络状态发送变化</p>
+				<p>获取当前的登录状态</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)networkDidChangedType:(BMXNetworkType)<em>type</em> reconnect:(BOOL)<em>reconnect</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXSignInStatus)signInStatus</code></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>type</code></th>
-						<td><p>变化后的网络类型</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>reconnect</code></th>
-						<td><p>网络是否需要重连</p></td>
-					</tr>
-				
-				</table>
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXSignInStatus.html">BMXSignInStatus</a></p>
 			</div>
 			
 
 			
 
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>处理网络状态发送变化</p>
-			</div>
 			
 
 			
@@ -808,7 +978,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
@@ -841,11 +1011,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>强制重新连接</p>
-			</div>
-			
 
 			
 
@@ -854,15 +1019,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/disConnect" title="disConnect"></a>
-	<h3 class="method-title"><code><a href="#//api/name/disConnect">&ndash;&nbsp;disConnect</a></code>
+	<a name="//api/name/onNetworkChangedWithType:reconnect:" title="onNetworkChangedWithType:reconnect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onNetworkChangedWithType:reconnect:">&ndash;&nbsp;onNetworkChangedWithType:reconnect:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -872,58 +1037,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>断开网络连接</p>
+				<p>处理网络状态发送变化</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)disConnect</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>断开网络连接</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/changeAppID:completion:" title="changeAppID:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/changeAppID:completion:">&ndash;&nbsp;changeAppID:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>更改SDK的appId，本操作会同时更新BMXConfig中的appId。</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)changeAppID:(NSString *)<em>appID</em> completion:(void ( ^ ) ( BMXError *error ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)onNetworkChangedWithType:(BMXNetworkType)<em>type</em> reconnect:(BOOL)<em>reconnect</em></code></div>
 
 		    
 			
@@ -932,8 +1051,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>appID</code></th>
-						<td><p>新变更的appId</p></td>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>变化后的网络类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reconnect</code></th>
+						<td><p>网络是否需要重连</p></td>
 					</tr>
 				
 				</table>
@@ -945,10 +1069,46 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>更改SDK的appId，本操作会同时更新BMXConfig中的appId。</p>
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnect" title="disconnect"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnect">&ndash;&nbsp;disconnect</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断开网络连接</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)disconnect</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -958,15 +1118,89 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initializeServerConfig:" title="initializeServerConfig:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initializeServerConfig:">&ndash;&nbsp;initializeServerConfig:</a></code>
+	<a name="//api/name/changeAppIdWithAppId:appSecret:" title="changeAppIdWithAppId:appSecret:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/changeAppIdWithAppId:appSecret:">&ndash;&nbsp;changeAppIdWithAppId:appSecret:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更改SDK的appId，本操作会同时更新BMXConfig中的appId。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)changeAppIdWithAppId:(NSString *)<em>appId</em> appSecret:(NSString *)<em>appSecret</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>appId</code></th>
+						<td><p>新变更的appId</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/changeAppIdWithAppId:" title="changeAppIdWithAppId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/changeAppIdWithAppId:">&ndash;&nbsp;changeAppIdWithAppId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)changeAppIdWithAppId:(NSString *)<em>appId</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initializeServerConfigWithIsLocal:" title="initializeServerConfigWithIsLocal:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initializeServerConfigWithIsLocal:">&ndash;&nbsp;initializeServerConfigWithIsLocal:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -981,7 +1215,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)initializeServerConfig:(BOOL)<em>isLocal</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BMXErrorCode)initializeServerConfigWithIsLocal:(BOOL)<em>isLocal</em></code></div>
 
 		    
 			
@@ -999,14 +1233,14 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取app的服务器网络配置，在初始化SDK之后登陆之前调用，可以提前获取服务器配置加快登陆速度。</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -1016,10 +1250,821 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">BMXClient.h</code></p>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessageWithMsg:" title="sendMessageWithMsg:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessageWithMsg:">&ndash;&nbsp;sendMessageWithMsg:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送消息，消息状态变化会通过listener通知，在发送群组消息且指定的群组为开启群组已读回执的情况下，
+该接口会自动获取群成员列表id并且填充到message config中去，无需客户端自己进行群组成员列表的填充操作。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendMessageWithMsg:(BMXMessage *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signUpNewUserWithUsername:password:completion:" title="signUpNewUserWithUsername:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signUpNewUserWithUsername:password:completion:">&ndash;&nbsp;signUpNewUserWithUsername:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册新用户，username和password是必填参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)signUpNewUserWithUsername:(NSString *)<em>username</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXUserProfile *profile , BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bmxUserProfilePtr</code></th>
+						<td><p>注册成功后从该函数处获取新注册用户的Profile信息，初始传入指向为空的shared_ptr对象即可。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signInByNameWithName:password:completion:" title="signInByNameWithName:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signInByNameWithName:password:completion:">&ndash;&nbsp;signInByNameWithName:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户名登录</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)signInByNameWithName:(NSString *)<em>name</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signInByIdWithArg1:password:completion:" title="signInByIdWithArg1:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signInByIdWithArg1:password:completion:">&ndash;&nbsp;signInByIdWithArg1:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户ID登录</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)signInByIdWithArg1:(long long)<em>arg1</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>int64_t</code></th>
+						<td><p>用户id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fastSignInByNameWithName:password:completion:" title="fastSignInByNameWithName:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fastSignInByNameWithName:password:completion:">&ndash;&nbsp;fastSignInByNameWithName:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户名快速登录（要求之前成功登录过，登录速度较快）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fastSignInByNameWithName:(NSString *)<em>name</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>用户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码(用于sdk在内部token到期时自动更新用户token)</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fastSignInByIdWithUid:password:completion:" title="fastSignInByIdWithUid:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fastSignInByIdWithUid:password:completion:">&ndash;&nbsp;fastSignInByIdWithUid:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过用户ID快速登录（要求之前成功登录过，登录速度较快）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fastSignInByIdWithUid:(long long)<em>uid</em> password:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uid</code></th>
+						<td><p>用户id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>用户密码(用于sdk在内部token到期时自动更新用户token)</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signOutWithUid:ignoreUnbindDevice:completion:" title="signOutWithUid:ignoreUnbindDevice:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOutWithUid:ignoreUnbindDevice:completion:">&ndash;&nbsp;signOutWithUid:ignoreUnbindDevice:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>退出登录</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)signOutWithUid:(long long)<em>uid</em> ignoreUnbindDevice:(BOOL)<em>ignoreUnbindDevice</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uid</code></th>
+						<td><p>退出用户的uid（默认输入0则退出当前登陆用户）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ignoreUnbindDevice</code></th>
+						<td><p>用户退出时是否忽略解绑定设备操作。对应某些服务器不可访问的情况下忽略服务器解绑定设备操作直接强制退出时设置为true</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signOutWithUid:completion:" title="signOutWithUid:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOutWithUid:completion:">&ndash;&nbsp;signOutWithUid:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)signOutWithUid:(long long)<em>uid</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signOutWithCompletion:" title="signOutWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signOutWithCompletion:">&ndash;&nbsp;signOutWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)signOutWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteAccountWithPassword:completion:" title="deleteAccountWithPassword:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteAccountWithPassword:completion:">&ndash;&nbsp;deleteAccountWithPassword:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除账号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteAccountWithPassword:(NSString *)<em>password</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>密码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reconnectWithCompletion:" title="reconnectWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reconnectWithCompletion:">&ndash;&nbsp;reconnectWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>强制重新连接</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)reconnectWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnectWithCompletion:" title="disconnectWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnectWithCompletion:">&ndash;&nbsp;disconnectWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断开网络连接</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)disconnectWithCompletion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/changeAppIdWithAppId:appSecret:completion:" title="changeAppIdWithAppId:appSecret:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/changeAppIdWithAppId:appSecret:completion:">&ndash;&nbsp;changeAppIdWithAppId:appSecret:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更改SDK的appId，本操作会同时更新BMXConfig中的appId。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)changeAppIdWithAppId:(NSString *)<em>appId</em> appSecret:(NSString *)<em>appSecret</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>appId</code></th>
+						<td><p>新变更的appId</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/changeAppIdWithAppId:completion:" title="changeAppIdWithAppId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/changeAppIdWithAppId:completion:">&ndash;&nbsp;changeAppIdWithAppId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)changeAppIdWithAppId:(NSString *)<em>appId</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initializeServerConfigWithIsLocal:completion:" title="initializeServerConfigWithIsLocal:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initializeServerConfigWithIsLocal:completion:">&ndash;&nbsp;initializeServerConfigWithIsLocal:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取app的服务器网络配置，在初始化SDK之后登陆之前调用，可以提前获取服务器配置加快登陆速度。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)initializeServerConfigWithIsLocal:(BOOL)<em>isLocal</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isLocal</code></th>
+						<td><p>为true则使用本地缓存的dns配置，为false则从服务器获取最新的配置。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Constants/BMXErrorCode.html">BMXErrorCode</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessageWithMsg:completion:" title="sendMessageWithMsg:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessageWithMsg:completion:">&ndash;&nbsp;sendMessageWithMsg:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送消息，消息状态变化会通过listener通知，在发送群组消息且指定的群组为开启群组已读回执的情况下，
+该接口会自动获取群成员列表id并且填充到message config中去，无需客户端自己进行群组成员列表的填充操作。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendMessageWithMsg:(BMXMessage *)<em>msg</em> completion:(void ( ^ ) ( BMXError *aError ))<em>resBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>发送的消息</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">floo_proxy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -1037,7 +2082,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 美信拓扑. All rights reserved. Updated: 2022-02-09</p>
+						<p class="copyright">Copyright &copy; 2023 美信拓扑. All rights reserved. Updated: 2023-02-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -21,7 +21,9 @@
 namespace floo {
 
 class BMXPushService;
-
+/**
+ * @brief 推送服务监听者
+ */
 class EXPORT_API BMXPushServiceListener {
 public:
 

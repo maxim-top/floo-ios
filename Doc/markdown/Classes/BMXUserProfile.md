@@ -1,215 +1,225 @@
 # BMXUserProfile Class Reference
 
-  **Inherits from** NSObject  
-  **Declared in** BMXUserProfile.h  
+  **Inherits from** <a href="../Classes/BMXBaseObject.md">BMXBaseObject</a> :   
+NSObject  
+  **Declared in** floo_proxy.h  
 
-## Properties
+## Overview
+
+@interface 用户Profile
+
+## Instance Methods
 
 <a name="//api/name/addFriendAuthMode" title="addFriendAuthMode"></a>
 ### addFriendAuthMode
 
-好友验证模式
+加好友校验方式
 
-`@property (nonatomic, assign) BMXAddFriendAuthMode addFriendAuthMode`
+`- (BMXUserProfile_AddFriendAuthMode)addFriendAuthMode`
 
-#### Discussion
-好友验证模式
+#### Return Value
+<a href="../Constants/BMXUserProfile_AddFriendAuthMode.md">BMXUserProfile_AddFriendAuthMode</a>
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/authQuestion" title="authQuestion"></a>
 ### authQuestion
 
-验证问题
+添加好友时的验证问题
 
-`@property (nonatomic, strong) BMXAuthQuestion *authQuestion`
+`- (BMXUserProfileAuthQuestion *)authQuestion`
 
-#### Discussion
-验证问题
+#### Return Value
+AuthQuestion
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/avatarPath" title="avatarPath"></a>
 ### avatarPath
 
-头像本地路径
+用户头像本地存储路径
 
-`@property (nonatomic, copy) NSString *avatarPath`
+`- (NSString *)avatarPath`
 
-#### Discussion
-头像本地路径
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
+
+<a name="//api/name/avatarRatelUrl" title="avatarRatelUrl"></a>
+### avatarRatelUrl
+
+用户ratel服务器头像url
+
+`- (NSString *)avatarRatelUrl`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
 
 <a name="//api/name/avatarThumbnailPath" title="avatarThumbnailPath"></a>
 ### avatarThumbnailPath
 
-头像缩略图本地路径
+用户头像缩略图本地存储路径
 
-`@property (nonatomic, copy) NSString *avatarThumbnailPath`
+`- (NSString *)avatarThumbnailPath`
 
-#### Discussion
-头像缩略图本地路径
-
-#### Declared In
-* `BMXUserProfile.h`
-
-<a name="//api/name/avatarThumbnailUrl" title="avatarThumbnailUrl"></a>
-### avatarThumbnailUrl
-
-头像缩略图url
-
-`@property (nonatomic, copy) NSString *avatarThumbnailUrl`
-
-#### Discussion
-头像缩略图url
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/avatarUrl" title="avatarUrl"></a>
 ### avatarUrl
 
-头像url
+用户头像url
 
-`@property (nonatomic, copy) NSString *avatarUrl`
+`- (NSString *)avatarUrl`
 
-#### Discussion
-头像url
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
+
+<a name="//api/name/category" title="category"></a>
+### category
+
+用户策略
+
+`- (BMXUserProfile_UserCategory)category`
+
+#### Return Value
+<a href="../Constants/BMXUserProfile_UserCategory.md">BMXUserProfile_UserCategory</a>
+
+#### Declared In
+* `floo_proxy.h`
+
+<a name="//api/name/dealloc" title="dealloc"></a>
+### dealloc
+
+`- (void)dealloc`
 
 <a name="//api/name/email" title="email"></a>
 ### email
 
-  用户邮箱
+用户邮箱
 
-`@property (nonatomic, copy) NSString *email`
+`- (NSString *)email`
 
-#### Discussion
-  用户邮箱
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/isAutoAcceptGroupInvite" title="isAutoAcceptGroupInvite"></a>
 ### isAutoAcceptGroupInvite
 
-自动接收群邀请
+收到群组邀请进群时是否自动同意进群
 
-`@property (nonatomic, assign) BOOL isAutoAcceptGroupInvite`
+`- (BOOL)isAutoAcceptGroupInvite`
 
-#### Discussion
-自动接收群邀请
+#### Return Value
+BOOL
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/messageSetting" title="messageSetting"></a>
 ### messageSetting
 
-消息设置
+用户消息设定
 
-`@property (nonatomic, strong) BMXMessageSetting *messageSetting`
+`- (BMXUserProfileMessageSetting *)messageSetting`
 
-#### Discussion
-消息设置
+#### Return Value
+<a href="../Classes/BMXUserProfileMessageSetting.md">BMXUserProfileMessageSetting</a>
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
 <a name="//api/name/mobilePhone" title="mobilePhone"></a>
 ### mobilePhone
 
-手机号
+用户手机
 
-`@property (nonatomic, copy) NSString *mobilePhone`
+`- (NSString *)mobilePhone`
 
-#### Discussion
-手机号
-
-#### Declared In
-* `BMXUserProfile.h`
-
-<a name="//api/name/nickName" title="nickName"></a>
-### nickName
-
-昵称
-
-`@property (nonatomic, copy) NSString *nickName`
-
-#### Discussion
-昵称
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
-<a name="//api/name/privateInfoJson" title="privateInfoJson"></a>
-### privateInfoJson
+<a name="//api/name/nickname" title="nickname"></a>
+### nickname
 
-私密信息
+用户昵称
 
-`@property (nonatomic, copy) NSString *privateInfoJson`
+`- (NSString *)nickname`
 
-#### Discussion
-私密信息
-
-#### Declared In
-* `BMXUserProfile.h`
-
-<a name="//api/name/publicInfoJson" title="publicInfoJson"></a>
-### publicInfoJson
-
-公开信息
-
-`@property (nonatomic, copy) NSString *publicInfoJson`
-
-#### Discussion
-公开信息
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
 
-<a name="//api/name/userCategory" title="userCategory"></a>
-### userCategory
+<a name="//api/name/privateInfo" title="privateInfo"></a>
+### privateInfo
 
-用户级别
+用户私有扩展信息，好友不可见
 
-`@property (nonatomic, assign) BMXUserCategory userCategory`
+`- (NSString *)privateInfo`
 
-#### Discussion
-用户级别
+#### Return Value
+NSString
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
+
+<a name="//api/name/publicInfo" title="publicInfo"></a>
+### publicInfo
+
+用户公开扩展信息，好友可见
+
+`- (NSString *)publicInfo`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
 
 <a name="//api/name/userId" title="userId"></a>
 ### userId
 
-用户id
+用户ID（唯一）
 
-`@property (nonatomic, assign) long long userId`
+`- (long long)userId`
 
-#### Discussion
-用户id
-
-#### Declared In
-* `BMXUserProfile.h`
-
-<a name="//api/name/userName" title="userName"></a>
-### userName
-
-用户名
-
-`@property (nonatomic, copy) NSString *userName`
-
-#### Discussion
-用户名
+#### Return Value
+long long
 
 #### Declared In
-* `BMXUserProfile.h`
+* `floo_proxy.h`
+
+<a name="//api/name/username" title="username"></a>
+### username
+
+用户名（唯一）
+
+`- (NSString *)username`
+
+#### Return Value
+NSString
+
+#### Declared In
+* `floo_proxy.h`
 
