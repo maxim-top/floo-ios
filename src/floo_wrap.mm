@@ -7278,9 +7278,10 @@ void _wrap_BMXMessageConfig_setRTCCallInfo(void* imarg1, int imarg2, long long i
     @throw anException;
   }
   std::string arg6_str(getStdString(imarg6));
-   arg6 = &arg6_str; 
+  arg6 = &arg6_str;
   
   (arg1)->setRTCCallInfo(arg2,arg3,arg4,arg5,(std::string const &)*arg6);
+  (arg1)->setIOSConfig("{\"mutable_content\":true}");
 }
 
 void _wrap_BMXMessageConfig_setRTCPickupInfo(void* imarg1, NSString* imarg2) {

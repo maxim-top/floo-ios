@@ -4471,6 +4471,17 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
 @property(nonatomic) BOOL swigCMemOwn;
 
 - (id)initWithCptr:(void *)cptr swigOwnCObject:(BOOL)ownCObject;
+
+  /**
+   * @brief 在通话中
+   **/
+- (BOOL)isOnCall;
+
+  /**
+   * @brief 音视频通话对方ID
+   **/
+- (long long)otherId;
+
   /**
    * @brief 销毁音视频Engine
    **/

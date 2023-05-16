@@ -6815,7 +6815,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 
 - (void)getAllConversationsWithCompletion:(void (^)(BMXConversationList *res)) resBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        BMXConversationList *list = [[BMXConversationList alloc] init];
+        BMXConversationList *list = nil;
         void* cPtr = _wrap_BMXChatService_getAllConversations(self.swigCPtr);
         if(cPtr) {
           list = [[BMXConversationList alloc] initWithCptr:cPtr swigOwnCObject:NO];
@@ -6909,6 +6909,9 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 - (void)removeDelegate:(id)aDelegate {
     if (aDelegate == nil) {
         return;
+    }
+    if ([aDelegate conformsToProtocol:@protocol(BMXChatServiceProtocol)]) {
+        chatListener->removeDelegate(aDelegate);
     }
 }
 
@@ -9194,6 +9197,9 @@ static BMXClient *sharedClient = nil;
     if (aDelegate == nil) {
         return;
     }
+    if ([aDelegate conformsToProtocol:@protocol(BMXRTCEngineProtocol)]) {
+        [rtcEngineListener removeDelegate:aDelegate];
+    }
 }
 
 - (void)addRTCEngineListener:(id<BMXRTCEngineProtocol>)listener {
@@ -9594,6 +9600,9 @@ void RTCServiceListener::removeDelegate(id<BMXRTCServiceProtocol> delegate) {
 - (void)removeDelegate:(id)aDelegate {
     if (aDelegate == nil) {
         return;
+    }
+    if ([aDelegate conformsToProtocol:@protocol(BMXRTCServiceProtocol)]) {
+        rtcListener->removeDelegate(aDelegate);
     }
 }
 
@@ -10688,6 +10697,9 @@ private:
 - (void)removeDelegate:(id)aDelegate {
     if (aDelegate == nil) {
         return;
+    }
+    if ([aDelegate conformsToProtocol:@protocol(BMXRTCSignalServiceProtocol)]) {
+        rtcSignalListener->removeDelegate(aDelegate);
     }
 }
 
@@ -11795,6 +11807,9 @@ private:
 - (void)removeDelegate:(id)aDelegate {
     if (aDelegate == nil) {
         return;
+    }
+    if ([aDelegate conformsToProtocol:@protocol(BMXGroupServiceProtocol) ]) {
+        groupListener->removeDelegate(aDelegate);
     }
 }
 
