@@ -7182,6 +7182,142 @@ NSString* _wrap_BMXMessageConfig_getPushTitle(void* imarg1) {
   return imresult;
 }
 
+void _wrap_BMXMessageConfig_setPushTitleLocKey(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setPushTitleLocKey((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXMessageConfig_getPushTitleLocKey(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  result = (arg1)->getPushTitleLocKey();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessageConfig_setPushTitleLocArgs(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setPushTitleLocArgs((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXMessageConfig_getPushTitleLocArgs(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  result = (arg1)->getPushTitleLocArgs();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessageConfig_setPushMessageLocKey(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setPushMessageLocKey((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXMessageConfig_getPushMessageLocKey(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  result = (arg1)->getPushMessageLocKey();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessageConfig_setPushMessageLocArgs(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setPushMessageLocArgs((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXMessageConfig_getPushMessageLocArgs(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  result = (arg1)->getPushMessageLocArgs();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
 BOOL _wrap_BMXMessageConfig_isSilence(void* imarg1) {
   long long larg1 = (long long)imarg1;
   floo::BMXMessageConfigPtr arg1 ;
@@ -7281,7 +7417,6 @@ void _wrap_BMXMessageConfig_setRTCCallInfo(void* imarg1, int imarg2, long long i
   arg6 = &arg6_str;
   
   (arg1)->setRTCCallInfo(arg2,arg3,arg4,arg5,(std::string const &)*arg6);
-  (arg1)->setIOSConfig("{\"mutable_content\":true}");
 }
 
 void _wrap_BMXMessageConfig_setRTCPickupInfo(void* imarg1, NSString* imarg2) {
@@ -8210,6 +8345,14 @@ void* _wrap_BMXMessage_createMessage__SWIG_1(long long imarg1, long long imarg2,
             floo::BMXVoiceAttachmentPtr *pVoice = *(floo::BMXVoiceAttachmentPtr **)&lPtr;
             if (pVoice) voice = *pVoice;
             result = floo::BMXMessage::createMessage(arg1,arg2,arg3,arg4,voice);
+            break;
+        }
+        case floo::BMXMessageAttachment::Type::Location :
+        {
+            floo::BMXLocationAttachmentPtr loc ;
+            floo::BMXLocationAttachmentPtr *pLoc = *(floo::BMXLocationAttachmentPtr **)&lPtr;
+            if (pLoc) loc = *pLoc;
+            result = floo::BMXMessage::createMessage(arg1,arg2,arg3,arg4,loc);
             break;
         }
         default:

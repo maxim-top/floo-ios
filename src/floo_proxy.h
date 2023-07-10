@@ -1935,6 +1935,46 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  */
 - (NSString*)getPushTitle;
 /**
+ * @brief 设置推送标题多语言键名
+ * @param pushTitleLocKey
+ */
+- (void)setPushTitleLocKey:(NSString*)pushTitleLocKey;
+/**
+ * @brief 获取推送标题多语言键名
+ * @return NSString
+ */
+- (NSString*)getPushTitleLocKey;
+/**
+ * @brief 设置推送标题多语言参数
+ * @param pushTitleLocArgs
+ */
+- (void)setPushTitleLocArgs:(NSString*)pushTitleLocArgs;
+/**
+ * @brief 获取推送标题多语言参数
+ * @return NSString
+ */
+- (NSString*)getPushTitleLocArgs;
+/**
+ * @brief 设置推送正文多语言键名
+ * @param pushMessageLocKey
+ */
+- (void)setPushMessageLocKey:(NSString*)pushMessageLocKey;
+/**
+ * @brief 获取推送正文多语言键名
+ * @return NSString
+ */
+- (NSString*)getPushMessageLocKey;
+/**
+ * @brief 设置推送正文多语言参数
+ * @param pushMessageLocArgs
+ */
+- (void)setPushMessageLocArgs:(NSString*)pushMessageLocArgs;
+/**
+ * @brief 获取推送正文多语言参数
+ * @return NSString
+ */
+- (NSString*)getPushMessageLocArgs;
+/**
  * @brief 获取当前的推送消息是否是静默消息
  * @return BOOL
  */

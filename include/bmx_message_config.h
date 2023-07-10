@@ -46,6 +46,10 @@ static const std::string kRTCInitiator = "initiator";                   // int64
 static const std::string kRTCCallId = "callId";                         // string
 static const std::string kRTCRoomType = "roomType";                     // int
 static const std::string kRTCPin = "pin";                               // string
+static const std::string kPushTitleLocKey = "pushTitleLocKey";          // string
+static const std::string kPushTitleLocArgs = "pushTitleLocArgs";        // string
+static const std::string kPushMessageLocKey = "pushMessageLocKey";      // string
+static const std::string kPushMessageLocArgs = "pushMessageLocArgs";    // string
 
 class BMXMessageConfig;
 typedef std::shared_ptr<BMXMessageConfig> BMXMessageConfigPtr;
@@ -231,10 +235,58 @@ public:
   void setPushTitle(const std::string& pushTitle);
 
   /**
+   * @brief 设置推送标题多语言键名
+   * @param pushTitle
+   **/
+  void setPushTitleLocKey(const std::string& pushTitleLocKey);
+
+  /**
+   * @brief 设置推送标题多语言参数
+   * @param pushTitle
+   **/
+  void setPushTitleLocArgs(const std::string& pushTitleLocArgs);
+
+  /**
+   * @brief 设置推送正文多语言键名
+   * @param pushTitle
+   **/
+  void setPushMessageLocKey(const std::string& pushMessageLocKey);
+
+  /**
+   * @brief 设置推送正文多语言参数
+   * @param pushTitle
+   **/
+  void setPushMessageLocArgs(const std::string& pushMessageLocArgs);
+
+  /**
    * @brief 获取推送标题
    * @return std::string
    **/
   std::string getPushTitle();
+
+  /**
+   * @brief 获取推送标题多语言键名
+   * @return std::string
+   **/
+  std::string getPushTitleLocKey();
+
+  /**
+   * @brief 获取推送标题多语言参数
+   * @return std::string
+   **/
+  std::string getPushTitleLocArgs();
+
+  /**
+   * @brief 获取推送正文多语言键名
+   * @return std::string
+   **/
+  std::string getPushMessageLocKey();
+
+  /**
+   * @brief 获取推送正文多语言参数
+   * @return std::string
+   **/
+  std::string getPushMessageLocArgs();
 
   /**
    * @brief 获取当前的推送消息是否是静默消息
@@ -357,6 +409,10 @@ private:
   int mPushShowBeginTime;
   int mPushShowEndTime;
   std::string mPushTitle;
+  std::string mPushTitleLocKey;
+  std::string mPushTitleLocArgs;
+  std::string mPushMessageLocKey;
+  std::string mPushMessageLocArgs;
   bool mIsSilence;
   BadgeCountType mBadgeType;
   int mBadgeCount;

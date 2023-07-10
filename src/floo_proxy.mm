@@ -5506,6 +5506,46 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
   }
 }
 
+- (void)setPushTitleLocKey:(NSString*)pushTitleLocKey {
+  _wrap_BMXMessageConfig_setPushTitleLocKey(self.swigCPtr, pushTitleLocKey);
+}
+
+- (NSString*)getPushTitleLocKey {
+  {
+    return _wrap_BMXMessageConfig_getPushTitleLocKey(self.swigCPtr);
+  }
+}
+
+- (void)setPushTitleLocArgs:(NSString*)pushTitleLocArgs {
+  _wrap_BMXMessageConfig_setPushTitleLocArgs(self.swigCPtr, pushTitleLocArgs);
+}
+
+- (NSString*)getPushTitleLocArgs {
+  {
+    return _wrap_BMXMessageConfig_getPushTitleLocArgs(self.swigCPtr);
+  }
+}
+
+- (void)setPushMessageLocKey:(NSString*)pushMessageLocKey {
+  _wrap_BMXMessageConfig_setPushMessageLocKey(self.swigCPtr, pushMessageLocKey);
+}
+
+- (NSString*)getPushMessageLocKey {
+  {
+    return _wrap_BMXMessageConfig_getPushMessageLocKey(self.swigCPtr);
+  }
+}
+
+- (void)setPushMessageLocArgs:(NSString*)pushMessageLocArgs {
+  _wrap_BMXMessageConfig_setPushMessageLocArgs(self.swigCPtr, pushMessageLocArgs);
+}
+
+- (NSString*)getPushMessageLocArgs {
+  {
+    return _wrap_BMXMessageConfig_getPushMessageLocArgs(self.swigCPtr);
+  }
+}
+
 - (BOOL)isSilence {
    return _wrap_BMXMessageConfig_isSilence(self.swigCPtr); 
 }

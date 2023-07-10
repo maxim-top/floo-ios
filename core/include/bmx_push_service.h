@@ -22,6 +22,9 @@ namespace floo {
 
 class BMXPushServiceListener;
 
+/**
+ * @brief 推送Service
+ */
 class EXPORT_API BMXPushService {
 public:
 
@@ -218,7 +221,7 @@ public:
    @param result 数据库返回的加载本地推送消息列表
    @param Direction 加载推送消息的方向，默认是加载更早的消息
    **/
-  virtual BMXErrorCode loadLocalPushMessages(int64_t refMsgId, size_t size, BMXMessageList& result, PushDirection = PushDirection::Up) = 0;
+  virtual BMXErrorCode loadLocalPushMessages(int64_t refMsgId, size_t size, BMXMessageList& result, PushDirection Direction= PushDirection::Up) = 0;
 
   /**
    * @brief 添加推送监听者
