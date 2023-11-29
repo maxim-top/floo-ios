@@ -204,6 +204,9 @@ struct BMXVideoCanvas {
 };
 typedef std::shared_ptr<BMXVideoCanvas> BMXVideoCanvasPtr;
 
+/**
+ * @brief 流状态
+ **/
 struct BMXStreamStats {
   int mUserId;
   std::string mStreamId;
@@ -218,7 +221,9 @@ struct BMXStreamStats {
 };
 typedef std::shared_ptr<BMXStreamStats> BMXStreamStatsPtr;
 
-
+/**
+ * @brief 流信息
+ **/
 struct BMXJanusStreamInfo {
   BMXJanusStreamInfo() {}
   int64_t mFeedId;
@@ -238,8 +243,8 @@ typedef std::vector<BMXJanusStreamInfoPtr> BMXRTCStreams;
 
 
 /**
-  * @brief 房间活跃成员信息
-  */
+ * @brief 房间活跃成员信息
+ */
 struct BMXRoomParticipant {
   BMXRoomParticipant() {}
   int64_t mUserId;          // 用户id
@@ -250,7 +255,9 @@ struct BMXRoomParticipant {
 typedef std::shared_ptr<BMXRoomParticipant> BMXRoomParticipantPtr;
 typedef std::vector<BMXRoomParticipantPtr> BMXRTCRoomParticipants;
 
-
+/**
+ * @brief 流发布者
+ */
 struct BMXJanusPublisher {
   BMXJanusPublisher(int64_t userId) : mUserId(userId) {}
   int64_t mUserId;
@@ -266,7 +273,7 @@ typedef std::vector<BMXJanusPublisherPtr> BMXRTCPublishers;
 
 
 /**
- * @brief sdk类型
+ * @brief SDP类型
  */
 enum class BMXRoomSDPType {
   /// 请求类型

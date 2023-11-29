@@ -43,7 +43,7 @@ public:
   };
 
   /**
-   * @brief 好友邀请
+   * @brief 好友申请
    **/
   struct Application {
     Application() {}

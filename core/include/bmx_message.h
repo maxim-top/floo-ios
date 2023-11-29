@@ -121,10 +121,22 @@ public:
   int64_t fromId();
 
   /**
+   * @brief 设置消息发送者id
+   * @param fromId
+   */
+  void setFromId(int64_t);
+
+  /**
    * @brief 消息接收方ID
    * @return int64_t
    */
   int64_t toId();
+
+  /**
+   * @brief 设置消息接受者id
+   * @param toid
+   */
+  void setToId(int64_t);
 
   /**
    * @brief 消息类型
@@ -392,6 +404,65 @@ public:
    */
   bool isPushMessage();
 
+  /**
+   * @brief 设置追加内容
+   * @param appendContent 消息追加内容
+   */
+  void setAppendedContent(const std::string& appendContent);
+
+  /**
+   * @brief 消息追加内容
+   * @return std::string
+   */
+  const std::string& appendedContent();
+
+  /**
+   * @brief 设置替换内容
+   * @param replaceContent 消息替换内容
+   */
+  void setReplaceContent(const std::string& replaceContent);
+
+  /**
+   * @brief 消息替换内容
+   * @return std::string
+   */
+  const std::string& replaceContent();
+
+  /**
+   * @brief 设置替换config配置
+   * @param BMXMessageConfigPtr 消息替换config配置
+   */
+  void setReplaceConfig(BMXMessageConfigPtr);
+
+  /**
+   * @brief 消息替换config配置
+   * @return BMXMessageConfigPtr
+   */
+  BMXMessageConfigPtr replaceConfig();
+
+  /**
+   * @brief 设置替换extension配置
+   * @param BMXMessageConfigPtr 消息替换extension配置
+   */
+  void setReplaceExtension(const JSON&);
+
+  /**
+   * @brief 消息替换extension配置
+   * @return std::string
+   */
+  const JSON& replaceExtension();
+
+  /**
+   * @brief 设置编辑时间戳（服务端收到时的时间）
+   * @param int64_t
+   */
+  void setEditTimestamp(int64_t);
+  /**
+   * @brief 消息编辑追加或替换发生时间
+   * @return int64_t
+   */
+  int64_t editTimestamp();
+
 public:
   /**
    * @brief 创建发送文本消息
@@ -527,6 +598,11 @@ private:
   int mGroupPlayAckUnreadCount;
   int mPriority;
   bool mIsPushMessage;
+  std::string mAppendedContent;
+  std::string mReplaceContent;
+  BMXMessageConfigPtr mReplaceConfig;
+  JSON mReplaceExtension;
+  int64_t mEditTimestamp;
   std::recursive_mutex mMutex;
 };
 

@@ -57,6 +57,20 @@ public:
   virtual void onAttachmentUploadProgressChanged(BMXMessagePtr msg, int percent)  {}
 
   /**
+   * @brief 追加内容消息发送状态发生变化
+   * @param msg 发生追加内容状态变化的消息
+   * @param error 状态错误码
+   **/
+  virtual void onContentAppendChanged(BMXMessagePtr msg, BMXErrorCode error) {}
+
+  /**
+   * @brief 替换消息发送状态发生变化
+   * @param msg 发生替换消息状态变化的消息
+   * @param error 状态错误码
+   **/
+  virtual void onReplaceChanged(BMXMessagePtr msg, BMXErrorCode error) {}
+
+  /**
    * @brief 消息撤回状态发送变化
    * @param msg 撤回状态发生变化的消息
    * @param error 状态错误码
@@ -122,6 +136,18 @@ public:
    * @param list 接收到的音频/视频消息已播放回执消息列表
    **/
   virtual void onReceivePlayAcks(const BMXMessageList& list)  {}
+
+  /**
+   * @brief 收到追加内容消息
+   * @param list 接收到的追加内容消息列表
+   **/
+  virtual void onReceiveAppendContentMessages(const BMXMessageList& list) {}
+
+  /**
+   * @brief 收到变更内容消息
+   * @param list 接收到的变更内容消息列表
+   **/
+  virtual void onReceiveReplaceMessages(const BMXMessageList& list) {}
 
   /**
    * @brief 附件下载状态发生变化

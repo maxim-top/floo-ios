@@ -67,6 +67,11 @@ public:
    **/
   virtual void onRTCHangupMessageReceive(BMXMessagePtr msg) {}
 
+  /**
+   * @brief 接收到统计消息
+   * @param msg 
+   **/
+  virtual void onRTCRecordMessageReceive(BMXMessagePtr msg) {}
 public:
   void registerRTCService(BMXRTCService* service) {
     mService = service;

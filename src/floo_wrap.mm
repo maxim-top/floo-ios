@@ -7331,6 +7331,19 @@ BOOL _wrap_BMXMessageConfig_isSilence(void* imarg1) {
   return imresult;
 }
 
+BOOL _wrap_BMXMessageConfig_isPeerDrop(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  result = (bool)(arg1)->getPeerDrop();
+  imresult = (result)? YES:NO;
+  return imresult;
+}
+
 int _wrap_BMXMessageConfig_getBadgeCountType(void* imarg1) {
   long long larg1 = (long long)imarg1;
   floo::BMXMessageConfigPtr arg1 ;
@@ -7437,7 +7450,7 @@ void _wrap_BMXMessageConfig_setRTCPickupInfo(void* imarg1, NSString* imarg2) {
   (arg1)->setRTCPickupInfo((std::string const &)*arg2);
 }
 
-void _wrap_BMXMessageConfig_setRTCHangupInfo(void* imarg1, NSString* imarg2) {
+void _wrap_BMXMessageConfig_setRTCHangupInfo(void* imarg1, NSString* imarg2, BOOL imarg3) {
   long long larg1 = (long long)imarg1;
   floo::BMXMessageConfigPtr arg1 ;
   floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
@@ -7452,7 +7465,8 @@ void _wrap_BMXMessageConfig_setRTCHangupInfo(void* imarg1, NSString* imarg2) {
   std::string arg2_str(getStdString(imarg2));
    arg2 = &arg2_str; 
   
-  (arg1)->setRTCHangupInfo((std::string const &)*arg2);
+  bool arg3 = imarg3? true : false;
+  (arg1)->setRTCHangupInfo((std::string const &)*arg2, arg3);
 }
 
 NSString* _wrap_BMXMessageConfig_getRTCAction(void* imarg1) {
@@ -7729,7 +7743,7 @@ long long _wrap_BMXMessage_serverTimestamp(void* imarg1) {
   int64_t result;
   
   result = (int64_t)(arg1)->serverTimestamp();
-  imresult = *(typeof(imresult)*)&result; 
+  imresult = *(typeof(imresult)*)&result;
   return imresult;
 }
 
@@ -7740,8 +7754,32 @@ void _wrap_BMXMessage_setServerTimestamp(void* imarg1, long long imarg2) {
   if (argp1) arg1 = *argp1;
   int64_t arg2 ;
   
-  arg2 = (int64_t)imarg2; 
+  arg2 = (int64_t)imarg2;
   (arg1)->setServerTimestamp(arg2);
+}
+
+long long _wrap_BMXMessage_editTimestamp(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  long long imresult = 0 ;
+  int64_t result;
+  
+  result = (int64_t)(arg1)->editTimestamp();
+  imresult = *(typeof(imresult)*)&result;
+  return imresult;
+}
+
+void _wrap_BMXMessage_setEditTimestamp(void* imarg1, long long imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  int64_t arg2 ;
+  
+  arg2 = (int64_t)imarg2;
+  (arg1)->setEditTimestamp(arg2);
 }
 
 long long _wrap_BMXMessage_clientTimestamp(void* imarg1) {
@@ -7946,6 +7984,74 @@ void _wrap_BMXMessage_setContent(void* imarg1, NSString* imarg2) {
   (arg1)->setContent((std::string const &)*arg2);
 }
 
+NSString* _wrap_BMXMessage_appendedContent(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string *result = 0 ;
+  
+  result = (std::string *) &(arg1)->appendedContent();
+  imresult = [NSString stringWithUTF8String: result->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessage_setAppendedContent(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setAppendedContent((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXMessage_replaceContent(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string *result = 0 ;
+  
+  result = (std::string *) &(arg1)->replaceContent();
+  imresult = [NSString stringWithUTF8String: result->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessage_setReplaceContent(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setReplaceContent((std::string const &)*arg2);
+}
+
 int _wrap_BMXMessage_contentType(void* imarg1) {
   long long larg1 = (long long)imarg1;
   floo::BMXMessagePtr arg1 ;
@@ -8006,6 +8112,72 @@ void _wrap_BMXMessage_setConfig(void* imarg1, void* imarg2) {
   arg2 = *argp2; 
   
   (arg1)->setConfig(arg2);
+}
+
+void* _wrap_BMXMessage_replaceConfig(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  void* imresult = 0 ;
+  floo::BMXMessageConfigPtr *temp ;
+  std::shared_ptr< floo::BMXMessageConfig > result;
+  
+  result = (arg1)->replaceConfig();
+  
+  BMXMessageConfig2Void(result)
+  imresult = (void*)lresult;
+  
+  return imresult;
+}
+
+void _wrap_BMXMessage_setReplaceConfig(void* imarg1, void* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessageConfig > > arg2 ;
+  floo::BMXMessageConfigPtr *argp2 ;
+  
+  
+  argp2 = (floo::BMXMessageConfigPtr *)imarg2;
+  arg2 = *argp2;
+  
+  (arg1)->setReplaceConfig(arg2);
+}
+
+NSString* _wrap_BMXMessage_replaceExtension(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string *result = 0 ;
+  
+  result = (std::string *) &(arg1)->replaceExtension();
+  imresult = [NSString stringWithUTF8String: result->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXMessage_setReplaceExtension(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessagePtr arg1 ;
+  floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setReplaceExtension((std::string const &)*arg2);
 }
 
 NSString* _wrap_BMXMessage_extension(void* imarg1) {
@@ -10207,6 +10379,32 @@ void _wrap_BMXChatService_ackPlayMessage(void* imarg1, void* imarg2) {
   (arg1)->ackPlayMessage(arg2);
 }
 
+void _wrap_BMXChatService_appendMessageContent(void* imarg1, void* imarg2) {
+  floo::BMXChatService *arg1 = (floo::BMXChatService *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
+  floo::BMXMessagePtr *argp2 ;
+  
+  arg1 = (floo::BMXChatService *)imarg1;
+  
+  argp2 = (floo::BMXMessagePtr *)imarg2;
+  arg2 = *argp2;
+  
+  (arg1)->appendMessageContent(arg2);
+}
+
+void _wrap_BMXChatService_replaceMessage(void* imarg1, void* imarg2) {
+  floo::BMXChatService *arg1 = (floo::BMXChatService *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
+  floo::BMXMessagePtr *argp2 ;
+  
+  arg1 = (floo::BMXChatService *)imarg1;
+  
+  argp2 = (floo::BMXMessagePtr *)imarg2;
+  arg2 = *argp2;
+  
+  (arg1)->replaceMessage(arg2);
+}
+
 void _wrap_BMXChatService_readCancel(void* imarg1, void* imarg2) {
   floo::BMXChatService *arg1 = (floo::BMXChatService *) 0 ;
   SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
@@ -10781,6 +10979,35 @@ void _wrap_BMXChatServiceListener_onAttachmentUploadProgressChanged(void* imarg1
   arg3 = (int)imarg3; 
   (arg1)->onAttachmentUploadProgressChanged(arg2,arg3);
 }
+void _wrap_BMXChatServiceListener_onContentAppendChanged(void* imarg1, void* imarg2, int imarg3) {
+  floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
+  floo::BMXErrorCode arg3 ;
+  floo::BMXMessagePtr *argp2 ;
+
+  arg1 = (floo::BMXChatServiceListener *)imarg1;
+
+  argp2 = (floo::BMXMessagePtr *)imarg2;
+  arg2 = *argp2;
+
+  arg3 = (floo::BMXErrorCode)imarg3;
+  (arg1)->onContentAppendChanged(arg2,arg3);
+}
+
+void _wrap_BMXChatServiceListener_onReplaceChanged(void* imarg1, void* imarg2, int imarg3) {
+  floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
+  floo::BMXErrorCode arg3 ;
+  floo::BMXMessagePtr *argp2 ;
+
+  arg1 = (floo::BMXChatServiceListener *)imarg1;
+
+  argp2 = (floo::BMXMessagePtr *)imarg2;
+  arg2 = *argp2;
+
+  arg3 = (floo::BMXErrorCode)imarg3;
+  (arg1)->onReplaceChanged(arg2,arg3);
+}
 
 void _wrap_BMXChatServiceListener_onRecallStatusChanged(void* imarg1, void* imarg2, int imarg3) {
   floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
@@ -10882,9 +11109,27 @@ void _wrap_BMXChatServiceListener_onReceivePlayAcks(void* imarg1, void* imarg2) 
   floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
   floo::BMXMessageList *arg2 = 0 ;
   
-  arg1 = (floo::BMXChatServiceListener *)imarg1; 
-  arg2 = (floo::BMXMessageList *)imarg2; 
+  arg1 = (floo::BMXChatServiceListener *)imarg1;
+  arg2 = (floo::BMXMessageList *)imarg2;
   (arg1)->onReceivePlayAcks((floo::BMXMessageList const &)*arg2);
+}
+
+void _wrap_BMXChatServiceListener_onReceiveAppendContentMessages(void* imarg1, void* imarg2) {
+  floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
+  floo::BMXMessageList *arg2 = 0 ;
+  
+  arg1 = (floo::BMXChatServiceListener *)imarg1;
+  arg2 = (floo::BMXMessageList *)imarg2;
+  (arg1)->onReceiveAppendContentMessages((floo::BMXMessageList const &)*arg2);
+}
+
+void _wrap_BMXChatServiceListener_onReceiveReplaceMessages(void* imarg1, void* imarg2) {
+  floo::BMXChatServiceListener *arg1 = (floo::BMXChatServiceListener *) 0 ;
+  floo::BMXMessageList *arg2 = 0 ;
+  
+  arg1 = (floo::BMXChatServiceListener *)imarg1;
+  arg2 = (floo::BMXMessageList *)imarg2;
+  (arg1)->onReceiveReplaceMessages((floo::BMXMessageList const &)*arg2);
 }
 
 void _wrap_BMXChatServiceListener_onAttachmentStatusChanged(void* imarg1, void* imarg2, int imarg3, int imarg4) {
@@ -15199,12 +15444,25 @@ void _wrap_BMXRTCServiceListener_onRTCHangupMessageReceive(void* imarg1, void* i
   SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
   floo::BMXMessagePtr *argp2 ;
   
-  arg1 = (floo::BMXRTCServiceListener *)imarg1; 
+  arg1 = (floo::BMXRTCServiceListener *)imarg1;
   
   argp2 = (floo::BMXMessagePtr *)imarg2;
-  arg2 = *argp2; 
+  arg2 = *argp2;
   
   (arg1)->onRTCHangupMessageReceive(arg2);
+}
+
+void _wrap_BMXRTCServiceListener_onRTCRecordMessageReceive(void* imarg1, void* imarg2) {
+  floo::BMXRTCServiceListener *arg1 = (floo::BMXRTCServiceListener *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXMessage > > arg2 ;
+  floo::BMXMessagePtr *argp2 ;
+  
+  arg1 = (floo::BMXRTCServiceListener *)imarg1;
+  
+  argp2 = (floo::BMXMessagePtr *)imarg2;
+  arg2 = *argp2;
+  
+  (arg1)->onRTCRecordMessageReceive(arg2);
 }
 
 void _wrap_BMXRTCServiceListener_registerRTCService(void* imarg1, void* imarg2) {

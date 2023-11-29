@@ -169,6 +169,9 @@ public:
   };
   typedef std::shared_ptr<BMXRoomSubJoinOptions> BMXRoomSubJoinOptionsPtr;
 
+  /**
+   * @brief 订阅模式更新房间参数信息
+   */
   struct BMXRoomSubConfigureOptions {
     BMXRoomSubConfigureOptions(bool enableAudio = true, bool enableVideo = true, bool enableData = true) : 
       mEnableAudio(enableAudio), mEnableVideo(enableVideo) , mEnableData(enableData) {
@@ -179,12 +182,15 @@ public:
   };
   typedef std::shared_ptr<BMXRoomSubConfigureOptions> BMXRoomSubConfigureOptionsPtr;
 
+  /**
+   * @brief 订阅模式切换媒体源
+   */
   struct BMXRoomSubSwitchOptions {
     BMXRoomSubSwitchOptions() {}
     BMXRoomSubSwitchOptions(int64_t feedId, bool enableAudio = true, bool enableVideo = true, bool enableData = true) : 
       mFeedId(feedId), mEnableAudio(enableAudio), mEnableVideo(enableVideo), mEnableData(enableData) {
     }
-    int64_t mFeedId;          // 订阅用户的id信息
+    int64_t mFeedId;          // 发布者的ID
     bool    mEnableAudio;     // 是否启用音频
     bool    mEnableVideo;     // 是否启用视频
     bool    mEnableData;      // 是否启用数据

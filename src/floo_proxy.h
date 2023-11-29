@@ -2017,7 +2017,7 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @brief 设置挂断消息信息
  * @param callId 通话id
  */
-- (void)setRTCHangupInfo:(NSString*)callId;
+- (void)setRTCHangupInfo:(NSString*)callId peerDrop:(BOOL)peerDrop;
 /**
  * @brief 获得RTC相关操作类型信息（呼叫、接通、挂断等）。
  * @return int
@@ -2053,6 +2053,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @return NSString
  */
 - (NSString*)getRTCPin;
+/**
+ * @brief 是否对方异常退出。
+ * @return BOOL
+ */
+- (BOOL)isPeerDrop;
 /**
  * @brief 序列化操作
  * @return NSString
@@ -2305,6 +2310,60 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @return BOOL
  */
 - (BOOL)isPushMessage;
+
+/**
+ * @brief 设置追加内容
+ * @param appendContent 消息追加内容
+ */
+- (void)setAppendedContent:(NSString*)appendContent;
+
+/**
+ * @brief 消息追加内容
+ * @return std::string
+ */
+- (NSString*)appendedContent;
+
+/**
+ * @brief 设置替换内容
+ * @param replaceContent 消息替换内容
+ */
+- (void)setReplaceContent:(NSString*)replaceContent;
+
+/**
+ * @brief 消息替换内容
+ * @return std::string
+ */
+- (NSString*)replaceContent;
+
+/**
+ * @brief 设置替换config配置
+ */
+- (void)setReplaceConfig:(BMXMessageConfig*)config;
+
+/**
+ * @brief 消息替换config配置
+ */
+- (BMXMessageConfig*)replaceConfig;
+
+/**
+ * @brief 设置替换extension配置
+ */
+- (void)setReplaceExtension:(NSString*)ext;
+
+/**
+ * @brief 消息替换extension配置
+ */
+- (NSString*)replaceExtension;
+
+/**
+ * @brief 设置编辑时间戳（服务端收到时的时间）
+ */
+- (void)setEditTimestamp:(long long)timestamp;
+/**
+ * @brief 消息编辑追加或替换发生时间
+ */
+- (long long)editTimestamp;
+
 /**
  * @brief 创建发送文本消息
  * @param from 消息发送者
@@ -3177,6 +3236,16 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
 - (void)messageAttachmentUploadProgressChanged:(BMXMessage *)message
                                 percent:(int)percent;
 /**
+ * 追加内容消息发送状态发生变化
+ **/
+- (void)messageContentAppendChanged:(BMXMessage *)message
+            error:(BMXError *)error;
+/**
+ * 替换消息发送状态发生变化
+ **/
+- (void)messageReplaceChanged:(BMXMessage *)message
+            error:(BMXError *)error;
+/**
  * 消息撤回状态发送变化
  **/
 - (void)messageRecallStatusDidChanged:(BMXMessage *)message
@@ -3185,6 +3254,14 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * 收到消息
  **/
 - (void)receivedMessages:(NSArray<BMXMessage*> *)messages;
+/**
+ * 收到追加内容消息
+ **/
+- (void)receivedAppendContentMessages:(NSArray<BMXMessage*> *)messages;
+/**
+ * 收到变更内容消息
+ **/
+- (void)receivedReplaceMessages:(NSArray<BMXMessage*> *)messages;
 /**
  * 收到命令消息
  **/
@@ -3307,6 +3384,17 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @param msg 需要发送已读回执的消息
  */
 - (void)ackPlayMessageWithMsg:(BMXMessage*)msg;
+/**
+ * @brief 消息内容追加
+ * @param msg 需要发送追加内容的消息，只允许追加content
+ */
+- (void)appendMessageContentWithMsg:(BMXMessage*) msg;
+
+/**
+ * @brief 消息内容替换
+ * @param msg 需要发送替换内容的消息，允许替换content、config和extension
+ */
+- (void)replaceMessageWithMsg:(BMXMessage*) msg;
 /**
  * @brief 标记此消息为未读，该消息同步到当前用户的所有设备
  * @param msg 需要发送消息已读取消的消息
@@ -3487,6 +3575,17 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @param msg 需要发送已读回执的消息
  */
 - (void)ackPlayMessageWithMsg:(BMXMessage*)msg completion:(void (^)(BMXError *aError)) resBlock;
+/**
+ * @brief 消息内容追加
+ * @param msg 需要发送追加内容的消息，只允许追加content
+ */
+- (void)appendMessageContentWithMsg:(BMXMessage*) msg completion:(void (^)(BMXError *aError)) resBlock;
+
+/**
+ * @brief 消息内容替换
+ * @param msg 需要发送替换内容的消息，允许替换content、config和extension
+ */
+- (void)replaceMessageWithMsg:(BMXMessage*) msg completion:(void (^)(BMXError *aError)) resBlock;
 /**
  * @brief 标记此消息为未读，该消息同步到当前用户的所有设备
  * @param msg 需要发送消息已读取消的消息
@@ -4963,6 +5062,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @param msg 
    **/
 - (void)onRTCHangupMessageReceiveWithMsg:(BMXMessage*)msg;
+/**
+ * @brief 接收到通话记录消息
+ * @param msg
+ **/
+- (void)onRTCRecordMessageReceiveWithMsg:(BMXMessage*)msg;
 @end
 
 /**

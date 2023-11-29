@@ -479,6 +479,21 @@ BMXMessageConfig* ObjcDecodeBMXMessageConfig(NSString* config) {
  * @param percent 附件上传的进度
  */
 - (void)onAttachmentUploadProgressChangedWithMsg:(BMXMessage*)msg percent:(int)percent;
+
+/**
+ * @brief 追加内容消息发送状态发生变化
+ * @param msg 发生追加内容状态变化的消息
+ * @param error 状态错误码
+ */
+- (void)onContentAppendChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error;
+
+/**
+ * @brief 替换消息发送状态发生变化
+ * @param msg 发生替换消息状态变化的消息
+ * @param error 状态错误码
+ */
+- (void)onReplaceChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error;
+
 /**
  * @brief 消息撤回状态发送变化
  * @param msg 撤回状态发生变化的消息
@@ -535,6 +550,18 @@ BMXMessageConfig* ObjcDecodeBMXMessageConfig(NSString* config) {
  * @param list 接收到的音频/视频消息已播放回执消息列表
  */
 - (void)onReceivePlayAcksWithList:(BMXMessageList*)list;
+
+/**
+ * @brief 收到追加内容消息
+ * @param list 接收到的追加内容消息列表
+ */
+- (void)onReceiveAppendContentMessagesWithList:(BMXMessageList*)list;
+
+/**
+ * @brief 收到变更内容消息
+ * @param list 接收到的变更内容消息列表
+ */
+- (void)onReceiveReplaceMessagesWithList:(BMXMessageList*)list;
 /**
  * @brief 附件下载状态发生变化
  * @param msg 发生下载状态变化的消息
@@ -592,6 +619,7 @@ BMXMessageConfig* ObjcDecodeBMXMessageConfig(NSString* config) {
 - (void)onRTCCallMessageReceiveWithMsg:(BMXMessage*)msg;
 - (void)onRTCPickupMessageReceiveWithMsg:(BMXMessage*)msg;
 - (void)onRTCHangupMessageReceiveWithMsg:(BMXMessage*)msg;
+- (void)onRTCRecordMessageReceiveWithMsg:(BMXMessage*)msg;
 - (void)registerRTCServiceWithService:(BMXRTCService*)service;
 - (void)dealloc;
 @end
@@ -2862,6 +2890,16 @@ public:
      * 附件上传进度发送变化
      **/
     virtual void onAttachmentUploadProgressChanged(floo::BMXMessagePtr msg, int percent)  override;
+
+    /**
+     * 追加内容消息发送状态发生变化
+     **/
+    virtual void onContentAppendChanged(floo::BMXMessagePtr msg, floo::BMXErrorCode error)  override;
+
+    /**
+     * 替换消息发送状态发生变化
+     **/
+    virtual void onReplaceChanged(floo::BMXMessagePtr msg, floo::BMXErrorCode error)  override;
     /**
      * 消息撤回状态发送变化
      **/
@@ -2870,6 +2908,14 @@ public:
      * 收到消息
      **/
     virtual void onReceive(const floo::BMXMessageList& list)  override;
+    /**
+     * 收到追加内容消息
+     **/
+    virtual void onReceiveAppendContentMessages(const floo::BMXMessageList& list)  override;
+    /**
+     * 收到变更内容消息
+     **/
+    virtual void onReceiveReplaceMessages(const floo::BMXMessageList& list)  override;
     /**
      * @brief 收到命令消息
      **/
@@ -2939,6 +2985,22 @@ void ChatServiceListener :: onAttachmentUploadProgressChanged(floo::BMXMessagePt
     }
 }
 
+void ChatServiceListener :: onContentAppendChanged(floo::BMXMessagePtr msg, floo::BMXErrorCode error) {
+    if (container && msg) {
+        BMXMessage2Void(msg)
+        BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
+        [container messageContentAppendChanged:message error:[BMXError errorCode:(BMXErrorCode)error]];
+    }
+}
+
+void ChatServiceListener :: onReplaceChanged(floo::BMXMessagePtr msg, floo::BMXErrorCode error) {
+    if (container && msg) {
+        BMXMessage2Void(msg)
+        BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
+        [container messageReplaceChanged:message error:[BMXError errorCode:(BMXErrorCode)error]];
+    }
+}
+
 void ChatServiceListener :: onRecallStatusChanged(floo::BMXMessagePtr msg, floo::BMXErrorCode error) {
     if (container && msg) {
         BMXMessage2Void(msg)
@@ -2976,6 +3038,18 @@ BMXMessageList *BMXMessageList2OC(const floo::BMXMessageList &list){
 void ChatServiceListener :: onReceive(const floo::BMXMessageList &list) {
     if (list.size() && container) {
         [container receivedMessages:BMXMessageList2NSArray(list)];
+    }
+}
+
+void ChatServiceListener :: onReceiveAppendContentMessages(const floo::BMXMessageList& list) {
+    if (list.size() && container) {
+        [container receivedAppendContentMessages:BMXMessageList2NSArray(list)];
+    }
+}
+
+void ChatServiceListener :: onReceiveReplaceMessages(const floo::BMXMessageList& list) {
+    if (list.size() && container) {
+        [container receivedReplaceMessages:BMXMessageList2NSArray(list)];
     }
 }
 
@@ -5576,8 +5650,8 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
   _wrap_BMXMessageConfig_setRTCPickupInfo(self.swigCPtr, callId);
 }
 
-- (void)setRTCHangupInfo:(NSString*)callId {
-  _wrap_BMXMessageConfig_setRTCHangupInfo(self.swigCPtr, callId);
+- (void)setRTCHangupInfo:(NSString*)callId peerDrop:(BOOL)peerDrop {
+  _wrap_BMXMessageConfig_setRTCHangupInfo(self.swigCPtr, callId, peerDrop);
 }
 
 - (NSString*)getRTCAction {
@@ -5612,6 +5686,10 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
   {
     return _wrap_BMXMessageConfig_getRTCPin(self.swigCPtr);
   }
+}
+
+- (BOOL)isPeerDrop {
+   return _wrap_BMXMessageConfig_isPeerDrop(self.swigCPtr);
 }
 
 + (BMXMessageConfig*)createMessageConfigWithMentionAll:(BOOL)mentionAll {
@@ -5865,6 +5943,55 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 - (BOOL)isPushMessage {
    return _wrap_BMXMessage_isPushMessage(self.swigCPtr); 
 }
+
+- (void)setAppendedContent:(NSString*)appendContent {
+  _wrap_BMXMessage_setAppendedContent(self.swigCPtr, appendContent);
+}
+
+- (NSString*)appendedContent {
+  return _wrap_BMXMessage_appendedContent(self.swigCPtr);
+}
+
+- (void)setReplaceContent:(NSString*)replaceContent {
+  _wrap_BMXMessage_setReplaceContent(self.swigCPtr, replaceContent);
+}
+
+- (NSString*)replaceContent{
+  return _wrap_BMXMessage_replaceContent(self.swigCPtr);
+}
+
+- (void)setReplaceConfig:(BMXMessageConfig*)config{
+  _wrap_BMXMessage_setReplaceConfig(self.swigCPtr, config.swigCPtr);
+}
+
+- (BMXMessageConfig*)replaceConfig{
+    void* cPtr = _wrap_BMXMessage_replaceConfig(self.swigCPtr);
+    BMXMessageConfig* ret = nil;
+    if(cPtr) {
+       ret = [[BMXMessageConfig alloc] initWithCptr:cPtr swigOwnCObject:NO];
+#if !__has_feature(objc_arc)
+      [ret autorelease];
+#endif
+    }
+   return ret;
+}
+
+- (void)setReplaceExtension:(NSString*)ext{
+  _wrap_BMXMessage_setReplaceExtension(self.swigCPtr, ext);
+}
+
+- (NSString*)replaceExtension{
+  return _wrap_BMXMessage_replaceExtension(self.swigCPtr);
+}
+
+- (void)setEditTimestamp:(long long)timestamp{
+  _wrap_BMXMessage_setEditTimestamp(self.swigCPtr, timestamp);
+}
+
+- (long long)editTimestamp{
+  return _wrap_BMXMessage_editTimestamp(self.swigCPtr);
+}
+
 
 + (BMXMessage*)createMessageWithFrom:(long long)from to:(long long)to type:(BMXMessage_MessageType)type conversationId:(long long)conversationId content:(NSString*)content {
      void* cPtr = _wrap_BMXMessage_createMessage__SWIG_0(from, to, (int)type, conversationId, content);
@@ -6565,6 +6692,14 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
   _wrap_BMXChatService_ackPlayMessage(self.swigCPtr, msg.swigCPtr);
 }
 
+- (void)appendMessageContentWithMsg:(BMXMessage*) msg{
+  _wrap_BMXChatService_appendMessageContent(self.swigCPtr, msg.swigCPtr);
+}
+
+- (void)replaceMessageWithMsg:(BMXMessage*) msg{
+  _wrap_BMXChatService_replaceMessage(self.swigCPtr, msg.swigCPtr);
+}
+
 - (void)readCancelWithMsg:(BMXMessage*)msg {
   _wrap_BMXChatService_readCancel(self.swigCPtr, msg.swigCPtr);
 }
@@ -6758,6 +6893,20 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 - (void)ackPlayMessageWithMsg:(BMXMessage*)msg completion:(void (^)(BMXError *aError)) resBlock {
     [BMXAsync async:^BMXErrorCode{
         _wrap_BMXChatService_ackPlayMessage(self.swigCPtr, msg.swigCPtr);
+        return BMXErrorCode_NoError;
+    } completion:resBlock];
+}
+
+- (void)appendMessageContentWithMsg:(BMXMessage*) msg completion:(void (^)(BMXError *aError)) resBlock {
+    [BMXAsync async:^BMXErrorCode{
+        _wrap_BMXChatService_appendMessageContent(self.swigCPtr, msg.swigCPtr);
+        return BMXErrorCode_NoError;
+    } completion:resBlock];
+}
+
+- (void)replaceMessageWithMsg:(BMXMessage*) msg completion:(void (^)(BMXError *aError)) resBlock {
+    [BMXAsync async:^BMXErrorCode{
+        _wrap_BMXChatService_replaceMessage(self.swigCPtr, msg.swigCPtr);
         return BMXErrorCode_NoError;
     } completion:resBlock];
 }
@@ -7010,6 +7159,14 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
   _wrap_BMXChatServiceListener_onAttachmentUploadProgressChanged(self.swigCPtr, msg.swigCPtr, percent);
 }
 
+- (void)onContentAppendChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error {
+  _wrap_BMXChatServiceListener_onContentAppendChanged(self.swigCPtr, msg.swigCPtr, (int)error);
+}
+
+- (void)onReplaceChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error {
+  _wrap_BMXChatServiceListener_onReplaceChanged(self.swigCPtr, msg.swigCPtr, (int)error);
+}
+
 - (void)onRecallStatusChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error {
   _wrap_BMXChatServiceListener_onRecallStatusChanged(self.swigCPtr, msg.swigCPtr, (int)error);
 }
@@ -7052,6 +7209,14 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 
 - (void)onReceivePlayAcksWithList:(BMXMessageList*)list {
   _wrap_BMXChatServiceListener_onReceivePlayAcks(self.swigCPtr, list.swigCPtr);
+}
+
+- (void)onReceiveAppendContentMessagesWithList:(BMXMessageList*)list {
+  _wrap_BMXChatServiceListener_onReceiveAppendContentMessages(self.swigCPtr, list.swigCPtr);
+}
+
+- (void)onReceiveReplaceMessagesWithList:(BMXMessageList*)list {
+  _wrap_BMXChatServiceListener_onReceiveReplaceMessages(self.swigCPtr, list.swigCPtr);
 }
 
 - (void)onAttachmentStatusChangedWithMsg:(BMXMessage*)msg error:(BMXErrorCode)error percent:(int)percent {
@@ -9477,6 +9642,11 @@ public:
      * @param msg
      **/
     virtual void onRTCHangupMessageReceive(floo::BMXMessagePtr msg);
+    /**
+     * @brief 接收到通话记录消息
+     * @param msg
+     **/
+    virtual void onRTCRecordMessageReceive(floo::BMXMessagePtr msg);
     //delegate
     virtual void addDelegate(id<BMXRTCServiceProtocol> delegate, dispatch_queue_t queue);
     virtual void removeDelegate(id<BMXRTCServiceProtocol> delegate);
@@ -9515,6 +9685,14 @@ void RTCServiceListener::onRTCHangupMessageReceive(floo::BMXMessagePtr msg){
         BMXMessage2Void(msg)
         BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
         [container onRTCHangupMessageReceiveWithMsg:message];
+    }
+}
+
+void RTCServiceListener::onRTCRecordMessageReceive(floo::BMXMessagePtr msg){
+    if (container && msg) {
+        BMXMessage2Void(msg)
+        BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
+        [container onRTCRecordMessageReceiveWithMsg:message];
     }
 }
 
@@ -9713,6 +9891,10 @@ void RTCServiceListener::removeDelegate(id<BMXRTCServiceProtocol> delegate) {
 
 - (void)onRTCHangupMessageReceiveWithMsg:(BMXMessage*)msg {
   _wrap_BMXRTCServiceListener_onRTCHangupMessageReceive(self.swigCPtr, msg.swigCPtr);
+}
+
+- (void)onRTCRecordMessageReceiveWithMsg:(BMXMessage*)msg {
+  _wrap_BMXRTCServiceListener_onRTCRecordMessageReceive(self.swigCPtr, msg.swigCPtr);
 }
 
 - (void)registerRTCServiceWithService:(BMXRTCService*)service {

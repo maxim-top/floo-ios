@@ -255,6 +255,9 @@ public:
     MuteChat
   };
 
+  /**
+   * @brief 群成员角色
+   */
   enum class MemberRoleType {
     /// 群成员
     GroupMember,
@@ -266,6 +269,9 @@ public:
     NotGroupMember
   };
 
+  /**
+   * @brief 群类型
+   */
   enum class GroupType {
     /// 私有群组
     Private,

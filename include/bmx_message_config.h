@@ -44,6 +44,7 @@ static const std::string kRTCCallType = "type";                         // int
 static const std::string kRTCRoomId = "roomId";                         // int64_t
 static const std::string kRTCInitiator = "initiator";                   // int64_t
 static const std::string kRTCCallId = "callId";                         // string
+static const std::string kPeerDrop = "peerDrop";                        // bool
 static const std::string kRTCRoomType = "roomType";                     // int
 static const std::string kRTCPin = "pin";                               // string
 static const std::string kPushTitleLocKey = "pushTitleLocKey";          // string
@@ -337,8 +338,16 @@ public:
   /**
   * @brief 设置挂断消息信息
   * @param callId 通话id
+  * @peerDrop 对端是否掉线
   **/
-  void setRTCHangupInfo(const std::string& callId);
+  void setRTCHangupInfo(const std::string& callId, bool peerDrop = false);
+
+  /**
+  * @brief 设置统计消息信息
+  * @param callId 通话id
+  * @peerDrop 对端是否掉线
+  **/
+  void setRTCRecordInfo(const std::string& callId, bool peerDrop = false);
 
   /**
   * @brief 获得RTC相关操作类型信息（呼叫、接通、挂断等）。
@@ -371,6 +380,12 @@ public:
   std::string getRTCCallId();
 
   /**
+  * @brief 获得对方状态是否掉线。
+  * @return bool
+  **/
+  bool getPeerDrop();
+
+  /**
   * @brief 获得RTC相关房间类型信息。
   * @return RTCRoomType
   **/
@@ -395,7 +410,8 @@ public:
 
 private:
 
-  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0), mUsername("") {}
+  void setRTCInitiatorbyCallId(const std::string& callId);
+  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0), mUsername(""), mPeerDrop(false) {}
 
   std::recursive_mutex mMutex;
   bool mMentionAll;
@@ -424,6 +440,7 @@ private:
   std::string mRTCCallId;
   RTCRoomType mRTCRoomType;
   std::string mRTCPin;
+  bool mPeerDrop;
 };
 
 std::string encodeBMXMessageConfig(BMXMessageConfigPtr);

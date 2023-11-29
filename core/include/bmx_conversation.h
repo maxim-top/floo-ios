@@ -140,11 +140,39 @@ public:
   virtual BMXErrorCode setAllMessagesRead() = 0;
 
   /**
+   * @brief 更新一条数据库存储消息的内容字段信息
+   * @param msg 需要更改内容信息的消息此时msg部分已经更新扩展字段信息
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode updateMessageContent(BMXMessagePtr msg) = 0;
+
+  /**
+   * @brief 更新一条数据库存储消息的配置字段信息
+   * @param msg 需要更改配置信息的消息此时msg部分已经更新扩展字段信息
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode updateMessageConfig(BMXMessagePtr msg) = 0;
+
+  /**
    * @brief 更新一条数据库存储消息的扩展字段信息
-   * @param msg 需要更改扩展信息的消息此时msg部分已经更新扩展字椴信息
+   * @param msg 需要更改扩展信息的消息此时msg部分已经更新扩展字段信息
    * @return BMXErrorCode
    **/
   virtual BMXErrorCode updateMessageExtension(BMXMessagePtr msg) = 0;
+
+  /**
+   * @brief 更新一条数据库存储消息的扩展字段信息
+   * @param msg 需要更改扩展信息的消息此时msg部分已经更新扩展字段信息
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode replaceMessage(BMXMessagePtr msg) = 0;
+
+  /**
+   * @brief 更新一条数据库存储消息的编辑时间
+   * @param msg 需要编辑时间的消息此时msg部分已经更新扩展字段信息
+   * @return BMXErrorCode
+   **/
+  virtual BMXErrorCode updateMessageEditTimestamp(BMXMessagePtr msg) = 0;
 
   /**
    * @brief 插入一条消息
