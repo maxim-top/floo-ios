@@ -88,10 +88,22 @@ public:
   virtual const std::string& getToken() = 0;
 
   /**
+   @brief 获取推送token。
+   @return std::stirng
+   **/
+  virtual const std::string getPushToken() = 0;
+
+  /**
    @brief 获取登陆后服务器返回的推送证书。
    @return std::stirng
    **/
   virtual const std::string& getCert() = 0;
+
+  /**
+   @brief 获取登陆后服务器返回的推送证书。
+   @return std::stirng
+   **/
+  virtual const std::string getPushCert() = 0;
 
   /**
    @brief 推送sdk当前的状态。
