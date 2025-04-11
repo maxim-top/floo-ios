@@ -559,6 +559,15 @@ public:
   virtual BMXErrorCode setEnableReadAck(BMXGroupPtr group, bool enable) = 0;
 
   /**
+   * @brief 设置群成员是否开可见群其它成员个人信息
+   * 
+   * @param group 进行操作的群组
+   * @param enable 是否隐藏
+   * @return BMXErrorCode 
+   */
+  virtual BMXErrorCode setHideMemberInfo(BMXGroupPtr group, bool enable) = 0;
+
+  /**
    * @brief 设置群成员是否开可见群历史聊天记录
    * @param group 进行操作的群组
    * @param enable 是否开启

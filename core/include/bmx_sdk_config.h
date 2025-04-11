@@ -333,6 +333,22 @@ public:
    **/
   void setDebugLogReceiverId(int64_t uid);
 
+  /**
+   * @brief 获取当前 appid 对应的 app 级别的应用设置
+   * @return std::string
+   **/
+  std::string getAppConfig();
+
+  /**
+   * @brief 设置当前 appid 对应的 app 级别的应用设置
+   * @param config 获取的 config 的 json 配置内容
+   **/
+  void setAppConfig(const std::string &config);
+
+private:
+  void LoadLocalAppConfig();
+  void saveLocalAppConfig(const std::string& config);
+
 private:
   std::recursive_mutex mMutex;
   std::string mDataDir;
@@ -358,6 +374,8 @@ private:
   BMXPushProviderType mPushProviderType;
   BMXPushEnvironmentType mPushEnvironmentType;
   int64_t mLogReceiverId;
+  std::string mAppConfig;
+  std::string mAppconfigFilePath;
 };
 
 typedef std::shared_ptr<BMXSDKConfig> BMXSDKConfigPtr;

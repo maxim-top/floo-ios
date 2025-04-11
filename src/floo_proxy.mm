@@ -5624,6 +5624,14 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
    return _wrap_BMXMessageConfig_isSilence(self.swigCPtr); 
 }
 
+- (void)setNoPush:(BOOL)noPush {
+    _wrap_BMXMessageConfig_setNoPush(self.swigCPtr, noPush);
+}
+
+- (BOOL)getNoPush {
+    return _wrap_BMXMessageConfig_getNoPush(self.swigCPtr);
+}
+
 - (BMXMessageConfig_BadgeCountType)getBadgeCountType {
    return (BMXMessageConfig_BadgeCountType)_wrap_BMXMessageConfig_getBadgeCountType(self.swigCPtr); 
 }
@@ -6591,6 +6599,16 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 
 - (void)setDebugLogReceiverId:(long long)uid {
   _wrap_BMXSDKConfig_setDebugLogReceiverId(self.swigCPtr, uid);
+}
+
+- (NSString*)getAppConfig {
+  {
+    return _wrap_BMXSDKConfig_getAppConfig(self.swigCPtr);
+  }
+}
+
+- (void)setAppConfig:(NSString*)appConfig {
+  _wrap_BMXSDKConfig_setAppConfig(self.swigCPtr, appConfig);
 }
 
 - (void)dealloc {
@@ -11240,7 +11258,11 @@ private:
 }
 
 - (BOOL)enableReadAck {
-   return _wrap_BMXGroup_enableReadAck(self.swigCPtr); 
+   return _wrap_BMXGroup_enableReadAck(self.swigCPtr);
+}
+
+- (BOOL)hideMemberInfo {
+   return _wrap_BMXGroup_hideMemberInfo(self.swigCPtr);
 }
 
 - (BOOL)historyVisible {
@@ -11586,6 +11608,10 @@ private:
 
 - (BMXErrorCode)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable {
    return (BMXErrorCode)_wrap_BMXGroupService_setEnableReadAck(self.swigCPtr, group.swigCPtr, enable);
+}
+
+- (BMXErrorCode)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide {
+   return (BMXErrorCode)_wrap_BMXGroupService_setHideMemberInfo(self.swigCPtr, group.swigCPtr, hide);
 }
 
 - (BMXErrorCode)setHistoryVisible:(BMXGroup*)group enable:(BOOL)enable {
@@ -11942,6 +11968,12 @@ private:
 - (void)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable completion:(void (^)(BMXError *aError)) resBlock {
     [BMXAsync async:^BMXErrorCode{
         return (BMXErrorCode)_wrap_BMXGroupService_setEnableReadAck(self.swigCPtr, group.swigCPtr, enable);
+    } completion:resBlock];
+}
+
+- (void)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide completion:(void (^)(BMXError *aError)) resBlock {
+    [BMXAsync async:^BMXErrorCode{
+        return (BMXErrorCode)_wrap_BMXGroupService_setHideMemberInfo(self.swigCPtr, group.swigCPtr, hide);
     } completion:resBlock];
 }
 

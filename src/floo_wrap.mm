@@ -7331,6 +7331,30 @@ BOOL _wrap_BMXMessageConfig_isSilence(void* imarg1) {
   return imresult;
 }
 
+BOOL _wrap_BMXMessageConfig_getNoPush(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  result = (bool)(arg1)->getNoPush();
+  imresult = (result)? YES:NO;
+  return imresult;
+}
+
+void _wrap_BMXMessageConfig_setNoPush(void* imarg1, BOOL imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXMessageConfigPtr arg1 ;
+  floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  bool arg2 ;
+  
+  arg2 = imarg2? true : false;
+  (arg1)->setNoPush(arg2);
+}
+
 BOOL _wrap_BMXMessageConfig_isPeerDrop(void* imarg1) {
   long long larg1 = (long long)imarg1;
   floo::BMXMessageConfigPtr arg1 ;
@@ -10134,6 +10158,40 @@ void _wrap_BMXSDKConfig_setAppID(void* imarg1, NSString* imarg2) {
   arg2 = &arg2_str; 
   
   (arg1)->setAppID((std::string const &)*arg2);
+}
+
+NSString* _wrap_BMXSDKConfig_getAppConfig(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXSDKConfigPtr arg1 ;
+  floo::BMXSDKConfigPtr *argp1 = *(floo::BMXSDKConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  result = (arg1)->getAppConfig();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+void _wrap_BMXSDKConfig_setAppConfig(void* imarg1, NSString* imarg2) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXSDKConfigPtr arg1 ;
+  floo::BMXSDKConfigPtr *argp1 = *(floo::BMXSDKConfigPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  std::string *arg2 = 0 ;
+  
+  if(!imarg2) {
+    NSException* anException = [NSException exceptionWithName:@"NullPointerException"
+    reason:@"null std::string" userInfo:nil];
+    @throw anException;
+  }
+  std::string arg2_str(getStdString(imarg2));
+  arg2 = &arg2_str;
+  
+  (arg1)->setAppConfig((std::string const &)*arg2);
 }
 
 NSString* _wrap_BMXSDKConfig_getAppSecret(void* imarg1) {
@@ -17338,7 +17396,20 @@ BOOL _wrap_BMXGroup_enableReadAck(void* imarg1) {
   bool result;
   
   result = (bool)(arg1)->enableReadAck();
-  imresult = (result)? YES:NO; 
+  imresult = (result)? YES:NO;
+  return imresult;
+}
+
+BOOL _wrap_BMXGroup_hideMemberInfo(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXGroupPtr arg1 ;
+  floo::BMXGroupPtr *argp1 = *(floo::BMXGroupPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  result = (bool)(arg1)->hideMemberInfo();
+  imresult = (result)? YES:NO;
   return imresult;
 }
 
@@ -19024,6 +19095,25 @@ int _wrap_BMXGroupService_setEnableReadAck(void* imarg1, void* imarg2, BOOL imar
   arg3 = imarg3? true : false; 
   result = (floo::BMXErrorCode)(arg1)->setEnableReadAck(arg2,arg3);
   imresult = (int)result; 
+  return imresult;
+}
+
+int _wrap_BMXGroupService_setHideMemberInfo(void* imarg1, void* imarg2, BOOL imarg3) {
+  floo::BMXGroupService *arg1 = (floo::BMXGroupService *) 0 ;
+  SwigValueWrapper< std::shared_ptr< floo::BMXGroup > > arg2 ;
+  bool arg3 ;
+  floo::BMXGroupPtr *argp2 ;
+  int imresult = 0 ;
+  floo::BMXErrorCode result;
+  
+  arg1 = (floo::BMXGroupService *)imarg1;
+  
+  argp2 = (floo::BMXGroupPtr *)imarg2;
+  arg2 = *argp2;
+  
+  arg3 = imarg3? true : false;
+  result = (floo::BMXErrorCode)(arg1)->setHideMemberInfo(arg2,arg3);
+  imresult = (int)result;
   return imresult;
 }
 

@@ -120,6 +120,12 @@ extern "C" {
  *     "The path or file does not exist."
  * BMXErrorCode_DbOperationFailed:
  *     "The local database operation failed."
+ * BMXErrorCode_SignInInvalidParam:
+ *     "The user login input parameters are invalid."
+ * BMXErrorCode_SignInUserMapDbOperationFailed:
+ *     "The user login user map database open failed."
+ * BMXErrorCode_SignInUserDbOperationFailed:
+ *     "The user login user database open failed."
  * BMXErrorCode_SignInCancelled:
  *     "The user has cancelled the login operation."
  * BMXErrorCode_SignInTimeout:
@@ -280,6 +286,32 @@ extern "C" {
  *     "A connection failure error occurred on the server."
  * BMXErrorCode_ServerDNSFailed:
  *     "The current server failed to obtain the dns list."
+ * BMXErrorCode_ServerDNSFetchFailed:
+ *     "The current server failed to fetch dns list from dns server."
+ * BMXErrorCode_ServerDNSUserCancelFailed:
+ *     "The current server user cancel fetch dns list from dns server."
+ * BMXErrorCode_ServerDNSParseDataFailed:
+ *     "The current server failed to parse dns json data fetch from dns server."
+ * BMXErrorCode_ServerDNSAppIdEmpty:
+ *     "The current server failed to fetch dns list from dns server beacuse of app id empty."
+ * BMXErrorCode_ServerDNSAppIdInvalid:
+ *     "The current server failed to fetch dns list from dns server because of app id not invalid."
+ * BMXErrorCode_ServerDNSHealthCheckFailed:
+ *     "The current server failed to health check dns server beacuse of network problem."
+ * BMXErrorCode_ServerPrivateDNSParseDataFailed:
+ *     "The current server use private config and dns json data parse failed."
+ * BMXErrorCode_ServerTokenResponseInvalid:
+ *     "The current server token response json data parse failed."
+ * BMXErrorCode_ServerTokenRequestTooMany:
+ *     "The current server token request too many times, need retry later."
+ * BMXErrorCode_ServerTokenRequestParameterInvalid:
+ *     "The current server token request input parameter invalid."
+ * BMXErrorCode_ServerTokenRequestAppIdMissing:
+ *     "The current server token request app id missing."
+ * BMXErrorCode_ServerTokenRequestAppIdInvalid:
+ *     "The current server token request app id invalid."
+ * BMXErrorCode_ServerTokenAppStatusNotNormal:
+ *     "The current server token request app server status not normal."
  * BMXErrorCode_ServerNeedReconnected:
  *     "The current server has changed and needs to be reconnected."
  * BMXErrorCode_ServerFileUploadUnknownError:
@@ -335,6 +367,9 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_InvalidParam,
     BMXErrorCode_NotFound,
     BMXErrorCode_DbOperationFailed,
+    BMXErrorCode_SignInInvalidParam,
+    BMXErrorCode_SignInUserMapDbOperationFailed,
+    BMXErrorCode_SignInUserDbOperationFailed,
     BMXErrorCode_SignInCancelled,
     BMXErrorCode_SignInTimeout,
     BMXErrorCode_SignInFailed,
@@ -415,6 +450,19 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_ServerTimeOut,
     BMXErrorCode_ServerConnectFailed,
     BMXErrorCode_ServerDNSFailed,
+    BMXErrorCode_ServerDNSFetchFailed,
+    BMXErrorCode_ServerDNSUserCancelFailed,
+    BMXErrorCode_ServerDNSParseDataFailed,
+    BMXErrorCode_ServerDNSAppIdEmpty,
+    BMXErrorCode_ServerDNSAppIdInvalid,
+    BMXErrorCode_ServerDNSHealthCheckFailed,
+    BMXErrorCode_ServerPrivateDNSParseDataFailed,
+    BMXErrorCode_ServerTokenResponseInvalid,
+    BMXErrorCode_ServerTokenRequestTooMany,
+    BMXErrorCode_ServerTokenRequestParameterInvalid,
+    BMXErrorCode_ServerTokenRequestAppIdMissing,
+    BMXErrorCode_ServerTokenRequestAppIdInvalid,
+    BMXErrorCode_ServerTokenAppStatusNotNormal,
     BMXErrorCode_ServerNeedReconnected,
     BMXErrorCode_ServerFileUploadUnknownError,
     BMXErrorCode_ServerFileDownloadUnknownError,
@@ -858,7 +906,8 @@ typedef NS_ENUM(NSInteger, BMXGroup_UpdateInfoType) {
     BMXGroup_UpdateInfoType_MsgMuteMode,    /// 修改是否提醒消息
     BMXGroup_UpdateInfoType_ReadAckMode,    /// 是否开启群消息已读功能
     BMXGroup_UpdateInfoType_HistoryVisibleMode,/// 新群成员是否可见群历史聊天记录
-    BMXGroup_UpdateInfoType_BanExpireTime   /// 群组全员禁言到期时间
+    BMXGroup_UpdateInfoType_BanExpireTime,   /// 群组全员禁言到期时间
+    BMXGroup_UpdateInfoType_HideMemberInfoMode   /// 群是否对群成员隐藏其它群成员个人信息展示
 };
 
 /**
@@ -1983,6 +2032,19 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @brief 获取当前的推送消息中badge计数
  * @return BadgeCountType
  */
+
+/**
+ * @brief 设置是否禁用push
+ * @param noPush
+ */
+- (void)setNoPush:(BOOL)noPush;
+
+/**
+ * @brief 获取是否禁用Push设置
+ * @return bool
+ */
+- (BOOL)getNoPush;
+
 - (BMXMessageConfig_BadgeCountType)getBadgeCountType;
 /**
  * @brief 获取当前的推送消息中badge计数
@@ -2922,6 +2984,16 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @param uid 调试log接收者id
  */
 - (void)setDebugLogReceiverId:(long long)uid;
+/**
+ * @brief 获取app的配置。
+ * @return NSString
+ */
+- (NSString*)getAppConfig;
+/**
+ * @brief 设置app的配置。
+ * @param appConfig app的配置
+ */
+- (void)setAppConfig:(NSString*)appConfig;
 - (void)dealloc;
 @end
 
@@ -5310,6 +5382,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @return BOOL
    **/
 - (BOOL)enableReadAck;
+/**
+ * @brief 群成员是否可见群内其它成员个人信息
+ * @return BOOL
+ **/
+- (BOOL)hideMemberInfo;
   /**
    * @brief 是否可以加载显示历史聊天记录
    * @return BOOL
@@ -5766,6 +5843,14 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    **/
 - (BMXErrorCode)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable;
   /**
+   * @brief 设置群成员是否开可见群其它成员个人信息
+   * @param group 进行操作的群组
+   * @param hide 是否隐藏
+   * @return BMXErrorCode
+   **/
+- (BMXErrorCode)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide;
+
+  /**
    * @brief 设置群成员是否开可见群历史聊天记录
    * @param group 进行操作的群组
    * @param enable 是否开启
@@ -6203,6 +6288,12 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @return BMXErrorCode
    **/
 - (void)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable completion:(void (^)(BMXError *aError)) resBlock;
+  /**
+   * @brief 设置群成员是否开可见群其它成员个人信息
+   * @param group 进行操作的群组
+   * @param hide 是否隐藏
+   **/
+- (void)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide completion:(void (^)(BMXError *aError)) resBlock;
   /**
    * @brief 设置群成员是否开可见群历史聊天记录
    * @param group 进行操作的群组

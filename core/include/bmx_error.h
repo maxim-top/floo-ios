@@ -29,6 +29,9 @@ enum class BMXErrorCode {
   InvalidParam,
   NotFound,
   DbOperationFailed,
+  SignInInvalidParam,
+  SignInUserMapDbOperationFailed,
+  SignInUserDbOperationFailed,
   SignInCancelled,
   SignInTimeout,
   SignInFailed,
@@ -116,6 +119,19 @@ enum class BMXErrorCode {
   ServerTimeOut,
   ServerConnectFailed,
   ServerDNSFailed,
+  ServerDNSFetchFailed,
+  ServerDNSUserCancelFailed,
+  ServerDNSParseDataFailed,
+  ServerDNSAppIdEmpty,
+  ServerDNSAppIdInvalid,
+  ServerDNSHealthCheckFailed,
+  ServerPrivateDNSParseDataFailed,
+  ServerTokenResponseInvalid,
+  ServerTokenRequestTooMany,
+  ServerTokenRequestParameterInvalid,
+  ServerTokenRequestAppIdMissing,
+  ServerTokenRequestAppIdInvalid,
+  ServerTokenAppStatusNotNormal,
   ServerNeedReconnected,
   ServerFileUploadUnknownError,
   ServerFileDownloadUnknownError,
@@ -163,6 +179,38 @@ public:
 private:
   BMXErrorCode mErrorCode;
 };
+
+class EXPORT_API BMXDetailError {
+public:
+  virtual ~BMXDetailError();
+
+  BMXDetailError(const BMXDetailError&);
+  BMXDetailError& operator=(const BMXDetailError&);
+  static BMXDetailError *getInstance() {
+    if (instance == nullptr) {
+      instance = new BMXDetailError;
+    }
+    return instance;
+  }
+
+  static void setLastError(BMXErrorCode errorCode, int httpCode = 0, int serverCode = 0, const std::string& httpResponse = "");
+
+  BMXErrorCode errorCode();
+  int httpCode();
+  int serverCode();
+  std::string httpResponse();
+
+private:
+  static BMXDetailError *instance;
+  BMXDetailError();
+
+  BMXErrorCode mErrorCode;
+  int mHttpCode;
+  int mServerCode;
+  std::string mHttpResponse;
+};
+
+EXPORT_API BMXDetailError& getLastDetailError();
 
 }
 

@@ -36,6 +36,7 @@ static const std::string kPushShowBeginTime = "show_begin_time";        // int
 static const std::string kPushShowEndTime = "show_end_time";            // int
 static const std::string kPushTitle = "title";                          // string
 static const std::string kSilence = "silence";                          // bool
+static const std::string kNoPush = "noPush";                            // bool
 static const std::string kBadge = "badge";                              // int
 static const std::string kUsername = "username";                        // string
 
@@ -237,25 +238,25 @@ public:
 
   /**
    * @brief 设置推送标题多语言键名
-   * @param pushTitle
+   * @param pushTitleLocKey
    **/
   void setPushTitleLocKey(const std::string& pushTitleLocKey);
 
   /**
    * @brief 设置推送标题多语言参数
-   * @param pushTitle
+   * @param pushTitleLocArgs
    **/
   void setPushTitleLocArgs(const std::string& pushTitleLocArgs);
 
   /**
    * @brief 设置推送正文多语言键名
-   * @param pushTitle
+   * @param pushMessageLocKey
    **/
   void setPushMessageLocKey(const std::string& pushMessageLocKey);
 
   /**
    * @brief 设置推送正文多语言参数
-   * @param pushTitle
+   * @param pushMessageLocArgs
    **/
   void setPushMessageLocArgs(const std::string& pushMessageLocArgs);
 
@@ -294,6 +295,18 @@ public:
    * @return bool
    **/
   bool isSilence();
+
+  /**
+   * @brief 设置是否禁用push
+   * @param noPush 
+   */
+  void setNoPush(bool noPush);
+
+  /**
+   * @brief 获取是否禁用Push设置
+   * @return bool 
+   */
+  bool getNoPush();
 
   /**
    * @brief 获取当前的推送消息中badge计数
@@ -338,14 +351,16 @@ public:
   /**
   * @brief 设置挂断消息信息
   * @param callId 通话id
+  * @peerDrop 对端是否掉线
   **/
   void setRTCHangupInfo(const std::string& callId, bool peerDrop = false);
 
   /**
   * @brief 设置统计消息信息
   * @param callId 通话id
+  * @peerDrop 对端是否掉线
   **/
-  void setRTCRecordInfo(const std::string& callId);
+  void setRTCRecordInfo(const std::string& callId, bool peerDrop = false);
 
   /**
   * @brief 获得RTC相关操作类型信息（呼叫、接通、挂断等）。
@@ -409,7 +424,7 @@ public:
 private:
 
   void setRTCInitiatorbyCallId(const std::string& callId);
-  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0), mUsername("") {}
+  BMXMessageConfig() : mMentionAll(false), mIsSilence(false), mNoPush(false), mBadgeType(BMXMessageConfig::BadgeCountType::Change), mBadgeCount(0), mUsername(""), mPeerDrop(false) {}
 
   std::recursive_mutex mMutex;
   bool mMentionAll;
@@ -428,6 +443,7 @@ private:
   std::string mPushMessageLocKey;
   std::string mPushMessageLocArgs;
   bool mIsSilence;
+  bool mNoPush;
   BadgeCountType mBadgeType;
   int mBadgeCount;
   std::string mUsername;

@@ -231,6 +231,8 @@ public:
     HistoryVisibleMode,
     /// 群组全员禁言到期时间
     BanExpireTime,
+    /// 群是否对群成员隐藏其它群成员个人信息展示
+    HideMemberInfoMode,
   };
 
   /**
@@ -454,6 +456,12 @@ public:
    * @return bool
    **/
   virtual bool enableReadAck() = 0;
+
+  /**
+   * @brief 群成员是否可见群内其它成员个人信息
+   * @return bool
+   **/
+  virtual bool hideMemberInfo() = 0;
 
   /**
    * @brief 是否可以加载显示历史聊天记录
