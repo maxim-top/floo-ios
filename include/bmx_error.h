@@ -53,6 +53,7 @@ enum class BMXErrorCode {
   UserCancel,
   UserOldPasswordNotMatch,
   UserSigningIn,
+  UserKickedByAppDeprecated,
 
   PushTokenInvalid = 200,
   PushAliasBindByOtherUser,

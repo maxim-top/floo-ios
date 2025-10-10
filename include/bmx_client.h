@@ -60,6 +60,18 @@ public:
   virtual BMXSDKConfigPtr getSDKConfig() = 0;
 
   /**
+   * @brief 获取app状态
+   * @return std::string //normal-正常 frozen-冻结 banned-封禁 revoked-已失效
+   **/
+  virtual std::string getAppStatus() = 0;
+
+  /**
+   * @brief 获取API接口IP地址列表
+   * @return std::string
+   **/
+  virtual std::string getRatelIpList() = 0;
+
+  /**
    * @brief 获取用户Service
    * @return BMXUserService
    **/

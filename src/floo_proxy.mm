@@ -1014,7 +1014,7 @@ BMXMessageConfig* ObjcDecodeBMXMessageConfig(NSString* config) {
      void* cPtr = _wrap_BMXMessageList_get(self.swigCPtr, i);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -3014,7 +3014,8 @@ NSMutableArray *BMXMessageList2NSArray(const floo::BMXMessageList &list){
   floo::BMXMessageList::const_iterator ite = list.begin();
   for (; ite != list.end(); ++ite) {
       if ((*ite).get() != nullptr) {
-          BMXMessage2Void(*ite)
+          floo::BMXMessagePtr i = *ite;
+          BMXMessage2Void(i)
           BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
           [messages addObject:message];
       }
@@ -3027,7 +3028,8 @@ BMXMessageList *BMXMessageList2OC(const floo::BMXMessageList &list){
   floo::BMXMessageList::const_iterator ite = list.begin();
   for (; ite != list.end(); ++ite) {
       if ((*ite).get() != nullptr) {
-          BMXMessage2Void(*ite)
+          floo::BMXMessagePtr i = *ite;
+          BMXMessage2Void(i)
           BMXMessage *message = [[[BMXMessage alloc] init] initWithCptr:(void*)lresult swigOwnCObject:NO];
           [messages addWithX:message];
       }
@@ -6005,7 +6007,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createMessage__SWIG_0(from, to, (int)type, conversationId, content);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6017,7 +6019,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createMessage__SWIG_1(from, to, (int)type, conversationId, attachment.swigCPtr, attachment.type);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6029,7 +6031,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createCommandMessage__SWIG_0(from, to, (int)type, conversationId, content);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6041,7 +6043,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createRTCMessage__SWIG_0(from, to, (int)type, conversationId, content);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6052,7 +6054,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createMessage__SWIG_2(msgId, from, to, (int)type, conversationId, content, serverTimestamp);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6064,7 +6066,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createMessage__SWIG_3(msgId, from, to, (int)type, conversationId, attachment.swigCPtr, serverTimestamp, attachment.type);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6076,7 +6078,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createCommandMessage__SWIG_1(msgId, from, to, (int)type, conversationId, content, serverTimestamp);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6088,7 +6090,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createRTCMessage__SWIG_1(msgId, from, to, (int)type, conversationId, content, serverTimestamp);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6099,7 +6101,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXMessage_createForwardMessage(msg.swigCPtr, from, to, (int)type, conversationId);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6137,7 +6139,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXConversation_lastMsg(self.swigCPtr);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6201,7 +6203,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXConversation_loadMessage(self.swigCPtr, msgId);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -6277,14 +6279,12 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
 - (void)loadMessageWithMsgId:(long long)msgId completion:(void (^)(BMXMessage *res, BMXError *aError)) resBlock {
     [BMXAsync asyncWithBMXMessage:^BMXErrorCode(BMXMessage *res) {
         void* cPtr = _wrap_BMXConversation_loadMessage(self.swigCPtr, msgId);
-        BMXMessage* ret = nil;
         if(cPtr) {
-           ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+           res = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
    #if !__has_feature(objc_arc)
           [ret autorelease];
    #endif
         }
-        res = ret;
         return BMXErrorCode_NoError;
     } completion: resBlock];
 }
@@ -6770,7 +6770,7 @@ void ChatServiceListener::removeDelegate(id<BMXChatServiceProtocol> delegate) {
      void* cPtr = _wrap_BMXChatService_getMessage(self.swigCPtr, msgId);
      BMXMessage* ret = nil;
      if(cPtr) {
-        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:NO];
+        ret = [[BMXMessage alloc] initWithCptr:cPtr swigOwnCObject:YES];
 #if !__has_feature(objc_arc)
 	   [ret autorelease];
 #endif
@@ -7489,13 +7489,13 @@ void PushServiceListener ::  removeDelegate(id<BMXPushServiceProtocol> delegate)
   if((self = [super init])) {
     self.swigCPtr = cptr;
     self.swigCMemOwn = ownCObject;
-  }
-  if (!pushListener) {
-      pushListener = new PushServiceListener();
-  }
-  if (pushListener) {
-    BMXPushServiceListener * listener = [[[BMXPushServiceListener alloc] init] initWithCptr:pushListener swigOwnCObject:NO];
-    [self addPushListenerWithListener: listener];
+      if (pushListener == nil) {
+          pushListener = new PushServiceListener();
+      }
+      if (pushListener) {
+        BMXPushServiceListener * listener = [[[BMXPushServiceListener alloc] init] initWithCptr:pushListener swigOwnCObject:NO];
+        [self addPushListenerWithListener: listener];
+      }
   }
  
   return self;
@@ -7808,6 +7808,14 @@ static BMXClient *sharedClient = nil;
 #endif
      }
     return ret; 
+}
+
+- (NSString*)getAppStatus{
+    return _wrap_BMXClient_getAppStatus(self.swigCPtr);
+}
+
+- (NSString*)getRatelIpList{
+    return _wrap_BMXClient_getRatelIpList(self.swigCPtr);
 }
 
 - (BMXUserService*)getUserServiceImpl {

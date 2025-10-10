@@ -6545,7 +6545,7 @@ void* _wrap_BMXMessageAttachment_clone(void* imarg1) {
   
   temp = new std::shared_ptr< floo::BMXMessageAttachment >((const std::shared_ptr< floo::BMXMessageAttachment > &)result); 
   
-  return imresult;
+  return (void*)temp;
 }
 
 NSString* _wrap_kMentionAll_get() {
@@ -6862,13 +6862,13 @@ void* _wrap_BMXMessageConfig_getMentionList(void* imarg1) {
   floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
   if (argp1) arg1 = *argp1;
   void* imresult = 0 ;
-  std::vector< int64_t > *temp ;
+//  std::vector< int64_t > *temp ;
   std::vector< int64_t > result;
   
   result = (arg1)->getMentionList();
   
-  temp = new std::vector< int64_t >((const std::vector< int64_t > &)result); 
-  
+//  temp = new std::vector< int64_t >((const std::vector< int64_t > &)result); 
+  imresult = *(typeof(imresult)*)&result;
   return imresult;
 }
 
@@ -6991,12 +6991,13 @@ void* _wrap_BMXMessageConfig_getGroupMemberList(void* imarg1) {
   floo::BMXMessageConfigPtr *argp1 = *(floo::BMXMessageConfigPtr **)&larg1;
   if (argp1) arg1 = *argp1;
   void* imresult = 0 ;
-  std::vector< int64_t > *temp ;
+//  std::vector< int64_t > *temp ;
   std::vector< int64_t > result;
   
   result = (arg1)->getGroupMemberList();
-  
-  temp = new std::vector< int64_t >((const std::vector< int64_t > &)result); 
+  imresult = *(typeof(imresult)*)&result;
+
+//  temp = new std::vector< int64_t >((const std::vector< int64_t > &)result); 
   
   return imresult;
 }
@@ -7654,6 +7655,7 @@ void _wrap_delete_BMXMessage(void* imarg1) {
   floo::BMXMessagePtr arg1 ;
   floo::BMXMessagePtr *argp1 = *(floo::BMXMessagePtr **)&larg1;
   delete argp1;
+  arg1.reset();
 }
 
 long long _wrap_BMXMessage_msgId(void* imarg1) {
@@ -11980,6 +11982,38 @@ void* _wrap_BMXClient_getSDKConfig(void* imarg1) {
   BMXSDKConfig2Void(result)
   imresult = (void*)lresult; 
   
+  return imresult;
+}
+
+NSString* _wrap_BMXClient_getAppStatus(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXClientPtr arg1 ;
+  floo::BMXClientPtr *argp1 = *(floo::BMXClientPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+
+  result = (arg1)->getAppStatus();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
+  return imresult;
+}
+
+NSString* _wrap_BMXClient_getRatelIpList(void* imarg1) {
+  long long larg1 = (long long)imarg1;
+  floo::BMXClientPtr arg1 ;
+  floo::BMXClientPtr *argp1 = *(floo::BMXClientPtr **)&larg1;
+  if (argp1) arg1 = *argp1;
+  NSString* imresult = 0 ;
+  std::string result;
+
+  result = (arg1)->getRatelIpList();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()];
+#if !__has_feature(objc_arc)
+  [imresult autorelease];
+#endif
   return imresult;
 }
 

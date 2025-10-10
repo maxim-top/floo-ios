@@ -955,6 +955,8 @@ void _wrap_BMXPushServiceListener_registerPushService(void* imarg1, void* imarg2
 void* _wrap_BMXClient_create(void* imarg1);
 void _wrap_delete_BMXClient(void* imarg1);
 void* _wrap_BMXClient_getSDKConfig(void* imarg1);
+NSString* _wrap_BMXClient_getAppStatus(void* imarg1);
+NSString* _wrap_BMXClient_getRatelIpList(void* imarg1);
 void* _wrap_BMXClient_getUserService(void* imarg1);
 void* _wrap_BMXClient_getChatService(void* imarg1);
 void* _wrap_BMXClient_getGroupService(void* imarg1);

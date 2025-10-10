@@ -166,6 +166,8 @@ extern "C" {
  *     "The old password does not match when the password is changed."
  * BMXErrorCode_UserSigningIn:
  *     "The user is signning in."
+ * BMXErrorCode_UserKickedByAppDeprecated:
+ *     "The version of the app is deprecated."
  * BMXErrorCode_PushTokenInvalid:
  *     "The push token is not valid."
  * BMXErrorCode_PushAliasBindByOtherUser:
@@ -390,6 +392,7 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_UserCancel,
     BMXErrorCode_UserOldPasswordNotMatch,
     BMXErrorCode_UserSigningIn,
+    BMXErrorCode_UserKickedByAppDeprecated,
     BMXErrorCode_PushTokenInvalid = 200,
     BMXErrorCode_PushAliasBindByOtherUser,
     BMXErrorCode_PushAliasTokenNotMatch,
@@ -3969,6 +3972,16 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @return BMXSDKConfig
  */
 - (BMXSDKConfig*)getSDKConfig;
+/**
+ * @brief 获取app状态
+ * @return NSString* normal-正常 frozen-冻结 banned-封禁 revoked-已失效
+ */
+- (NSString*)getAppStatus;
+/**
+ * @brief 获取API接口IP列表
+ * @return NSString*
+ */
+- (NSString*)getRatelIpList;
 /**
  * @brief 注册新用户，username和password是必填参数
  * @param username 用户名
